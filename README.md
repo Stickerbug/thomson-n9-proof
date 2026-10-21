@@ -35,3 +35,7 @@ The verifier is `proof_work/publication_validation/verify_local_lean.py`. It reb
 ## Remaining trust gaps
 
 The certificates are conditional: the AAA theorem assumes the coefficient family lies in archived `coefficientInterval` and the point lies in `relativeBox`. The true residual/shifted-coefficient binding, the other 11 classes, 45 contact equations, rank-33/W compatibility, the 68,063-leaf coverage instantiation and the final `ThomsonNineClaim` remain unformalized.
+
+## Transfer
+
+For a complete continuation brief, see `HANDOFF_TO_NEXT_AI_zh.md` and `HANDOFF_STATE.json`.
