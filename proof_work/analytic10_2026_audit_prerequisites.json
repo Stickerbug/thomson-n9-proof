@@ -1,0 +1,46 @@
+{
+  "status": "NECESSARY_PSD_ROOT_PAIR_F_C_AND_FROZEN_SOURCE_REPLAY_PASS",
+  "local_proofs_unneeded_because_zero_local_leaves": true,
+  "fresh_C_builds": [
+    {
+      "source": "analytic10_2026_sum.c",
+      "frozen": "analytic10_2026_sum.so",
+      "rebuilt": "analytic10_2026_audit_sum.so",
+      "byte_identical": true,
+      "rebuilt_sha256": "535dd60d5d5b1aaacf215f525258189a65d6d1829957313d0f0d37c003d3d1d5",
+      "frozen_sha256": "535dd60d5d5b1aaacf215f525258189a65d6d1829957313d0f0d37c003d3d1d5"
+    },
+    {
+      "source": "exact128_2026.c",
+      "frozen": "exact128_2026_f7293e5065a2d21b.so",
+      "rebuilt": "analytic10_2026_audit_tensor.so",
+      "byte_identical": true,
+      "rebuilt_sha256": "e9635586e1be892ad2f3cd3ea62f23be043156a62e21c2bce7b752723c8c3e9a",
+      "frozen_sha256": "e9635586e1be892ad2f3cd3ea62f23be043156a62e21c2bce7b752723c8c3e9a"
+    }
+  ],
+  "all_math_coefficient_arrays_identical": [
+    "F_coefficients",
+    "R_coefficients",
+    "c",
+    "F111",
+    "E_star",
+    "local_centers",
+    "H_coefficients_ascending"
+  ],
+  "root_endpoint_signs_replayed": true,
+  "pair056_pure_Fraction_replayed": true,
+  "kernel_LU_PSD_replayed": true,
+  "E_star_minus_delta_strictly_gt_25_7599864": true,
+  "exact_contact_compatibility_theorem_not_needed_for_approximate_LB": "selected33 invertible equations define B; LDL implies B>0; NBN^T PSD and c definition suffice",
+  "root_search_repeated": false,
+  "source_sha256": {
+    "proof_work/analytic10_2026_run1.json": "10adc9c59a9bb03f54bd764409ce9faf6cb7ccf779770de1f89e00faf2437ed6",
+    "proof_work/analytic10_2026_engine.py": "721edff81d54bd92b408ede73238f1ef23ee4f1c16a1337813d901081b6ec8e1",
+    "proof_work/analytic10_2026_sum.c": "8851f5f168a78d53d35e6ae19d2a2742f2de4d52b0b314e2d74edceba773178b",
+    "proof_work/analytic10_2026_sum.so": "535dd60d5d5b1aaacf215f525258189a65d6d1829957313d0f0d37c003d3d1d5",
+    "proof_work/analytic10_2026_audit_kernel.json": "e0ca64b369d92d1d979708afa26b41bf44f230a4076b6f9cdc8572da7c47667e",
+    "proof_work/analytic10_2026_audit_coefficients.json": "1b70641e398c091d61150e5ff9960ad866e34a6a55804cbc1e95a4d44b3eff47"
+  },
+  "seconds": 27.673655033111572
+}

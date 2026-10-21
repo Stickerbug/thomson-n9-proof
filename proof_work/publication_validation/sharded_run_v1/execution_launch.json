@@ -1,0 +1,9 @@
+{
+  "pid": 25755,
+  "wrapper_pid": 25669,
+  "workers": 4,
+  "started_epoch": 1792232455.4834218,
+  "preparation_only_manifest": true,
+  "preexisting_chunk_results": 0,
+  "log": "proof_work/publication_validation/sharded_full_v1.log"
+}

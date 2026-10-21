@@ -1,0 +1,22 @@
+=== 09:48:05 building Minimizer ===
+ThomsonNine/Minimizer.lean:38:28: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+ThomsonNine/Minimizer.lean:43:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ThomsonNine/Minimizer.lean:45:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:51:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:51:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if i = j then ?m.132 else ?m.133
+in the target expression
+  ∀ (i i_1 : Fin 9), x ∈ if i = i_1 then Set.univ else {x | 1 / 26 ≤ ‖x i - x i_1‖}
+
+case neg
+x : Fin 9 → R3
+h1 : ∀ (i : Fin 9), ‖x i‖ = 1
+h2 : ∀ (i i_1 : Fin 9), x ∈ if i = i_1 then Set.univ else {x | 1 / 26 ≤ ‖x i - x i_1‖}
+i j : Fin 9
+hij : i ≠ j
+h : ¬i = j
+⊢ 1 / 26 ≤ ‖x i - x j‖
+ThomsonNine/Minimizer.lean:61:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ThomsonNine/Minimizer.lean:63:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+=== FAIL Minimizer ===
+=== ALL DONE 09:49:51 ===

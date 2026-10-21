@@ -1,0 +1,11 @@
+=== 09:54:41 building ThreePoint ===
+ThomsonNine/ThreePoint.lean:175:30: warning: This simp argument is unused:
+  real_inner_self_eq_norm_sq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Set.domRestrict, v, hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/ThreePoint.lean:220:93: error: unexpected token 'end'; expected ']'
+=== FAIL ThreePoint ===
+=== ALL DONE 09:57:17 ===

@@ -1,0 +1,43 @@
+=== 17:26:42 building Stationary ===
+ThomsonNine/Stationary.lean:17:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:17:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:69:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:69:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:107:2: error: `fun_prop` was unable to prove `ContinuousOn
+  (fun r =>
+    -2 * √3 / r ^ 2 + 3 * r / (2 * √(1 - r ^ 2) ^ 3) + 6 * r / √(4 - r ^ 2) ^ 3 + 6 / √(2 - r) ^ 3 -
+      6 / √(2 + 2 * r) ^ 3)
+  (Set.Icc (1 / 2) (9 / 10))`
+
+Issues:
+  Failed to infer `(?t : Set (ℝ × ℝ))` when applying theorem `continuousOn_id'`.
+  No theorems found for `OfNat.ofNat` in order to prove `ContinuousOn (fun x => 3) ?t`
+  No theorems found for `OfNat.ofNat` in order to prove `ContinuousOn (fun i => 2) ?t`
+  Failed to infer `(?t : Set ℝ)` when applying theorem `continuousOn_const`.
+  Failed to prove necessary assumption `∀ x ∈ Set.Icc (1 / 2) (9 / 10), x ^ 2 ≠ 0` when applying theorem `ContinuousOn.div₀`.
+=== FAIL Stationary ===
+=== ALL DONE 17:28:18 ===

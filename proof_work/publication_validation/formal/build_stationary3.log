@@ -1,0 +1,31 @@
+=== 17:28:41 building Stationary ===
+ThomsonNine/Stationary.lean:17:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:17:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:69:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:69:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== OK Stationary ===
+=== ALL DONE 17:30:35 ===

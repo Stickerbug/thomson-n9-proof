@@ -1,0 +1,39 @@
+=== 15:02:57 building Statement ===
+=== OK Statement ===
+=== 15:04:51 building CoverageSoundness ===
+=== OK CoverageSoundness ===
+=== 15:05:35 building TaylorTen ===
+ThomsonNine/TaylorTen.lean:8:17: error: unexpected token 'partial'; expected identifier
+ThomsonNine/TaylorTen.lean:35:11: error: unexpected token 'partial'; expected term
+ThomsonNine/TaylorTen.lean:35:19: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:36:16: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:39:49: error: unexpected token 'partial'; expected term
+ThomsonNine/TaylorTen.lean:39:57: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:40:16: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:48:68: error: unexpected token 'partial'; expected term
+ThomsonNine/TaylorTen.lean:49:11: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:52:28: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:54:21: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:54:45: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:57:20: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:59:14: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:59:55: error: unexpected identifier; expected 'lemma'
+ThomsonNine/TaylorTen.lean:63:19: error: unexpected identifier; expected 'lemma'
+=== FAIL TaylorTen ===
+=== 15:07:48 building LeafSemantics ===
+ThomsonNine/LeafSemantics.lean:52:32: error: unexpected token 'λ'; expected '}'
+=== FAIL LeafSemantics ===
+=== 15:09:15 building ReducedPSD ===
+=== OK ReducedPSD ===
+=== 15:10:29 building HermiteFactor ===
+ThomsonNine/HermiteFactor.lean:28:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'instSub', which is 'noncomputable'
+=== FAIL HermiteFactor ===
+=== 15:11:58 building TransverseCoordinates ===
+ThomsonNine/TransverseCoordinates.lean:42:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ThomsonNine/TransverseCoordinates.lean:49:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+=== OK TransverseCoordinates ===
+=== ALL DONE 15:12:59 ===

@@ -1,0 +1,43 @@
+all190 analytic interval columns built seconds 13.440179109573364
+PASS saved rational coefficients only; independent implementation; minorant nodes 23 exclusion nodes 1
+{"stage": "analytic10_progress", "visited": 10000, "seconds": 2.7081031250418164, "pending": 19, "counts": {"positive": 2299, "gram_negative": 2569, "ordered_disjoint": 123, "local_region": 0, "boundary_multiplier": 0}}
+{"stage": "analytic10_progress", "visited": 45000, "seconds": 22.86875260103261, "pending": 23, "counts": {"positive": 10721, "gram_negative": 10961, "ordered_disjoint": 784, "local_region": 0, "boundary_multiplier": 23}}
+{"stage": "analytic10_progress", "visited": 50000, "seconds": 23.708594267023727, "pending": 25, "counts": {"positive": 11963, "gram_negative": 12116, "ordered_disjoint": 886, "local_region": 0, "boundary_multiplier": 23}}
+{"stage": "analytic10_progress", "visited": 60000, "seconds": 25.71854739205446, "pending": 19, "counts": {"positive": 14266, "gram_negative": 14656, "ordered_disjoint": 1046, "local_region": 0, "boundary_multiplier": 23}}
+{"stage": "analytic10_progress", "visited": 65000, "seconds": 26.8148723920458, "pending": 23, "counts": {"positive": 15454, "gram_negative": 15815, "ordered_disjoint": 1197, "local_region": 0, "boundary_multiplier": 23}}
+{"stage": "analytic10_progress", "visited": 85000, "seconds": 30.978817704017274, "pending": 17, "counts": {"positive": 19807, "gram_negative": 20622, "ordered_disjoint": 1512, "local_region": 0, "boundary_multiplier": 551}}
+{"stage": "analytic10_progress", "visited": 90000, "seconds": 34.53063697402831, "pending": 19, "counts": {"positive": 20518, "gram_negative": 21622, "ordered_disjoint": 1648, "local_region": 0, "boundary_multiplier": 1203}}
+{"stage": "analytic10_progress", "visited": 95000, "seconds": 37.76307239005109, "pending": 19, "counts": {"positive": 21038, "gram_negative": 22254, "ordered_disjoint": 1818, "local_region": 0, "boundary_multiplier": 2381}}
+{"stage": "analytic10_progress", "visited": 100000, "seconds": 40.331829681003, "pending": 17, "counts": {"positive": 22064, "gram_negative": 22464, "ordered_disjoint": 2037, "local_region": 0, "boundary_multiplier": 3427}}
+{
+  "status": "VERIFIED_NONSHARP_DECIMAL_LOWER_BOUND",
+  "global_bound_claimed_by_this_run": true,
+  "decimal_target": "2575998643126983/100000000000000",
+  "energy_E_star": {
+    "lo_numerator": "1014995148924132230230761197739915261089050665426773091951717311959300726088362701458171829027777366589283736921355137",
+    "hi_numerator": "1014995148924132230230761197739915261089050665426773091951717311959300726088362701458171829027777366589283970670600899",
+    "denominator_power_of_two": 384
+  },
+  "independent_energy": {
+    "lo_numerator": "1014995148924132230230761197739915261089050665426773091951717311959300726088362701458171829027777366589283736921355144",
+    "hi_numerator": "1014995148924132230230761197739915261089050665426773091951717311959300726088362701458171829027777366589283970670600891",
+    "denominator_power_of_two": 384
+  },
+  "delta": "1/10000000",
+  "PSD_interval_LDL_rebuilt": true,
+  "F_c_interval_rebuilt_bitwise": true,
+  "pair_exclusion_reproved": true,
+  "local_terminals": 0,
+  "local_and_Hermite_theorems_used": false,
+  "exact_contact_theorem_used": false,
+  "jets_theorem_used": false,
+  "nonnegative_boundary_multipliers_checked": true,
+  "manifest_sha256": "5256af5aa4321bcc44436764e857b36cbb04022fa8c6351b4c3df095411d76c1",
+  "root_replay_command": "PYTHONPATH=proof_work:proof_work/python_deps OPENBLAS_NUM_THREADS=1 python3 '/home/dsh/Thomson Problem/proof_work/analytic10_2026_verify.py' --replay-root",
+  "mathematical_identity": "For 9 points, sum R over84 unordered triples>=0 and total ordered PSD kernel sum>=0 imply E>=12(c-delta/12)-3F111/2=E_star-delta. Distinct-pair diagonals F(1,t,t) are counted7 times. Kernel PSD follows the S2 anchored-circle Chebyshev addition theorem for Q_k and A_k=N_k^T B_k N_k with rebuilt B_k positive definite.",
+  "replayed_root_seconds": 45.18795676401351,
+  "visited_nodes": 110513,
+  "pending_count": 0,
+  "root_transcript_sha256": "5047c95288d38fa7d27bd0c1498da319a26855bf99b1bb5e9af9c5e0fcc24151",
+  "seconds": 61.12361301202327
+}

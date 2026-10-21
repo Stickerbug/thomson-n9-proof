@@ -1,0 +1,26 @@
+=== 05:11:55 building EnergyForms ===
+ThomsonNine/EnergyForms.lean:42:4: error: Type mismatch: After simplification, term
+  HasDerivAt.add (hasDerivAt_const 0 1) (hasDerivAt_id 0)
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.normedAddCommGroup.toAddCommGroup
+    RCLike.toInnerProductSpaceReal.toModule PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ ((fun x => 1) + id) 1
+    0
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => 1 + t) 1 0
+ThomsonNine/EnergyForms.lean:54:4: error: Type mismatch
+  energy_smul (1 + t) hpos x
+has type
+  (energy fun i => (1 + t) • x i) = (1 + t)⁻¹ * energy x
+but is expected to have type
+  (1 + t)⁻¹ * energy x = energy fun i => (1 + t) • x i
+ThomsonNine/EnergyForms.lean:55:37: error: Application type mismatch: The argument
+  hev
+has type
+  (fun t => (1 + t)⁻¹ * energy x) =ᶠ[nhds 0] fun t => energy fun i => (1 + t) • x i
+but is expected to have type
+  ?m.591 =ᶠ[nhds 0] fun t => (1 + t)⁻¹ * energy x
+in the application
+  HasDerivAt.congr_of_eventuallyEq hmul hev
+=== FAIL EnergyForms ===
+=== ALL DONE 05:13:30 ===

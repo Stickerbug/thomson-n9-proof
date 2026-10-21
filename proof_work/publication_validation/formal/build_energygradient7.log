@@ -1,0 +1,10 @@
+=== 06:46:18 building EnergyGradient ===
+ThomsonNine/EnergyGradient.lean:66:16: warning: `if_true` has been deprecated: Use `ite_true` instead
+Try this:
+  [apply] abel_nf
+ThomsonNine/EnergyGradient.lean:79:19: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/EnergyGradient.lean:79:31: warning: `if_true` has been deprecated: Use `ite_true` instead
+ThomsonNine/EnergyGradient.lean:83:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/EnergyGradient.lean:83:30: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+=== OK EnergyGradient ===
+=== ALL DONE 06:49:06 ===

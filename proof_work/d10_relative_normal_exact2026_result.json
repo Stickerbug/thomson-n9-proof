@@ -1,0 +1,12 @@
+{
+  "status": "CERTIFIED_CONTACT_AND_PSD_AND_TRUE_COEFFICIENTS_NOT_GLOBAL",
+  "outputs_sha256": {
+    "/home/dsh/Thomson Problem/proof_work/d10_relative_normal_exact2026_seed.json": "51a1e805b1b8c8675e7d16528c580b3bdf83808957dccad5ac0b6fe419b21806",
+    "/home/dsh/Thomson Problem/proof_work/d10_relative_normal_exact2026_basischeck.json": "e2f631264612ea5d5aa9c09d1195ea0178656226404f840d078b716788fe3fc6",
+    "/home/dsh/Thomson Problem/proof_work/d10_relative_normal_exact2026_certificate.json": "a31a0f109ebed799b51a42331ffc02adc8a479c54ccc9c055761754cde03d049",
+    "/home/dsh/Thomson Problem/proof_work/d10_relative_normal_exact2026_coefficients.json": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2"
+  },
+  "F_terms": 756,
+  "R_terms": 807,
+  "local_or_global_nonnegativity_claimed": false
+}

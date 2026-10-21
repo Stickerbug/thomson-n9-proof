@@ -1,0 +1,117 @@
+{
+  "status": "symbolically_verified_geometry",
+  "scope": "For any smooth symmetric residual R>=0 on g>=0 with R=0 at these candidate boundary triples, gradR=lambda*gradg with lambda>=0 and T^T(HessR-lambda*Hessg)T>=0. Applies to true r_star in (0,1); no approximate-radius transfer. Not a global Thomson proof.",
+  "cases": [
+    {
+      "type": "C",
+      "point": [
+        "r**2/2 - 1",
+        "r/2",
+        "r/2"
+      ],
+      "gradient": [
+        "2 - r**2/2",
+        "r**3/2 - 2*r",
+        "r**3/2 - 2*r"
+      ],
+      "tangent_basis": [
+        [
+          "0",
+          "2*r"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "projected_gram_hessian": [
+        [
+          "-2*r**2",
+          "0"
+        ],
+        [
+          "0",
+          "2*r**2 - 8"
+        ]
+      ]
+    },
+    {
+      "type": "B",
+      "point": [
+        "-r",
+        "-r",
+        "2*r**2 - 1"
+      ],
+      "gradient": [
+        "-4*r**3 + 4*r",
+        "-4*r**3 + 4*r",
+        "2 - 2*r**2"
+      ],
+      "tangent_basis": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "0",
+          "-4*r"
+        ]
+      ],
+      "projected_gram_hessian": [
+        [
+          "-8*r**2",
+          "0"
+        ],
+        [
+          "0",
+          "8*r**2 - 8"
+        ]
+      ]
+    },
+    {
+      "type": "equilateral",
+      "point": [
+        "-1/2",
+        "-1/2",
+        "-1/2"
+      ],
+      "gradient": [
+        "3/2",
+        "3/2",
+        "3/2"
+      ],
+      "tangent_basis": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "0",
+          "-2"
+        ]
+      ],
+      "projected_gram_hessian": [
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "-6"
+        ]
+      ]
+    }
+  ]
+}

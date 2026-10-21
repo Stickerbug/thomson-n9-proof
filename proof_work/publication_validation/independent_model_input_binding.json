@@ -1,0 +1,98 @@
+{
+  "status": "PASS_EXPORTED_MODEL_INPUT_BINDING",
+  "checks": {
+    "co_digest": true,
+    "locals_digest": true,
+    "locals_same_model_digest": true,
+    "exact_symmetric_midpoints": true,
+    "sym_error_equals_exported_eps": true,
+    "direct_raw_coefficient_L1_error_bounded": true,
+    "constant_interval_exact": true,
+    "all_twelve_local_boxes": true,
+    "every_local_binding": true
+  },
+  "raw_coefficient_L1_error": "75640377291739006408807925031555/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+  "symmetrized_L1_error": "75640377291739006408807925031555/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+  "exported_epsF": "75640377291739006408807925031555/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+  "F_support": 756,
+  "local_bindings": [
+    {
+      "id": "new-local-0-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-1-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-2-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-3-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-4-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-5-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-6-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-7-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-8-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-9-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-10-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    },
+    {
+      "id": "new-local-11-012",
+      "expected_row_id": true,
+      "core_matches_center_width": true,
+      "core_inside_original_certified_box": true
+    }
+  ],
+  "root_input_sha256": "3dd4ba639e78cabaa2c3a8182db3724545751ade50635e6d542067338b281066",
+  "source_hashes": {
+    "co": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2",
+    "locals": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec"
+  },
+  "scope": "Verifies midpoint, error, constant and local-core derivation from the frozen source data. Validity of the original algebraic coefficient enclosures and local nonnegativity proofs remains assumed, not independently generated or proved."
+}

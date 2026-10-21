@@ -1,0 +1,27 @@
+{
+  "status": "INDEPENDENT_HERMITE_COMPONENT_TESTS_PASS",
+  "positive_test": "14node confluent interpolation exactly defined from p(t)=t^27+3t^2-7t+5 and pprime; all28 recovered power enclosures contain the exact rational coefficients",
+  "strict_different_node_divisors": 364,
+  "negative_tests": [
+    {
+      "case": "duplicate_node",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "nodes must have disjoint ordered intervals"
+    },
+    {
+      "case": "reversed_nodes",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "nodes must have disjoint ordered intervals"
+    },
+    {
+      "case": "wrong_node_count",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "expected14 distinct nodes"
+    },
+    {
+      "case": "node_at_pole_one",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "node outside smooth domain"
+    }
+  ]
+}

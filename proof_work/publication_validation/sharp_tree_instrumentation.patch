@@ -1,0 +1,89 @@
+--- analytic10_sharp2026_engine.py
++++ publication_validation/sharp_tree_engine_instrumented.py
+@@ -120,7 +120,7 @@
+ from functools import lru_cache
+ from exact128_2026 import pointer,decode
+ DEFAULT_BITS=96
+-LIB=C.CDLL(str(Path(__file__).with_name('analytic10_2026_sum.so').resolve()))
++LIB=C.CDLL(str((Path(__file__).parent.parent / 'analytic10_2026_sum.so').resolve()))
+ LIB.analytic10_min.argtypes=[C.POINTER(C.c_uint64)]*5;LIB.analytic10_min.restype=C.c_int
+ 
+ def words(v):
+@@ -186,37 +186,47 @@
+         for p,v in GRAM.items():ss[p]=ss.get(p,0)-item['lambda']*v
+         active[i]=NativeTensor(coefficients(ss,ROOT_BOX,degrees=(10,10,10),bits=bits))
+     rootinputs={'bits':bits,'F_mid_sym':[[list(p),str(v)]for p,v in sorted(fm.items())],'epsF':str(eps),'d_mid':[[k,str(v)]for k,v in sorted(dm.items())],'c_interval':list(map(str,[clo,chi])),'delta':str(delta),'K_monomial':[[list(p),str(v)]for p,v in sorted(lower.items())],'K_root_floor':[str(int(v))for v in B0.flat],'K_shape':[11]*3,'D_root_ceil':list(map(str,cache.root)),'Gram_root_ceil':[str(int(v))for v in G0.flat],'Gram_shape':list(G0.shape),'local_regions':_serial(local),'boundary_multipliers':_serial(boundary)}
++    _export_root(rootinputs)
+     stack=[(b,g,active,ROOT_BOX,(0,0,0),(0,0,0),'')];counts={x:0 for x in ['positive','gram_negative','ordered_disjoint','local_region','boundary_multiplier']};visited=splits=maxdepth=0;h_range_skipped_nodes=0;reason=None;transcript=sha256();localcounts={x['id']:0 for x in local};bc={x['id']:0 for x in boundary}
+-    while stack and visited<budget and monotonic()-start<seconds:
+-        if len(stack)>256:reason='pending_stack_exceeds256';break
+-        if len(stack[-1][-1])>150:reason='next_path_depth_exceeds150';break
+-        b,g,act,box,levels,indices,path=stack.pop();visited+=1;maxdepth=max(maxdepth,len(path));kind=None;ident=None;witness=None
+-        if any(box[i][0]>box[j][1]for i in range(3)for j in range(i+1,3)):kind='ordered_disjoint'
+-        elif g.max()<0:kind='gram_negative'
+-        else:
+-            hh=[cache.H(lev,idx)[0]for lev,idx in zip(levels,indices)];v=None if any(h is None for h in hh)else minimum(b,hh)
+-            if v is None:h_range_skipped_nodes+=1
+-            if v is not None and v>=0:kind='positive';witness=v
++    current=None
++    try:
++        while stack and visited<budget and monotonic()-start<seconds:
++            if len(stack)>256:reason='pending_stack_exceeds256';break
++            if len(stack[-1][-1])>150:reason='next_path_depth_exceeds150';break
++            current=stack[-1]
++            b,g,act,box,levels,indices,path=stack.pop();visited+=1;maxdepth=max(maxdepth,len(path));kind=None;ident=None;witness=None
++            if any(box[i][0]>box[j][1]for i in range(3)for j in range(i+1,3)):kind='ordered_disjoint'
++            elif g.max()<0:kind='gram_negative'
+             else:
+-                for reg in local:
+-                    if _contained(box,reg['core']):kind='local_region';ident=reg['id'];localcounts[ident]+=1;break
+-                if kind is None:
+-                    for i,sb in act.items():
+-                        v=None if any(h is None for h in hh)else minimum(sb,hh)
+-                        if v is not None and v>=0:kind='boundary_multiplier';ident=boundary[i]['id'];bc[ident]+=1;witness=v;break
+-        if kind:
+-            counts[kind]+=1;transcript.update(json.dumps([path,kind,ident,witness]).encode());continue
+-        axis=min(range(3),key=lambda i:levels[i]);lv=list(levels);lv[axis]+=1;lv=tuple(lv);mid=sum(box[axis])/2;boxes=[list(box),list(box)];boxes[0][axis]=(box[axis][0],mid);boxes[1][axis]=(mid,box[axis][1]);boxes=list(map(tuple,boxes));bs=b.split(axis);gs=g.split(axis,upper=True);acs=[{},{}]
+-        for i,sb in act.items():
+-            yes=[_intersects(bb,boundary[i]['activation'])for bb in boxes]
+-            if any(yes):
+-                ss=sb.split(axis)
+-                for side in range(2):
+-                    if yes[side]:acs[side][i]=ss[side]
+-        for side in [1,0]:
+-            ix=list(indices);ix[axis]=2*ix[axis]+side;stack.append((bs[side],gs[side],acs[side],boxes[side],lv,tuple(ix),path+str(side)))
+-        splits+=1
+-        if visited%5000==0:print(json.dumps({'stage':'analytic10_sharp_progress','visited':visited,'seconds':monotonic()-start,'pending':len(stack),'counts':counts}),flush=True)
++                hh=[cache.H(lev,idx)[0]for lev,idx in zip(levels,indices)];v=None if any(h is None for h in hh)else minimum(b,hh)
++                if v is None:h_range_skipped_nodes+=1
++                if v is not None and v>=0:kind='positive';witness=v
++                else:
++                    for reg in local:
++                        if _contained(box,reg['core']):kind='local_region';ident=reg['id'];localcounts[ident]+=1;break
++                    if kind is None:
++                        for i,sb in act.items():
++                            v=None if any(h is None for h in hh)else minimum(sb,hh)
++                            if v is not None and v>=0:kind='boundary_multiplier';ident=boundary[i]['id'];bc[ident]+=1;witness=v;break
++            if kind:
++                _export_node('leaf',path,box,levels,indices,kind=kind,ident=ident,witness=None if witness is None else str(witness))
++                current=None
++                counts[kind]+=1;transcript.update(json.dumps([path,kind,ident,witness]).encode());continue
++            axis=min(range(3),key=lambda i:levels[i]);lv=list(levels);lv[axis]+=1;lv=tuple(lv);mid=sum(box[axis])/2;boxes=[list(box),list(box)];boxes[0][axis]=(box[axis][0],mid);boxes[1][axis]=(mid,box[axis][1]);boxes=list(map(tuple,boxes));bs=b.split(axis);gs=g.split(axis,upper=True);acs=[{},{}]
++            for i,sb in act.items():
++                yes=[_intersects(bb,boundary[i]['activation'])for bb in boxes]
++                if any(yes):
++                    ss=sb.split(axis)
++                    for side in range(2):
++                        if yes[side]:acs[side][i]=ss[side]
++            for side in [1,0]:
++                ix=list(indices);ix[axis]=2*ix[axis]+side;stack.append((bs[side],gs[side],acs[side],boxes[side],lv,tuple(ix),path+str(side)))
++            _export_node('split',path,box,levels,indices,axis=axis)
++            current=None
++            splits+=1
++            if visited%5000==0:print(json.dumps({'stage':'analytic10_sharp_progress','visited':visited,'seconds':monotonic()-start,'pending':len(stack),'counts':counts}),flush=True)
++    finally:
++        _export_pending(stack,current,boundary)
+     terminals=sum(counts.values());assert visited==terminals+splits and terminals+len(stack)==splits+1
+     pending=[{'box':_serial(box),'path':path,'levels':lv,'indices':ix,'active_boundary_ids':[boundary[i]['id']for i in ac]}for _,_,ac,box,lv,ix,path in reversed(stack)]
+-    return {'status':('CONDITIONAL_SHARP_CLOSED'if delta==0 else'CONDITIONAL_NONSHARP_CLOSED')if not stack else'INCOMPLETE','conditional_only':True,'premises':['true symmetric F coefficient enclosures and c enclosure','same input model PSD and pair reduction','every supplied local certificate belongs to this SAME input F/c model; no old-model local transfer'],'bits':bits,'h_range_skipped_nodes':h_range_skipped_nodes,'delta':str(delta),'energy_target':'E_star-'+str(delta),'F_degree':degree,'d_degree':ddegree,'epsF':str(eps),'rootinputs':rootinputs,'guard_reason':reason,'visited_nodes':visited,'split_nodes':splits,'counts':counts,'local_counts':localcounts,'boundary_counts':bc,'maxdepth':maxdepth,'pending_count':len(pending),'pending':pending,'coverage':{'visited_equals_terminal_plus_splits':visited==terminals+splits,'terminal_plus_pending_equals_splits_plus_one':terminals+len(pending)==splits+1,'full_pending_saved':True},'cache_H':list(cache.H.cache_info()),'cache_D':list(cache.D.cache_info()),'elapsed_seconds':monotonic()-start,'transcript_sha256':transcript.hexdigest(),'engine_sha256':sha256(Path(__file__).read_bytes()).hexdigest(),'native_sum_sha256':sha256(Path(__file__).with_name('analytic10_2026_sum.c').read_bytes()).hexdigest(),'native_sum_so_sha256':sha256(Path(__file__).with_name('analytic10_2026_sum.so').read_bytes()).hexdigest(),'tensor_wrapper_sha256':sha256(Path(native_backend.__file__).read_bytes()).hexdigest(),'tensor_C_sha256':sha256(Path(native_backend.__file__).with_suffix('.c').read_bytes()).hexdigest(),'root_inputs_sha256':_hash(rootinputs),'restart_from_full_root':True,'frontier_resumed':False}
++    return {'status':('CONDITIONAL_SHARP_CLOSED'if delta==0 else'CONDITIONAL_NONSHARP_CLOSED')if not stack else'INCOMPLETE','conditional_only':True,'premises':['true symmetric F coefficient enclosures and c enclosure','same input model PSD and pair reduction','every supplied local certificate belongs to this SAME input F/c model; no old-model local transfer'],'bits':bits,'h_range_skipped_nodes':h_range_skipped_nodes,'delta':str(delta),'energy_target':'E_star-'+str(delta),'F_degree':degree,'d_degree':ddegree,'epsF':str(eps),'rootinputs':rootinputs,'guard_reason':reason,'visited_nodes':visited,'split_nodes':splits,'counts':counts,'local_counts':localcounts,'boundary_counts':bc,'maxdepth':maxdepth,'pending_count':len(pending),'pending':pending,'coverage':{'visited_equals_terminal_plus_splits':visited==terminals+splits,'terminal_plus_pending_equals_splits_plus_one':terminals+len(pending)==splits+1,'full_pending_saved':True},'cache_H':list(cache.H.cache_info()),'cache_D':list(cache.D.cache_info()),'elapsed_seconds':monotonic()-start,'transcript_sha256':transcript.hexdigest(),'engine_sha256':sha256(Path(__file__).read_bytes()).hexdigest(),'native_sum_sha256':sha256((Path(__file__).parent.parent / 'analytic10_2026_sum.c').read_bytes()).hexdigest(),'native_sum_so_sha256':sha256((Path(__file__).parent.parent / 'analytic10_2026_sum.so').read_bytes()).hexdigest(),'tensor_wrapper_sha256':sha256(Path(native_backend.__file__).read_bytes()).hexdigest(),'tensor_C_sha256':sha256(Path(native_backend.__file__).with_suffix('.c').read_bytes()).hexdigest(),'root_inputs_sha256':_hash(rootinputs),'restart_from_full_root':True,'frontier_resumed':False}

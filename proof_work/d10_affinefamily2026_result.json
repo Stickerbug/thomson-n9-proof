@@ -1,0 +1,74 @@
+{
+  "status": "CERTIFIED_THREE_EXACT_CONTACT_PSD_ENDPOINTS_AND_AFFINE_FAMILY_NOT_GLOBAL",
+  "source": "/home/dsh/Thomson Problem/proof_work/sharp_contact_refinement2026_batch3_best_original_data.json",
+  "source_sha256": "099e143bb86171f6292ef19ff7ae051510c76f0585e42bdcada7c866f46b4929",
+  "model_keys": [
+    "first_batch_original_PSD_seed",
+    "third_batch_original_models[0]",
+    "third_batch_original_models[1]"
+  ],
+  "endpoints": [
+    {
+      "index": 0,
+      "certificate": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_endpoint0_certificate.json",
+      "certificate_sha256": "7196815bb6fd714edbd1b77ee0bebc95b72b2411e4395229946bcea3ca82c732",
+      "coefficients": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_endpoint0_coefficients.json",
+      "coefficients_sha256": "7fc0b40ef6cf4ba26fc4f08257cf8005a5d47083f4f347da1bf1cb8b87e86851",
+      "R_terms": 807,
+      "R_at_old_negative_witness": {
+        "lo_numerator": "-275330431488683779657731588633802747716629233865246421842001892177682211633022024808502835930089416484030319",
+        "hi_numerator": "-275330431488683779657731588633802747716629233865246421842001892177682211632719984719681314946164952079874491",
+        "denominator_power_of_two": 384,
+        "float_lo": -6.987726211613006e-09,
+        "float_hi": -6.987726211613006e-09
+      },
+      "R_coefficient_sumwidth": "6535629354236065992109204803185923/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+      "smallest_PSD_pivot_lower_display": 3.8143717898548696e-06
+    },
+    {
+      "index": 1,
+      "certificate": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_endpoint1_certificate.json",
+      "certificate_sha256": "911c1e5d5e55844f2e379b16ece23e2bca74504eb29839fc171e5d0ba1d92f33",
+      "coefficients": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_endpoint1_coefficients.json",
+      "coefficients_sha256": "536f6012a47707863a8bbe680b37987e2bd61b635e6553b2dfd3d69a5cd44c55",
+      "R_terms": 807,
+      "R_at_old_negative_witness": {
+        "lo_numerator": "-129464984802903661802850138141000534879526934529379426156546038604031380336923264241775834737191594324148388",
+        "hi_numerator": "-129464984802903661802850138141000534879526934529379426156546038604031380336917081667587343719269862746151197",
+        "denominator_power_of_two": 384,
+        "float_lo": -3.2857460139872392e-09,
+        "float_hi": -3.2857460139872392e-09
+      },
+      "R_coefficient_sumwidth": "133780649228823739530445555022441/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+      "smallest_PSD_pivot_lower_display": 9.994032182602106e-07
+    },
+    {
+      "index": 2,
+      "certificate": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_endpoint2_certificate.json",
+      "certificate_sha256": "6d2ca4b6e1b520dee0c17054009da0a217a2b8c89e496bf1b093efa1da798892",
+      "coefficients": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_endpoint2_coefficients.json",
+      "coefficients_sha256": "7a0b349a6fcb3873a043fb16ea292dc703e724c0004bfc9680cbd3caae7dfe15",
+      "R_terms": 807,
+      "R_at_old_negative_witness": {
+        "lo_numerator": "79677203463408816778348502833713418666979488385607298949309274376940258626298843604580671257463018110391745",
+        "hi_numerator": "79677203463408816778348502833713418666979488385607298949309274376940258626305254910534878879153326818435639",
+        "denominator_power_of_two": 384,
+        "float_lo": 2.0221610815009658e-09,
+        "float_hi": 2.0221610815009658e-09
+      },
+      "R_coefficient_sumwidth": "17341251496108030723406911591245/4925250774549309901534880012517951725634967408808180833493536675530715221437151326426783281860614455100828498788352",
+      "smallest_PSD_pivot_lower_display": 9.99297935825169e-07
+    }
+  ],
+  "shared": "/home/dsh/Thomson Problem/proof_work/d10_affinefamily2026_shared.json",
+  "shared_sha256": "124f29a96e022b1d3bd864c961846e6d6abea381c66fe7978b089cee595c295b",
+  "affine_theorem": "For rational weights w_j with sum w_j=1, nonselected157 coordinates x(w)=sum w_j seed_j; selected33 solve same fixed invertible M_selected and fixed rhs. Since M(sum w_j x_j)=sum w_j rhs=rhs, uniqueness gives x(w)=sum w_j x_j. Thus B,A,F and c are affine; shared H and sum w_j=1 give R_H(w)=sum w_j R_H_j. If all w_j>=0, all B(w) positive definite by convexity. Arbitrary signed affine weights require new PSD verification.",
+  "combination_rule": "For rational nonnegative weights summing to1, combine interval coefficients using outward I384 rational multiplication/addition. Monomial supports may be unioned; absent coefficients are exact0. No new33LU or polynomial export is required. New local or global residual assertions still require their own proof.",
+  "Newton_direction_numerical_diagnostic": [
+    0.0006659877111804839,
+    0.00015566734420174332,
+    0.0007405189639863644
+  ],
+  "Newton_quadratic_predicted_drop": -2.3564211264894975e-09,
+  "seconds": 24.34507131576538
+}

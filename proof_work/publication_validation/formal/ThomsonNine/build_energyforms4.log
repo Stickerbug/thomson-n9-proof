@@ -1,0 +1,12 @@
+=== 05:13:45 building EnergyForms ===
+ThomsonNine/EnergyForms.lean:42:4: error: Type mismatch: After simplification, term
+  HasDerivAt.add (hasDerivAt_const 0 1) (hasDerivAt_id 0)
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.normedAddCommGroup.toAddCommGroup
+    RCLike.toInnerProductSpaceReal.toModule PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ ((fun x => 1) + id) 1
+    0
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => 1 + t) 1 0
+=== FAIL EnergyForms ===
+=== ALL DONE 05:16:18 ===

@@ -1,0 +1,18 @@
+=== 06:43:25 building EnergyGradient ===
+ThomsonNine/EnergyGradient.lean:65:53: error: Application type mismatch: The argument
+  hab
+has type
+  a ≠ b
+but is expected to have type
+  x a ≠ x b
+in the application
+  hasDerivAt_pair_inv_dist (x a) (x b) v hab
+ThomsonNine/EnergyGradient.lean:66:16: warning: `if_true` has been deprecated: Use `ite_true` instead
+Try this:
+  [apply] abel_nf
+ThomsonNine/EnergyGradient.lean:79:19: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/EnergyGradient.lean:79:31: warning: `if_true` has been deprecated: Use `ite_true` instead
+ThomsonNine/EnergyGradient.lean:83:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/EnergyGradient.lean:83:30: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+=== FAIL EnergyGradient ===
+=== ALL DONE 06:46:11 ===

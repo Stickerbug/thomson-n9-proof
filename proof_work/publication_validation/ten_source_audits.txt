@@ -1,0 +1,9 @@
+#print axioms ThomsonNine.TenSource.t018_gathered_mem
+#print axioms ThomsonNine.TenSource.t038_gathered_mem
+#print axioms ThomsonNine.TenSource.t128_gathered_mem
+#print axioms ThomsonNine.TenSource.t145_gathered_mem
+#print axioms ThomsonNine.TenSource.t165_gathered_mem
+#print axioms ThomsonNine.TenSource.t256_gathered_mem
+#print axioms ThomsonNine.TenSource.t770_gathered_mem
+#print axioms ThomsonNine.TenSource.t780_gathered_mem
+#print axioms ThomsonNine.TenSource.t797_gathered_mem

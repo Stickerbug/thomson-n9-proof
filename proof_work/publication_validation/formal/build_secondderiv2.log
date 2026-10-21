@@ -1,0 +1,120 @@
+=== 17:52:46 building SecondDerivative ===
+ThomsonNine/SecondDerivative.lean:49:15: error: Application type mismatch: The argument
+  hasDerivAt_inv (ne_of_gt (pow_pos hr 2))
+has type
+  HasDerivAt (fun y => y⁻¹) (-((r ^ 2) ^ 2)⁻¹) (r ^ 2)
+but is expected to have type
+  HasDerivAt ?m.146 ?m.148 (?m.145 ?m.141)
+in the application
+  HasDerivAt.comp ?m.141 (hasDerivAt_inv (ne_of_gt (pow_pos hr 2)))
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/SecondDerivative.lean:71:4: error: unsolved goals
+case e'_9
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h1 : HasDerivAt (fun y => -2 * √3 * (y ^ 2)⁻¹) (4 * √3 / r ^ 3) r
+hu1 : HasDerivAt (fun y => (√(1 - y ^ 2))⁻¹ ^ 3) (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5) r
+hm :
+  HasDerivAt (fun y => 3 / 2 * (id * fun y => (√(1 - y ^ 2))⁻¹ ^ 3) y)
+    (3 / 2 * (1 * (√(1 - r ^ 2))⁻¹ ^ 3 + id r * (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5))) r
+⊢ r ^ 2 * (√(1 - r ^ 2))⁻¹ ^ 5 * (9 / 2) + (√(1 - r ^ 2))⁻¹ ^ 3 * (3 / 2) =
+    r * (√(1 - r ^ 2))⁻¹ ^ 5 * id r * (9 / 2) + (√(1 - r ^ 2))⁻¹ ^ 3 * (3 / 2)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/SecondDerivative.lean:83:4: error: unsolved goals
+case e'_9
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h1 : HasDerivAt (fun y => -2 * √3 * (y ^ 2)⁻¹) (4 * √3 / r ^ 3) r
+hu1 : HasDerivAt (fun y => (√(1 - y ^ 2))⁻¹ ^ 3) (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5) r
+h2 :
+  HasDerivAt (fun y => 3 / 2 * (y * (√(1 - y ^ 2))⁻¹ ^ 3))
+    (3 / 2 * ((√(1 - r ^ 2))⁻¹ ^ 3 + r * (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5))) r
+hu2 : HasDerivAt (fun y => (√(4 - y ^ 2))⁻¹ ^ 3) (3 * r * (√(4 - r ^ 2))⁻¹ ^ 5) r
+hm :
+  HasDerivAt (fun y => 6 * (id * fun y => (√(4 - y ^ 2))⁻¹ ^ 3) y)
+    (6 * (1 * (√(4 - r ^ 2))⁻¹ ^ 3 + id r * (3 * r * (√(4 - r ^ 2))⁻¹ ^ 5))) r
+⊢ r ^ 2 * (√(4 - r ^ 2))⁻¹ ^ 5 * 18 + (√(4 - r ^ 2))⁻¹ ^ 3 * 6 =
+    r * (√(4 - r ^ 2))⁻¹ ^ 5 * id r * 18 + (√(4 - r ^ 2))⁻¹ ^ 3 * 6
+ThomsonNine/SecondDerivative.lean:98:2: error: unsolved goals
+case e'_8
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h1 : HasDerivAt (fun y => -2 * √3 * (y ^ 2)⁻¹) (4 * √3 / r ^ 3) r
+hu1 : HasDerivAt (fun y => (√(1 - y ^ 2))⁻¹ ^ 3) (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5) r
+h2 :
+  HasDerivAt (fun y => 3 / 2 * (y * (√(1 - y ^ 2))⁻¹ ^ 3))
+    (3 / 2 * ((√(1 - r ^ 2))⁻¹ ^ 3 + r * (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5))) r
+hu2 : HasDerivAt (fun y => (√(4 - y ^ 2))⁻¹ ^ 3) (3 * r * (√(4 - r ^ 2))⁻¹ ^ 5) r
+h3 :
+  HasDerivAt (fun y => 6 * (y * (√(4 - y ^ 2))⁻¹ ^ 3)) (6 * ((√(4 - r ^ 2))⁻¹ ^ 3 + r * (3 * r * (√(4 - r ^ 2))⁻¹ ^ 5)))
+    r
+hu3 : HasDerivAt (fun y => (√(2 - y))⁻¹ ^ 3) (3 / 2 * (√(2 - r))⁻¹ ^ 5) r
+h4 : HasDerivAt (fun y => 6 * (√(2 - y))⁻¹ ^ 3) (6 * (3 / 2 * (√(2 - r))⁻¹ ^ 5)) r
+hu4 : HasDerivAt (fun y => (√(2 + 2 * y))⁻¹ ^ 3) (-3 * (√(2 + 2 * r))⁻¹ ^ 5) r
+h5 : HasDerivAt (fun y => -6 * (√(2 + 2 * y))⁻¹ ^ 3) (-6 * (-3 * (√(2 + 2 * r))⁻¹ ^ 5)) r
+hsum :
+  HasDerivAt
+    (((((fun y => -2 * √3 * (y ^ 2)⁻¹) + fun y => 3 / 2 * (y * (√(1 - y ^ 2))⁻¹ ^ 3)) + fun y =>
+          6 * (y * (√(4 - y ^ 2))⁻¹ ^ 3)) +
+        fun y => 6 * (√(2 - y))⁻¹ ^ 3) +
+      fun y => -6 * (√(2 + 2 * y))⁻¹ ^ 3)
+    (4 * √3 / r ^ 3 + 3 / 2 * ((√(1 - r ^ 2))⁻¹ ^ 3 + r * (3 * r * (√(1 - r ^ 2))⁻¹ ^ 5)) +
+          6 * ((√(4 - r ^ 2))⁻¹ ^ 3 + r * (3 * r * (√(4 - r ^ 2))⁻¹ ^ 5)) +
+        6 * (3 / 2 * (√(2 - r))⁻¹ ^ 5) +
+      -6 * (-3 * (√(2 + 2 * r))⁻¹ ^ 5))
+    r
+y : ℝ
+⊢ -(√3 * y⁻¹ ^ 2 * 2) + y * (√(1 - y ^ 2))⁻¹ ^ 3 * (3 / 2) + y * (√(4 - y ^ 2))⁻¹ ^ 3 * 6 + (√(2 - y))⁻¹ ^ 3 * 6 -
+      (√(2 + y * 2))⁻¹ ^ 3 * 6 =
+    (((((fun y => -(√3 * y⁻¹ ^ 2 * 2)) + fun y => y * (√(1 - y ^ 2))⁻¹ ^ 3 * (3 / 2)) + fun y =>
+            y * (√(4 - y ^ 2))⁻¹ ^ 3 * 6) +
+          fun y => (√(2 - y))⁻¹ ^ 3 * 6) +
+        fun y => -((√(2 + y * 2))⁻¹ ^ 3 * 6))
+      y
+ThomsonNine/SecondDerivative.lean:175:69: error: Application type mismatch: The argument
+  hx.left
+has type
+  r < x
+but is expected to have type
+  r ≤ x
+in the application
+  lt_of_lt_of_le hr hx.left
+ThomsonNine/SecondDerivative.lean:176:24: error: Application type mismatch: The argument
+  hx.right
+has type
+  x < s
+but is expected to have type
+  x ≤ s
+in the application
+  lt_of_le_of_lt hx.right
+ThomsonNine/SecondDerivative.lean:189:69: error: Application type mismatch: The argument
+  hx.left
+has type
+  s < x
+but is expected to have type
+  s ≤ x
+in the application
+  lt_of_lt_of_le hs hx.left
+ThomsonNine/SecondDerivative.lean:190:24: error: Application type mismatch: The argument
+  hx.right
+has type
+  x < r
+but is expected to have type
+  x ≤ r
+in the application
+  lt_of_le_of_lt hx.right
+=== FAIL SecondDerivative ===
+=== ALL DONE 17:54:42 ===

@@ -1,0 +1,118 @@
+{
+  "status": "INDEPENDENT_PSD_BLOCKS_PASS",
+  "process_exit_code": 0,
+  "elapsed_seconds": 1.0472135409945622,
+  "bits": 640,
+  "previous_export_pair_candidate_artifacts_unchanged": true,
+  "source_sha256": "a31a0f109ebed799b51a42331ffc02adc8a479c54ccc9c055761754cde03d049",
+  "coordinate_count": 190,
+  "block_count": 11,
+  "strict_positive_pivot_count": 50,
+  "block_dimensions_and_minimum_lower_display_only": [
+    {
+      "k": 0,
+      "dimension": 9,
+      "minimum_pivot_lower_approx": "0.0000169382581361814156887493"
+    },
+    {
+      "k": 1,
+      "dimension": 9,
+      "minimum_pivot_lower_approx": "0.000268209127677593304408338"
+    },
+    {
+      "k": 2,
+      "dimension": 7,
+      "minimum_pivot_lower_approx": "0.000226492162884210936844018"
+    },
+    {
+      "k": 3,
+      "dimension": 7,
+      "minimum_pivot_lower_approx": "0.00538646026466303646748222"
+    },
+    {
+      "k": 4,
+      "dimension": 5,
+      "minimum_pivot_lower_approx": "0.0338259860141621623732092"
+    },
+    {
+      "k": 5,
+      "dimension": 5,
+      "minimum_pivot_lower_approx": "0.000456884417258089205558302"
+    },
+    {
+      "k": 6,
+      "dimension": 3,
+      "minimum_pivot_lower_approx": "0.00189287698005667421391496"
+    },
+    {
+      "k": 7,
+      "dimension": 3,
+      "minimum_pivot_lower_approx": "0.00000393527034676741776668248"
+    },
+    {
+      "k": 8,
+      "dimension": 1,
+      "minimum_pivot_lower_approx": "0.00000163110751798184917353433"
+    },
+    {
+      "k": 9,
+      "dimension": 1,
+      "minimum_pivot_lower_approx": "0.00000670310855799471135797473"
+    },
+    {
+      "k": 10,
+      "dimension": 0,
+      "minimum_pivot_lower_approx": null
+    }
+  ],
+  "negative_tests": [
+    {
+      "case": "duplicate_index",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "duplicate index"
+    },
+    {
+      "case": "lower_triangle_noncanonical_index",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "noncanonical lower-triangle index: symmetry invalid"
+    },
+    {
+      "case": "deleted_coordinate",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "coordinate count must equal 190"
+    },
+    {
+      "case": "nonsymmetric_matrix",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "matrix intervals are not symmetric"
+    },
+    {
+      "case": "negative_diagonal",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "LDL pivot 0 lacks strictly positive lower bound"
+    },
+    {
+      "case": "reversed_interval",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "reversed raw coefficient interval"
+    }
+  ],
+  "files": {
+    "independent_psd_blocks.py": {
+      "sha256": "299440061c8012e4ccf66edd1b3bb2ceb29998669ffb6e7141445d6fce0d46b2",
+      "bytes": 5066
+    },
+    "independent_psd_blocks_result.json": {
+      "sha256": "9b1a34da514d7dd3fe1f8ceb8f86ddc247a4d33ae0c7767ae1fd496ad3276cbe",
+      "bytes": 347186
+    },
+    "independent_psd_blocks.log": {
+      "sha256": "e4146704ea9318c4b60179d0cd51edab08fb99aeee5d814414c60874be4980c2",
+      "bytes": 1862
+    },
+    "README_independent_psd_blocks.md": {
+      "sha256": "81cf5cc2b638af8dd957e128efda28ddfeb719334b8d9986cad4745bdbf10a5f",
+      "bytes": 4035
+    }
+  }
+}

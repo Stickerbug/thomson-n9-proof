@@ -1,0 +1,141 @@
+{
+  "status": "ORIGINAL_HESSIAN_INTERVAL_TO_PSD_EXPORT_ONLY",
+  "rows": [
+    {
+      "index": 0,
+      "label": "AAA",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_00_AAA.json",
+        "sha256": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_00_AAA"
+    },
+    {
+      "index": 1,
+      "label": "CBA",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_01_CBA.json",
+        "sha256": "9370f0f76e4ca1c945de39661c9d6d7908c4c31feec805c2d5ea02001612cb00"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_01_CBA"
+    },
+    {
+      "index": 2,
+      "label": "CCA",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_02_CCA.json",
+        "sha256": "bcc1ebde610e5cb3e496b3a799b0da3ee0ef23ca9fd8c6f59b5bd5e7c6743943"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_02_CCA"
+    },
+    {
+      "index": 3,
+      "label": "AFF",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_03_AFF.json",
+        "sha256": "59f76b8de023d04616ae1efb57dc9fb22892dfb04d42805519ade2157dc2d9fe"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_03_AFF"
+    },
+    {
+      "index": 4,
+      "label": "GAF",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_04_GAF.json",
+        "sha256": "5ea3d7226c0ad28bba35074a54168e78f73978584f524044e0d308dd4d42c77b"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_04_GAF"
+    },
+    {
+      "index": 5,
+      "label": "BFF",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_05_BFF.json",
+        "sha256": "206bb814ea78c19412f4f4b22eca6755788671bd0eed9d6004ecf03cd904cf66"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_05_BFF"
+    },
+    {
+      "index": 6,
+      "label": "GGB",
+      "dimension": 2,
+      "entry_enclosures": 3,
+      "source": {
+        "file": "independent_local_06_GGB.json",
+        "sha256": "ac880bffdd6e9ea7ce864278dcfc3fedbecae23030a45058b4b450c7d00b1110"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_06_GGB"
+    },
+    {
+      "index": 7,
+      "label": "CFF",
+      "dimension": 2,
+      "entry_enclosures": 3,
+      "source": {
+        "file": "independent_local_07_CFF.json",
+        "sha256": "6eea673d975d85e886e9d6e5d8eae60514e6ce18376c614383a499932994ab09"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_07_CFF"
+    },
+    {
+      "index": 8,
+      "label": "CGF",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_08_CGF.json",
+        "sha256": "bbde094a487a3d22fc7c7c2bc42f066ffb3010953f496ca098b82cdd2a91bed5"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_08_CGF"
+    },
+    {
+      "index": 9,
+      "label": "DDD",
+      "dimension": 2,
+      "entry_enclosures": 3,
+      "source": {
+        "file": "independent_local_09_DDD.json",
+        "sha256": "575ea3c4c887e858bc9072c79bfe8acaed9f32c2bc5c04f2c2f43cdfcdf222b9"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_09_DDD"
+    },
+    {
+      "index": 10,
+      "label": "DFF",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_10_DFF.json",
+        "sha256": "cc07b6aacafda071a260b20ecebb68adf841b17185ff24f799fb7210308a808d"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_10_DFF"
+    },
+    {
+      "index": 11,
+      "label": "GDF",
+      "dimension": 3,
+      "entry_enclosures": 6,
+      "source": {
+        "file": "independent_local_11_GDF.json",
+        "sha256": "48c2756ca908b86278689ebbb827b95d7eaee8258897a32bad58e1faf9b07d7b"
+      },
+      "theorem": "ThomsonNine.LocalLDL.HessianBridge.psd_original_11_GDF"
+    }
+  ],
+  "entry_enclosures": 63,
+  "generated_sha256": "0292469391d085f1d3cd9a0bd8e8c9315d50a6ab61d4378142e91765f4e829e8",
+  "exporter_sha256": "db4b567b53328ddccb9bd2e4cc9ba404e83a4b7a4b31532e9851665cc3089c66",
+  "remaining_premise": "Actual original Hessian entries belong to target_Hessian intervals. No real residual differentiation or exact contact identities proved."
+}

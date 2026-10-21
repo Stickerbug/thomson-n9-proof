@@ -1,0 +1,44 @@
+{
+  "status": "budget_exhausted",
+  "stopping_reason": "time_limit",
+  "elapsed_seconds": 59.002085927990265,
+  "processed_nodes": 2660,
+  "total_tree_nodes": 5260,
+  "pending": 2600,
+  "counts": {
+    "split": 2628,
+    "excluded": 32
+  },
+  "max_depth": 10,
+  "coverage": [
+    {
+      "root": 0,
+      "volume_by_action": {
+        "exclude_pair_cap": "1",
+        "pending": "15"
+      },
+      "total": "16"
+    },
+    {
+      "root": 1,
+      "volume_by_action": {
+        "pending": "16"
+      },
+      "total": "16"
+    },
+    {
+      "root": 2,
+      "volume_by_action": {
+        "pending": "16"
+      },
+      "total": "16"
+    },
+    {
+      "root": 3,
+      "volume_by_action": {
+        "pending": "16"
+      },
+      "total": "16"
+    }
+  ]
+}

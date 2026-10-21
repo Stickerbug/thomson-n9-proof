@@ -1,0 +1,452 @@
+{
+  "status": "microbenchmark_only",
+  "not_a_proof_run": true,
+  "bits": 48,
+  "degree": [
+    27,
+    27,
+    27
+  ],
+  "full_tensor_shape": [
+    28,
+    28,
+    28
+  ],
+  "node_limit": 20,
+  "seconds_limit": 28,
+  "build_seconds": 4.864865104027558,
+  "elapsed_seconds": 6.393085937015712,
+  "compared_nodes": 20,
+  "rows": [
+    {
+      "node": 0,
+      "depth": 0,
+      "horner_max_residual_width": 12226.674315660486,
+      "bernstein_max_residual_width": 159.77266068765866,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 9.113945101118432,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.0586812500259839,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 1,
+      "depth": 0,
+      "horner_max_residual_width": 12226.674315660486,
+      "bernstein_max_residual_width": 159.77266068765866,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 9.113945101118432,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.01786874997196719,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2,
+      "depth": 0,
+      "horner_max_residual_width": 12226.674315660486,
+      "bernstein_max_residual_width": 159.77266068765866,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 9.113945101118432,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.016706249967683107,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 3,
+      "depth": 0,
+      "horner_max_residual_width": 12226.674315660486,
+      "bernstein_max_residual_width": 159.77266068765866,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 9.113945101118432,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.013287500012665987,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2044,
+      "depth": 9,
+      "horner_max_residual_width": 1002.444723008102,
+      "bernstein_max_residual_width": 2.9801240839855545,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 9.113945101118432,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.12031666602706537,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2045,
+      "depth": 9,
+      "horner_max_residual_width": 1057.935517010548,
+      "bernstein_max_residual_width": 2.9801240839855545,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 9.113945101118432,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.02518072898965329,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2046,
+      "depth": 9,
+      "horner_max_residual_width": 1398.1804721533229,
+      "bernstein_max_residual_width": 2.9450314819010934,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 7.89153467943078,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.10303854203084484,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2047,
+      "depth": 9,
+      "horner_max_residual_width": 1244.442403240442,
+      "bernstein_max_residual_width": 2.9450314819010934,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 7.89153467943078,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.026797917031217366,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2048,
+      "depth": 9,
+      "horner_max_residual_width": 1611.1783557741924,
+      "bernstein_max_residual_width": 2.9394401779447463,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 5.171242924394392,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.0753828120068647,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2049,
+      "depth": 9,
+      "horner_max_residual_width": 1234.0045158747218,
+      "bernstein_max_residual_width": 2.9394401779447463,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 5.171242924394392,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.020949479017872363,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2050,
+      "depth": 9,
+      "horner_max_residual_width": 3232.010282352474,
+      "bernstein_max_residual_width": 21.262583973888372,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 7.849930840309558,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.14932187501108274,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2051,
+      "depth": 9,
+      "horner_max_residual_width": 2323.3267508099225,
+      "bernstein_max_residual_width": 5.267845271680336,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 7.849930840309558,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.09273333300370723,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2052,
+      "depth": 9,
+      "horner_max_residual_width": 1060.2711599671222,
+      "bernstein_max_residual_width": 2.9801240839855545,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 8.896713132940253,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.07287708297371864,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2053,
+      "depth": 9,
+      "horner_max_residual_width": 1722.27090076926,
+      "bernstein_max_residual_width": 2.9450314819010934,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 7.789384638896809,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.054659896006342024,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2054,
+      "depth": 9,
+      "horner_max_residual_width": 822.5269166152485,
+      "bernstein_max_residual_width": 1.6385538327878777,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 4.3321070046053975,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.1828562499722466,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2055,
+      "depth": 9,
+      "horner_max_residual_width": 945.3432142737428,
+      "bernstein_max_residual_width": 2.9850599833254527,
+      "bernstein_W_lower": 0.0,
+      "bernstein_W_upper": 7.747780673342781,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        4
+      ],
+      "seconds": 0.059964582964312285,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2659,
+      "depth": 9,
+      "horner_max_residual_width": 704.1202544309842,
+      "bernstein_max_residual_width": 2.9801240839855545,
+      "bernstein_W_lower": 3.2219108305753252e-06,
+      "bernstein_W_upper": 4.827351890029956,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.21398281201254576,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2658,
+      "depth": 9,
+      "horner_max_residual_width": 686.5807198609284,
+      "bernstein_max_residual_width": 2.9801240839855545,
+      "bernstein_W_lower": 3.2219108305753252e-06,
+      "bernstein_W_upper": 4.827351890029956,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.04780729202320799,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2657,
+      "depth": 9,
+      "horner_max_residual_width": 781.5916696488591,
+      "bernstein_max_residual_width": 5.267845271680336,
+      "bernstein_W_lower": 2.6407994226929077e-06,
+      "bernstein_W_upper": 6.498449743353557,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.12517812504665926,
+      "threshold_passed_on_this_saved_box": false
+    },
+    {
+      "node": 2656,
+      "depth": 9,
+      "horner_max_residual_width": 914.5488198768096,
+      "bernstein_max_residual_width": 5.267845271680336,
+      "bernstein_W_lower": 2.6407994226929077e-06,
+      "bernstein_W_upper": 6.498449743353557,
+      "query_cover_leafcounts": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "seconds": 0.04537187499227002,
+      "threshold_passed_on_this_saved_box": false
+    }
+  ],
+  "stats": {
+    "created_cells": 482,
+    "queries": 180,
+    "query_splits": 1168
+  },
+  "max_query_leaves": 4,
+  "max_query_splits": 10,
+  "arithmetic": "Exact Fraction root transform; lower/upper integer coefficient bounds scaled 2^48. All midpoint de Casteljau outward. Safe int64 extrema asserted <2^60, each sum <2^61.",
+  "query_coverage": "Each query keeps every child cell whose exact rational box overlaps its interval product; root starts with full [-1,14/25]^d. No uncovered portion is discarded. Min lower/max upper over intersecting leaves enclose R on the query. max(0,lower) uses the old geometric nonnegativity certificate only.",
+  "warning": "Only saved nodes were compared; the original 2600 pending leaves are unchanged. No W acceptance is transferred to the proof tree. Boundaries may be duplicated and only worsen ranges."
+}

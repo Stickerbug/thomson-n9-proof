@@ -1,0 +1,10 @@
+=== 09:15:23 building EnergySymmetry ===
+ThomsonNine/EnergySymmetry.lean:44:15: warning: This simp argument is unused:
+  Equiv.symm_apply_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [σ.injective.eq_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== OK EnergySymmetry ===
+=== ALL DONE 09:17:12 ===

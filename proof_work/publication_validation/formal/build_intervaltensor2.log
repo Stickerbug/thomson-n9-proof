@@ -1,0 +1,4 @@
+=== 13:46:50 building IntervalTensor ===
+ThomsonNine/IntervalTensor.lean:29:8: error(lean.unknownIdentifier): Unknown identifier `nonneg_of_lo`
+=== FAIL IntervalTensor ===
+=== ALL DONE 13:49:37 ===

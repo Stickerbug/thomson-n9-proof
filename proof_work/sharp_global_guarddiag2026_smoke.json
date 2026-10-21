@@ -1,0 +1,22 @@
+{
+  "status": "SMOKE_PASSED",
+  "negative_constant_guard": {
+    "visited_nodes": 275,
+    "maxdepth": 148,
+    "pending_count": 22,
+    "status": "DEPTH_GUARD_REACHED_DIAGNOSTIC_ONLY",
+    "root_coverage": {
+      "binary_partition_complete": true,
+      "terminal_plus_pending_equals_splits_plus_one": true,
+      "visited_equals_terminal_plus_splits": true,
+      "pending_boxes_complete": true
+    }
+  },
+  "guard_axis_levels": [
+    50,
+    49,
+    49
+  ],
+  "positive_status": "DIAGNOSTIC_TREE_CLOSED_NOT_GLOBAL_PROOF",
+  "no_global_conclusion": true
+}

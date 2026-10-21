@@ -1,0 +1,9 @@
+=== 08:14:29 building GradientZero ===
+ThomsonNine/GradientZero.lean:19:13: error: typeclass instance problem is stuck
+  AddCommMonoid ?m.66
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `AddCommMonoid` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+=== FAIL GradientZero ===
+=== ALL DONE 08:17:28 ===

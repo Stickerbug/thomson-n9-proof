@@ -1,0 +1,11 @@
+=== 16:32:34 building DerivProbe ===
+ThomsonNine/DerivProbe.lean:11:2: error: `fun_prop` was unable to prove `DifferentiableAt ℝ
+  (fun r => √3 + 2 * √3 / r + 3 / (2 * √(1 - r ^ 2)) + 6 / √(4 - r ^ 2) + 12 / √(2 - r) + 6 / √(2 + 2 * r)) r`
+
+Issues:
+  No theorems found for `HDiv.hDiv` in order to prove `DifferentiableAt ℝ (fun i5 => 3 / i5) (2 * √(1 - r ^ 2))`
+  No theorems found for `HDiv.hDiv` in order to prove `DifferentiableAt ℝ (fun i => 3 / (2 * √(1 - i ^ 2))) r`
+  No theorems found for `HDiv.hDiv` in order to prove `DifferentiableAt ℝ (fun a => 2 * √3 / a) r`
+ThomsonNine/DerivProbe.lean:27:2: error: `ring_nf` made no progress on the goal
+=== FAIL DerivProbe ===
+=== ALL DONE 16:35:39 ===

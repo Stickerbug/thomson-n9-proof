@@ -1,0 +1,3 @@
+#print axioms ThomsonNine.SeventeenSource.t011_gathered_mem
+#print axioms ThomsonNine.SeventeenSource.t138_gathered_mem
+#print axioms ThomsonNine.SeventeenSource.t790_gathered_mem

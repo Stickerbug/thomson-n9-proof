@@ -1,0 +1,27 @@
+=== 16:54:45 building IntervalTensorEval ===
+ThomsonNine/IntervalTensorEval.lean:19:31: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:21:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:22:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:26:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:27:30: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:28:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+=== FAIL IntervalTensorEval ===
+=== ALL DONE 16:57:38 ===

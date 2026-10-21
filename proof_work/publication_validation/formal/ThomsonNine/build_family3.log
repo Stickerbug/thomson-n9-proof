@@ -1,0 +1,2435 @@
+=== 15:44:36 building Family ===
+ThomsonNine/Family.lean:81:34: warning: Variable name `hr1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Family.lean:94:22: warning: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Family.lean:94:35: warning: Variable name `hr1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Family.lean:101:34: warning: Variable name `hr1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Family.lean:126:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:126:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:126:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:127:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:127:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:127:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:128:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:129:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:130:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:131:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:134:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:128:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:129:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:130:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:131:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:134:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:141:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:141:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:142:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:143:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:143:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:143:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:144:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:145:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:146:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:147:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:150:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:144:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:145:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:146:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:147:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:150:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:157:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:157:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:158:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:158:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:158:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:159:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:159:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:159:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:160:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:161:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:162:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:163:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:165:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:166:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:160:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:161:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:162:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:163:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:165:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:166:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:174:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:174:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:174:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:175:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:175:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:175:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:176:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:178:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:179:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:176:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:178:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:179:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:189:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:189:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:190:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:191:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:191:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:191:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:192:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:194:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:195:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:192:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:194:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:195:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:205:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:205:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:206:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:206:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:206:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:207:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:209:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:211:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:214:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:209:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:211:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:214:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:221:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:221:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:222:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:222:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:222:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:223:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:223:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:223:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:225:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:226:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:229:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:230:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:225:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:226:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:229:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:230:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:237:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:237:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:238:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:238:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:239:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:239:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:241:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:243:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:246:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:241:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:243:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:246:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:254:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:255:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:255:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:255:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:256:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:257:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:258:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:259:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:261:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:262:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:256:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:257:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:258:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:259:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:261:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:262:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:270:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:270:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:270:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:271:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:271:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:271:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:272:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:274:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:275:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:272:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:274:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:275:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:286:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:286:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:286:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:287:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:287:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:287:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:288:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:289:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:290:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:291:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:293:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:294:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:288:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:289:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:290:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:291:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:293:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:294:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:302:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:303:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:303:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:303:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:304:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:306:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:307:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:304:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:306:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:307:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:318:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:318:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:318:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:319:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:321:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:323:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:326:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:321:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:323:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:326:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:334:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:334:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:334:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:335:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:335:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:335:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:337:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:339:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:342:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:337:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:339:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:342:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:350:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:350:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:351:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:351:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:353:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:354:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:358:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:353:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:354:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:358:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:365:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:365:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:366:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:367:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:367:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:367:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:368:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:370:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:371:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:368:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:370:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:371:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:382:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:383:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:383:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:383:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:384:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:386:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:387:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:384:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:386:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:387:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:397:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:397:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:398:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:399:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:399:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:399:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:400:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:401:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:402:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:403:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:405:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:406:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:400:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:401:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:402:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:403:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:405:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:406:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:413:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:413:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:414:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:415:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:417:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:418:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:422:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:417:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:418:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:422:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:429:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:429:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:430:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:431:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:431:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:431:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:433:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:435:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:438:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:433:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:435:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:438:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:445:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:445:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:447:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:447:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:449:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:451:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:454:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:449:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:451:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:454:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:462:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:462:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:462:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:463:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:463:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:463:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:464:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:465:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:466:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:467:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:470:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:464:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:465:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:466:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:467:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:470:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:477:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:477:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:478:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:479:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:479:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:479:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:480:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:481:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:482:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:483:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:486:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:480:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:481:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:482:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:483:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:486:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:493:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:493:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:494:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:494:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:494:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:495:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:497:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:499:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:502:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:497:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:499:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:502:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:509:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:509:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:510:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:510:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:510:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:511:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:511:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:511:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:513:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:514:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:517:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:518:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:513:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:514:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:517:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:518:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:525:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:525:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:526:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:526:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:527:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:527:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:529:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:531:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:534:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:529:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:531:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:534:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:542:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:543:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:543:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:543:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:544:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:545:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:546:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:547:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:549:29: warning: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:550:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:544:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:545:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:546:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:547:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:549:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:550:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:558:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:558:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:558:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:559:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:561:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:563:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:566:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:561:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:563:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:566:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:574:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:574:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:574:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:575:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:575:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:575:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:577:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:579:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:582:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:577:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:579:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:582:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:590:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:590:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:591:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:591:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:593:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:594:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:598:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:593:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:594:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:598:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:605:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:605:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:606:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:607:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:609:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:610:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:614:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:609:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:610:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:614:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:621:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:621:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:622:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:623:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:623:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:623:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:625:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:627:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:630:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:625:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:627:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:630:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:637:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:637:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:639:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:639:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:641:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:643:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:646:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:641:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:643:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:646:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:653:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:653:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:654:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:654:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:654:52: warning: This simp argument is unused:
+  cos_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:655:6: warning: This simp argument is unused:
+  sin_five_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:656:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:657:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:658:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:659:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:662:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:656:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:657:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:658:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:659:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:662:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:669:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:669:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:670:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:670:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:672:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:673:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:674:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:675:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:678:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:672:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:673:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:674:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:675:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:678:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:685:25: warning: This simp argument is unused:
+  cos_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:685:47: warning: This simp argument is unused:
+  sin_two_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:686:6: warning: This simp argument is unused:
+  cos_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, sin_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:686:29: warning: This simp argument is unused:
+  sin_four_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, cos_five_pi_div_three,
+    sin_five_pi_div_three, cos_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:687:29: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:687:47: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_two_pi_div_three, sin_two_pi_div_three, cos_four_pi_div_three, sin_four_pi_div_three,
+    cos_five_pi_div_three, sin_five_pi_div_three, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Family.lean:688:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:689:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:690:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:691:29: warning: Unused tactic linter: `positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:694:29: warning: Unused tactic linter: `nlinarith` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/Family.lean:688:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:689:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:690:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:691:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:694:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/Family.lean:702:45: warning: Variable name `hr1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+=== OK Family ===
+=== ALL DONE 15:47:23 ===

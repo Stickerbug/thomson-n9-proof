@@ -1,0 +1,233 @@
+[
+  {
+    "iteration": 0,
+    "worst_point": [
+      -0.9999894066019149,
+      -0.5638075359237393,
+      0.56
+    ],
+    "R_original": -0.030584647867316545,
+    "gradient_original": [
+      0.5707271926909576,
+      0.00318074574878191,
+      -0.18922563776505985
+    ],
+    "candidate_max_R_original": 2.1510571102112408e-15,
+    "boundary_original_stationarity": [
+      {
+        "candidate": 3,
+        "lambda_original": 0.00046959128800655453,
+        "stationarity_norm_original": 2.4179228639694707e-15
+      },
+      {
+        "candidate": 4,
+        "lambda_original": 9.967519837392191e-09,
+        "stationarity_norm_original": 1.9957983891320847e-15
+      },
+      {
+        "candidate": 7,
+        "lambda_original": 0.01680633413137389,
+        "stationarity_norm_original": 3.925231146709438e-17
+      }
+    ],
+    "compiled_original_discrepancy": 3.130135040052551e-14,
+    "direct_design_discrepancy": 8.743006318923108e-16,
+    "search_seconds": 0.5952671879786067,
+    "strict_negative_audit": [
+      {
+        "point": [
+          -0.999989406501916,
+          -0.5638075358673585,
+          0.5599999999440001
+        ],
+        "R_original": -0.03058464779946911,
+        "gram": 1.368016810943118e-10,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.9999893966020208,
+          -0.563807530285664,
+          0.5599999944
+        ],
+        "R_original": -0.030584641082509648,
+        "gram": 1.3685370170435363e-08,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.9999884066125083,
+          -0.5638069721162033,
+          0.55999944
+        ],
+        "R_original": -0.03058396939238646,
+        "gram": 1.3685424595788476e-06,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.9998894076612548,
+          -0.563751155170147,
+          0.5599440000000001
+        ],
+        "R_original": -0.030516858773824318,
+        "gram": 0.00013685685338282738,
+        "box_strict": true
+      }
+    ]
+  },
+  {
+    "iteration": 1,
+    "worst_point": [
+      -0.3839009081246682,
+      -0.3839009081246682,
+      -0.38390090812466465
+    ],
+    "R_original": -0.013715069711474598,
+    "gradient_original": [
+      -5.273259606752845e-11,
+      -5.273265157867968e-11,
+      -5.273131931105013e-11
+    ],
+    "candidate_max_R_original": 2.5118795932144167e-15,
+    "boundary_original_stationarity": [
+      {
+        "candidate": 3,
+        "lambda_original": 0.00024880706921790103,
+        "stationarity_norm_original": 2.711253011826675e-15
+      },
+      {
+        "candidate": 4,
+        "lambda_original": 0.0014548868313514556,
+        "stationarity_norm_original": 9.209399865702696e-16
+      },
+      {
+        "candidate": 7,
+        "lambda_original": 0.006360302250222617,
+        "stationarity_norm_original": 8.173475083826478e-17
+      }
+    ],
+    "compiled_original_discrepancy": 1.9914625504213745e-15,
+    "direct_design_discrepancy": 8.500145032286355e-16,
+    "search_seconds": 0.2557343749795109,
+    "strict_negative_audit": [
+      {
+        "point": [
+          -0.38390090808627814,
+          -0.38390090808627814,
+          -0.3839009080862746
+        ],
+        "R_original": -0.013715069711475236,
+        "gram": 0.4447017178734677,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.3839009042856591,
+          -0.3839009042856591,
+          -0.38390090428565554
+        ],
+        "R_original": -0.013715069711473696,
+        "gram": 0.44470172998864355,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.3839005242237601,
+          -0.3839005242237601,
+          -0.38390052422375653
+        ],
+        "R_original": -0.013715069711223472,
+        "gram": 0.44470294150543566,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.38386251803385574,
+          -0.38386251803385574,
+          -0.3838625180338522
+        ],
+        "R_original": -0.013715067200495354,
+        "gram": 0.4448240854475483,
+        "box_strict": true
+      }
+    ]
+  },
+  {
+    "iteration": 2,
+    "worst_point": [
+      -0.9802742160668771,
+      0.09931209075543367,
+      0.09931209676035616
+    ],
+    "R_original": -0.004771723031149845,
+    "gradient_original": [
+      0.24245203604994503,
+      -0.04815684216386551,
+      -0.04815684063859493
+    ],
+    "candidate_max_R_original": 3.427813588530171e-15,
+    "boundary_original_stationarity": [
+      {
+        "candidate": 3,
+        "lambda_original": 0.00032143851295245277,
+        "stationarity_norm_original": 3.597709888867812e-15
+      },
+      {
+        "candidate": 4,
+        "lambda_original": 0.0003180467820373952,
+        "stationarity_norm_original": 1.6428756373077293e-15
+      },
+      {
+        "candidate": 7,
+        "lambda_original": 7.582918749088958e-08,
+        "stationarity_norm_original": 2.266233259184326e-17
+      }
+    ],
+    "compiled_original_discrepancy": 8.090750291955828e-15,
+    "direct_design_discrepancy": 9.575673587391975e-16,
+    "search_seconds": 0.29587760398862883,
+    "strict_negative_audit": [
+      {
+        "point": [
+          -0.9802742159688497,
+          0.09931209074550246,
+          0.09931209675042495
+        ],
+        "R_original": -0.004771723006425886,
+        "gram": 2.0187240767910453e-10,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.980274206264135,
+          0.09931208976231275,
+          0.09931209576723518
+        ],
+        "R_original": -0.004771720558803698,
+        "gram": 2.0193305361182468e-08,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.980273235792661,
+          0.0993119914433429,
+          0.09931199744825939
+        ],
+        "R_original": -0.004771475799791577,
+        "gram": 2.0193355775299793e-06,
+        "box_strict": true
+      },
+      {
+        "point": [
+          -0.9801761886452705,
+          0.09930215954635813,
+          0.09930216555068012
+        ],
+        "R_original": -0.004747031904484063,
+        "gram": 0.00020192328096257928,
+        "box_strict": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "certified_method_obstruction",
+  "uniform_moment_lower": "1/1000",
+  "tail_check": "72^2*176/(49*230)<(9-1/1000)^2",
+  "node_multiplicities": [
+    6,
+    12
+  ],
+  "midpoint_convexity_defect": {
+    "lo_numerator": "2412573433056252134454666236789017946377138142122887810877545644510439351361767854570467122853672406641269294344659",
+    "hi_numerator": "2412573433056252134454666236789017946377138142122887810877545644510439351361767854570467122853672406641275111408417",
+    "denominator_power_of_two": 384
+  },
+  "gap_lower_interval": {
+    "lo_numerator": "603130793039208050112622546227541412814850892803788540458126866817884465247415975809787410142373468879715662843",
+    "hi_numerator": "603130793039208050112622546227541412814850892803788540458126866817884465247415975809787410142373468879717117079",
+    "denominator_power_of_two": 384
+  },
+  "conclusion": "Every standard finite-degree Legendre LP minorant has B < E_star - 1/100000. Its supremum cannot approach E_star.",
+  "scope": "p=sum a_l P_l <= f on [-1,1), a_l>=0 for l>=1; N=9; B=(81a0-9p(1))/2. Also applies to uniformly absolutely convergent Legendre expansions with finite sum a_l and the same defect identity."
+}

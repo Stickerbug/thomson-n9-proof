@@ -1,0 +1,39 @@
+=== 17:05:14 building IntervalTensorEval ===
+ThomsonNine/IntervalTensorEval.lean:19:31: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:21:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:22:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:26:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:27:30: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:28:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:40:13: error: unsolved goals
+ι : Type u_1
+f : ι → RatInterval
+g : ι → ℝ
+h : ∀ i ∈ ∅, (f i).mem (g i)
+⊢ lo 0 ≤ 0
+ThomsonNine/IntervalTensorEval.lean:40:37: error: unsolved goals
+ι : Type u_1
+f : ι → RatInterval
+g : ι → ℝ
+h : ∀ i ∈ ∅, (f i).mem (g i)
+⊢ 0 ≤ hi 0
+=== FAIL IntervalTensorEval ===
+=== ALL DONE 17:08:13 ===

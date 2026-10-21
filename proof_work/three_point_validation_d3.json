@@ -1,0 +1,11 @@
+{
+  "degree": 3,
+  "continuous_min_residual": -0.00019849753715400764,
+  "parameters": [
+    -0.750429368261778,
+    0.2527885845547131,
+    0.691947768232354
+  ],
+  "success": true,
+  "evaluations": 2164
+}

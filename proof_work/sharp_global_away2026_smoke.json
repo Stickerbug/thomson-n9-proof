@@ -1,0 +1,15 @@
+{
+  "status": "SMOKE_PASSED",
+  "checks": [
+    "48 independently transformed child tensors outward-enclosed",
+    "constant interval positive",
+    "budget zero retains whole root",
+    "Gram-negative pruning with complete pending",
+    "uncertain center intersection contains full root",
+    "midpoint-only containment correctly rejected",
+    "R=g compensated S=R-g=0 closes root on Gram",
+    "float rejected",
+    "negative-lambda rejected"
+  ],
+  "conditional_only": true
+}

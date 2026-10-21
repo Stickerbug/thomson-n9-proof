@@ -1,0 +1,18 @@
+[
+  {
+    "degree": 4,
+    "max_h_minus_f_at_candidate": 1.1102230246251565e-16,
+    "candidate_ordered_residual_sum": 3.907985046680551e-12,
+    "candidate_ordered_residual_max_abs": 9.045209026226075e-12,
+    "weighted_G_innerproduct": 1.313124609054127e-11,
+    "objective_minus_target": -1.4210854715202004e-14
+  },
+  {
+    "degree": 6,
+    "max_h_minus_f_at_candidate": 1.1102230246251565e-16,
+    "candidate_ordered_residual_sum": -1.640942156461156e-13,
+    "candidate_ordered_residual_max_abs": 7.907563492892677e-14,
+    "weighted_G_innerproduct": 2.78461715491618e-13,
+    "objective_minus_target": 0.0
+  }
+]

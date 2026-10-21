@@ -1,0 +1,37 @@
+replaying rational pair056 verifier
+PASS saved rational coefficients only; independent implementation; minorant nodes 23 exclusion nodes 1
+PASS refined root and strict candidate energy<U ['25.75998653126983156407570227', '25.75998653126983156407570227']
+PASS exact Hermite reconstruction and geometric W minor
+all190 analytic interval columns built seconds 29.852680683135986
+{"status": "CERTIFIED_CONTACT_AND_POSITIVE_DEFINITE", "delta_display_max": 1.440298496066966e-12, "seconds": 30.326149940490723}
+all190 analytic interval columns built seconds 13.078359365463257
+PASS exported 807 R terms seconds 1.88484525680542
+PASS local ['A', 'A', 'A'] .001 seconds 0.5020008087158203
+PASS local ['C', 'B', 'A'] .0001 seconds 1.1701438426971436
+PASS local ['C', 'C', 'A'] .001 seconds 1.7334942817687988
+PASS local ['A', 'F', 'F'] .001 seconds 2.7989935874938965
+PASS local ['G', 'A', 'F'] .0001 seconds 4.935114860534668
+PASS local ['B', 'F', 'F'] .0001 seconds 8.878340244293213
+PASS local ['G', 'G', 'B'] .0001 seconds 10.69935154914856
+PASS local ['C', 'F', 'F'] .00001 seconds 11.71914029121399
+PASS local ['C', 'G', 'F'] .00001 seconds 12.746970891952515
+PASS local ['D', 'D', 'D'] .00001 seconds 13.429175615310669
+PASS local ['D', 'F', 'F'] .0001 seconds 15.283151149749756
+PASS local ['G', 'D', 'F'] .0001 seconds 16.748152494430542
+CERTIFIED_POSITIVE_WIDTH_CONTACT_NEIGHBORHOODS
+CERTIFIED_SHARP_PREREQUISITES_NOT_GLOBAL seconds 68.28112030029297
+PASS ['A', 'A', 'A'] 1/1000 wider False seconds 2.729729652404785
+PASS ['C', 'B', 'A'] 3/10000 wider True seconds 5.682918548583984
+PASS ['C', 'C', 'A'] 1/1000 wider False seconds 7.736815452575684
+PASS ['A', 'F', 'F'] 1/1000 wider False seconds 8.988193273544312
+PASS ['G', 'A', 'F'] 3/10000 wider True seconds 11.529159784317017
+PASS ['B', 'F', 'F'] 3/10000 wider True seconds 14.281953573226929
+PASS ['G', 'G', 'B'] 1/10000 wider False seconds 17.696606636047363
+PASS ['C', 'F', 'F'] 1/10000 wider True seconds 20.820905208587646
+PASS ['C', 'G', 'F'] 3/100000 wider True seconds 24.269859790802002
+PASS ['D', 'D', 'D'] 1/100000 wider False seconds 25.996405124664307
+PASS ['D', 'F', 'F'] 1/1000 wider True seconds 28.462729692459106
+PASS ['G', 'D', 'F'] 3/10000 wider True seconds 30.87032127380371
+CERTIFIED_PRECONDITIONED_POSITIVE_WIDTH_LOCAL_BOXES_NOT_GLOBAL wider 7 seconds 30.92048931121826
+Starting fresh complete-root native128 check
+INCOMPLETE_GLOBAL_COVERAGE 1

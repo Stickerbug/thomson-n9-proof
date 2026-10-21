@@ -1,0 +1,282 @@
+{
+  "status": "INDEPENDENT_N_CONTACT33_F_C_BINDING_PASS",
+  "process_exit_codes": {
+    "initial_fraction_solve": "UNRECORDED_AFTER_JOB_REGISTRY_RESET; ENOSYS traceback preserved",
+    "full_bracket_integer_solve": 0,
+    "radius_refinement_and_N": 0,
+    "refined_integer_solve": 0,
+    "coefficient_binding": 0,
+    "component_and_interval_and_sparse_tests": 0
+  },
+  "previous_artifacts_unchanged": {
+    "sharp_tree_completion.json": true,
+    "independent_pair_reduction_completion.json": true,
+    "independent_candidate_bounds_completion.json": true,
+    "independent_psd_blocks_completion.json": true
+  },
+  "all_previous_artifacts_unchanged": true,
+  "bits": 640,
+  "refinement_bisections": 150,
+  "root_width_at_most_2powminus500": true,
+  "all190_x_inside_original": true,
+  "strict_Gauss_pivots": 33,
+  "F_count": 756,
+  "all756_F_inside_original": true,
+  "c_inside_original": true,
+  "E_inside_original": true,
+  "F111_inside_original": true,
+  "elapsed_seconds": {
+    "radius_and_N": 9.19158853997942,
+    "refined_solve": 43.456492181052454,
+    "F_c_binding": 2.260479165939614
+  },
+  "source_certificate_sha256": "a31a0f109ebed799b51a42331ffc02adc8a479c54ccc9c055761754cde03d049",
+  "source_coefficients_sha256": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2",
+  "files": {
+    "independent_contact_construction.py": {
+      "sha256": "0ae3b6493f481f30bbd50af7afe6772388fa18c4dee37350ee40a3daf5926aac",
+      "bytes": 7075
+    },
+    "independent_contact_solve.py": {
+      "sha256": "e6a6731865af465ca429d3bee823343fe39194534210b4486c59663d0ce32364",
+      "bytes": 6875
+    },
+    "independent_integer_interval.py": {
+      "sha256": "b401563885d769d07b2960f40ad9a871044e24e2ecbbe9f4c47c6dfb9cb7d664",
+      "bytes": 2090
+    },
+    "independent_contact_solve_fast.py": {
+      "sha256": "c4120b015ee1debf00cd92751c643f52ecb7a291e89b726d3b868b3ca24dc60c",
+      "bytes": 7209
+    },
+    "independent_refined_contact.py": {
+      "sha256": "6ed5863b7d4fb044e6126469393266e6951fd5c051770447f5f0e9abccb24786",
+      "bytes": 2711
+    },
+    "independent_contact_solve_refined.py": {
+      "sha256": "51fc5367cf3cff6bc6207e874088b39fe2de8b8df26e3eb3c6b85a7dbd395436",
+      "bytes": 7209
+    },
+    "independent_coefficient_binding.py": {
+      "sha256": "166e3692e3172eefb36dd792c26790befc43af79bb31ff8965ac3d37b7359ddb",
+      "bytes": 5534
+    },
+    "README_independent_contact_construction.md": {
+      "sha256": "af0fbba1a64ae4b1542c00eb08f79135f0b9e5529c1db8ff05e2199b6952fd67",
+      "bytes": 9804
+    },
+    "independent_kernel_complements_result.json": {
+      "sha256": "2e4f382934e2b9ec423fd31ba29c878ff4a42c1ca8bfe5407d80ba6c39f2a01a",
+      "bytes": 525202
+    },
+    "independent_contact_component_tests.json": {
+      "sha256": "9ea74b379827cbd5f41685122ea1fc12e1a0cf46102ae81f57ff04044d60d986",
+      "bytes": 697
+    },
+    "independent_integer_interval_tests.json": {
+      "sha256": "e9c32cfe127dbce9fcc006668eec078a43bc3144a2f263044e50f29d075e47da",
+      "bytes": 205
+    },
+    "independent_integer_interval_extended_tests.json": {
+      "sha256": "236d4a94f293128cfd630c7311e9fb9582410c50a0752a52b4cd2e914242fc74",
+      "bytes": 480
+    },
+    "independent_sparse_Q_tests.json": {
+      "sha256": "a6b0bbd376c82c43776c76f39decbbb6befc2c6e27432f37fb8be4622b0fb0bd",
+      "bytes": 201
+    },
+    "independent_contact_solve_fast_result.json": {
+      "sha256": "2f810cc5a753c4fbe2e92ecb73e93f405179f3c9b8b113174a585782e5c07fef",
+      "bytes": 1169375
+    },
+    "independent_refined_radius_result.json": {
+      "sha256": "3fb7a07c7ce9505171cefa2a5b6ef9a64928a163fc8bb2f64bb0fe912a1d6f10",
+      "bytes": 137379
+    },
+    "independent_kernel_refined_result.json": {
+      "sha256": "25eed8b02a987716d4aa7a2cf752ba485846611dff82529548a809500efafe90",
+      "bytes": 525454
+    },
+    "independent_contact_solve_refined_result.json": {
+      "sha256": "18d7abb3a05aad2c916571c9102cafd14c2729f9b115ff72f3839da4693247ee",
+      "bytes": 1124485
+    },
+    "independent_coefficient_binding_result.json": {
+      "sha256": "5c21029acab9bab672d6ca9e12d266a4253f7c1086ad7fb2b376953ab8eae970",
+      "bytes": 1126366
+    },
+    "independent_kernel_complements.log": {
+      "sha256": "c712f38b6e8a70a61d67aeaf0b1270854e6f5c027ce665c5bb579fea95831484",
+      "bytes": 1119
+    },
+    "independent_contact_solve.log": {
+      "sha256": "f0e3890c488dc68c18a0668b85865238862a8e758b99818fa39fc71d7d46db60",
+      "bytes": 1685
+    },
+    "independent_contact_solve_fast.log": {
+      "sha256": "d6cf31d2afb52bb43a44a9d22d505b233958eb872d8bd88ac2121dc3a2f342a6",
+      "bytes": 2146
+    },
+    "independent_refined_contact.log": {
+      "sha256": "b5a0ec3b877142a4f16d9af9c4ede4259d3cc53124178dd87d50d7a407229c60",
+      "bytes": 115
+    },
+    "independent_contact_solve_refined.log": {
+      "sha256": "8410e37f6a54e81627a068c1d48ab8bd6fc2181a600a1180c3463e2ab53e73db",
+      "bytes": 2152
+    },
+    "independent_coefficient_binding.log": {
+      "sha256": "6c074fc93e8c03355982c66387cc9d24b24352f09af6833347de41afb5cd572e",
+      "bytes": 4123
+    }
+  },
+  "jet_checkpoint_count": 35,
+  "jet_checkpoints": {
+    "contact_jet640_52f4b891ca0a5f42bd79.json": {
+      "sha256": "868f3e4e279be7b2fb4737cb51949ad0192cf672abefe7e6b0cb1662ae4a97b0",
+      "bytes": 593813
+    },
+    "contact_jet640_5624c0d0aa3e9623da29.json": {
+      "sha256": "c5c5bb5d95983d8c9398c13dc4bf3ecb3b50ad659723ff0fb10fea364a8e91e1",
+      "bytes": 593047
+    },
+    "contact_jet640_d6f7f791ec40bee1753f.json": {
+      "sha256": "ebffa0a8e70ab30721d5a6903aba98847a804d93f062c4b0af60847ca7803730",
+      "bytes": 594148
+    },
+    "contact_jet640_32a44a20803abfb2f7ae.json": {
+      "sha256": "53ce5933ebe47b86d28f03f5c0a9b94825fc6be6c9bf0efb585cfd73496fc74f",
+      "bytes": 592913
+    },
+    "contact_jet640_dccc45ad85820afd8d60.json": {
+      "sha256": "8ec6db0191246ae55dc287766f1949fd47d7eacee20e6dde61bed9943aaa31da",
+      "bytes": 593838
+    },
+    "contact_jet640_41a6cf33686a85b81861.json": {
+      "sha256": "c780b9418c84a9ce07f57d1a92329438fb9d8b8daf30cd66b7e213c78344bbf9",
+      "bytes": 594220
+    },
+    "contact_jet640_a0d500c10f6d90370383.json": {
+      "sha256": "8e91815e58ce8ba1ac76943f5562b9a8422aead71fd633e71c45f560e9c83442",
+      "bytes": 252211
+    },
+    "contact_jet640_d7ed6e49e0a8f89230e2.json": {
+      "sha256": "ab85d4e2c03d6494e5d9d1851f83f5953a484fb74d71538ccf2cf115010d1148",
+      "bytes": 593571
+    },
+    "contact_jet640_7b7a2936a0ccb8a02526.json": {
+      "sha256": "27cbfbc43b34f7383d60eca8e31970973d8e66f3702af3d15eeec6876d4c9960",
+      "bytes": 594432
+    },
+    "contact_jet640_a93742f186abd6714eb1.json": {
+      "sha256": "5bd58459aa579cbb7c11920dc2330a2be5f0b90c2b32e0ea6764a4faa101b88e",
+      "bytes": 595129
+    },
+    "contact_jet640_343af89a8f4686b7b6f7.json": {
+      "sha256": "4635151e1fb0aad9a0e01f0c00c5bad25d064d4bd44017f6b25cf0b42710067f",
+      "bytes": 593920
+    },
+    "contact_jet640_5834483f74a44b63c703.json": {
+      "sha256": "0d2a248e337441dd347665d451c17faf86a219d5bcfaad852af096664a0f4bc5",
+      "bytes": 594717
+    },
+    "contact_jet640_d6d96bed0674d8dce8a5.json": {
+      "sha256": "58fafed2e895792ba0c382720e4ccff39edaa0c8e1d5a68906f8e266256a0867",
+      "bytes": 593722
+    },
+    "contact_jet640_d4a1fc2c444d6bc4b730.json": {
+      "sha256": "4b7e81149a99fd254f31ca1609edc122828860dcb3632ca8525ffb79dfe8be9f",
+      "bytes": 595372
+    },
+    "contact_jet640_eba78db078dd980d9c50.json": {
+      "sha256": "f34d25b2ab71b3c58f982239bf1679a83a35d63ab19f136879599e1972ded9f0",
+      "bytes": 595262
+    },
+    "contact_jet640_2d6b0af660fd200519e6.json": {
+      "sha256": "849bdf32791147ab429c7dd21090d4ee71e00783a37f1bab3c710bda632f46e8",
+      "bytes": 595055
+    },
+    "contact_jet640_59e830cfcb4d2145fb0c.json": {
+      "sha256": "36a97a792a3a59a0890026ab566b34e8351113a335cff694358b8fe3f7d4f9de",
+      "bytes": 593164
+    },
+    "contact_jet640_c1a7e0170899ad5f92ed.json": {
+      "sha256": "f683b945f26dc4351eb12feace330bb87cca27d47a1d911d295a29748218c26c",
+      "bytes": 593783
+    },
+    "contact_jet640_02942c6070c693c3c5e4.json": {
+      "sha256": "fc5eb7fe6b2d447e8ad807b007bed0c90653c97278e7c6ce5d2beabc5e8f1db8",
+      "bytes": 593939
+    },
+    "contact_jet640_bdfc09985bcac491d517.json": {
+      "sha256": "1f01bd960ba23e70e512da25fe2240076bc9b825cea0acc63e25e440d4d42cb0",
+      "bytes": 593777
+    },
+    "contact_jet640_ee9b6a8e412a6e4370b3.json": {
+      "sha256": "a31149506cb9a8b7fe1b83c8cddeafac17ed2ef7bc914f2b12ef8aa5c1a7b3fa",
+      "bytes": 593020
+    },
+    "contact_jet640_d621b3b147cc763978c1.json": {
+      "sha256": "c5f5614f82fedf50443e7bc29d1c82073a7f931313651311a57ba178b287b468",
+      "bytes": 594214
+    },
+    "contact_jet640_f511b1000671ce3ed6d3.json": {
+      "sha256": "b6cfb183410ac49656fcd505e1f1dfeaf8d50b908ce69dc8311acc6334a1862c",
+      "bytes": 593873
+    },
+    "contact_jet640_4f4c5eb709ce9d6c166f.json": {
+      "sha256": "cdb214ce6ae4b25200ddf4def9d187f0ca63ca2728aba46eef13496cd1203571",
+      "bytes": 594222
+    },
+    "contact_jet640_a849efbca652ce7d98ca.json": {
+      "sha256": "b2e2c631e22800782ef3ec4370ce9ee9de06aade14b8fc7cff1e68716c5cbad4",
+      "bytes": 593543
+    },
+    "contact_jet640_9a09e6d38bb56f762a08.json": {
+      "sha256": "a399cd93ed84ec88e62422dcce4b213387a2611f6bd8dd97cd5e04d0b3629514",
+      "bytes": 594443
+    },
+    "contact_jet640_2d477087185bf6793e8b.json": {
+      "sha256": "054cafe45c91e14f65bd0ef8288e0b0ac2d87228cf6a8ccb3087623caa4e839f",
+      "bytes": 595119
+    },
+    "contact_jet640_bddf17bde72a97b44b5d.json": {
+      "sha256": "adba1881936bd384b943544fd8e0399d58f8e665fa26ce056786c2dee364eed1",
+      "bytes": 593951
+    },
+    "contact_jet640_bc08277caaffeec2ded4.json": {
+      "sha256": "0b218665f011016a438e2cb438e31ffa6dab71adceaac8e116c788c826b86928",
+      "bytes": 594778
+    },
+    "contact_jet640_b3cf7168ee474081a4ed.json": {
+      "sha256": "3e496d97e3fedaf98683237d0fa1331b18028e861389001696cb5ef583f0f4ba",
+      "bytes": 593834
+    },
+    "contact_jet640_e702425d55c250609d29.json": {
+      "sha256": "aba145bc090527c29aa6924cb1fd6e0538e0607d98c3a52a9020de337b02c5f5",
+      "bytes": 595300
+    },
+    "contact_jet640_61ef98f964a4f11e3ccc.json": {
+      "sha256": "e916099b0d6322bbfa81cb5c33f5568c0eaf6dabee27d6504e2d95e07c7bbb08",
+      "bytes": 595171
+    },
+    "contact_jet640_cf0ea26d80e43da953b9.json": {
+      "sha256": "e2b3cb4dfc484926a06d3e3f989937937214fa534dda64a74199aac445a39ec4",
+      "bytes": 595048
+    },
+    "contact_jet640_56186bcd2f01db325bd8.json": {
+      "sha256": "ff3671075daa6418d7e52b29538b4062483413c623caffac49e9e46e298a0bb5",
+      "bytes": 593825
+    },
+    "contact_jet640_53c8feb2918d61093380.json": {
+      "sha256": "86b62d2ef4a0cdab668fc2baa4940c354e68e0cc983f997d9d8283028d8f355a",
+      "bytes": 593892
+    }
+  },
+  "remaining": [
+    "Exact45 rank33/W compatibility independent check",
+    "12local validation",
+    "Full main tree independent leaf check"
+  ],
+  "no_Lean_installation_performed": true
+}

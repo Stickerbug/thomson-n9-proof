@@ -1,0 +1,55 @@
+=== 06:36:18 building EnergyGradient ===
+ThomsonNine/EnergyGradient.lean:65:53: error: Application type mismatch: The argument
+  hab
+has type
+  a ≠ b
+but is expected to have type
+  x a ≠ x b
+in the application
+  hasDerivAt_pair_inv_dist (x a) (x b) v hab
+ThomsonNine/EnergyGradient.lean:66:16: warning: `if_true` has been deprecated: Use `ite_true` instead
+ThomsonNine/EnergyGradient.lean:70:21: error(lean.unknownIdentifier): Unknown identifier `i`
+ThomsonNine/EnergyGradient.lean:71:25: error(lean.unknownIdentifier): Unknown identifier `i`
+ThomsonNine/EnergyGradient.lean:72:50: error(lean.unknownIdentifier): Unknown identifier `i`
+Try this:
+  [apply] abel_nf
+ThomsonNine/EnergyGradient.lean:74:6: error: unsolved goals
+case e'_8
+x : Fin 9 → R3
+hx : Function.Injective x
+v : R3
+a : Fin 9
+a✝ : a ∈ Finset.univ
+b : Fin 9
+hb : b ∈ Finset.Ioi a
+hai : ¬a = b
+hlt : a < sorry
+hne : x a ≠ x sorry
+h : HasDerivAt (fun t => ‖x a + t • -v - x sorry‖⁻¹) (⟪x sorry - x a, -v⟫_ℝ / ‖x a - x sorry‖ ^ 3) 0
+t : ℝ
+⊢ ‖x a + (-1 • x b + -1 • t • v)‖ = ‖x a + (t • -1 • v + -1 • x sorry)‖
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/EnergyGradient.lean:78:6: error: unsolved goals
+case e'_9
+x : Fin 9 → R3
+hx : Function.Injective x
+v : R3
+a : Fin 9
+a✝ : a ∈ Finset.univ
+b : Fin 9
+hb : b ∈ Finset.Ioi a
+hai : ¬a = b
+hlt : a < sorry
+hne : x a ≠ x sorry
+h : HasDerivAt (fun t => ‖x a + t • -v - x sorry‖⁻¹) (⟪x sorry - x a, -v⟫_ℝ / ‖x a - x sorry‖ ^ 3) 0
+⊢ (if a = b then 0 else if True then -(⟪x b, v⟫_ℝ * ‖x b - x a‖⁻¹ ^ 3) + ⟪x a, v⟫_ℝ * ‖x b - x a‖⁻¹ ^ 3 else 0) =
+    -(⟪x sorry - x a, v⟫_ℝ * ‖x a - x sorry‖⁻¹ ^ 3)
+ThomsonNine/EnergyGradient.lean:82:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/EnergyGradient.lean:82:30: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+=== FAIL EnergyGradient ===
+=== ALL DONE 06:38:05 ===

@@ -1,0 +1,44 @@
+=== 17:24:15 building Stationary ===
+ThomsonNine/Stationary.lean:17:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:17:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:69:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:69:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Stationary.lean:107:2: error: Tactic `aesop` failed, failed to prove the goal after exhaustive search.
+Initial goal:
+  ⊢ ContinuousOn
+      (fun r =>
+        -2 * √3 / r ^ 2 + 3 * r / (2 * √(1 - r ^ 2) ^ 3) + 6 * r / √(4 - r ^ 2) ^ 3 + 6 / √(2 - r) ^ 3 -
+          6 / √(2 + 2 * r) ^ 3)
+      (Set.Icc (1 / 2) (9 / 10))
+Remaining goals after safe rules:
+  ⊢ ContinuousOn
+      (fun r =>
+        -(2 * √3) / r ^ 2 + 3 * r / (2 * √(1 - r ^ 2) ^ 3) + 6 * r / √(4 - r ^ 2) ^ 3 + 6 / √(2 - r) ^ 3 -
+          6 / √(2 + 2 * r) ^ 3)
+      (Set.Icc 2⁻¹ (9 / 10))
+=== FAIL Stationary ===
+=== ALL DONE 17:25:58 ===

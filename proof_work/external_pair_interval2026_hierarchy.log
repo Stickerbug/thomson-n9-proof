@@ -1,0 +1,40 @@
+PREP 894 nodes 1786 seconds 1.1830645829904824
+BLOCKS 200 frontier 198 {'split': 197, 'exclude_pair_cap': 2, 'accept_psi': 1} seconds 2.74056822899729
+BLOCKS 400 frontier 384 {'split': 390, 'exclude_pair_cap': 7, 'accept_psi': 3} seconds 4.697046873974614
+BLOCKS 600 frontier 574 {'split': 585, 'exclude_pair_cap': 10, 'accept_psi': 5} seconds 13.22829322697362
+BLOCKS 800 frontier 768 {'split': 782, 'exclude_pair_cap': 13, 'accept_psi': 5} seconds 20.248719268012792
+BLOCKS 1000 frontier 944 {'split': 970, 'exclude_pair_cap': 21, 'accept_psi': 9} seconds 32.03556197398575
+BLOCKS 1200 frontier 1110 {'split': 1153, 'exclude_pair_cap': 28, 'accept_psi': 17, 'exclude_capacity': 2} seconds 49.38567603402771
+BLOCKS 1400 frontier 1288 {'split': 1342, 'exclude_pair_cap': 33, 'accept_psi': 23, 'exclude_capacity': 2} seconds 62.05396040697815
+BLOCKS 1600 frontier 1470 {'split': 1533, 'exclude_pair_cap': 39, 'accept_psi': 25, 'exclude_capacity': 3} seconds 69.24995207297616
+BLOCKS 1800 frontier 1650 {'split': 1723, 'exclude_pair_cap': 39, 'accept_psi': 35, 'exclude_capacity': 3} seconds 90.85773123602849
+BLOCKS 2000 frontier 1842 {'split': 1919, 'exclude_pair_cap': 39, 'accept_psi': 39, 'exclude_capacity': 3} seconds 116.70496664900566
+{
+  "status": "partial_hierarchical_low_pair_domain",
+  "processed_blocks": 2012,
+  "total_product_blocks": 3862,
+  "counts_blocks": {
+    "split": 1929,
+    "exclude_pair_cap": 40,
+    "accept_psi": 40,
+    "exclude_capacity": 3,
+    "pending_budget": 1850
+  },
+  "counts_ordered_pairs": {
+    "exclude_pair_cap": 78683,
+    "accept_psi": 51689,
+    "exclude_capacity": 2352,
+    "pending_budget": 666512
+  },
+  "pending_ordered_pairs": 666512,
+  "elapsed_seconds": 118.45663852401776,
+  "prepare_seconds": 1.1830645829904824,
+  "stopping_reason": "time_limit",
+  "stats": {
+    "created_nodes": 44409,
+    "resident_created_nodes": 1097,
+    "queries": 3521,
+    "splits": 34286,
+    "cache_resets": 30
+  }
+}

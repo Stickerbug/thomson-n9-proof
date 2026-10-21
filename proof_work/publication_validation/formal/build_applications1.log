@@ -1,0 +1,28 @@
+=== 01:50:09 building Applications ===
+ThomsonNine/Applications.lean:22:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  f ?x - f ?y
+in the target expression
+  ‖(⇑f ∘ x) i - (⇑f ∘ x) j‖ = ‖x i - x j‖
+
+n : ℕ
+x : Fin n → R3
+f : R3 ≃ₗᵢ[ℝ] R3
+i : Fin n
+x✝¹ : i ∈ Finset.univ
+j : Fin n
+x✝ : j ∈ Finset.Ioi i
+⊢ ‖(⇑f ∘ x) i - (⇑f ∘ x) j‖ = ‖x i - x j‖
+ThomsonNine/Applications.lean:52:52: error: Function expected at
+  familyEnergyDeriv
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  r
+
+Hint: The identifier `familyEnergyDeriv` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+ThomsonNine/Applications.lean:55:10: error(lean.unknownIdentifier): Unknown identifier `energy_candidate`
+ThomsonNine/Applications.lean:56:9: error(lean.unknownIdentifier): Unknown identifier `hasDerivAt_familyEnergy`
+ThomsonNine/Applications.lean:59:22: error(lean.unknownIdentifier): Unknown identifier `candidate_mem_sphere`
+=== FAIL Applications ===
+=== ALL DONE 01:51:40 ===

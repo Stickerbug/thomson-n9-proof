@@ -1,0 +1,7 @@
+{
+  "status": "BASIS_AND_INDICES_IDENTICAL_PREPARED_NOT_EXACTIFIED",
+  "numerical_model_is_not_strict_PSD": true,
+  "source_sha256": "6058c518eb208f5170efb88cf68b5a77c91313e6545009db489cff15d8eac6c9",
+  "seed_sha256": "802e58d0a2d6b2d8300ec69fd4a003d891ada3cd7ac77ecffeb05c9051c691a1",
+  "no_exactification_performed_in_prepare_mode": true
+}

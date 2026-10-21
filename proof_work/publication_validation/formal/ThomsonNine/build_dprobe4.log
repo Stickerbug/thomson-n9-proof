@@ -1,0 +1,17 @@
+=== 05:16:33 building DProbe ===
+ThomsonNine/DProbe.lean:13:56: error: unsolved goals
+case e'_10
+g : ℝ → ℝ := fun t => 1 + t
+hlin : HasDerivAt g 1 0
+h : HasDerivAt (fun y => y⁻¹) (-(1 ^ 2)⁻¹) 1
+⊢ 1 + 0 = 1
+ThomsonNine/DProbe.lean:18:12: error: Application type mismatch: The argument
+  h1
+has type
+  HasDerivAt (fun y => y⁻¹) (-1) (g 0)
+but is expected to have type
+  HasDerivAt ?m.449 ?m.451 (?m.448 ?m.444)
+in the application
+  HasDerivAt.comp ?m.444 h1
+=== FAIL DProbe ===
+=== ALL DONE 05:19:21 ===

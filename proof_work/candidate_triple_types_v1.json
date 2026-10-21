@@ -1,0 +1,243 @@
+{
+  "status": "exact_candidate_classification",
+  "pair_multiplicities": {
+    "A": 6,
+    "B": 3,
+    "C": 6,
+    "D": 3,
+    "F": 12,
+    "G": 6
+  },
+  "triangle_total": 84,
+  "triangle_types": [
+    {
+      "labels": [
+        "A",
+        "A",
+        "A"
+      ],
+      "multiplicity": 2,
+      "inner_products": [
+        "1 - 3*r**2/2",
+        "1 - 3*r**2/2",
+        "1 - 3*r**2/2"
+      ],
+      "Gram_factorization": "-27*r**4*(r - 1)*(r + 1)/4",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "33566651054306375205530947943697087974678737865325960654666070211821476663816505009248552423995508900046391179292935",
+        "hi_numerator": "33566651054306375205530947943697087974681590915048273695115835793700164007571804852634285747270488903460879273572634",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "A",
+        "B",
+        "C"
+      ],
+      "multiplicity": 12,
+      "inner_products": [
+        "1 - 3*r**2/2",
+        "2*r**2 - 1",
+        "r**2/2 - 1"
+      ],
+      "Gram_factorization": "-3*r**4*(r - 1)*(r + 1)",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "14918511579691722313569310197198705766523883495700426957629364538587322961696224448554912188442448400020618301907971",
+        "hi_numerator": "14918511579691722313569310197198705766525151517799232753384815908311184003365246601170793665453550623760390788254504",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "A",
+        "C",
+        "C"
+      ],
+      "multiplicity": 6,
+      "inner_products": [
+        "1 - 3*r**2/2",
+        "r**2/2 - 1",
+        "r**2/2 - 1"
+      ],
+      "Gram_factorization": "-3*r**4*(r - 1)*(r + 1)/4",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "3729627894922930578392327549299676441630970873925106739407341134646830740424056112138728047110612100005154575476991",
+        "hi_numerator": "3729627894922930578392327549299676441631287879449808188346203977077796000841311650292698416363387655940097697063628",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "A",
+        "F",
+        "F"
+      ],
+      "multiplicity": 6,
+      "inner_products": [
+        "1 - 3*r**2/2",
+        "r/2",
+        "r/2"
+      ],
+      "Gram_factorization": "-3*r**2*(r - 1)*(r + 1)",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "29548690870338440936612903245007801192676614536849639912325826629789467975552993652519268273390957375848237758672042",
+        "hi_numerator": "29548690870338440936612903245007801192678294358641406012765486341050910499987213555810042675766329802419858264587303",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "A",
+        "F",
+        "G"
+      ],
+      "multiplicity": 12,
+      "inner_products": [
+        "1 - 3*r**2/2",
+        "r/2",
+        "-r"
+      ],
+      "Gram_factorization": "-3*r**2*(r - 1)*(r + 1)/4",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "7387172717584610234153225811251950298169153634212409978081456657447366993888248413129817068347739343962059439668009",
+        "hi_numerator": "7387172717584610234153225811251950298169573589660351503191371585262727624996803388952510668941582450604964566146827",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "B",
+        "F",
+        "F"
+      ],
+      "multiplicity": 6,
+      "inner_products": [
+        "2*r**2 - 1",
+        "r/2",
+        "r/2"
+      ],
+      "Gram_factorization": "-3*r**2*(r - 1)*(r + 1)",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "29548690870338440936612903245007801192676614536849639912325826629789467975552993652519268273390957375848237758672042",
+        "hi_numerator": "29548690870338440936612903245007801192678294358641406012765486341050910499987213555810042675766329802419858264587303",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "B",
+        "G",
+        "G"
+      ],
+      "multiplicity": 3,
+      "inner_products": [
+        "2*r**2 - 1",
+        "-r",
+        "-r"
+      ],
+      "Gram_factorization": "0",
+      "status": "identically_boundary",
+      "Gram_interval": null
+    },
+    {
+      "labels": [
+        "C",
+        "F",
+        "F"
+      ],
+      "multiplicity": 6,
+      "inner_products": [
+        "r**2/2 - 1",
+        "r/2",
+        "r/2"
+      ],
+      "Gram_factorization": "0",
+      "status": "identically_boundary",
+      "Gram_interval": null
+    },
+    {
+      "labels": [
+        "C",
+        "F",
+        "G"
+      ],
+      "multiplicity": 12,
+      "inner_products": [
+        "r**2/2 - 1",
+        "r/2",
+        "-r"
+      ],
+      "Gram_factorization": "-3*r**2*(r - 1)*(r + 1)/4",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "7387172717584610234153225811251950298169153634212409978081456657447366993888248413129817068347739343962059439668009",
+        "hi_numerator": "7387172717584610234153225811251950298169573589660351503191371585262727624996803388952510668941582450604964566146827",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "D",
+        "D",
+        "D"
+      ],
+      "multiplicity": 1,
+      "inner_products": [
+        "-1/2",
+        "-1/2",
+        "-1/2"
+      ],
+      "Gram_factorization": "0",
+      "status": "identically_boundary",
+      "Gram_interval": null
+    },
+    {
+      "labels": [
+        "D",
+        "F",
+        "F"
+      ],
+      "multiplicity": 6,
+      "inner_products": [
+        "-1/2",
+        "r/2",
+        "r/2"
+      ],
+      "Gram_factorization": "-3*(r - 1)*(r + 1)/4",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "14631572450890316622048437052489842117625929114287602873369192119852186450886382001697965435992539642654305333410757",
+        "hi_numerator": "14631572450890316622048437052489842117626349069735544398479107047667547081994936977520659036586382749297210459889574",
+        "denominator_power_of_two": 384
+      }
+    },
+    {
+      "labels": [
+        "D",
+        "F",
+        "G"
+      ],
+      "multiplicity": 12,
+      "inner_products": [
+        "-1/2",
+        "r/2",
+        "-r"
+      ],
+      "Gram_factorization": "-3*(r - 1)*(r + 1)/4",
+      "status": "certified_interior_at_true_root",
+      "Gram_interval": {
+        "lo_numerator": "14631572450890316622048437052489842117625929114287602873369192119852186450886382001697965435992539642654305333410757",
+        "hi_numerator": "14631572450890316622048437052489842117626349069735544398479107047667547081994936977520659036586382749297210459889574",
+        "denominator_power_of_two": 384
+      }
+    }
+  ],
+  "scope": "Necessary candidate contact locations, not a proof of global optimality. Polynomials are exact in the true stationary parameter r_star; interval bracket only certifies which triangles are interior."
+}

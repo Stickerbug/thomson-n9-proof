@@ -1,0 +1,31 @@
+{
+  "status": "SMOKE_PASSED",
+  "checks": [
+    "100 random lower + 100 random upper int64 splits enclose independent Fraction de Casteljau, including near-2^60 signed values",
+    "unsafe coarse cast rejected before int64 conversion",
+    "12 cached full-binary-path original-root80 replays outward-enclose independent exact transforms on SAME physical box",
+    "tiny positive, budget-zero pending, uncertain-center local containment, S=R-g, coverage identities",
+    "known positive quadratic+1e-20 TRIGGERS original-root80 upgrade and closes full tree"
+  ],
+  "upgrade_example": {
+    "visited_nodes": 1411,
+    "split_nodes": 705,
+    "pending_count": 0,
+    "precision_upgrades": 7,
+    "coarse_visited": 455,
+    "fine_visited": 956,
+    "terminal_precision_counts": {
+      "48": 221,
+      "80": 485
+    },
+    "root80_replay_split_steps": 43,
+    "root_coverage": {
+      "binary_partition_complete": true,
+      "terminal_plus_pending_equals_splits_plus_one": true,
+      "visited_equals_terminal_plus_splits": true,
+      "pending_boxes_complete": true
+    }
+  },
+  "replay_test_cache_hits": 11,
+  "conditional_only": true
+}

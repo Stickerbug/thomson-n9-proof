@@ -1,0 +1,15 @@
+=== 17:14:20 building IntervalTensorEval ===
+ThomsonNine/IntervalTensorEval.lean:30:39: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:30:39: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:32:34: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:32:34: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:33:34: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:33:34: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:37:36: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:37:36: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:38:38: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:38:38: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:39:36: error: `simp` made no progress
+ThomsonNine/IntervalTensorEval.lean:39:36: error: `simp` made no progress
+=== FAIL IntervalTensorEval ===
+=== ALL DONE 17:17:16 ===

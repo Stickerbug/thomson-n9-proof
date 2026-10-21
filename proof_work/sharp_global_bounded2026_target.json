@@ -1,0 +1,28 @@
+{
+  "status": "SHIFTED_TARGET_METADATA_NOT_GLOBAL_PROOF",
+  "delta": "1/10000000",
+  "energy_target": "E_star-1/10000000",
+  "residual_identity": "R_target=R_parent+1/120000000",
+  "c_target_identity": "c_target=c_parent-1/120000000",
+  "c_parent": {
+    "lo_numerator": "122049886546972154638621698311322504652409254922510833242507443222697557672876127631918661569141462399017455891916916",
+    "hi_numerator": "122049886546972154638621698311322504652409254922510833242507443222697557672876127631937574491233745077895613162057100",
+    "denominator_power_of_two": 384
+  },
+  "c_target_enclosure": {
+    "lo_numerator": "122049886218622103002001038208997170484545806546846339321962054323128445970828446202775239807355910274976492218528349",
+    "hi_numerator": "122049886218622103002001038208997170484545806546846339321962054323128445970828446202794152729448192953854649488668534",
+    "denominator_power_of_two": 384
+  },
+  "coefficient_file_c_field_scope": "copied c field remains parent sharp c; this supplemental target field gives shifted c; frozen R coefficients already enclose the correct shifted residual",
+  "local_nonnegativity": "R_parent>=0 on the12 certified physical local boxes implies shifted R>=0 on those same boxes",
+  "source_sha256": {
+    "sharp_global_native128_2026_engine.py": "e1cecea85455f03e8a7772bcd167f3314ca7bc0604a17b2a3382b4f8138efb15",
+    "sharp_global_bounded2026_engine.py": "4c751850f6a758638177658c5f79352a71bd260cf4f8e1dac58b3cce548712b3",
+    "sharp_global_bounded2026_run1.py": "2f5bbaa522f5b3d23f6eaf4b88bd3308ef85df0159def96bd377a27eb9b16577",
+    "sharp_global_bounded2026_coefficients.json": "e746ed4403f66ebf9a456fcff0f8c6481d696d7f2f840b2b89c7fadf40d4490b",
+    "narrowroot2026_coefficients.json": "60880c431cd4433bd0ddcd17254367e9d7c6bd915314f3b56a176bf92a60ded8",
+    "narrowroot2026_precondition_boxes.json": "4297e1d8f5871f17c81ab80699ca4dc695221678a484f1fc075cb82a33e2d24e",
+    "d10_sharpconvex_exact2026_jets.json": "7301241150a824ec0fc2999669bf5abe3552f8f75bd79bf95e5593e159d5faf4"
+  }
+}

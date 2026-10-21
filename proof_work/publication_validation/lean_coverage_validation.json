@@ -1,0 +1,25 @@
+{
+  "status": "GENERIC_COVERAGE_LEMMA_VERIFIED_NOT_THOMSON_THEOREM",
+  "runs": [
+    {
+      "name": "coverage",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "axioms",
+      "returncode": 0,
+      "stdout": "'ThomsonNine.Coverage.coverage_sound' does not depend on any axioms\n",
+      "stderr": ""
+    },
+    {
+      "name": "negative",
+      "returncode": 1,
+      "stdout": "/home/dsh/Thomson Problem/proof_work/publication_validation/CoverageSoundnessNegative.lean:27:14: error: Type mismatch\n  leaf_sound b checked\nhas type\n  \u2200 (x : Point), inside b x \u2192 goal x\nbut is expected to have type\n  \u2200 (x : Point), inside (root (Tree.leaf b)) x \u2192 False\n",
+      "stderr": ""
+    }
+  ],
+  "source_sha256": "9e0cdf69d9f62e6d5f902b8ea520a8fd423cfeb2fd6862547042cb99aaf2ce32",
+  "lean_version": "Lean (version 4.34.1, aarch64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)"
+}

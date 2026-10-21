@@ -1,0 +1,20 @@
+=== 05:08:59 building EnergyForms ===
+ThomsonNine/EnergyForms.lean:42:4: error: Type mismatch: After simplification, term
+  HasDerivAt.add (hasDerivAt_const 0 1) (hasDerivAt_id 0)
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.normedAddCommGroup.toAddCommGroup
+    RCLike.toInnerProductSpaceReal.toModule PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ ((fun x => 1) + id) 1
+    0
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => 1 + t) 1 0
+ThomsonNine/EnergyForms.lean:49:52: error(lean.unknownIdentifier): Unknown identifier `𝓝`
+ThomsonNine/EnergyForms.lean:40:80: error: unsolved goals
+x : Fin 9 → R3
+hlin : HasDerivAt (fun t => 1 + t) 1 0
+hinv : HasDerivAt (fun t => (1 + t)⁻¹) (-1) 0
+hmul : HasDerivAt (fun t => (1 + t)⁻¹ * energy x) (-1 * energy x) 0
+hev : (fun t => (1 + t)⁻¹ * energy x) =ᶠ[sorry] fun t => energy fun i => (1 + t) • x i
+⊢ HasDerivAt (fun t => energy fun i => (1 + t) • x i) (-energy x) 0
+=== FAIL EnergyForms ===
+=== ALL DONE 05:11:11 ===

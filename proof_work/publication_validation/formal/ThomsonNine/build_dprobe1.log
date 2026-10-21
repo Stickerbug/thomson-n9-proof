@@ -1,0 +1,23 @@
+=== 05:00:27 building DProbe ===
+ThomsonNine/DProbe.lean:5:2: error: Type mismatch: After simplification, term
+  HasFDerivAtFilter.const_add 1 (hasDerivAt_id 0)
+ has type
+  HasFDerivAtFilter (fun x => 1 + x) (ContinuousLinearMap.toSpanSingleton ℝ 1) (map (fun x => (x, 0)) (nhds 0))
+but is expected to have type
+  HasDerivAt (fun t => 1 + t) 1 0
+ThomsonNine/DProbe.lean:9:25: error: Type mismatch: After simplification, term
+  HasFDerivAtFilter.const_add 1 (hasDerivAt_id 0)
+ has type
+  HasFDerivAtFilter (fun x => 1 + x) (ContinuousLinearMap.toSpanSingleton ℝ 1) (map (fun x => (x, 0)) (nhds 0))
+but is expected to have type
+  HasDerivAt ?m.65 ?m.67 0
+ThomsonNine/DProbe.lean:9:8: error: Application type mismatch: The argument
+  h
+has type
+  HasDerivAt (fun y => y⁻¹) (-1) 1
+but is expected to have type
+  HasDerivAt ?m.66 ?m.68 (?m.65 0)
+in the application
+  HasDerivAt.comp 0 h
+=== FAIL DProbe ===
+=== ALL DONE 05:01:49 ===

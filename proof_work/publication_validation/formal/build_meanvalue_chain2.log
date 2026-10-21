@@ -1,0 +1,26 @@
+=== Mathlib/Analysis/Calculus/Deriv/AffineMap.lean exit=1 88s
+Mathlib/Analysis/Calculus/Deriv/AffineMap.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Calculus/Deriv/Linear.olean' of module Mathlib.Analysis.Calculus.Deriv.Linear does not exist
+
+=== Mathlib/Analysis/Calculus/Deriv/Linear.lean exit=0 165s
+
+=== Mathlib/Analysis/Calculus/Deriv/AffineMap.lean exit=0 159s
+
+=== Mathlib/Analysis/Calculus/Deriv/Slope.lean exit=1 126s
+Mathlib/Analysis/Calculus/Deriv/Slope.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/AffineSpace/Slope.olean' of module Mathlib.LinearAlgebra.AffineSpace.Slope does not exist
+
+=== Mathlib/LinearAlgebra/AffineSpace/Slope.lean exit=0 104s
+
+=== Mathlib/Analysis/Calculus/Deriv/Slope.lean exit=1 81s
+Mathlib/Analysis/Calculus/Deriv/Slope.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Algebra/Module/PerfectSpace.olean' of module Mathlib.Topology.Algebra.Module.PerfectSpace does not exist
+
+=== Mathlib/Topology/Algebra/Module/PerfectSpace.lean exit=1 69s
+Mathlib/Topology/Algebra/Module/PerfectSpace.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Perfect.olean' of module Mathlib.Topology.Perfect does not exist
+
+=== Mathlib/Topology/Perfect.lean exit=0 44s
+
+=== Mathlib/Topology/Algebra/Module/PerfectSpace.lean exit=0 64s
+
+=== Mathlib/Analysis/Calculus/Deriv/Slope.lean exit=0 69s
+
+=== Mathlib/Analysis/Calculus/Deriv/MeanValue.lean exit=0 87s
+

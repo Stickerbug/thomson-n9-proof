@@ -1,0 +1,8 @@
+=== 15:25:48 building IntervalMul ===
+ThomsonNine/IntervalMul.lean:37:15: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+ThomsonNine/IntervalMul.lean:40:17: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+ThomsonNine/IntervalMul.lean:40:29: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+ThomsonNine/IntervalMul.lean:57:17: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+ThomsonNine/IntervalMul.lean:57:29: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+=== OK IntervalMul ===
+=== ALL DONE 15:27:08 ===

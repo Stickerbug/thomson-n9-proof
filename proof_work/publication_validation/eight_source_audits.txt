@@ -1,0 +1,15 @@
+#print axioms ThomsonNine.EightSource.t020_gathered_mem
+#print axioms ThomsonNine.EightSource.t060_gathered_mem
+#print axioms ThomsonNine.EightSource.t130_gathered_mem
+#print axioms ThomsonNine.EightSource.t147_gathered_mem
+#print axioms ThomsonNine.EightSource.t185_gathered_mem
+#print axioms ThomsonNine.EightSource.t248_gathered_mem
+#print axioms ThomsonNine.EightSource.t277_gathered_mem
+#print axioms ThomsonNine.EightSource.t342_gathered_mem
+#print axioms ThomsonNine.EightSource.t354_gathered_mem
+#print axioms ThomsonNine.EightSource.t419_gathered_mem
+#print axioms ThomsonNine.EightSource.t744_gathered_mem
+#print axioms ThomsonNine.EightSource.t753_gathered_mem
+#print axioms ThomsonNine.EightSource.t772_gathered_mem
+#print axioms ThomsonNine.EightSource.t782_gathered_mem
+#print axioms ThomsonNine.EightSource.t799_gathered_mem

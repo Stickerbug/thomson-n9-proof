@@ -1,0 +1,28 @@
+{
+  "point": [
+    0.56,
+    0.56,
+    0.56
+  ],
+  "definition": "All four models use actual f and own cstar=(E*+1.5F111)/12, not target-adjusted c",
+  "models": {
+    "original_batch2_best_iteration1": {
+      "R_cstar": 4.439787293103459e-05,
+      "cstar": 2.9852726946657295
+    },
+    "rational_export_batch2_best": {
+      "R_cstar": 4.4396048365313856e-05,
+      "cstar": 2.9852726948032733
+    },
+    "PSD_contact_projection": {
+      "R_cstar": -0.00040895741418367493,
+      "cstar": 2.985442461463972
+    },
+    "Euclidean_contact_projection": {
+      "R_cstar": -0.0003418389364344687,
+      "cstar": 2.9853879904111396
+    }
+  },
+  "rational_export_actual_f_target_adjusted_c_R": 4.744032085080008e-05,
+  "rational_export_h27_target_adjusted_c_R": 4.744030543912814e-05
+}

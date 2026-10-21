@@ -1,0 +1,39 @@
+=== 17:15:59 building SignProbe ===
+ThomsonNine/SignProbe.lean:59:2: error: linarith failed to find a contradiction
+h1 : 1 - (1 / 2) ^ 2 = 3 / 4
+h2 : 4 - (1 / 2) ^ 2 = 15 / 4
+h3 : 2 - 1 / 2 = 3 / 2
+h4 : 2 + 2 * (1 / 2) = 3
+h5 : (1 / 2) ^ 2 = 1 / 4
+y34 : 0.86 < √(3 / 4)
+y154 : 1.93 < √(15 / 4)
+y32 : 1.22 < √(3 / 2)
+x3lo : 1.7 < √3
+x3hi : √3 < 1.75
+b1 : -2 * √3 / (1 / 4) < -13.6
+b2 : 3 * (1 / 2) / (2 * √(3 / 4) ^ 3) < 1.2
+b3 : 6 * (1 / 2) / √(15 / 4) ^ 3 < 0.5
+b4 : 6 / √(3 / 2) ^ 3 < 3.4
+b5 : -6 / √3 ^ 3 < -1.1
+a✝ :
+  0 ≤
+    -2 * √3 / (1 / 4) + 3 * (1 / 2) / (2 * √(1 - 1 / 4) ^ 3) + 6 * (1 / 2) / √(4 - 1 / 4) ^ 3 + 6 / √(3 / 2) ^ 3 -
+      6 / √3 ^ 3
+⊢ False
+failed
+ThomsonNine/SignProbe.lean:16:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SignProbe.lean:16:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== FAIL SignProbe ===
+=== ALL DONE 17:17:58 ===

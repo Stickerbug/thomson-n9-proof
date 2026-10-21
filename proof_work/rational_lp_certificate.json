@@ -1,0 +1,7 @@
+{
+  "exact_global_lower_bound": "51458779692279/2000000000000",
+  "display_only": 25.7293898461395,
+  "bernstein_leaves": 12,
+  "maximum_depth": 6,
+  "claim": "Every nine-point unit-sphere Coulomb configuration has energy >= exact_global_lower_bound."
+}

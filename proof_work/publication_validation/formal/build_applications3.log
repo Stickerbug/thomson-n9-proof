@@ -1,0 +1,6 @@
+=== 01:54:13 building Applications ===
+ThomsonNine/Applications.lean:64:30: error: expected token
+ThomsonNine/Applications.lean:69:37: error: expected token
+ThomsonNine/Applications.lean:74:59: error: expected token
+=== FAIL Applications ===
+=== ALL DONE 01:56:16 ===

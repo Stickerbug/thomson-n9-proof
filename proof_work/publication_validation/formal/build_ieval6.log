@@ -1,0 +1,35 @@
+=== 16:58:13 building IntervalTensorEval ===
+ThomsonNine/IntervalTensorEval.lean:19:31: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:21:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:22:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:26:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:27:30: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:28:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:40:21: error: Application type mismatch: The argument
+  le_rfl
+has type
+  ?m.44 ≤ ?m.44
+but is expected to have type
+  0 ≤ ↑(hi 0)
+in the application
+  ⟨?m.41, le_rfl⟩
+=== FAIL IntervalTensorEval ===
+=== ALL DONE 17:01:08 ===

@@ -1,0 +1,12 @@
+=== 09:57:39 building ThreePoint ===
+ThomsonNine/ThreePoint.lean:175:30: warning: This simp argument is unused:
+  real_inner_self_eq_norm_sq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Set.domRestrict, v, hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/ThreePoint.lean:210:24: error(lean.unknownIdentifier): Unknown constant `Matrix.posSemidef_iff_eq_sum_vecMulVec.mp`
+ThomsonNine/ThreePoint.lean:210:9: error: Tactic `rcases` failed: `x✝ : ?m.47` is not an inductive datatype
+=== FAIL ThreePoint ===
+=== ALL DONE 09:59:57 ===

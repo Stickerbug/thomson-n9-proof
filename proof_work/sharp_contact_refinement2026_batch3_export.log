@@ -1,0 +1,23 @@
+{
+  "stop": {
+    "job": "bash-602",
+    "status": "killed SIGTERM after two validated rounds",
+    "completed_solve_rounds": 2,
+    "third_returned_iterate": false,
+    "reason": "Two consecutive strengthened-domain residuals failed to improve the first PSD seed competitive residual. Manual stop follows parent instruction.",
+    "baseline_R": -7.73765424932904e-06,
+    "observed_R": [
+      -1.1937226343905483e-05,
+      -4.071769757579835e-05
+    ],
+    "source_process_difference": "Launched process initialized best_score from the old full-box residual -0.000404807..., so stored stagnation counts are 0,1. Source was corrected after launch to first competitive residual. Manual corrected counts are 1,2. Constraints, objective, seeds and saved iterates were unchanged.",
+    "pool_after_last_round": "Not reconstructed after cancellation; each solve pool_count and all active_points are preserved in source_results."
+  },
+  "best_batch3_c": 2.7368685955222625,
+  "best_batch3_trace": 14.957977195875976,
+  "best_batch3_minB": 9.956139173715375e-07,
+  "fixed_obstructions_R_upper": [
+    -1.1937226322007057e-05,
+    -4.0717695904622885e-05
+  ]
+}

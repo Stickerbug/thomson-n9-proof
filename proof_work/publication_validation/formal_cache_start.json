@@ -1,0 +1,16 @@
+{
+  "pid": 16995,
+  "modules": [
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Sqrt",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.NormNum"
+  ],
+  "started_unix": 1792232115.1625679
+}

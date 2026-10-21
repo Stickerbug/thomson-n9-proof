@@ -1,0 +1,24 @@
+=== 17:57:26 building SecondDerivative ===
+ThomsonNine/SecondDerivative.lean:105:29: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.add_apply, Pi.neg_apply, id_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SecondDerivative.lean:105:43: warning: This simp argument is unused:
+  Pi.neg_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.add_apply, Pi.sub_apply, id_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SecondDerivative.lean:105:57: warning: This simp argument is unused:
+  id_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.add_apply, Pi.sub_apply, Pi.neg_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== OK SecondDerivative ===
+=== ALL DONE 17:59:34 ===

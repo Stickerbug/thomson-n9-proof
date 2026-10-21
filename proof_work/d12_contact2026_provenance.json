@@ -1,0 +1,48 @@
+{
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "Linux-5.10.43-aarch64-with-glibc2.35",
+  "files": {
+    "d12_contact2026_core.py": {
+      "sha256": "5ac7dc66a2bd6a8be36d8709eb123c60e445078d89ef7e9b406b5771aa7c2065",
+      "size": 6571
+    },
+    "d12_contact2026_solver.py": {
+      "sha256": "1fce21faeb7a70c21d58ffdad57ce67d67195cdc435ecbe0d2d36885e39a3389",
+      "size": 12691
+    },
+    "d12_contact2026_validation.py": {
+      "sha256": "fb9b3ad8b8d86337aa578da19e90ad010baf7ed810c5edcfd0dfb0524d32ee89",
+      "size": 2013
+    },
+    "sharp_contact_refinement2026_core.py": {
+      "sha256": "3ef65b6fd7bbefa3fc0fdc2ed642089ee65c881f463a7633e6b3a7fa2a43d568",
+      "size": 6473
+    },
+    "sharp_contact_refinement2026_refine.py": {
+      "sha256": "a069832e8dc4c36f7dcfa8ae356a5c54616f7f7ca13ea68a8f9197a576e3c3ca",
+      "size": 11969
+    },
+    "sharp_contact_refinement2026_competitive_batch3.py": {
+      "sha256": "f9ccbfd4a6f1843c4264251e489f01a8f45efe0a75b523e94028f635192108aa",
+      "size": 15787
+    },
+    "sharp_boundary_actualf_v3.py": {
+      "sha256": "6b118a8f61762c0db40e0243eb5478038037e92407fb3a54b6e257f64cd861bc",
+      "size": 15614
+    },
+    "candidate_low_rank.py": {
+      "sha256": "c1da5b6a0670c12f8645c02afbb86119537b7459aa5e8bf8e377b5baff6c1e8e",
+      "size": 2356
+    },
+    "sharp_three_point.py": {
+      "sha256": "2e02e29e1d75f31d9865b21f77c4fd7c7e7c5e58932e3a674fae86503e6204da",
+      "size": 7523
+    },
+    "three_point_sampled.py": {
+      "sha256": "1a702693062ffc95a764dcba7f1bc743f7d1804bcbd2c0bc90060348047094ec",
+      "size": 5196
+    }
+  },
+  "authorization": "Parent extended preparation max120s after ghost, still max3 CLARABEL90s rounds",
+  "scope": "FULL bounded Gram domain, no competitive filter; all numerical discovery only"
+}

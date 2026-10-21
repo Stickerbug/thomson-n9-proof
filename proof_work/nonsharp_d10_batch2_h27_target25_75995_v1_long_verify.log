@@ -1,0 +1,6 @@
+PASS saved rational coefficients only; independent implementation; minorant nodes 23 exclusion nodes 1
+PASS exact PSD, minorant, reconstruction, normalization; tensor (28, 28, 28) construction 2.492640256881714 bounds [-172579165663912, 4166084516401, -4398046511104, 2923275962815]
+progress 50000 pending 17 depth 40 seconds 68.92622947692871
+progress 100000 pending 21 depth 40 seconds 180.50589418411255
+progress 150000 pending 23 depth 40 seconds 263.6058301925659
+progress 200000 pending 21 depth 41 seconds 341.8716170787811

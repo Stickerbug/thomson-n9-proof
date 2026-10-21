@@ -1,0 +1,45 @@
+{
+  "status": "INTERRUPTED_NO_FINAL_COVERAGE_OR_CHECKPOINT",
+  "conditional_only": true,
+  "no_global_conclusion": true,
+  "job_id": "bash-1046",
+  "job_kill_result": "unknown job",
+  "job_list_result": "no background jobs",
+  "normal_exit_collected": false,
+  "result_json_exists": false,
+  "last_log": {
+    "visited": 160000,
+    "elapsed_seconds": 349.82747234299313,
+    "pending": 28535,
+    "counts": {
+      "positive": 25200,
+      "gram_negative": 27038,
+      "ordered_disjoint": 2991,
+      "local_region": 34,
+      "boundary_multiplier": 10470
+    },
+    "native_tensor_split_calls": 212105
+  },
+  "first_plateau_log": {
+    "visited": 135000,
+    "pending": 3535,
+    "counts_unchanged_through": 160000
+  },
+  "static_diagnosis": {
+    "physical_box_midpoints": "exact Fraction, no float midpoint collapse",
+    "no_depth_guard": true,
+    "fixed_precision_arithmetic": "80-bit outward bounds may stagnate indefinitely; no terminal means no completion",
+    "memory_per_pending_B_bytes": 351232,
+    "estimated_pending_B_payload_bytes": 10022405120,
+    "possible_resource_failure": "unconfirmed; job registry gone and no result file",
+    "no_saved_stack": true
+  },
+  "sources_sha256": {
+    "sharp_global_native128_2026_engine.py": "e1cecea85455f03e8a7772bcd167f3314ca7bc0604a17b2a3382b4f8138efb15",
+    "sharp_global_native128_2026_run1.py": "d6a7824b46e750a34609ef276ce1f9e3da99808697a97b84fb241ecdc19894d4",
+    "exact128_2026.c": "f7293e5065a2d21ba8b40ded512f198c14cb5162967f05cc2ed7b123b2eb2898",
+    "exact128_2026.py": "9b535ce122f9824cc5b06998d6289005c6fcbc24fbc61a4c2e5f90880a3cca9b"
+  },
+  "log_sha256": "5d1469b5b90cd708fbadb4800c1e31725d417770abb84ab67d3eb4bf7bd8dbe6",
+  "log_seconds_since_mtime": 794.7239398956299
+}

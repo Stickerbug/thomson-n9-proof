@@ -1,0 +1,69 @@
+{
+  "status": "numerical_feasible_witness_only_not_global_minimum_certificate",
+  "T_decimal": [
+    "-0.759220762336624",
+    "-0.29211600772137486",
+    "0.32931701954562287"
+  ],
+  "model": "proof_work/nonsharp_d10_root25_7599205_v10.json",
+  "gram_determinant": 0.37587458429032794,
+  "R_T_exact_polynomial_decimal_approx": 2.10252384315792e-05,
+  "budget_7_U_minus_B": 0.0004622188888209485,
+  "exclusion_threshold": 7.353227506489489e-05,
+  "correct_cholesky": "a=(1,0,0); b=(u,sqrt(1-u*u),0); c=(v,(t-u*v)/sqrt(1-u*u),sqrt(detGram)/sqrt(1-u*u))",
+  "corrected_search": {
+    "evaluation": "807 rational coefficients parsed directly into longdouble; tensor polynomial Horner via numpy.polyval3d",
+    "domain": "q unit sphere; all anchor dot products <= 0.56",
+    "DE": {
+      "vectorized": true,
+      "popsize": 35,
+      "maxiter": 220,
+      "tol": 1e-10,
+      "polish": false
+    },
+    "runs": [
+      {
+        "seed": 321,
+        "three_R": 5.2519043287916474e-05,
+        "theta_phi": [
+          2.490954587585583,
+          1.0115317477381622
+        ],
+        "q_dot_anchors": [
+          0.32135893011802585,
+          0.09016450351158861,
+          -0.7585917994432171
+        ],
+        "seconds": 7.1650071144104
+      },
+      {
+        "seed": 739,
+        "three_R": 0.00011492270697968635,
+        "theta_phi": [
+          0.9997211592502526,
+          5.065388205936992
+        ],
+        "q_dot_anchors": [
+          0.2908559109611058,
+          -0.7346205479572507,
+          0.2937840655984269
+        ],
+        "cumulative_seconds": 15.633573293685913
+      }
+    ]
+  },
+  "counting": "T itself once; each of six external q gives abq, acq, bcq. These eighteen unordered triples are pairwise distinct and exclude T.",
+  "conclusion": "A feasible three_R value below exclusion_threshold means the minimum-based necessary condition cannot exclude this fixed T. It does not imply six mutually compatible external points exist; repeating a single minimizing q is not a valid nine-point configuration.",
+  "invalidated_results": [
+    "Initial anchor construction used c_z=sqrt(detGram) instead of sqrt(detGram)/sqrt(1-u*u); resulting 8.971308504475245e-5 candidate is invalid.",
+    "Initial comparison against the full budget was incorrect; the relevant threshold is (budget-R_T)/6.",
+    "Feasible minimizer values are upper bounds on the global minimum, not lower bounds."
+  ],
+  "follow_up": "Requested m0=8e-5 interval certificate task was withdrawn after corrected feasible witness below threshold. No interval proof attempted; batch2 not completed.",
+  "jobs": {
+    "bash-597": "collected exit127 python command missing",
+    "bash-600": "collected exit2 ghost-written script absent",
+    "bash-603": "collected killed SIGTERM after initial invalid-anchor search",
+    "bash-619": "collected exit0 corrected DE searches"
+  }
+}

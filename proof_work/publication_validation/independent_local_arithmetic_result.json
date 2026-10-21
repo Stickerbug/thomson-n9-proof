@@ -1,0 +1,157 @@
+{
+  "status": "INDEPENDENT_TWELVE_LOCAL_ARITHMETIC_PASS_CONDITIONAL_ON_EXACT_CONTACTS",
+  "bits": 640,
+  "interior_count": 9,
+  "boundary_count": 3,
+  "rows": {
+    "0": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_00_AAA.json",
+      "sha256": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5",
+      "elapsed_seconds": 9.842597916023806,
+      "pivot_lower_display": [
+        0.041083443167453965,
+        0.03243703543394917,
+        0.00901295581302011
+      ],
+      "failure": null
+    },
+    "1": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_01_CBA.json",
+      "sha256": "9370f0f76e4ca1c945de39661c9d6d7908c4c31feec805c2d5ea02001612cb00",
+      "elapsed_seconds": 8.583995832013898,
+      "pivot_lower_display": [
+        0.14240160948038588,
+        0.005774507075975945,
+        0.0024465300881417046
+      ],
+      "failure": null
+    },
+    "2": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_02_CCA.json",
+      "sha256": "bcc1ebde610e5cb3e496b3a799b0da3ee0ef23ca9fd8c6f59b5bd5e7c6743943",
+      "elapsed_seconds": 6.612281769979745,
+      "pivot_lower_display": [
+        0.08260085131882634,
+        0.048461317880268716,
+        0.0015375292985707314
+      ],
+      "failure": null
+    },
+    "3": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_03_AFF.json",
+      "sha256": "59f76b8de023d04616ae1efb57dc9fb22892dfb04d42805519ade2157dc2d9fe",
+      "elapsed_seconds": 5.690308331977576,
+      "pivot_lower_display": [
+        0.001842625428657774,
+        0.024004502462561576,
+        0.014887503797937757
+      ],
+      "failure": null
+    },
+    "4": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_04_GAF.json",
+      "sha256": "5ea3d7226c0ad28bba35074a54168e78f73978584f524044e0d308dd4d42c77b",
+      "elapsed_seconds": 5.943167186924256,
+      "pivot_lower_display": [
+        0.036140676714400785,
+        0.004673667793976005,
+        0.007996383002620575
+      ],
+      "failure": null
+    },
+    "5": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_05_BFF.json",
+      "sha256": "206bb814ea78c19412f4f4b22eca6755788671bd0eed9d6004ecf03cd904cf66",
+      "elapsed_seconds": 6.2248536449624225,
+      "pivot_lower_display": [
+        0.0034949263606098707,
+        0.1574466886835618,
+        0.01569422174981994
+      ],
+      "failure": null
+    },
+    "8": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_08_CGF.json",
+      "sha256": "bbde094a487a3d22fc7c7c2bc42f066ffb3010953f496ca098b82cdd2a91bed5",
+      "elapsed_seconds": 6.710115623893216,
+      "pivot_lower_display": [
+        0.023021137132040747,
+        0.0038193212257799807,
+        0.002407869712744623
+      ],
+      "failure": null
+    },
+    "10": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_10_DFF.json",
+      "sha256": "cc07b6aacafda071a260b20ecebb68adf841b17185ff24f799fb7210308a808d",
+      "elapsed_seconds": 6.323978123953566,
+      "pivot_lower_display": [
+        0.016475569709929475,
+        0.015862414474670596,
+        0.001624401123238246
+      ],
+      "failure": null
+    },
+    "11": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_11_GDF.json",
+      "sha256": "48c2756ca908b86278689ebbb827b95d7eaee8258897a32bad58e1faf9b07d7b",
+      "elapsed_seconds": 6.09971666499041,
+      "pivot_lower_display": [
+        0.03865559959427996,
+        0.002908458184608722,
+        0.024836855094233508
+      ],
+      "failure": null
+    },
+    "6": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_06_GGB.json",
+      "sha256": "ac880bffdd6e9ea7ce864278dcfc3fedbecae23030a45058b4b450c7d00b1110",
+      "elapsed_seconds": 6.755280207027681,
+      "pivot_lower_display": [
+        0.2409970107490251,
+        0.003308890544076565
+      ],
+      "failure": null
+    },
+    "7": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_07_CFF.json",
+      "sha256": "6eea673d975d85e886e9d6e5d8eae60514e6ce18376c614383a499932994ab09",
+      "elapsed_seconds": 7.540551562095061,
+      "pivot_lower_display": [
+        0.18075442534850475,
+        0.000931228719415449
+      ],
+      "failure": null
+    },
+    "9": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "file": "independent_local_09_DDD.json",
+      "sha256": "575ea3c4c887e858bc9072c79bfe8acaed9f32c2bc5c04f2c2f43cdfcdf222b9",
+      "elapsed_seconds": 6.919104165979661,
+      "pivot_lower_display": [
+        0.04081974537365156,
+        0.03060867562771819
+      ],
+      "failure": null
+    }
+  },
+  "pending_row_indices": [],
+  "source_sha256": {
+    "d10_relative_normal_exact2026_locals.json": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+    "independent_kernel_refined_result.json": "25eed8b02a987716d4aa7a2cf752ba485846611dff82529548a809500efafe90"
+  },
+  "elapsed_seconds": 86.69966144498903,
+  "scope": "Full original source boxes; independent translated-polynomial Hessians, boundary expanded-u monotonicity and graph chain rule, exact rational W invertibility and strict interval LDL. Conditional on separate exact45 contact/Hermite interpolation theorems; no global tree proof."
+}

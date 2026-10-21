@@ -1,0 +1,26 @@
+{
+  "status": "exact_prefix_accounting_query_cover_and_arithmetic_verified",
+  "polynomial_evaluations": 0,
+  "coefficient_tensor_rebuilds": 0,
+  "cells": 894,
+  "initial_pending_unordered": 229292,
+  "visited_pairs": 487,
+  "counts": {
+    "exclude_pair_cap": 117,
+    "accept_W": 369,
+    "pending": 1
+  },
+  "query_covers_checked": 1110,
+  "unvisited_inferred_pending": 228805,
+  "final_pending_unordered": 228806,
+  "minimum_visited_W_lower_exact": "211556764966885601364038405140060045320134034013036681193135587244504020248403799983072607964457328254126664119310422095745317400828740569044668606559909550564692772229161475447971669/5531758053295289234988141519842968465472544382070719024378162451155118968457650630511580460332423192221408255963451130957454918842330578572613368210269132899224305076329069199281356800000",
+  "minimum_visited_W_lower_display": 3.8244037958395604e-05,
+  "query_coefficient_bound_reliance": "Stored exact outward Bernstein coefficient minima treated as supplied oracle data. Paths, rational input coverage, prefix, cap comparisons and final acceptance arithmetic independently checked; polynomial transform and de Casteljau tensors not rebuilt in this audit.",
+  "seconds": 11.477423955977429,
+  "dependencies": {
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_universe.json": "d044f73f2660a8ecb33457e6905a3051411c016f1f564b2f8a5fbc2e6cf34e89",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_result.json": "9f65d5fdee9293d49ee7b70b4591651f1a1ca1d4ae38a7c8fd55b683b1386189",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_records.json": "bc209efe0640383cbdee73f169dccd5b59cba5d0c587dc1c587d1babff44cf80",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_verify.py": "7e5ab448e4ae76b4d0b6cb0cbdafc01b58bac7af0883c12422e3e7e5a4db1bc7"
+  }
+}

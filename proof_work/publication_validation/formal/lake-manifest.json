@@ -1,0 +1,93 @@
+{
+  "version": "1.2.0",
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/plausible",
+      "scope": "leanprover-community",
+      "name": "plausible",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/LeanSearchClient",
+      "scope": "leanprover-community",
+      "name": "LeanSearchClient",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/importGraph",
+      "scope": "leanprover-community",
+      "name": "importGraph",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/proofwidgets",
+      "scope": "leanprover-community",
+      "name": "proofwidgets",
+      "inherited": true,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/aesop",
+      "scope": "leanprover-community",
+      "name": "aesop",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/Qq",
+      "scope": "leanprover-community",
+      "name": "Qq",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/batteries",
+      "scope": "leanprover-community",
+      "name": "batteries",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": ".lake/pinned_sources/Cli",
+      "scope": "leanprover",
+      "name": "Cli",
+      "inherited": true,
+      "configFile": "lakefile.toml",
+      "manifestFile": "lake-manifest.json"
+    }
+  ],
+  "name": "ThomsonNine",
+  "lakeDir": ".lake",
+  "fixedToolchain": true
+}

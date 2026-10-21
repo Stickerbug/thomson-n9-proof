@@ -1,0 +1,94 @@
+{
+  "status": "ROUNDED_LDL_REPLAY_EXPORT_ONLY",
+  "bits": 640,
+  "rows": [
+    {
+      "row": 0,
+      "labels": "AAA",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 1,
+      "labels": "CBA",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 2,
+      "labels": "CCA",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 3,
+      "labels": "AFF",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 4,
+      "labels": "GAF",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 5,
+      "labels": "BFF",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 6,
+      "labels": "GGB",
+      "dimension": 2,
+      "interval_operations": 4,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 7,
+      "labels": "CFF",
+      "dimension": 2,
+      "interval_operations": 4,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 8,
+      "labels": "CGF",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 9,
+      "labels": "DDD",
+      "dimension": 2,
+      "interval_operations": 4,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 10,
+      "labels": "DFF",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    },
+    {
+      "row": 11,
+      "labels": "GDF",
+      "dimension": 3,
+      "interval_operations": 15,
+      "saved_pivots_and_L_matched_exactly": true
+    }
+  ],
+  "interval_operations": 147,
+  "generated_sha256": "0a5a2258f82223becc2e29e21253f6cbd699f0c7d459dd0651df9d01fefd80b4",
+  "exporter_sha256": "db1588db819ad8df9914e9785dcb012a50ac396b8985c71e23d5cf29fa846564",
+  "remaining_premise": "Actual real preconditioned Hessian entries belong to the saved input intervals. No polynomial/graph differentiation or exact contacts proved here."
+}

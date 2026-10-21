@@ -1,0 +1,41 @@
+{
+  "status": "WRAPPER_SOURCE_AUDIT_PASS_NOT_A_NEW_ROOT_EXECUTION",
+  "wrapper_sha256": "c2bd72057d01499f1228f8b0f59db43e42431660955407afc61c3a09f84d546c",
+  "manifest_sha256": "5256af5aa4321bcc44436764e857b36cbb04022fa8c6351b4c3df095411d76c1",
+  "all_manifest_dependencies_match_now": true,
+  "replay_call_AST_confirmed_local_empty": true,
+  "replay_budget": {
+    "budget": 200000,
+    "seconds": 180
+  },
+  "default_global_claim_false": true,
+  "full_root_replay_required_for_wrapper_global_claim": true,
+  "root_replay_assertions_reviewed": [
+    "closed status",
+    "zero pending",
+    "zero local leaf count",
+    "visited_nodes",
+    "split_nodes",
+    "counts",
+    "boundary_counts",
+    "maxdepth",
+    "transcript_sha256",
+    "manifest recheck after replay"
+  ],
+  "prerequisites_reviewed": [
+    "actual root bracket and strict endpoint signs",
+    "positive exact corrected blocks from33LU/I384LDL",
+    "F,c,E,F111 exact enclosure rebuild equality",
+    "peraxis degree<=10",
+    "independent energy formula and strict decimal bound",
+    "pure Fraction pair056 replay",
+    "all boundary multipliers nonnegative"
+  ],
+  "prior_independent_execution_report": "proof_work/analytic10_2026_audit_prerequisites.json",
+  "prior_rootinput_rebuild_report": "proof_work/analytic10_2026_audit_rootinputs.json",
+  "local_Hermite_exact_contact_theorems_not_needed": true,
+  "decimal_target": "25.75998643126983",
+  "mathematical_conclusion_if_replay_passes": "Emin>=E_star-1/10000000>=25.75998643126983",
+  "critical_bug_found": false,
+  "repeated_default_or_global_root_in_this_audit": false
+}

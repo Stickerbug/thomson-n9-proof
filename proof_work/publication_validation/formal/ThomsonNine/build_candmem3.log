@@ -1,0 +1,57 @@
+=== 15:55:34 building CandidateMem ===
+ThomsonNine/CandidateMem.lean:49:9: error: linarith failed to find a contradiction
+case «1».«2»
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h3 : 0 < √3
+hs : 0 < √(1 - r ^ 2)
+hij : p r ((fun i => i) ⟨1, ⋯⟩) = p r ((fun i => i) ⟨2, ⋯⟩)
+hne : ¬(fun i => i) ⟨1, ⋯⟩ = (fun i => i) ⟨2, ⋯⟩
+hx : True
+hy : √3 = -√3 ∨ r = 0
+⊢ False
+failed
+ThomsonNine/CandidateMem.lean:49:9: error: linarith failed to find a contradiction
+case «2».«1»
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h3 : 0 < √3
+hs : 0 < √(1 - r ^ 2)
+hij : p r ((fun i => i) ⟨2, ⋯⟩) = p r ((fun i => i) ⟨1, ⋯⟩)
+hne : ¬(fun i => i) ⟨2, ⋯⟩ = (fun i => i) ⟨1, ⋯⟩
+hx : True
+hy : -√3 = √3 ∨ r = 0
+⊢ False
+failed
+ThomsonNine/CandidateMem.lean:49:9: error: linarith failed to find a contradiction
+case «4».«5»
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h3 : 0 < √3
+hs : 0 < √(1 - r ^ 2)
+hij : p r ((fun i => i) ⟨4, ⋯⟩) = p r ((fun i => i) ⟨5, ⋯⟩)
+hne : ¬(fun i => i) ⟨4, ⋯⟩ = (fun i => i) ⟨5, ⋯⟩
+hx : True
+hy : √3 = -√3 ∨ r = 0
+⊢ False
+failed
+ThomsonNine/CandidateMem.lean:49:9: error: linarith failed to find a contradiction
+case «5».«4»
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+h3 : 0 < √3
+hs : 0 < √(1 - r ^ 2)
+hij : p r ((fun i => i) ⟨5, ⋯⟩) = p r ((fun i => i) ⟨4, ⋯⟩)
+hne : ¬(fun i => i) ⟨5, ⋯⟩ = (fun i => i) ⟨4, ⋯⟩
+hx : True
+hy : -√3 = √3 ∨ r = 0
+⊢ False
+failed
+ThomsonNine/CandidateMem.lean:49:9: error: No goals to be solved
+ThomsonNine/CandidateMem.lean:49:9: error: No goals to be solved
+=== FAIL CandidateMem ===
+=== ALL DONE 15:59:05 ===

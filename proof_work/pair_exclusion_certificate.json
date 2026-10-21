@@ -1,0 +1,9 @@
+{
+  "claim": "If E <= candidate energy upper enclosure, every off-diagonal dot product is <57/100; hence every pair distance is >sqrt(86/100).",
+  "candidate_energy_upper": "1287999326563491578203785113688024701433/50000000000000000000000000000000000000",
+  "global_bound": "51458779692279/2000000000000",
+  "gap_upper": "1529834256516578203785113688024701433/50000000000000000000000000000000000000",
+  "proof": "Exact Bernstein R=1-(2-2t)(p+gap)^2>0 on [57/100,1]. Thus f-p>gap there. Defect sum is at most gap for a competitive configuration.",
+  "leaves": 1,
+  "max_depth": 0
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "test": "two persistent subprocesses, complete two-chunk mathematical verification from root, physical reports and independent global aggregation",
+  "nodes": 3,
+  "chunks": 2,
+  "leaf_counts": {
+    "positive": 2
+  },
+  "seconds": 4.926339581958018,
+  "transport_source_sha256": {
+    "run_sharded_subprocess.py": "44911d0c873f43963f1d40c95a4b3c3250f00935bed8c07e124e02aadd570d72",
+    "subprocess_shard_worker.py": "7cd4c0a7a970a70977124e4c1b8940db278a4d81d9c8507674eac256b701f3bf"
+  }
+}

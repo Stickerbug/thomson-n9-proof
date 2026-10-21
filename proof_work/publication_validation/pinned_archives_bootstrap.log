@@ -1,0 +1,35 @@
+ARCHIVE_VERIFIED LeanSearchClient 15
+ARCHIVE_VERIFIED Cli 12
+ARCHIVE_VERIFIED plausible 35
+ARCHIVE_VERIFIED batteries 290
+ARCHIVE_VERIFIED aesop 258
+Traceback (most recent call last):
+  File "/home/dsh/Thomson Problem/proof_work/publication_validation/bootstrap_pinned_archives.py", line 56, in <module>
+    with cf.ThreadPoolExecutor(max_workers=8)as pool:results=list(pool.map(obtain,UP['packages']))
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/dsh/Thomson Problem/proof_work/publication_validation/bootstrap_pinned_archives.py", line 12, in obtain
+    tree=get_json(f'https://api.github.com/repos/{repo}/git/trees/{rev}?recursive=1')
+  File "/home/dsh/Thomson Problem/proof_work/publication_validation/bootstrap_pinned_archives.py", line 8, in get_json
+    with U.urlopen(U.Request(url,headers={'User-Agent':'ThomsonNine-validation'}),timeout=60) as r:return json.load(r)
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: rate limit exceeded

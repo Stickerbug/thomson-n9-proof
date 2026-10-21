@@ -1,0 +1,28 @@
+=== 08:59:00 building EnergyOptimality ===
+ThomsonNine/EnergyOptimality.lean:15:13: error(lean.unknownIdentifier): Unknown identifier `dist_ge_inv_energy`
+ThomsonNine/EnergyOptimality.lean:14:40: error: unsolved goals
+x : Fin 9 → R3
+hx : x ∈ SphereConfig 9
+U : ℝ
+hU : 0 < U
+hE : energy x ≤ U
+i j : Fin 9
+hij : i ≠ j
+⊢ ⟪x i, x j⟫_ℝ ≤ 1 - (U ^ 2)⁻¹ / 2
+ThomsonNine/EnergyOptimality.lean:41:43: error: Application type mismatch: The argument
+  hmin
+has type
+  IsLocalMin energy x
+but is expected to have type
+  ∀ᶠ (y : Fin 9 → R3) in nhds fun i => x i + 0 • v i, ?m.48 y
+in the application
+  Tendsto.eventually (Continuous.tendsto hcont 0) hmin
+ThomsonNine/EnergyOptimality.lean:36:58: error: unsolved goals
+x : Fin 9 → R3
+hx : Function.Injective x
+hmin : IsLocalMin energy x
+v : Fin 9 → R3
+hcont : Continuous fun t i => x i + t • v i
+⊢ IsLocalMin (fun t => energy fun i => x i + t • v i) 0
+=== FAIL EnergyOptimality ===
+=== ALL DONE 09:01:52 ===

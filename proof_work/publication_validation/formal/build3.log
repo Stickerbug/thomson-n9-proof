@@ -1,0 +1,7 @@
+=== 15:19:03 building DomainCoverage ===
+ThomsonNine/DomainCoverage.lean:9:0: error: invalid 'import' command, it must be used in the beginning of the file
+=== FAIL DomainCoverage ===
+=== 15:19:22 building Probe ===
+ThomsonNine/Probe.lean:1:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic.olean' of module Mathlib.Tactic does not exist
+=== FAIL Probe ===
+=== ALL DONE 15:21:08 ===

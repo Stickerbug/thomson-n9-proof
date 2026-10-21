@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "count": 6,
+  "test_groups": [
+    "valid boundary multiplier polynomial",
+    "mathematically false boundary multiplier",
+    "negative lambda",
+    "asymmetric midpoint",
+    "float enclosure",
+    "wrong external input binding"
+  ]
+}

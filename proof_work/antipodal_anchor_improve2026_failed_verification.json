@@ -1,0 +1,26 @@
+{
+  "status": "failed_depth_guard",
+  "certified": false,
+  "target": "1291/50",
+  "source": "antipodal_anchor_improve2026_export.json",
+  "source_sha256": "975d267dae4cf5d32bc36205b8478cfa0c0b2e8e47b008c20719e8e6c575de80",
+  "job_id": "bash-922",
+  "exit_code": 1,
+  "exact_checks_passed": [
+    "all blocks Fraction LDL",
+    "kernel and D reconstruction",
+    "R reconstruction",
+    "h11 global minorant"
+  ],
+  "error": "AssertionError: Depth guard reached; no certificate",
+  "root_domain": "[-.63,.63]^2 x [-1,.57],Gram>=0",
+  "pending_boxes": "not persisted at guard; must not infer completion",
+  "conditional_stationary_constants_only": {
+    "delta": "31/5000",
+    "theta": "14/125",
+    "dm": "441/500",
+    "cost": "463632053/7813968750",
+    "margin_above_U": "21245264946539737/31255875000000000000"
+  },
+  "warning": "The constants check is conditional on field bound25.82, which was NOT certified. No new pair exclusion follows."
+}

@@ -1,0 +1,9 @@
+=== 08:17:41 building GradientZero ===
+ThomsonNine/GradientZero.lean:19:6: error: Type mismatch
+  Finset.sum_eq_single i ?m.82 ?m.83
+has type
+  ∑ x_1, ⟪if x_1 = i then gradAt x i else 0, gradAt x x_1⟫_ℝ = ⟪if i = i then gradAt x i else 0, gradAt x i⟫_ℝ
+but is expected to have type
+  ∑ j, ⟪if j = i then gradAt x i else 0, gradAt x j⟫_ℝ = ⟪gradAt x i, gradAt x i⟫_ℝ
+=== FAIL GradientZero ===
+=== ALL DONE 08:20:27 ===

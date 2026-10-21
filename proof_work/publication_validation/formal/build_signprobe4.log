@@ -1,0 +1,17 @@
+=== 17:20:24 building SignProbe ===
+ThomsonNine/SignProbe.lean:16:32: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h2, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SignProbe.lean:16:36: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyEnergyDeriv, h1, h3, h4, h5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== OK SignProbe ===
+=== ALL DONE 17:23:42 ===

@@ -1,0 +1,28 @@
+{
+  "observed_unix": 1792207775.6469734,
+  "status": "INTERRUPTED_OR_UNOBSERVABLE; no solver result retained",
+  "job_id": "bash-867",
+  "job_output_before_loss": "running",
+  "job_output_after_loss": "Error: unknown job bash-867",
+  "job_list_after_loss": "(no background jobs)",
+  "process_check_error": "Error: /proc must be mounted",
+  "restart_performed": false,
+  "exit_code_known": false,
+  "no_global_or_feasibility_conclusion": true,
+  "saved_files": {
+    "d12_contact2026_batch2_solver.log": {
+      "mtime": 1792207541.132531,
+      "bytes": 69,
+      "sha256": "e5b6ca664cbeb1d93a7dcbde8f8cb71aee9231ce9b3368a849be66ec54454ebc"
+    },
+    "d12_contact2026_batch2_results.json": {
+      "mtime": 1792207541.132531,
+      "bytes": 1749677,
+      "sha256": "a097eaaa53ed6a0e03f6f127853f6ff95cd04f3f99a4e8852453f66ca5343a55",
+      "history_count": 0,
+      "mandatory_count": 1056,
+      "deterministic_count": 924,
+      "seed_error": 3.3306690738754696e-16
+    }
+  }
+}

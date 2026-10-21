@@ -1,0 +1,23 @@
+REPLAY 100 {'exclude_pair_cap': 41, 'accept_W': 59} seconds 6.778517707949504
+REPLAY 200 {'exclude_pair_cap': 77, 'accept_W': 123} seconds 12.615973435982596
+REPLAY 300 {'exclude_pair_cap': 82, 'accept_W': 217, 'pending': 1} seconds 19.16379635198973
+REPLAY 400 {'exclude_pair_cap': 89, 'accept_W': 310, 'pending': 1} seconds 27.154638016945682
+{
+  "status": "all_saved_pair_records_independently_replayed",
+  "fully_checked_records": 487,
+  "checked_counts": {
+    "exclude_pair_cap": 117,
+    "accept_W": 369,
+    "pending": 1
+  },
+  "elapsed_seconds": 31.318671870976686,
+  "root_build_seconds": 1.0272041669813916,
+  "stats": {
+    "I384_pair_geometries_recomputed": 487,
+    "recomputed_splits": 13293,
+    "terminal_coefficient_minima_recomputed": 7284,
+    "cache_hits": 104742,
+    "query_input_products_fully_replayed": 1110
+  },
+  "remaining_global_pairs": 228806
+}

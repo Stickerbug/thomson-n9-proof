@@ -1,0 +1,35 @@
+{
+  "elapsed_seconds": 17.813781247008592,
+  "random": {
+    "drawn": 12000,
+    "eligible_evaluated": 1444,
+    "minimum_R_new": -0.0009140740147552534,
+    "worst_point": [
+      -0.9457080898901464,
+      -0.6695418187936286,
+      0.39181335775890314
+    ],
+    "negative_below_minus_1e7_count": 81
+  },
+  "DE": {
+    "seconds": 4.464119269978255,
+    "seconds_limit": 12,
+    "status": "Optimization terminated successfully.",
+    "objective_point_evaluations": 4543
+  },
+  "best_numeric_eligible": {
+    "kind": "DE_result",
+    "point": [
+      -0.9391148010394065,
+      -0.6773164129765319,
+      0.38329155180117336
+    ],
+    "R_new_actual": -0.0009287113972182154,
+    "Gram": 1.0946799022804043e-13,
+    "budget_minus_Rold": 0.0001390972577864913,
+    "numeric_eligible": true
+  },
+  "random_1000eligible_completed": true,
+  "eight_SLSQP_starts_attempted": true,
+  "candidate_max_abs_R_new": 3.427813588530171e-15
+}

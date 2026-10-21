@@ -1,0 +1,11 @@
+=== 15:13:41 building TaylorTen ===
+=== OK TaylorTen ===
+=== 15:14:52 building LeafSemantics ===
+=== OK LeafSemantics ===
+=== 15:16:22 building HermiteFactor ===
+=== OK HermiteFactor ===
+=== 15:17:35 building Probe ===
+no such file or directory (error code: 2)
+  file: ThomsonNine/Probe.lean
+=== FAIL Probe ===
+=== ALL DONE 15:17:35 ===

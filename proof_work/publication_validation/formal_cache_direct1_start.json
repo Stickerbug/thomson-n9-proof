@@ -1,0 +1,29 @@
+{
+  "pid": 27083,
+  "source_paths": [
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/Cli",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/LeanSearchClient",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/Qq",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/aesop",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/batteries",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/importGraph",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/plausible",
+    "/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/pinned_sources/proofwidgets"
+  ],
+  "modules": [
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Sqrt",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.LinearAlgebra.Matrix.PosDef",
+    "Mathlib.Algebra.Polynomial.FieldDivision",
+    "Mathlib.RingTheory.Coprime.Lemmas"
+  ]
+}

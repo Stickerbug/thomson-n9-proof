@@ -1,0 +1,16 @@
+{
+  "status": "PASSED_GUARDED_SIGNED128_BACKEND_CROSSCHECK_NOT_GLOBAL_PROOF",
+  "random_tensors": 120,
+  "edge_tensors": 5,
+  "object_split_comparisons": 750,
+  "independent_Fraction_average_comparisons": 450,
+  "rejection_checks": 15,
+  "strict_range": "abs(value)<2^124",
+  "scale": "unchanged; input and output integers preserve caller scale",
+  "seconds": 1.7450597286224365,
+  "sources_sha256": {
+    "exact128_2026.c": "f7293e5065a2d21ba8b40ded512f198c14cb5162967f05cc2ed7b123b2eb2898",
+    "exact128_2026.py": "9b535ce122f9824cc5b06998d6289005c6fcbc24fbc61a4c2e5f90880a3cca9b",
+    "exact128_2026_test.py": "d3e364c5ddc63cc284277fb44af1f23411b0dadaea819ae03d84f5a623bd78d6"
+  }
+}

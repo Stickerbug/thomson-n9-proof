@@ -1,0 +1,28 @@
+=== 05:37:21 building PairDeriv ===
+ThomsonNine/PairDeriv.lean:28:6: error: Type mismatch: After simplification, term
+  HasDerivAt.add (hasDerivAt_const 0 (‖x‖ ^ 2)) h1
+ has type
+  HasDerivAt ((fun x_1 => ‖x‖ ^ 2) + fun t => 2 * t * ⟪x, v⟫_ℝ) (2 * ⟪x, v⟫_ℝ) 0
+but is expected to have type
+  HasDerivAt (fun x_1 => 2 * x_1 * ⟪x, v⟫_ℝ) (2 * ⟪x, v⟫_ℝ) 0
+ThomsonNine/PairDeriv.lean:31:8: error: Type mismatch: After simplification, term
+  HasDerivAt.pow (hasDerivAt_id 0) 2
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.normedCommRing.toCommRing.toAddCommGroup
+    (NormedAlgebra.toNormedSpace ℝ).toModule PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (id ^ 2) 0 0
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => t ^ 2) 0 0
+ThomsonNine/PairDeriv.lean:33:4: error: Type mismatch: After simplification, term
+  HasDerivAt.add h2 h4
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.normedAddCommGroup.toAddCommGroup
+    RCLike.toInnerProductSpaceReal.toModule PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯
+    ((fun t => ‖x‖ ^ 2 + 2 * t * ⟪x, v⟫_ℝ) + fun t => t ^ 2 * ‖v‖ ^ 2) (2 * ⟪x, v⟫_ℝ) 0
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => ‖x‖ ^ 2 + 2 * t * ⟪x, v⟫_ℝ + t ^ 2 * ‖v‖ ^ 2)
+    (2 * ⟪x, v⟫_ℝ) 0
+ThomsonNine/PairDeriv.lean:39:2: error: No goals to be solved
+=== FAIL PairDeriv ===
+=== ALL DONE 05:40:15 ===

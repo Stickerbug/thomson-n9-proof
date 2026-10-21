@@ -1,0 +1,126 @@
+{
+  "status": "GEOMETRIC_DERIVATION_REVIEW_PASS_WITH_EXPLICIT_DEPENDENCIES",
+  "physical_anchor_moment_checks": [
+    {
+      "k": 0,
+      "coordinates_checked": 11,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 1,
+      "coordinates_checked": 10,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 2,
+      "coordinates_checked": 9,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 3,
+      "coordinates_checked": 8,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 4,
+      "coordinates_checked": 7,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 5,
+      "coordinates_checked": 6,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 6,
+      "coordinates_checked": 5,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 7,
+      "coordinates_checked": 4,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 8,
+      "coordinates_checked": 3,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 9,
+      "coordinates_checked": 2,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    },
+    {
+      "k": 10,
+      "coordinates_checked": 1,
+      "real_moments_identical": true,
+      "sine_moments_zero_by_y_reflection": true
+    }
+  ],
+  "triangle_count": 84,
+  "pair_multiplicities": [
+    6,
+    3,
+    6,
+    3,
+    12,
+    6
+  ],
+  "pair_incidences": [
+    42,
+    21,
+    42,
+    21,
+    84,
+    42
+  ],
+  "F111_triangle_constant": "84/8=21/2",
+  "S_repeated_index_decomposition": "S=6 sum_unordered_distinct F+6 sum_unordered_pairs F(1,t,t)+9F111",
+  "weighted_M_value_identity": "sum w Mvalue=7S/6",
+  "weighted_M_derivative_identity": "sum w vel dot gradM=7Sprime/6 with fixed coefficient matrices",
+  "boundary_checks": [
+    {
+      "labels": [
+        "B",
+        "G",
+        "G"
+      ],
+      "g0": "-2*(r - 1)*(r + 1)",
+      "velocity_dot_gradient_exact_zero": true
+    },
+    {
+      "labels": [
+        "C",
+        "F",
+        "F"
+      ],
+      "g0": "-(r - 2)*(r + 2)/2",
+      "velocity_dot_gradient_exact_zero": true
+    },
+    {
+      "labels": [
+        "D",
+        "D",
+        "D"
+      ],
+      "g0": "3/2",
+      "velocity_dot_gradient_exact_zero": true
+    }
+  ],
+  "W_minor_exact": "-36*r",
+  "certified_LU_nonzero_count": 33,
+  "certificate_sha256": "a31a0f109ebed799b51a42331ffc02adc8a479c54ccc9c055761754cde03d049",
+  "seconds": 12.029677629470825,
+  "warning": "Small symbolic checks establish physical features/counts/boundary conversion; WM=0 is proven in accompanying geometric derivation, not by interval zero containment."
+}

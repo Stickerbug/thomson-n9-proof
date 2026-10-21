@@ -1,0 +1,37 @@
+{
+  "checker_exact.py": {
+    "sha256": "9ab4b9810740d1b83c4ecf2e9eef76f7d93c42aaff1ba85e51f8bc24c27a13bc",
+    "bytes": 9720,
+    "regular_file": true
+  },
+  "test_checker_exact.py": {
+    "sha256": "9de1b6804facc3b6930c511c874b4a46f433cc1ea538b7be12af159e5946cac7",
+    "bytes": 5786,
+    "regular_file": true
+  },
+  "test_checker_supplemental.py": {
+    "sha256": "b84d5d9b19678009103d3cc22d77414ca24804426e93e39348d8d02fb29e885f",
+    "bytes": 2001,
+    "regular_file": true
+  },
+  "README_independent_checker.md": {
+    "sha256": "00d41c89300d575b9da60a292b15839026fd232df05434b6103e166fdf1eeb5a",
+    "bytes": 7684,
+    "regular_file": true
+  },
+  "audit_independent_result.py": {
+    "sha256": "9d93f08aa73dd3890674585b06f83f5d20b15199e1c95edc45c3b270ac3c8944",
+    "bytes": 2167,
+    "regular_file": true
+  },
+  "independent_selftests.json": {
+    "sha256": "174f2d3830def50f5c7b0c9bb31cf87c2e8fe4639c164d95ff38a79cc21e92d6",
+    "bytes": 852,
+    "regular_file": true
+  },
+  "independent_supplemental_tests.json": {
+    "sha256": "86e464906bc78189ded15f734b0e16347952d8aae4ba2a25f5f4ca793629b99b",
+    "bytes": 261,
+    "regular_file": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "groups": 24,
+  "scope": "Additional exact Gram and recoverable-sharding tests; no local nonnegativity or PSD proof.",
+  "status": "PASS",
+  "tests": [
+    "integer_Gram_and_ceil_equal_exact_Fraction_at_three_geometries",
+    "valid_complete_variable_depth_frontiers",
+    "frontier_missing_domain",
+    "frontier_empty",
+    "frontier_duplicate",
+    "frontier_overlap_ancestor",
+    "frontier_illegal_path",
+    "subtree_spans_and_early_singletons",
+    "structure_missing_child",
+    "structure_extra_child",
+    "structure_wrong_geometry",
+    "structure_illegal_terminal",
+    "complete_shards_from_global_root_then_global_aggregate",
+    "wrong_chunk_status",
+    "wrong_chunk_path",
+    "wrong_chunk_manifest_hash",
+    "wrong_chunk_bytes_hash",
+    "wrong_chunk_counts",
+    "wrong_chunk_binding",
+    "rehash_cannot_hide_frontier_gap",
+    "wrong_frontier_byte_span",
+    "wrong_frontier_ancestor_axis",
+    "wrong_frontier_geometry",
+    "bound_frontier_and_report_mutations_checked"
+  ]
+}

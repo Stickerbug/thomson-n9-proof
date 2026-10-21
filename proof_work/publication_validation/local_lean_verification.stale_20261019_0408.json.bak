@@ -1,0 +1,86 @@
+{
+  "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
+  "scope": "Local certificate implications only; final ThomsonNineClaim is unproved.",
+  "started_unix": 1792382259.7168496,
+  "stages": [
+    {
+      "name": "export_data",
+      "exit_code": 0,
+      "seconds": 0.9241464138031006,
+      "log": "local_lean_verification_logs/export_data.log",
+      "log_sha256": "4ef991efdb7718bf95f3157ce5774446882d9fe0acd2091007b87c1fbe763d0a"
+    },
+    {
+      "name": "export_replay",
+      "exit_code": 0,
+      "seconds": 0.7481801509857178,
+      "log": "local_lean_verification_logs/export_replay.log",
+      "log_sha256": "0fe359df5bd53e24997e7ebca45093ea76b783e38d7bb072f1f56faa0735c65a"
+    },
+    {
+      "name": "build_LocalVerification",
+      "exit_code": 0,
+      "seconds": 97.87319326400757,
+      "log": "local_lean_verification_logs/build_LocalVerification.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "root",
+      "exit_code": 0,
+      "seconds": 107.39219069480896,
+      "log": "local_lean_verification_logs/root.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "axioms",
+      "exit_code": 0,
+      "seconds": 115.25096845626831,
+      "log": "local_lean_verification_logs/axioms.log",
+      "log_sha256": "4315b8c12a48b6136d2386f077eb6a0702e2de795add6be8d5eb5aaed20ec31b"
+    },
+    {
+      "name": "kernel",
+      "exit_code": 0,
+      "seconds": 351.36554646492004,
+      "log": "local_lean_verification_logs/kernel.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "axiom_audits": 241,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sources_sha256": {
+    "formal/ThomsonNine/LocalLDLSemantics.lean": "d15d39c1e8b98af71dcc06dc70a308b156729309b0e90365181616936948f8b2",
+    "formal/ThomsonNine/LocalCerts.lean": "6953fde199166c062b753b47eef0762d4ba05d62694a5c2cd6e0952b1172a8bb",
+    "formal/ThomsonNine/LocalLDLData.lean": "702ac38fabc7ac95ca7528672f90c4623c429242f5993f9755e214e96b29331d",
+    "formal/ThomsonNine/LocalLDLFactorization.lean": "ae29925ef624e6471c1300647509bcab143497f23ffede633cd414dae76f3bb3",
+    "formal/ThomsonNine/LocalNonneg.lean": "fed338c6533aff13f240f9dba8c1131a494e61cd27028532b3a0be15d65edee8",
+    "formal/ThomsonNine/IntervalLocalOps.lean": "0a9532bc3f7936344a5d3732dffbf6f379dc8775dc9aac6c9e5599de4cd35960",
+    "formal/ThomsonNine/LocalLDLReplay.lean": "0a5a2258f82223becc2e29e21253f6cbd699f0c7d459dd0651df9d01fefd80b4",
+    "formal/ThomsonNine/GramBoundary.lean": "1a648e0addda5e414e6f01522b0172d651d7f7a1687bcfdd7a7b1c0869692ae9",
+    "formal/ThomsonNine/LocalVerification.lean": "79e6c4d04b62f512effbf0354ef1c6e837e6fec777f5b3726d35551de3f55563",
+    "formal/ThomsonNine.lean": "27153018cfe62e76174526347d0011fc3283225a19414d1159b984af49fbbac1",
+    "formal/ThomsonNine/Axioms.lean": "28d3b58554ccbb8177ec84cea71bf872e10df6aedf2a73e8b4b292e4e2be3634",
+    "verify_local_lean.py": "67205cbe238ada08ae536d847e7cc90dabc52e32d6579cf51b2453cce4cb78c3",
+    "formal/build_direct.sh": "e1a2c48a036b14e367377a2583cb94f9fbc95adc40590a62c986d52605bcc709",
+    "export_local_lean.py": "78b27b92920bb9b04dcaf8618a2805abf5c2d8a9e42dc415c18ff287f0923ffe",
+    "local_lean_export_manifest.json": "576fcc6d0090ef734135e26dbea095e11026f76def65d0b70d4f7e193b5ee434",
+    "export_local_ldl_replay.py": "db1588db819ad8df9914e9785dcb012a50ac396b8985c71e23d5cf29fa846564",
+    "local_ldl_replay_manifest.json": "0d3c767da95c420467d431f8773067848deb616a8105e56a7301e76136a95116"
+  },
+  "artifacts_sha256": {
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalLDLSemantics.olean": "a0baf59445220cac94d8b3428938b25340048c55d06097c2657b6e82a6bd542d",
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalCerts.olean": "2f0094c9b17e973bf03fba0d9d0551136cbcce29ee68659c9aef6b0b55ab6945",
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalLDLData.olean": "d903de007a72b7af1c92eec081a1a7c200edb83d5c8db439eba1a2b35f1e3c5f",
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalLDLFactorization.olean": "ac75f50730b40b080e5446c7e7a315f4d942a26087c5853430129ffa5f90efa4",
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalNonneg.olean": "5cc263143788714a4f7f63dee05bb3ecadd9b2c71154910138c09d5a23b7632e",
+    "formal/.lake/build/lib/lean/ThomsonNine/IntervalLocalOps.olean": "fde65a4b94cd64636cd7edc65206502f9954f9e07bd8e593ca63ee1b7f955821",
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalLDLReplay.olean": "b71be1b249a6b95fcfcb8705f780c5b5dd77b6cbab225daab96a97af3186c54c",
+    "formal/.lake/build/lib/lean/ThomsonNine/GramBoundary.olean": "9dcf39cf932c7c03c8fba1f815e4809e7683d8624dd3c9961c18ae27656cef41",
+    "formal/.lake/build/lib/lean/ThomsonNine/LocalVerification.olean": "d0cde0b65b1db5183e6ddaa9dc006f3a1673b08ea88fcf813c941ac08850086a"
+  },
+  "finished_unix": 1792382933.5672586
+}

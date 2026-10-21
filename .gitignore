@@ -1,0 +1,26 @@
+# Build artifacts and toolchains (reproducible, not source)
+.venv/
+__pycache__/
+*.pyc
+**/.lake/
+proof_work/publication_validation/toolchain/
+proof_work/python_deps/
+*.olean
+*.ilean
+*.c
+*.o
+*.so
+*.a
+*.trace
+
+# Interrupted/staging directories
+*.tmpdir/
+.*.tmpdir/
+
+# Large/duplicate review archives; canonical bundle is included
+proof_work/THOMSON_N9_REVIEW_BUNDLE_2026-*.zip
+proof_work/publication_validation/THOMSON_N9_REVIEW_BUNDLE_2026-*.zip
+
+# Files above GitHub's 100 MB limit (to be uploaded as release assets)
+proof_work/nonsharp_d10_root25_759925_v9_depth1000_frontier.json
+proof_work/nonsharp_d10_root25_759925_v9_depth300_frontier.json

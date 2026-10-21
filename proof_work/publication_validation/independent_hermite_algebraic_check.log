@@ -1,0 +1,11 @@
+{
+  "status": "ALGEBRAIC_HERMITE_MINORANT_Q_BERNSTEIN_PASS",
+  "complete": true,
+  "visited_nodes": 1,
+  "max_depth": 0,
+  "leaf_count": 1,
+  "exact_dyadic_leaf_measure": "1",
+  "negative": null,
+  "stop_reason": null,
+  "elapsed_seconds": 2.193545832997188
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "test_groups": [
+    "exact affine transform and closed subdivisions including 170-bit integers",
+    "rigorous f-minus-d bounds with degree20 positive-tail handling",
+    "valid root and full binary fixtures",
+    "missing right child",
+    "missing interior child",
+    "duplicate root",
+    "illegal pending termination",
+    "unknown leaf reason",
+    "wrong nonzero delta",
+    "wrong root domain",
+    "wrong dyadic index",
+    "known inconsistent root tensor",
+    "known false positive leaf",
+    "known false Gram exclusion",
+    "explicit conditional local core",
+    "forged local core",
+    "local leaf outside core",
+    "negative enclosure radius"
+  ],
+  "count": 18,
+  "mutation_policy": "All negative cases have known structural or mathematical invalidity; arbitrary integer changes are not presumed invalid."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "SOURCE_SNAPSHOT_AND_EXACT_LOCAL_API_ROW_MATCH",
+  "local_api_rows_match_original": true,
+  "sha256": {
+    "dyadic_interval.py": "6ca947a97662cd274659eb030c107f1551841664644a8e2cb7344aa4de364adf",
+    "certify_pair_moments.py": "ef852263fce0558840f1a26d302146f6f44ea7d0cc586e6117509045e9905efd",
+    "certify_all_degree.py": "f9a9da7c89bb5caab3284066273860278a65ac99f6db7a92f8cfe0fceb16d590",
+    "candidate_low_rank.py": "c1da5b6a0670c12f8645c02afbb86119537b7459aa5e8bf8e377b5baff6c1e8e",
+    "candidate_low_rank_notes.md": "e52388e6711023e70383312368aab3b6a18536527de640bfe02bba35aa40a1d5",
+    "candidate_triple_types_v1.json": "adbc95b12ef4d47c2b4a08c7bee33778e23f12f2edd33bbc5ae6c11619db76bb",
+    "verify_pair056_saved.py": "8ac2885e69b5db83896f153ce328a261903b32e289e8068b431efe9531ff7528",
+    "pair056_optimized_certificate.json": "e6e683e00214e7e92ea6e415125ef7b9952278df4503161a9cdcdd706c88178c",
+    "d10_contact_left_geometry_v1.py": "715e41d5a02e7d70346f99576f2d43e7123515173363bcab94022776e88d878b",
+    "d10_contact_left_geometry_v1.json": "b1127dc4800c1f94229163048ee9f368336cca3bf64d1aa0f1c2e431e2904b34",
+    "d10_exact_contact_psd_seed1_v1.json": "ec62654a67cff8ce3575283fad1af22c5a30cda2a83b471c0695e831ac1e268c",
+    "contact_minorant_factor_v1.py": "78ae1a648c38fc08d286d05f8c0d93a177395fdbf758997e7ab78b50186c38ec",
+    "contact_minorant_factor_v1.json": "6efddb48d716ccfc7922866954bd4a9448ee1fd3686c0a6d6122b86f827c02aa",
+    "d10_sharpconvex_exact2026_kernel.py": "f3f1c1652d86cc4169ec82454547b30d784eb4b0b4d5af59f845714865d458bc",
+    "d10_sharpconvex_exact2026_seed.json": "58491a639340538cf12772975665a55e7240ef4002f0f583b0d0861e056be34e",
+    "d10_sharpconvex_exact2026_certificate.json": "0abbbc85245364424a1ca00c53b3c1aea92b752a82639e6fed6dcdb617fe4bef",
+    "d10_sharpconvex_exact2026_export.py": "b7eda48dcbdce20bb3f355ad4cd3b1eb8484da0cb6ec83b1268b5233679c64aa",
+    "d10_sharpconvex_exact2026_coefficients.json": "78bda6d1ac2a460acc8488350080507fee074323f7e68bc61d38db2f9a0e16e3",
+    "d10_sharpconvex_exact2026_local_pre_api.py": "5811ea56f0370324705b613b0732f3b01b1f122a6e3e88c986348e57bb53bb10",
+    "d10_sharpconvex_exact2026_local.py": "e14b80d006ceeeb2bdfcefe39b7510696d42e6a993baeccdd2064336300bf226",
+    "d10_sharpconvex_exact2026_local.json": "2c92d5583683bdfefa0e0d1355309b4d78bd27e8f101f89f554b5238f6cdc946",
+    "d10_sharpconvex_exact2026_local_api_replay.json": "7fed31f0a1d32430b028ceb983e5575bbac502337c09ead2b37c32d5533715aa",
+    "d10_sharpconvex_exact2026_closure_checklist_zh.md": "d247a74008cbdddbcbef3143b660a18820c45aeb76c4a11f0be4ef2af0fa35f2"
+  },
+  "scope": "snapshot of currently used mathematical proof sources, no away completion claim"
+}

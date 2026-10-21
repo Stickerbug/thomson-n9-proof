@@ -1,0 +1,131 @@
+#!/usr/bin/env python3
+"""Generate Lean interval bindings for 3/4-source single-axis chain targets."""
+import json, math, sys
+from fractions import Fraction as F
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+R = json.load(open(ROOT / 'independent_hermite_RH_result.json'))['R_coefficients']
+Q = json.load(open(ROOT / 'independent_local_00_AAA.json'))['shifted_polynomial']
+A = json.load(open(ROOT / 'independent_local_00_AAA.json'))['new_center_intervals']
+LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+
+def rat(x):
+    f = F(x); return f'(({f.numerator} : ℚ) / {f.denominator})'
+
+def idef(name, X):
+    return f'private def {name} : RatInterval := ⟨{rat(X[0])}, {rat(X[1])}, by rw [Rat.le_iff]; norm_num⟩'
+
+def imul(X, Y):
+    return (min(X[0]*Y[0], X[0]*Y[1], X[1]*Y[0], X[1]*Y[1]),
+            max(X[0]*Y[0], X[0]*Y[1], X[1]*Y[0], X[1]*Y[1]))
+
+src = [tuple(e) for e, _ in R]
+Rint = {tuple(e): (F(v[0]), F(v[1])) for e, v in R}
+Qint = {tuple(e): (F(v[0]), F(v[1])) for e, v in Q}
+Aint = [(F(v[0]), F(v[1])) for v in A]
+
+rows = []
+for i, (e, _) in enumerate(R):
+    k = tuple(e)
+    ss = [x for x in src if all(x[j] >= k[j] for j in range(3))]
+    if len(ss) not in (3, 4): continue
+    axes = [j for j in range(3) if len({x[j] for x in ss}) > 1]
+    if len(axes) != 1: continue
+    ax = axes[0]
+    if any(len({x[j] for x in ss}) != 1 for j in range(3) if j != ax): continue
+    if sorted({x[ax] for x in ss}) != list(range(k[ax], k[ax] + len(ss))): continue
+    rows.append((i, k, ss, ax))
+if LIMIT: rows = rows[:LIMIT]
+print(f'chain rows: {len(rows)}')
+
+out = ['import ThomsonNine.LocalSparseHessianAAABase\n',
+       'open ThomsonNine Interval',
+       'open ThomsonNine.LocalSparseHessianAAA',
+       'open ThomsonNine.Interval.RatInterval\n',
+       'namespace ThomsonNine.ChainBinding\n']
+audits = []
+for i, k, ss, ax in rows:
+    tag = '_'.join(map(str, k)); m = len(ss)
+    out.append(idef(f'Q_{tag}', Qint[k]))
+    Rs = []
+    for j, e in enumerate(ss):
+        name = f'R{j}_{tag}'; Rs.append(name); out.append(idef(name, Rint[e]))
+    out.append(idef(f'A_{tag}', Aint[ax]))
+    Ts = [Rs[0]]
+    factors = ['c0']
+    for j in range(1, m):
+        n = math.comb(k[ax] + j, j)
+        Pn = f'P{j}_{tag}'; X = imul((F(n), F(n)), Rint[ss[j]])
+        out.append(idef(Pn, X))
+        out.append(f'''theorem {Pn}_mem (c{j} : ℝ) (h{j} : {Rs[j]}.mem c{j}) :
+    {Pn}.mem ({n} * c{j}) := by
+  refine mem_mul_of_bounds (mem_const ({n} : ℚ)) h{j} ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
+    (simp only [{Pn}, {Rs[j]}, RatInterval.const]; rw [Rat.le_iff]; norm_num)
+''')
+        prev = Pn
+        # left-assoc coefficient expression: ((n * c_j) * a) * a ...
+        coeff = f'({n} * c{j})'
+        for t in range(1, j + 1):
+            Kn = f'K{j}_{t}_{tag}'; X = imul(X, Aint[ax]); out.append(idef(Kn, X))
+            newcoeff = f'({coeff} * a)'
+            if t == 1:
+                out.append(f'''theorem {Kn}_mem (c{j} : ℝ) (h{j} : {Rs[j]}.mem c{j}) (ha : A_{tag}.mem a) :
+    {Kn}.mem ({newcoeff}) := by
+  have hp : {prev}.mem ({coeff}) := {prev}_mem c{j} h{j}
+  refine mem_mul_of_bounds hp ha ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
+    (simp only [{prev}, {Kn}, A_{tag}]; rw [Rat.le_iff]; norm_num)
+''')
+            else:
+                out.append(f'''theorem {Kn}_mem (c{j} : ℝ) (h{j} : {Rs[j]}.mem c{j}) (ha : A_{tag}.mem a) :
+    {Kn}.mem ({newcoeff}) := by
+  have hp : {prev}.mem ({coeff}) := {prev}_mem c{j} h{j} ha
+  refine mem_mul_of_bounds hp ha ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
+    (simp only [{prev}, {Kn}, A_{tag}]; rw [Rat.le_iff]; norm_num)
+''')
+            prev = Kn; coeff = newcoeff
+        Ts.append(prev); factors.append(coeff)
+    sumexpr = factors[-1]
+    for j in range(m - 2, 0, -1):
+        sumexpr = f'({factors[j]} + {sumexpr})'
+    sumexpr = f'({factors[0]} + {sumexpr})'
+    # theorem signature
+    if m == 3:
+        args = f'(c0 c1 c2 : ℝ)\n    (h0 : {Rs[0]}.mem c0) (h1 : {Rs[1]}.mem c1) (h2 : {Rs[2]}.mem c2) (ha : A_{tag}.mem a)'
+        call = 'c0 c1 c2 h0 h1 h2 ha'
+    else:
+        args = f'(c0 c1 c2 c3 : ℝ)\n    (h0 : {Rs[0]}.mem c0) (h1 : {Rs[1]}.mem c1) (h2 : {Rs[2]}.mem c2)\n    (h3 : {Rs[3]}.mem c3) (ha : A_{tag}.mem a)'
+        call = 'c0 c1 c2 c3 h0 h1 h2 h3 ha'
+    out.append(f'''theorem target_{tag}_interval_bound {args} :
+    Q_{tag}.mem ({sumexpr}) := by''')
+    for j in range(1, m):
+        out.append(f'''  have hT{j} : {Ts[j]}.mem ({factors[j]}) := {Ts[j]}_mem c{j} h{j} ha''')
+    if m == 3:
+        out.append(f'''  have hsum : (add {Ts[0]} (add {Ts[1]} {Ts[2]})).mem ({factors[0]} + ({factors[1]} + {factors[2]})) :=
+    mem_add h0 (mem_add hT1 hT2)
+  refine mem_subset hsum ?_ ?_
+  · change Q_{tag}.lo ≤ {Rs[0]}.lo + ({Ts[1]}.lo + {Ts[2]}.lo)
+    rw [Rat.le_iff]; norm_num [Q_{tag}, {Rs[0]}, {Ts[1]}, {Ts[2]}]
+  · change {Rs[0]}.hi + ({Ts[1]}.hi + {Ts[2]}.hi) ≤ Q_{tag}.hi
+    rw [Rat.le_iff]; norm_num [Q_{tag}, {Rs[0]}, {Ts[1]}, {Ts[2]}]''')
+    else:
+        out.append(f'''  have hsum : (add {Ts[0]} (add {Ts[1]} (add {Ts[2]} {Ts[3]}))).mem ({factors[0]} + ({factors[1]} + ({factors[2]} + {factors[3]}))) :=
+    mem_add h0 (mem_add hT1 (mem_add hT2 hT3))
+  refine mem_subset hsum ?_ ?_
+  · change Q_{tag}.lo ≤ {Rs[0]}.lo + ({Ts[1]}.lo + ({Ts[2]}.lo + {Ts[3]}.lo))
+    rw [Rat.le_iff]; norm_num [Q_{tag}, {Rs[0]}, {Ts[1]}, {Ts[2]}, {Ts[3]}]
+  · change {Rs[0]}.hi + ({Ts[1]}.hi + ({Ts[2]}.hi + {Ts[3]}.hi)) ≤ Q_{tag}.hi
+    rw [Rat.le_iff]; norm_num [Q_{tag}, {Rs[0]}, {Ts[1]}, {Ts[2]}, {Ts[3]}]''')
+    out.append(f'''
+theorem target_t{i:03d}_{tag}_interval_bound {args} :
+    (coefficientInterval .t{i:03d}).mem ({sumexpr}) := by
+  have hQ : coefficientInterval .t{i:03d} = Q_{tag} := rfl
+  rw [hQ]
+  exact target_{tag}_interval_bound {call}
+''')
+    audits.append(f'#print axioms ThomsonNine.ChainBinding.target_t{i:03d}_{tag}_interval_bound')
+out.append('end ThomsonNine.ChainBinding\n')
+path = ROOT / 'formal/ThomsonNine/ChainBindings.lean'
+path.write_text('\n'.join(out))
+print(f'wrote {path} ({path.stat().st_size} bytes), {len(rows)} targets')
+(ROOT / 'chain_audits.txt').write_text('\n'.join(audits) + '\n')

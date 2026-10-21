@@ -1,0 +1,36 @@
+{
+  "warning": "NONRIGOROUS; concrete counterexamples to the polynomial residual, not counterexamples to Thomson candidate.",
+  "validation": {
+    "random_minimum": -1.0435479511003347,
+    "differential_evolution": [
+      {
+        "residual": -1.1696656214647376,
+        "angle_parameters": [
+          1.0,
+          1.0,
+          0.5782935644272863
+        ],
+        "triangle": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "evaluations": 74
+      },
+      {
+        "residual": -1.1696656214647376,
+        "angle_parameters": [
+          1.0,
+          1.0,
+          0.2575843103554001
+        ],
+        "triangle": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "evaluations": 122
+      }
+    ]
+  }
+}

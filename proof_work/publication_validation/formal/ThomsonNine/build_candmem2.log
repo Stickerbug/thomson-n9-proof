@@ -1,0 +1,7 @@
+=== 15:51:45 building CandidateMem ===
+ThomsonNine/CandidateMem.lean:75:34: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+=== FAIL CandidateMem ===
+=== ALL DONE 15:54:57 ===

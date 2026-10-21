@@ -1,0 +1,54 @@
+{
+  "status": "INDEPENDENT_CANDIDATE_BOUNDS_PASS",
+  "process_exit_code": 0,
+  "elapsed_seconds": 0.12766770797315985,
+  "bits": 640,
+  "previous_export_and_pair_artifacts_unchanged": true,
+  "approximate_display_only": {
+    "r": "0.710548334092953811327704179272791243768034",
+    "left_derivative_upper": "-3.30799550542493834506899854750016287063737E-105",
+    "right_derivative_lower": "1.32916372758512265595730657251627816679908E-104",
+    "energy_upper": "25.7599865312698315640757022737604940286419",
+    "U_minus_energy_upper": "1.80863635232405502378559049466001447947976E-38"
+  },
+  "negative_tests": [
+    {
+      "case": "reversed_root_interval",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "root bracket must be strictly ordered inside (0,1)"
+    },
+    {
+      "case": "reciprocal_crosses_zero",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "reciprocal interval crosses zero"
+    },
+    {
+      "case": "sqrt_upper_rounded_down",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "sqrt enclosure fails exact squared endpoint inequalities"
+    },
+    {
+      "case": "wrong_U_below_energy",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "candidate energy upper bound is not below U"
+    }
+  ],
+  "files": {
+    "independent_candidate_bounds.py": {
+      "sha256": "63f197c0f5904bdd1e64b801e9af8de24b96dc595f3a539c691537acf25f268b",
+      "bytes": 7341
+    },
+    "independent_candidate_bounds_result.json": {
+      "sha256": "a6f90fc05790b5a3d2e61a6f0d5718e1ed7887f4b3d4b3263a2b9690b1b3f0b0",
+      "bytes": 37763
+    },
+    "independent_candidate_bounds.log": {
+      "sha256": "ff7b8a3c9319385942aab5a0c5eff5896234aec5ef7bbc8f7e06d1d3fc80214e",
+      "bytes": 3966
+    },
+    "README_independent_candidate_bounds.md": {
+      "sha256": "72ba43af7a03105ce5f326a1dd44cff359aac1c5215bf66b394f59a3f35f9d4f",
+      "bytes": 3875
+    }
+  }
+}

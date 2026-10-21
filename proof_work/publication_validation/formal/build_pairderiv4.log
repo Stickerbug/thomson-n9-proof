@@ -1,0 +1,46 @@
+=== 06:00:29 building PairDeriv ===
+ThomsonNine/PairDeriv.lean:32:24: error: Application type mismatch: The argument
+  LT.lt.ne' hxpos
+has type
+  ‖x‖ ≠ 0
+but is expected to have type
+  ‖x + 0 • v‖ ≠ 0
+in the application
+  pow_ne_zero 2 (LT.lt.ne' hxpos)
+ThomsonNine/PairDeriv.lean:37:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  √(‖x‖ ^ 2)
+in the target expression
+  ⟪x, v⟫_ℝ / ‖x‖ = 2 * ⟪x, v⟫_ℝ / (2 * √(‖x + 0 • v‖ ^ 2))
+
+case e'_9
+x v : R3
+hx : x ≠ 0
+hf : HasDerivAt (fun t => ‖x + t • v‖ ^ 2) (2 * ⟪x, v⟫_ℝ) 0
+hxpos : 0 < ‖x‖
+hsq : (fun t => ‖x + t • v‖ ^ 2) 0 ≠ 0
+h : HasDerivAt (fun y => √(‖x + y • v‖ ^ 2)) (2 * ⟪x, v⟫_ℝ / (2 * √(‖x + 0 • v‖ ^ 2))) 0
+⊢ ⟪x, v⟫_ℝ / ‖x‖ = 2 * ⟪x, v⟫_ℝ / (2 * √(‖x + 0 • v‖ ^ 2))
+ThomsonNine/PairDeriv.lean:45:22: error: Application type mismatch: The argument
+  LT.lt.ne' hxpos
+has type
+  ‖x‖ ≠ 0
+but is expected to have type
+  ‖x + 0 • v‖ ≠ 0
+in the application
+  HasDerivAt.inv hn (LT.lt.ne' hxpos)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/PairDeriv.lean:42:73: error: unsolved goals
+case e'_9
+x v : R3
+hx : x ≠ 0
+hxpos : 0 < ‖x‖
+hn : HasDerivAt (fun t => ‖x + t • v‖) (⟪x, v⟫_ℝ / ‖x‖) 0
+hinv : HasDerivAt (fun t => ‖x + t • v‖)⁻¹ (-(⟪x, v⟫_ℝ / ‖x‖) / ‖x + 0 • v‖ ^ 2) 0
+⊢ -⟪x, v⟫_ℝ = -(⟪x, v⟫_ℝ * ‖x‖ ^ 2 * ‖x + 0 • v‖⁻¹ ^ 2)
+=== FAIL PairDeriv ===
+=== ALL DONE 06:01:46 ===

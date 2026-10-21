@@ -1,0 +1,58 @@
+=== 16:42:12 building IntervalTensorEval ===
+ThomsonNine/IntervalTensorEval.lean:16:31: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:18:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:19:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:23:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:24:30: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:25:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:34:4: error: Type mismatch: After simplification, term
+  mem_const 0
+ has type
+  (const 0).mem 0
+but is expected to have type
+  mem 0 0
+ThomsonNine/IntervalTensorEval.lean:37:23: error: Application type mismatch: The argument
+  Finset.mem_insert_self a s
+has type
+  a ∈ insert a s
+but is expected to have type
+  a ∈ s✝
+in the application
+  h a (Finset.mem_insert_self a s)
+ThomsonNine/IntervalTensorEval.lean:38:7: error: Function expected at
+  ih
+but this term has type
+  (∑ i ∈ s, f i).mem (∑ i ∈ s, g i)
+
+Note: Expected a function because this term is being applied to the argument
+  (fun i hi => h i (Finset.mem_insert_of_mem hi))
+ThomsonNine/IntervalTensorEval.lean:62:59: error: Function expected at
+  tensor
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `tensor` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+ThomsonNine/IntervalTensorEval.lean:63:20: error: Tactic `unfold` failed: Local variable `tensor` has no definition
+=== FAIL IntervalTensorEval ===
+=== ALL DONE 16:45:16 ===

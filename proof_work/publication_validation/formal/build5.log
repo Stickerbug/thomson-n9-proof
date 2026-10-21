@@ -1,0 +1,59 @@
+=== 15:25:50 building Probe ===
+ThomsonNine/Probe.lean:31:2: error: No goals to be solved
+ThomsonNine/Probe.lean:36:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  √3 ^ 2
+in the target expression
+  1 / 2 * (1 / 2) - √3 / 2 * (√3 / 2) = -1 / 2
+
+h : 2 * π / 3 = π / 3 + π / 3
+⊢ 1 / 2 * (1 / 2) - √3 / 2 * (√3 / 2) = -1 / 2
+ThomsonNine/Probe.lean:42:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  √3 ^ 2
+in the target expression
+  √3 / 2 * (1 / 2) + 1 / 2 * (√3 / 2) = √3 / 2
+
+h : 2 * π / 3 = π / 3 + π / 3
+⊢ √3 / 2 * (1 / 2) + 1 / 2 * (√3 / 2) = √3 / 2
+ThomsonNine/Probe.lean:45:63: error: unsolved goals
+h : 4 * π / 3 = π / 3 + π
+⊢ -(1 / 2) = -1 / 2
+ThomsonNine/Probe.lean:49:73: error: unsolved goals
+h : 4 * π / 3 = π / 3 + π
+⊢ -(√3 / 2) = -√3 / 2
+ThomsonNine/Probe.lean:57:73: error: unsolved goals
+h : 5 * π / 3 = 2 * π - π / 3
+⊢ -(√3 / 2) = -√3 / 2
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/Probe.lean:69:45: error: unsolved goals
+r : ℝ
+h : 0 < r
+h1 : r < 1
+⊢ ‖!₂[r, 0, √(1 - r ^ 2)] - !₂[r * (-1 / 2), r * √3 * (1 / 2), √(1 - r ^ 2)]‖ ^ 2 = r ^ 2 * 3
+ThomsonNine/Probe.lean:70:19: warning: This simp argument is unused:
+  sqdist_cyl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cand, cyl, cos_two_pi_div_three, sin_two_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Probe.lean:77:2: error: Tactic `rfl` failed: equality lhs
+  f 0 3 + (f 0 2 + (f 0 1 + (f 2 3 + (f 1 3 + f 1 2))))
+is not definitionally equal to rhs
+  f 0 1 + (f 0 2 + (f 0 3 + (f 1 2 + (f 1 3 + f 2 3))))
+
+f : Fin 4 → Fin 4 → ℝ
+⊢ f 0 3 + (f 0 2 + (f 0 1 + (f 2 3 + (f 1 3 + f 1 2)))) = f 0 1 + (f 0 2 + (f 0 3 + (f 1 2 + (f 1 3 + f 2 3))))
+ThomsonNine/Probe.lean:84:2: error: Tactic `rfl` failed: equality lhs
+  f 0 3 + (f 0 2 + (f 0 1 + (f 2 3 + (f 1 3 + f 1 2))))
+is not definitionally equal to rhs
+  f 0 1 + (f 0 2 + (f 0 3 + (f 1 2 + (f 1 3 + f 2 3))))
+
+f : Fin 4 → Fin 4 → ℝ
+⊢ f 0 3 + (f 0 2 + (f 0 1 + (f 2 3 + (f 1 3 + f 1 2)))) = f 0 1 + (f 0 2 + (f 0 3 + (f 1 2 + (f 1 3 + f 2 3))))
+=== FAIL Probe ===
+=== ALL DONE 15:28:13 ===

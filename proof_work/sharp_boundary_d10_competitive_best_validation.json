@@ -1,0 +1,715 @@
+{
+  "warning": "NONRIGOROUS validator, not proof; predicate requires exact parent LP-defect theorem",
+  "model": "proof_work/sharp_boundary_actualf_d10_v3.json",
+  "selected_iteration": 1,
+  "domain": "Gram PSD intersect [-1,.56]^3 and C>=0",
+  "C_definition": "U-B-sum(h11(t)-rational_lp24(t))",
+  "C_numeric_threshold": -1e-10,
+  "U": 25.75998653126983,
+  "B": 25.7293898461395,
+  "gap": 0.030596685130330314,
+  "history": {
+    "random": {
+      "feasible_count": 48718,
+      "minimum": {
+        "kind": "random",
+        "triangle": [
+          -0.4674793497761305,
+          -0.9661583055955707,
+          0.489816856144638
+        ],
+        "residual": -5.829230585396861e-05,
+        "C": 0.003628349372965134,
+        "domain_feasible": true,
+        "gram_determinant": 0.050541071687352
+      }
+    },
+    "boundary": {
+      "feasible_count": 16758,
+      "minimum": {
+        "kind": "boundary",
+        "triangle": [
+          -0.9977001648225802,
+          -0.03761924982187989,
+          -0.030201152743554213
+        ],
+        "residual": -5.2427287848599846e-05,
+        "C": 0.0038052785333371197,
+        "domain_feasible": true,
+        "gram_determinant": 1.1102230246251565e-16
+      }
+    },
+    "near_antipodal": {
+      "feasible_count": 9974,
+      "minimum": {
+        "kind": "near_antipodal",
+        "triangle": [
+          -0.9977397098150267,
+          -0.025811706684354507,
+          -0.036860428263062045
+        ],
+        "residual": -3.3718335050447745e-05,
+        "C": 0.0037818198390559,
+        "domain_feasible": true,
+        "gram_determinant": 0.0005919759776836786
+      }
+    },
+    "unrestricted_worst_predicate": [
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9612802033093072,
+          0.4871313206300988,
+          -0.4637356349491672
+        ],
+        "residual": -6.020640725391824e-05,
+        "C": 0.0050129167274599595,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789939668008759
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9612806954129373,
+          0.4871314887594077,
+          -0.46373644399597236
+        ],
+        "residual": -6.0206407242080484e-05,
+        "C": 0.0050127975638202815,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789866634526075
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9612789373287878,
+          0.48713075607650896,
+          -0.4637326217499212
+        ],
+        "residual": -6.020640715583003e-05,
+        "C": 0.005013245830441382,
+        "domain_feasible": true,
+        "gram_determinant": 0.05790127799652467
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.46373701115450044,
+          -0.9612803033602542,
+          0.4871317500979592
+        ],
+        "residual": -6.0206407063972955e-05,
+        "C": 0.005012825195207238,
+        "domain_feasible": true,
+        "gram_determinant": 0.057899226489738886
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9974248577662139,
+          -0.0358827632199027,
+          -0.03588271920425542
+        ],
+        "residual": -5.881537013746607e-05,
+        "C": 0.0039025137738916693,
+        "domain_feasible": true,
+        "gram_determinant": 0.0
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9974248576286167,
+          -0.03588265953937664,
+          -0.03588282480209971
+        ],
+        "residual": -5.8815370136189316e-05,
+        "C": 0.003902513822879927,
+        "domain_feasible": true,
+        "gram_determinant": 0.0
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9974248576286163,
+          -0.03588265953938219,
+          -0.03588282480209882
+        ],
+        "residual": -5.881537013546767e-05,
+        "C": 0.0039025138228801493,
+        "domain_feasible": true,
+        "gram_determinant": 0.0
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.035882872131488074,
+          -0.035882683632844366,
+          -0.9974248525029182
+        ],
+        "residual": -5.881537013152638e-05,
+        "C": 0.0039025156477514034,
+        "domain_feasible": true,
+        "gram_determinant": -1.1102230246251565e-16
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.035882872131488074,
+          -0.035882683632844366,
+          -0.9974248525029182
+        ],
+        "residual": -5.881537013152638e-05,
+        "C": 0.0039025156477514034,
+        "domain_feasible": true,
+        "gram_determinant": -1.1102230246251565e-16
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.03588259451983924,
+          -0.03588288063265786,
+          -0.9974248582880682
+        ],
+        "residual": -5.8815370128417754e-05,
+        "C": 0.003902513588100731,
+        "domain_feasible": true,
+        "gram_determinant": -1.1102230246251565e-16
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.03588259451983924,
+          -0.03588288063265786,
+          -0.9974248582880682
+        ],
+        "residual": -5.8815370128417754e-05,
+        "C": 0.003902513588100731,
+        "domain_feasible": true,
+        "gram_determinant": -1.1102230246251565e-16
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9974248790180332,
+          -0.03588251019252219,
+          -0.03588267610232123
+        ],
+        "residual": -5.881537011653837e-05,
+        "C": 0.0039025062077343575,
+        "domain_feasible": true,
+        "gram_determinant": -1.1102230246251565e-16
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.9974248790180332,
+          -0.03588251019252219,
+          -0.03588267610232123
+        ],
+        "residual": -5.881537011653837e-05,
+        "C": 0.0039025062077343575,
+        "domain_feasible": true,
+        "gram_determinant": -1.1102230246251565e-16
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.03588308781718566,
+          -0.9974248184607591,
+          -0.03588294229791593
+        ],
+        "residual": -5.881537009821969e-05,
+        "C": 0.003902527767569719,
+        "domain_feasible": true,
+        "gram_determinant": 0.0
+      },
+      {
+        "kind": "unrestricted_worst",
+        "triangle": [
+          -0.035883087817185216,
+          -0.997424818460759,
+          -0.035882942297916824
+        ],
+        "residual": -5.88153700977756e-05,
+        "C": 0.0039025277675698855,
+        "domain_feasible": true,
+        "gram_determinant": 2.220446049250313e-16
+      }
+    ],
+    "corners": [
+      {
+        "kind": "corner",
+        "triangle": [
+          0.56,
+          0.56,
+          0.56
+        ],
+        "residual": 2.3211426284586167e-05,
+        "C": -0.05735966579618035,
+        "domain_feasible": false,
+        "gram_determinant": 0.4104319999999998
+      },
+      {
+        "kind": "corner",
+        "triangle": [
+          -1,
+          0,
+          0
+        ],
+        "residual": 0.000704951888308214,
+        "C": 0.002966116406754593,
+        "domain_feasible": true,
+        "gram_determinant": 0.0
+      }
+    ],
+    "local3D": [
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.9612802405418754,
+          0.48713125327224893,
+          -0.4637357489159625
+        ],
+        "residual": -6.020640726166204e-05,
+        "C": 0.005012921308833573,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789934852403178
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          0.4871312960174556,
+          -0.9612801912257165,
+          -0.46373562866823637
+        ],
+        "residual": -6.0206407255306016e-05,
+        "C": 0.005012923131711422,
+        "domain_feasible": true,
+        "gram_determinant": 0.057899416430730266
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.463735537977417,
+          -0.9612801044927612,
+          0.4871312184066264
+        ],
+        "residual": -6.020640725526438e-05,
+        "C": 0.0050129522782668134,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789954959035204
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.9612804540133302,
+          0.48713131284357253,
+          -0.4637362061192546
+        ],
+        "residual": -6.0206407252794136e-05,
+        "C": 0.0050128718730549915,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789903377776007
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.4637360102330387,
+          0.48713142344107163,
+          -0.9612804027548916
+        ],
+        "residual": -6.0206407251989225e-05,
+        "C": 0.0050128625357512835,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789909824381123
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.46373611509614476,
+          0.4871313167508093,
+          -0.9612803905203067
+        ],
+        "residual": -6.020640725164228e-05,
+        "C": 0.005012882897324045,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789912601229541
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.9612801554440951,
+          -0.4637355790909594,
+          0.48713125514137195
+        ],
+        "residual": -6.020640725115656e-05,
+        "C": 0.005012936662420198,
+        "domain_feasible": true,
+        "gram_determinant": 0.057899471987911344
+      },
+      {
+        "kind": "local3d",
+        "triangle": [
+          -0.9612798695865417,
+          0.48713102698860955,
+          -0.46373528753094684
+        ],
+        "residual": -6.020640724994919e-05,
+        "C": 0.005013028028117261,
+        "domain_feasible": true,
+        "gram_determinant": 0.057899908640861586
+      }
+    ],
+    "boundary2D": [
+      {
+        "sign": -1,
+        "component": 0,
+        "best": [
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              0.34269429781623445,
+              0.3673577976509719,
+              -0.7478691379445754
+            ],
+            "residual": -1.413398388327991e-07,
+            "C": 0.029589310373931643,
+            "domain_feasible": true,
+            "gram_determinant": 1.1102230246251565e-16
+          },
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              0.36735776984198,
+              0.34269432766082625,
+              -0.7478691367040615
+            ],
+            "residual": -1.4133983877728795e-07,
+            "C": 0.02958931073215787,
+            "domain_feasible": true,
+            "gram_determinant": 1.1102230246251565e-16
+          },
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              0.3426982850975785,
+              0.3673544766152791,
+              -0.747868690783347
+            ],
+            "residual": -1.4133979248098782e-07,
+            "C": 0.029589347092913165,
+            "domain_feasible": true,
+            "gram_determinant": 0.0
+          }
+        ]
+      },
+      {
+        "sign": 1,
+        "component": 1,
+        "best": [
+          {
+            "kind": "DE2d",
+            "triangle": [
+              -0.7478690768057041,
+              0.3673574249354954,
+              0.34269476080656874
+            ],
+            "residual": -1.4133984002628885e-07,
+            "C": 0.02958931427378564,
+            "domain_feasible": true,
+            "gram_determinant": 0.0
+          },
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              -0.7478691043527502,
+              0.3673575854517515,
+              0.34269455969031676
+            ],
+            "residual": -1.413398387217768e-07,
+            "C": 0.02958931261890274,
+            "domain_feasible": true,
+            "gram_determinant": 1.1102230246251565e-16
+          },
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              -0.7478690810974047,
+              0.3673556489982117,
+              0.3426965485548263
+            ],
+            "residual": -1.4133982764730213e-07,
+            "C": 0.029589338839153934,
+            "domain_feasible": true,
+            "gram_determinant": 0.0
+          }
+        ]
+      },
+      {
+        "sign": 1,
+        "component": -1,
+        "best": [
+          {
+            "kind": "DE2d",
+            "triangle": [
+              0.3673573309681966,
+              -0.7478691272932886,
+              0.3426947842723506
+            ],
+            "residual": -1.4133984016506673e-07,
+            "C": 0.029589316591311032,
+            "domain_feasible": true,
+            "gram_determinant": -1.1102230246251565e-16
+          },
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              0.34269458048958296,
+              -0.7478691423064334,
+              0.3673575116849733
+            ],
+            "residual": -1.4133983977648867e-07,
+            "C": 0.02958931440420698,
+            "domain_feasible": true,
+            "gram_determinant": 0.0
+          },
+          {
+            "kind": "boundary2d",
+            "triangle": [
+              0.3426945768886653,
+              -0.7478691751790374,
+              0.36735746919391604
+            ],
+            "residual": -1.4133983936015504e-07,
+            "C": 0.02958931565550904,
+            "domain_feasible": true,
+            "gram_determinant": 1.1102230246251565e-16
+          }
+        ]
+      }
+    ],
+    "DE3d": [
+      {
+        "kind": "DE3d",
+        "triangle": [
+          -0.4637356190063061,
+          -0.9612801386729384,
+          0.4871313031997396
+        ],
+        "residual": -6.0206407253488026e-05,
+        "C": 0.00501293157738375,
+        "domain_feasible": true,
+        "gram_determinant": 0.057899493041646766
+      },
+      {
+        "kind": "DE3d",
+        "triangle": [
+          -0.9612800407250742,
+          -0.4637354427319189,
+          0.48713122296551464
+        ],
+        "residual": -6.020640725346027e-05,
+        "C": 0.005012963242833457,
+        "domain_feasible": true,
+        "gram_determinant": 0.057899642136591156
+      },
+      {
+        "kind": "DE3d",
+        "triangle": [
+          -0.463735548466586,
+          0.4871312733908878,
+          -0.9612801730817895
+        ],
+        "residual": -6.020640725482029e-05,
+        "C": 0.0050129303223897526,
+        "domain_feasible": true,
+        "gram_determinant": 0.05789944426009952
+      }
+    ]
+  },
+  "independent_minimum": -6.020640726166204e-05,
+  "worst_points": [
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.9612802405418754,
+        0.48713125327224893,
+        -0.4637357489159625
+      ],
+      "residual": -6.020640726166204e-05,
+      "C": 0.005012921308833573,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789934852403178
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        0.4871312960174556,
+        -0.9612801912257165,
+        -0.46373562866823637
+      ],
+      "residual": -6.0206407255306016e-05,
+      "C": 0.005012923131711422,
+      "domain_feasible": true,
+      "gram_determinant": 0.057899416430730266
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.463735537977417,
+        -0.9612801044927612,
+        0.4871312184066264
+      ],
+      "residual": -6.020640725526438e-05,
+      "C": 0.0050129522782668134,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789954959035204
+    },
+    {
+      "kind": "DE3d",
+      "triangle": [
+        -0.463735548466586,
+        0.4871312733908878,
+        -0.9612801730817895
+      ],
+      "residual": -6.020640725482029e-05,
+      "C": 0.0050129303223897526,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789944426009952
+    },
+    {
+      "kind": "unrestricted_worst",
+      "triangle": [
+        -0.9612802033093072,
+        0.4871313206300988,
+        -0.4637356349491672
+      ],
+      "residual": -6.020640725391824e-05,
+      "C": 0.0050129167274599595,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789939668008759
+    },
+    {
+      "kind": "DE3d",
+      "triangle": [
+        -0.4637356190063061,
+        -0.9612801386729384,
+        0.4871313031997396
+      ],
+      "residual": -6.0206407253488026e-05,
+      "C": 0.00501293157738375,
+      "domain_feasible": true,
+      "gram_determinant": 0.057899493041646766
+    },
+    {
+      "kind": "DE3d",
+      "triangle": [
+        -0.9612800407250742,
+        -0.4637354427319189,
+        0.48713122296551464
+      ],
+      "residual": -6.020640725346027e-05,
+      "C": 0.005012963242833457,
+      "domain_feasible": true,
+      "gram_determinant": 0.057899642136591156
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.9612804540133302,
+        0.48713131284357253,
+        -0.4637362061192546
+      ],
+      "residual": -6.0206407252794136e-05,
+      "C": 0.0050128718730549915,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789903377776007
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.4637360102330387,
+        0.48713142344107163,
+        -0.9612804027548916
+      ],
+      "residual": -6.0206407251989225e-05,
+      "C": 0.0050128625357512835,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789909824381123
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.46373611509614476,
+        0.4871313167508093,
+        -0.9612803905203067
+      ],
+      "residual": -6.020640725164228e-05,
+      "C": 0.005012882897324045,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789912601229541
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.9612801554440951,
+        -0.4637355790909594,
+        0.48713125514137195
+      ],
+      "residual": -6.020640725115656e-05,
+      "C": 0.005012936662420198,
+      "domain_feasible": true,
+      "gram_determinant": 0.057899471987911344
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.9612798695865417,
+        0.48713102698860955,
+        -0.46373528753094684
+      ],
+      "residual": -6.020640724994919e-05,
+      "C": 0.005013028028117261,
+      "domain_feasible": true,
+      "gram_determinant": 0.057899908640861586
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.9612800551988713,
+        -0.4637353021658242,
+        0.4871312850471805
+      ],
+      "residual": -6.020640724974102e-05,
+      "C": 0.005012950052205145,
+      "domain_feasible": true,
+      "gram_determinant": 0.057899614440039215
+    },
+    {
+      "kind": "local3d",
+      "triangle": [
+        -0.46373623433168304,
+        0.4871314510599833,
+        -0.9612805714474639
+      ],
+      "residual": -6.0206407248478144e-05,
+      "C": 0.005012826792415215,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789884988541938
+    },
+    {
+      "kind": "unrestricted_worst",
+      "triangle": [
+        -0.9612806954129373,
+        0.4871314887594077,
+        -0.46373644399597236
+      ],
+      "residual": -6.0206407242080484e-05,
+      "C": 0.0050127975638202815,
+      "domain_feasible": true,
+      "gram_determinant": 0.05789866634526075
+    }
+  ],
+  "design_crosscheck_error": 2.456368441983159e-15,
+  "seconds": 18.45243215560913
+}

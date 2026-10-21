@@ -1,0 +1,24 @@
+{
+  "status": "INDEPENDENT_CONTACT_COMPONENT_SELFTESTS_PASS",
+  "positive_tests": [
+    "Dual4 (u-v*t)^2 exact value169 and gradients(-26,130,78)",
+    "strict interval Gauss encloses exact (1/5,3/5) solution"
+  ],
+  "negative_tests": [
+    {
+      "case": "singular_gauss_system",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "no strict nonzero Gauss pivot at 1"
+    },
+    {
+      "case": "singular_basis_transform",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "singular rational basis transform"
+    },
+    {
+      "case": "perturbed_kernel_numerator",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "exact polynomial kernel identity fails"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "status": "PREPARED_NO_ROOT_RUN",
+  "source_scope": "Ranges use rational decimal reconstruction of NUMERICAL solution A/c only. They are not certified bounds for forthcoming true exact coefficients. No root traversal or check_analytic was called.",
+  "source_sha256": "368ec491d7c66398ac1cb7639e24fb24059af586fca73980a9f36bfdc177a2fb",
+  "engine_sha256": "25b42d62d857003d8ac3f28db294b9e42b58afb9db3a2de4a5b06d7b1208c562",
+  "F_degree": [
+    10,
+    10,
+    10
+  ],
+  "d_degree": 20,
+  "precision_assessment": [
+    {
+      "bits": 80,
+      "K_root_absmax": "110559476963085776243887744",
+      "K_root_absmax_bitlength": 87,
+      "K_root_safe_strict_2pow124": true,
+      "H_root_absmax_bitlength": 104,
+      "H_root_native_eligible": true,
+      "intervals": [
+        {
+          "level": 12,
+          "index": 1312,
+          "width": "39/102400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "41334347/1208925819614629174706176",
+          "difference_float": 3.41909704709394e-17
+        },
+        {
+          "level": 20,
+          "index": 336082,
+          "width": "39/26214400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "7891905/604462909807314587353088",
+          "difference_float": 1.3056061624220604e-17
+        },
+        {
+          "level": 24,
+          "index": 5377312,
+          "width": "39/419430400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "22041415/604462909807314587353088",
+          "difference_float": 3.6464462322470985e-17
+        },
+        {
+          "level": 28,
+          "index": 86037005,
+          "width": "39/6710886400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "22276823/604462909807314587353088",
+          "difference_float": 3.685391218975075e-17
+        }
+      ]
+    },
+    {
+      "bits": 96,
+      "K_root_absmax": "7245625882252789431919427154640",
+      "K_root_absmax_bitlength": 103,
+      "K_root_safe_strict_2pow124": true,
+      "H_root_absmax_bitlength": 120,
+      "H_root_native_eligible": true,
+      "intervals": [
+        {
+          "level": 12,
+          "index": 1312,
+          "width": "39/102400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "18714849/39614081257132168796771975168",
+          "difference_float": 4.724292071428655e-22
+        },
+        {
+          "level": 20,
+          "index": 336082,
+          "width": "39/26214400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "94329531/39614081257132168796771975168",
+          "difference_float": 2.381212134839472e-21
+        },
+        {
+          "level": 24,
+          "index": 5377312,
+          "width": "39/419430400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "1339939/4951760157141521099596496896",
+          "difference_float": 2.7059852607511996e-22
+        },
+        {
+          "level": 28,
+          "index": 86037005,
+          "width": "39/6710886400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "41258435/79228162514264337593543950336",
+          "difference_float": 5.207546621136364e-22
+        }
+      ]
+    },
+    {
+      "bits": 104,
+      "K_root_absmax": "1854880225856714094571373351587813",
+      "K_root_absmax_bitlength": 111,
+      "K_root_safe_strict_2pow124": true,
+      "H_root_absmax_bitlength": 128,
+      "H_root_native_eligible": false,
+      "intervals": [
+        {
+          "level": 12,
+          "index": 1312,
+          "width": "39/102400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "31914959/10141204801825835211973625643008",
+          "difference_float": 3.1470579308539347e-24
+        },
+        {
+          "level": 20,
+          "index": 336082,
+          "width": "39/26214400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "32304991/20282409603651670423947251286016",
+          "difference_float": 1.59275902771354e-24
+        },
+        {
+          "level": 24,
+          "index": 5377312,
+          "width": "39/419430400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "7375819/2535301200456458802993406410752",
+          "difference_float": 2.909247626543169e-24
+        },
+        {
+          "level": 28,
+          "index": 86037005,
+          "width": "39/6710886400",
+          "h_integer_upper_D_vs_exact_D_max_difference": "1776533/1267650600228229401496703205376",
+          "difference_float": 1.4014374305349998e-24
+        }
+      ]
+    }
+  ],
+  "exact_fraction_square_samples": 48,
+  "h_overflow_returns_None_without_cast": true,
+  "seconds": 2.540729166008532
+}

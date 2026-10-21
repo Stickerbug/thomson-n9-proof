@@ -1,0 +1,8 @@
+=== 04:28:49 building EnergyValue ===
+ThomsonNine/EnergyValue.lean:87:9: error: Tactic `rcases` failed: `right✝ : ∀ (y : ℝ),
+  (fun r =>
+        0 < r ∧ r < 1 ∧ familyEnergyDeriv r = 0 ∧ ∀ (s : ℝ), 0 < s → s < 1 → s ≠ r → familyEnergy r < familyEnergy s)
+      y →
+    y = r` is not an inductive datatype
+=== FAIL EnergyValue ===
+=== ALL DONE 04:30:48 ===

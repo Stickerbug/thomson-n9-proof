@@ -1,0 +1,14 @@
+{
+  "status": "partial_pair_pruning_not_exclusion_proof",
+  "ordered_pairs": 799236,
+  "phi_pair_accepted": 303673,
+  "same_capacity_group_infeasible": 56084,
+  "overlap": 19105,
+  "union_accepted_or_excluded": 340652,
+  "remaining_ordered_pairs": 458584,
+  "dependencies": {
+    "t2_low_cells2026_capacity.json": "e6d13c73a4ba52683fd278009d7a50f2f032bb1ee2fe0f891fac9c60ef7d2fcf",
+    "t2_unary_leaf_pair2026_result.json": "deff8145dd8feaff166bc87fc02145fd16a209e6c0056da7c7175c5c4a3df3c1"
+  },
+  "claim": "On each retained cell pair either field lower bound already reaches 1/25000, the pair violates distance because its cells share a capacity-one group, or it is retained. Remaining pairs are not certified."
+}

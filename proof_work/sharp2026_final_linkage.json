@@ -1,0 +1,21 @@
+{
+  "status": "LOCAL_COMPUTER_ASSISTED_PROOF_CHAIN_CLOSED_UNREVIEWED",
+  "energy_statement": "E_min(9)=E_D3h(r_star)",
+  "exact_energy_identity_checked": true,
+  "all_source_hashes_match": true,
+  "two_full_roots_match": true,
+  "delta": "0",
+  "pending_count": 0,
+  "uniqueness_proved": false,
+  "peer_reviewed": false,
+  "formally_verified": false,
+  "independent_implementation": false,
+  "mathematical_dependencies": [
+    "circle harmonic PSD identity",
+    "fixed-kernel anchor annihilation and rank33/W compatibility",
+    "Hermite remainder positivity and local convexity/Gram graph proof",
+    "Legendre pair reduction",
+    "outward Bernstein coverage and arithmetic soundness"
+  ],
+  "limitations": "Session-internal review and same-code replay; external review and independent implementation remain outstanding."
+}

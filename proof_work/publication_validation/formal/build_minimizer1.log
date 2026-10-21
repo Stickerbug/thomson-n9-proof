@@ -1,0 +1,50 @@
+=== 09:45:23 building Minimizer ===
+ThomsonNine/Minimizer.lean:38:24: error: Application type mismatch: The argument
+  i
+has type
+  Set (Fin 9 → R3)
+but is expected to have type
+  Fin 9
+in the application
+  h1 i
+ThomsonNine/Minimizer.lean:39:21: error: Type mismatch
+  j
+has type
+  i ∈ Set.range fun i => ⋂ j, if i = j then Set.univ else {x | 1 / 26 ≤ ‖x i - x j‖}
+of sort `Prop` but is expected to have type
+  Set (Fin 9 → R3)
+of sort `Type`
+ThomsonNine/Minimizer.lean:40:6: error: `simp` made no progress
+ThomsonNine/Minimizer.lean:41:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:44:24: error: Application type mismatch: The argument
+  i
+has type
+  Fin 9
+but is expected to have type
+  Set (Fin 9 → R3)
+in the application
+  h1 i
+ThomsonNine/Minimizer.lean:47:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:47:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if i = j then ?m.127 else ?m.128
+in the target expression
+  x ∈ ⋂ i, ⋂ j, if i = j then Set.univ else {x | 1 / 26 ≤ ‖x i - x j‖}
+
+case neg
+x : Fin 9 → R3
+h1 : x ∈ ⋂ i, {x | ‖x i‖ = 1}
+h2 : x ∈ ⋂ i, ⋂ j, if i = j then Set.univ else {x | 1 / 26 ≤ ‖x i - x j‖}
+i j : Fin 9
+hij : i ≠ j
+h : ¬i = j
+⊢ 1 / 26 ≤ ‖x i - x j‖
+ThomsonNine/Minimizer.lean:57:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ThomsonNine/Minimizer.lean:59:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:69:34: error(lean.unknownIdentifier): Unknown identifier `exists_candidate_energy_lt_26`
+ThomsonNine/Minimizer.lean:69:9: error: Tactic `rcases` failed: `x✝ : ?m.3` is not an inductive datatype
+ThomsonNine/Minimizer.lean:106:36: error(lean.unknownIdentifier): Unknown identifier `exists_candidate_energy_lt_26`
+ThomsonNine/Minimizer.lean:106:11: error: Tactic `rcases` failed: `x✝ : ?m.146` is not an inductive datatype
+ThomsonNine/Minimizer.lean:118:34: error(lean.unknownIdentifier): Unknown identifier `exists_candidate_energy_lt_26`
+ThomsonNine/Minimizer.lean:118:9: error: Tactic `rcases` failed: `x✝ : ?m.42` is not an inductive datatype
+=== FAIL Minimizer ===
+=== ALL DONE 09:47:45 ===

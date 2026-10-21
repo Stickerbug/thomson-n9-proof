@@ -1,0 +1,611 @@
+"""Export AAA H00 actual coordinate-derivative enclosure, conditional on coefficients.
+
+All saved endpoints are rational literals. Explicit finite power and per-term
+rounding witnesses are proved by Lean norm_num, without native_decide. Python
+checks the same rational enclosures before emission. --check compares generated
+Lean and manifest byte-for-byte; --self-test rejects mutated data/witnesses.
+No residual identity, translation coefficient membership or contact is asserted.
+"""
+from pathlib import Path
+from fractions import Fraction as Q
+from hashlib import sha256
+from copy import deepcopy
+import argparse
+import json
+from export_local_lean import BASE, load, need, interval, lean_interval, rat
+
+OUT = BASE / 'formal/ThomsonNine/LocalSparseHessianAAA.lean'
+MANIFEST = BASE / 'local_sparse_hessian_manifest.json'
+S = 1 << 640
+CHUNK = 24
+NTERMS = 807
+MAX_POWER = 27
+
+
+def exact_mul(A, B):
+    corners = [a * b for a in A for b in B]
+    return min(corners), max(corners)
+
+
+def exact_square(A):
+    lo, hi = A
+    return (Q(0) if lo <= 0 <= hi else min(lo * lo, hi * hi),
+            max(lo * lo, hi * hi))
+
+
+def rounded(A):
+    return Q((A[0] * S).__floor__(), S), Q((A[1] * S).__ceil__(), S)
+
+
+def contained(inner, outer, message):
+    need(outer[0] <= inner[0] <= inner[1] <= outer[1], message)
+
+
+def sum_intervals(items):
+    items = list(items)
+    return tuple(sum((A[i] for A in items), Q(0)) for i in range(2))
+
+
+def checked_data(row):
+    need(row['row_index'] == 0 and row['labels'] == ['A'] * 3, 'AAA identity')
+    need(row['kind'] == 'interior_Hessian_PD_on_convex_cube', 'AAA kind')
+    need(row['shifted_polynomial_term_count'] == NTERMS, 'AAA term count')
+    entries = row['shifted_polynomial']
+    need(len(entries) == NTERMS, 'AAA coefficient coverage')
+    box = [interval(v) for v in row['relative_sourcebox']]
+    need(len(box) == 3 and box[0] == box[1] == box[2], 'AAA common relative domain')
+    domain = box[0]
+    need(domain[0] < 0 < domain[1], 'AAA signed domain')
+    poly = []
+    for e, A in entries:
+        need(len(e) == 3 and all(type(n) is int and 0 <= n <= MAX_POWER for n in e),
+             'invalid exponent triple')
+        poly.append((tuple(e), interval(A)))
+    need(len(set(e for e, _ in poly)) == NTERMS, 'duplicate exponent triple')
+    need(poly == sorted(poly), 'coefficient order')
+    need(all((v * S).denominator == 1 for A in box + [A for _, A in poly] for v in A),
+         'non-dyadic source endpoints')
+    powers = [(Q(1), Q(1))]
+    for n in range(1, MAX_POWER + 1):
+        exact = exact_square(powers[n // 2]) if n % 2 == 0 else exact_mul(powers[-1], domain)
+        out = rounded(exact)
+        contained(exact, out, 'power witness not outward enclosed')
+        powers.append(out)
+    terms = []
+    for e, A in poly:
+        C = A
+        for n in (e[0], max(e[0] - 1, 0)):
+            C = (Q(0), Q(0)) if n == 0 else exact_mul(C, (Q(n), Q(n)))
+        lowered = (max(e[0] - 2, 0), e[1], e[2])
+        B = C
+        for i in range(3):
+            B = rounded(exact_mul(B, powers[lowered[i]]))
+        monomial = exact_mul(exact_mul(powers[lowered[0]], powers[lowered[1]]), powers[lowered[2]])
+        contained(exact_mul(C, monomial), B, 'grouped monomial not enclosed')
+        terms.append(B)
+    target = interval(row['target_Hessian'][0][0])
+    need(sum_intervals(terms) == target, 'H00 rounded replay differs from archive')
+    return poly, domain, powers, terms, target
+
+
+def term_corner_block(k, e, A, bound, powers):
+    """Exact termBound membership by eight literal corner comparisons.
+
+    Avoids unfolding the 807-case coefficientInterval or RatInterval.mul's
+    min/max; all arithmetic goals are literal rational inequalities.
+    """
+    e0, e1, e2 = e
+    need(e0 >= 2, 'corner block requires a surviving second axis-0 derivative')
+    C = A
+    for n in (e0, e0 - 1):
+        C = (Q(0), Q(0)) if n == 0 else exact_mul(C, (Q(n), Q(n)))
+    lowered = (e0 - 2, e1, e2)
+    monomial = exact_mul(exact_mul(powers[lowered[0]], powers[lowered[1]]), powers[lowered[2]])
+    contained(exact_mul(C, monomial), bound, 'corner block not enclosed')
+    s = e0 * (e0 - 1)
+    fs = [(i, lowered[i]) for i in range(3) if lowered[i] != 0]
+    expr = '1' if not fs else ' * '.join(f'(x {i} ^ {n})' for i, n in fs)
+    sfx = f'_{k:03d}'
+    defs = []
+    def q(name, v):
+        defs.append(f'private def q{name}{sfx} : ℚ := {rat(v)}')
+    q('Alo', A[0]); q('Ahi', A[1]); q('Ilo', C[0]); q('Ihi', C[1])
+    defs += [f'private def I{sfx} : RatInterval :=',
+             f'  {{ lo := qIlo{sfx}, hi := qIhi{sfx}, h := by rw [Rat.le_iff]; norm_num [qIlo{sfx}, qIhi{sfx}] }}']
+    jsimp = []
+    if len(fs) == 2:
+        J = exact_mul(powers[fs[0][1]], powers[fs[1][1]])
+        q('Jlo', J[0]); q('Jhi', J[1])
+        defs += [f'private def J{sfx} : RatInterval :=',
+                 f'  {{ lo := qJlo{sfx}, hi := qJhi{sfx}, h := by rw [Rat.le_iff]; norm_num [qJlo{sfx}, qJhi{sfx}] }}']
+    elif len(fs) == 3:
+        J01 = exact_mul(powers[fs[0][1]], powers[fs[1][1]])
+        J = exact_mul(J01, powers[fs[2][1]])
+        q('J01lo', J01[0]); q('J01hi', J01[1]); q('Jlo', J[0]); q('Jhi', J[1])
+        defs += [f'private def J01{sfx} : RatInterval :=',
+                 f'  {{ lo := qJ01lo{sfx}, hi := qJ01hi{sfx}, h := by rw [Rat.le_iff]; norm_num [qJ01lo{sfx}, qJ01hi{sfx}] }}',
+                 f'private def J{sfx} : RatInterval :=',
+                 f'  {{ lo := qJlo{sfx}, hi := qJhi{sfx}, h := by rw [Rat.le_iff]; norm_num [qJlo{sfx}, qJhi{sfx}] }}']
+    L = [f'private theorem term_mem_{k:03d} (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+         '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+         '    (hP : PowerEnclosures (fun _ n => powerTable n) x) :',
+         f'    termBound_{k:03d}.mem (hessianTerm c x .t{k:03d}) := by',
+         f'  have hterm : hessianTerm c x .t{k:03d} =',
+         f'      (c .t{k:03d} * {s}) * ({expr}) := by',
+         '    unfold hessianTerm derivativeCoeff monomial',
+         f'    rw [show exponents .t{k:03d} = ![{e0}, {e1}, {e2}] from rfl]',
+         '    norm_num [lowerExponent]',
+         '    try ring',
+         '    try simp',
+         '  rw [hterm]',
+         f'  have hcI : I{sfx}.mem (c .t{k:03d} * {s}) := by',
+         '    constructor',
+         '    · have h := (hC .t%03d).1' % k,
+         f'      rw [show (coefficientInterval .t{k:03d}).lo = qAlo{sfx} from rfl] at h',
+         f'      norm_num [I{sfx}, qIlo{sfx}, qAlo{sfx}] at h ⊢',
+         '      linarith',
+         '    · have h := (hC .t%03d).2' % k,
+         f'      rw [show (coefficientInterval .t{k:03d}).hi = qAhi{sfx} from rfl] at h',
+         f'      norm_num [I{sfx}, qIhi{sfx}, qAhi{sfx}] at h ⊢',
+         '      linarith']
+    if not fs:
+        L += ['  have hJmem : (RatInterval.const 1).mem (1 : ℝ) := by',
+              '    simpa using mem_const (1 : ℚ)',
+              f'  have hmain : termBound_{k:03d}.mem ((c .t{k:03d} * {s}) * (1 : ℝ)) := by',
+              '    refine mem_mul_of_bounds hcI hJmem ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [I{sfx}, termBound_{k:03d}, RatInterval.const]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qIlo{sfx}, qIhi{sfx}]']
+    elif len(fs) == 1:
+        i, n = fs[0]
+        L += [f'  have hJmem : power_{n:02d}.mem (x {i} ^ {n}) := by',
+              f'    simpa [powerTable, finitePower, power_{n:02d}] using hP {i} {n}',
+              f'  have hmain : termBound_{k:03d}.mem ((c .t{k:03d} * {s}) * ({expr})) := by',
+              '    refine mem_mul_of_bounds hcI hJmem ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [I{sfx}, power_{n:02d}, termBound_{k:03d}]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qIlo{sfx}, qIhi{sfx}]']
+    elif len(fs) == 2:
+        (i, a), (j, b) = fs
+        L += [f'  have hJmem : J{sfx}.mem ((x {i} ^ {a}) * (x {j} ^ {b})) := by',
+              f'    refine mem_mul_of_bounds (by simpa using hP {i} {a}) (by simpa using hP {j} {b}) ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [J{sfx}, powerTable, finitePower, power_{a:02d}, power_{b:02d}]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qJlo{sfx}, qJhi{sfx}]',
+              f'  have hmain : termBound_{k:03d}.mem ((c .t{k:03d} * {s}) * ({expr})) := by',
+              '    refine mem_mul_of_bounds hcI hJmem ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [I{sfx}, J{sfx}, termBound_{k:03d}]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qIlo{sfx}, qIhi{sfx}, qJlo{sfx}, qJhi{sfx}]']
+    else:
+        (i, a), (j, b), (l, c) = fs
+        L += [f'  have hJ01 : J01{sfx}.mem ((x {i} ^ {a}) * (x {j} ^ {b})) := by',
+              f'    refine mem_mul_of_bounds (by simpa using hP {i} {a}) (by simpa using hP {j} {b}) ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [J01{sfx}, powerTable, finitePower, power_{a:02d}, power_{b:02d}]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qJ01lo{sfx}, qJ01hi{sfx}]',
+              f'  have hJmem : J{sfx}.mem (((x {i} ^ {a}) * (x {j} ^ {b})) * (x {l} ^ {c})) := by',
+              f'    refine mem_mul_of_bounds hJ01 (by simpa using hP {l} {c}) ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [J{sfx}, J01{sfx}, powerTable, finitePower, power_{a:02d}, power_{b:02d}, power_{c:02d}]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qJlo{sfx}, qJhi{sfx}, qJ01lo{sfx}, qJ01hi{sfx}]',
+              f'  have hmain : termBound_{k:03d}.mem ((c .t{k:03d} * {s}) * ({expr})) := by',
+              '    refine mem_mul_of_bounds hcI hJmem ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_',
+              '    all_goals',
+              f'      simp only [I{sfx}, J{sfx}, termBound_{k:03d}]',
+              '      rw [Rat.le_iff]',
+              f'      norm_num [qIlo{sfx}, qIhi{sfx}, qJlo{sfx}, qJhi{sfx}]']
+    L += ['  simpa using hmain', '']
+    return defs, L
+
+
+def render(row, source):
+    poly, domain, powers, terms, target = checked_data(row)
+    chunks = [list(range(i, min(i + CHUNK, NTERMS))) for i in range(0, NTERMS, CHUNK)]
+    chunk_bounds = [sum_intervals(terms[i] for i in chunk) for chunk in chunks]
+    L = [
+        'import ThomsonNine.IntervalSparseDerivative',
+        'import Mathlib.Tactic.IntervalCases', '',
+        '/-! Generated AAA H00 coordinate-Hessian replay. Each arithmetic comparison',
+        'is checked in the kernel through norm_num. The coefficient family is fixed.',
+        'Membership of actual translated residual coefficients remains a premise.',
+        'No contact identity or n9 final theorem is asserted. -/', '',
+        'set_option maxRecDepth 8192',
+        'set_option maxHeartbeats 8000000', '',
+        'namespace ThomsonNine.LocalSparseHessianAAA', '',
+        'open ThomsonNine.Interval ThomsonNine.Interval.SparsePolynomial',
+        'open ThomsonNine.Interval.RatInterval', '',
+        f'-- Source SHA-256: {source["sha256"]}',
+        f'def relativeDomain : RatInterval := {lean_interval(list(domain))}',
+        'def relativeBox (_ : Fin 3) : RatInterval := relativeDomain',
+        f'def targetH00 : RatInterval := {lean_interval(list(target))}', ''
+    ]
+    for n, A in enumerate(powers):
+        L += [f'def power_{n:02d} : RatInterval := {lean_interval(list(A))}']
+    L += ['']
+    for n in range(MAX_POWER + 1):
+        L += [f'private theorem mem_power_{n:02d} {{x : ℝ}} (hx : relativeDomain.mem x) :',
+              f'    power_{n:02d}.mem (x ^ {n}) := by']
+        if n == 0:
+            L += ['  simpa [power_00, RatInterval.const] using mem_const (1 : ℚ)']
+        elif n % 2 == 0:
+            k = n // 2
+            ep = f'(by norm_num [power_{n:02d}, power_{k:02d}])'
+            L += [f'  have h : power_{n:02d}.mem ((x ^ {k}) ^ 2) :=',
+                  f'    mem_square_of_bounds (mem_power_{k:02d} hx)',
+                  '      ' + ' '.join([ep] * 5),
+                  '  simpa only [← pow_mul] using h']
+        else:
+            ep = f'(by norm_num [power_{n:02d}, power_{n-1:02d}, relativeDomain])'
+            L += [f'  have h : power_{n:02d}.mem (x ^ {n-1} * x) :=',
+                  f'    mem_mul_of_bounds (mem_power_{n-1:02d} hx) hx',
+                  '      ' + ' '.join([ep] * 8),
+                  '  simpa only [← pow_succ] using h']
+        L += ['']
+    L += ['private def finitePower : ℕ → RatInterval']
+    for n in range(MAX_POWER + 1):
+        L += [f'  | {n} => power_{n:02d}']
+    L += ['  | _ => const 0', '',
+          'def powerTable (n : ℕ) : RatInterval :=',
+          f'  if n < {MAX_POWER+1} then finitePower n else powSigned relativeDomain n', '',
+          'private theorem mem_powerTable {x : ℝ} (hx : relativeDomain.mem x) (n : ℕ) :',
+          '    (powerTable n).mem (x ^ n) := by',
+          f'  by_cases hn : n < {MAX_POWER+1}',
+          '  · interval_cases n']
+    for n in range(MAX_POWER + 1):
+        L += [f'    · simpa only [powerTable, finitePower, if_pos (by decide : {n} < {MAX_POWER+1})] using mem_power_{n:02d} hx']
+    L += ['  · simpa only [powerTable, if_neg hn] using mem_powSigned hx n', '',
+          'theorem power_enclosures (x : Fin 3 → ℝ)',
+          '    (hx : ∀ i, (relativeBox i).mem (x i)) :',
+          '    PowerEnclosures (fun _ n => powerTable n) x := by',
+          '  intro i n', '  exact mem_powerTable (hx i) n', '',
+          '/-- One constructor for each archived term; guards retain all 807 terms. -/',
+          'inductive TermIndex where']
+    for k in range(NTERMS):
+        L += [f'  | t{k:03d}']
+    L += ['', 'def exponents : TermIndex → Exp3']
+    for k, (e, _) in enumerate(poly):
+        L += [f'  | .t{k:03d} => ![{e[0]}, {e[1]}, {e[2]}]']
+    L += ['', 'def coefficientInterval : TermIndex → RatInterval']
+    for k, (_, A) in enumerate(poly):
+        L += [f'  | .t{k:03d} => {lean_interval(list(A))}']
+    L += ['', 'private def hessianTerm (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+          '    (k : TermIndex) : ℝ :=',
+          '  derivativeCoeff 0 (lowerExponent 0 (exponents k))',
+          '    (derivativeCoeff 0 (exponents k) (c k)) *',
+          '      monomial (lowerExponent 0 (lowerExponent 0 (exponents k))) x', '']
+    for k, ((e, A), bound) in enumerate(zip(poly, terms)):
+        name = f'termBound_{k:03d}'
+        L += [f'private def {name} : RatInterval := {lean_interval(list(bound))}',
+              f'private theorem term_mem_{k:03d} (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+              '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+              '    (hP : PowerEnclosures (fun _ n => powerTable n) x) :',
+              f'    {name}.mem (hessianTerm c x .t{k:03d}) := by']
+        # A second derivative along axis 0 of a term whose u-exponent is 0 or 1
+        # is identically zero.  Close those terms by definitional reduction and
+        # `mem_const`, avoiding a needless huge rational norm_num comparison.
+        if e[0] < 2 and bound[0] == 0 and bound[1] == 0:
+            L += ['  have hzero : hessianTerm c x .t%03d = 0 := by' % k,
+                  '    unfold hessianTerm',
+                  '    rw [show exponents .t%03d = ![%d, %d, %d] from rfl]' % (k, e[0], e[1], e[2]),
+                  '    simp [lowerExponent, derivativeCoeff]',
+                  '  rw [hzero]',
+                  f'  simpa [termBound_{k:03d}, RatInterval.const] using mem_const (0 : ℚ)',
+                  '']
+            continue
+        defs, thm = term_corner_block(k, e, A, bound, powers)
+        L = L[:-4] + defs + thm
+    for b, (chunk, bound) in enumerate(zip(chunks, chunk_bounds)):
+        index_list = ', '.join(f'.t{k:03d}' for k in chunk)
+        bound_list = ', '.join(f'termBound_{k:03d}' for k in chunk)
+        L += [f'def block_{b:02d} : List TermIndex := [{index_list}]',
+              f'private def blockBound_{b:02d} : RatInterval := {lean_interval(list(bound))}',
+              f'private theorem block_mem_{b:02d} (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+              '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+              '    (hP : PowerEnclosures (fun _ n => powerTable n) x) :',
+              f'    blockBound_{b:02d}.mem (formalHessianEntry exponents c 0 0 x block_{b:02d}) := by',
+              f'  have h : (sumIntervals [{bound_list}]).mem',
+              f'      (formalHessianEntry exponents c 0 0 x block_{b:02d}) := by']
+        nested = '(by simpa [sumIntervals, eval] using mem_const (0 : ℚ))'
+        for k in reversed(chunk):
+            nested = f'(mem_add (term_mem_{k:03d} c x hC hP) {nested})'
+        L += [f'    exact {nested}']
+        simp = ', '.join([f'blockBound_{b:02d}','sumIntervals','RatInterval.add','RatInterval.const'] +
+                         [f'termBound_{k:03d}' for k in chunk])
+        L += ['  exact mem_subset h', f'    (by norm_num [{simp}])',
+              f'    (by norm_num [{simp}])', '']
+    term_list = '[]'
+    for b in reversed(range(len(chunks))):
+        term_list = f'block_{b:02d} ++ ({term_list})'
+    L += ['def terms : List TermIndex :=',
+          '  ' + term_list, '',
+          'private theorem hessian_append (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+          '    (s t : List TermIndex) :',
+          '    formalHessianEntry exponents c 0 0 x (s ++ t) =',
+          '      formalHessianEntry exponents c 0 0 x s + formalHessianEntry exponents c 0 0 x t := by',
+          '  unfold formalHessianEntry formalDerivative',
+          '  induction s with',
+          '  | nil => simp [eval]',
+          '  | cons k ks ih =>',
+          '      simp only [List.cons_append, eval]',
+          '      rw [ih]', '      ring', '',
+          'private theorem hessian_nil (c : TermIndex → ℝ) (x : Fin 3 → ℝ) :',
+          '    formalHessianEntry exponents c 0 0 x [] = 0 := rfl', '',
+          'private theorem formal_h00_mem (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+          '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+          '    (hP : PowerEnclosures (fun _ n => powerTable n) x) :',
+          '    targetH00.mem (formalHessianEntry exponents c 0 0 x terms) := by',
+          '  have h : (sumIntervals [' + ', '.join(f'blockBound_{b:02d}' for b in range(len(chunks))) + ']).mem',
+          '      (formalHessianEntry exponents c 0 0 x terms) := by',
+          '    simp only [terms, hessian_append, hessian_nil]']
+    nested = '(by simpa [sumIntervals, eval] using mem_const (0 : ℚ))'
+    for b in reversed(range(len(chunks))):
+        nested = f'(mem_add (block_mem_{b:02d} c x hC hP) {nested})'
+    L += [f'    exact {nested}']
+    simp = ', '.join(['targetH00','sumIntervals','RatInterval.add','RatInterval.const'] +
+                     [f'blockBound_{b:02d}' for b in range(len(chunks))])
+    L += ['  exact mem_subset h', f'    (by norm_num [{simp}])', f'    (by norm_num [{simp}])', '',
+          '/-- Actual nested u-coordinate derivative belongs to archived AAA H00.',
+          'Only membership of one fixed real shifted coefficient family and the point',
+          'in the archived relative source box are premises. Power and arithmetic',
+          'endpoint bounds are discharged above, not assumed here. -/',
+          'theorem actual_h00_mem (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+          '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+          '    (hx : ∀ i, (relativeBox i).mem (x i)) :',
+          '    targetH00.mem',
+          '      (axisDeriv (axisDeriv (fun y => eval exponents c y terms) 0) 0 x) := by',
+          '  rw [axisDeriv_axisDeriv_eval]',
+          '  exact formal_h00_mem c x hC (power_enclosures x hx)', '',
+          'end ThomsonNine.LocalSparseHessianAAA', '']
+    text = '\n'.join(L)
+    manifest = {
+        'status':'AAA_H00_ACTUAL_COORDINATE_DERIVATIVE_EXPORT_UNCOMPILED',
+        'source':source,
+        'source_bindings':row['source_bindings'],
+        'scope':'AAA H00 only; 807 original guarded terms, all other entries excluded',
+        'coefficient_terms':NTERMS,
+        'nonzero_hessian_terms':sum(e[0]>=2 for e,_ in poly),
+        'power_witnesses':MAX_POWER+1,
+        'term_enclosure_witnesses':NTERMS,
+        'sum_chunks':len(chunks),
+        'chunk_size':CHUNK,
+        'rounded_sum_equals_archived_H00':True,
+        'generated_lean':str(OUT.relative_to(BASE)),
+        'generated_lean_sha256':sha256(text.encode()).hexdigest(),
+        'exporter_sha256':sha256(Path(__file__).read_bytes()).hexdigest(),
+        'theorem':'ThomsonNine.LocalSparseHessianAAA.actual_h00_mem',
+        'remaining_premises':['one fixed real coefficient family belongs to archived shifted intervals',
+                              'evaluation point belongs to archived relative_sourcebox'],
+        'not_proved':['actual residual-to-shifted-polynomial identity and coefficient membership',
+                      'exact contacts', 'other Hessian entries or boundary graph derivatives',
+                      'n9 final theorem'],
+        'arithmetic_trust':'Rational literals and norm_num proof terms intended for Lean kernel checking; no native_decide',
+        'compilation':'not run by exporter; parent must compile separately'
+    }
+    return text, json.dumps(manifest,indent=2)+'\n'
+
+
+
+def right_append(names):
+    result = '[]'
+    for name in reversed(names):
+        result = f'{name} ++ ({result})'
+    return result
+
+
+def split_modules(text, row, count):
+    """Partition already-rendered proof bodies, preserving their arithmetic bytes."""
+    poly, domain, powers, bounds, target = checked_data(row)
+    blocks = [list(range(i, min(i + CHUNK, NTERMS))) for i in range(0, NTERMS, CHUNK)]
+    need(1 <= count <= len(blocks), 'chunks must be between 1 and 34')
+    block_bounds = [sum_intervals(bounds[k] for k in block) for block in blocks]
+    term_start = text.index('private def termBound_000')
+    block_start = text.index('def block_00 :')
+    terms_start = text.index('def terms :')
+    append_start = text.index('private theorem hessian_append')
+    formal_start = text.index('private theorem formal_h00_mem')
+    actual_start = text.index('/-- Actual nested u-coordinate derivative')
+    ending = 'end ThomsonNine.LocalSparseHessianAAA\n'
+    # These shared definitions must remain transparent across imported modules.
+    base = text[:term_start].replace('private def finitePower', 'def finitePower')
+    base = base.replace('private def hessianTerm', 'def hessianTerm')
+    helpers = text[append_start:formal_start].replace('private theorem ', 'theorem ')
+    base += helpers + ending
+    prefix = 'formal/ThomsonNine/LocalSparseHessianAAA'
+    files = {prefix + 'Base.lean': base}
+    header = ['set_option maxRecDepth 8192', 'set_option maxHeartbeats 8000000', '',
+              'namespace ThomsonNine.LocalSparseHessianAAA', '',
+              'open ThomsonNine.Interval ThomsonNine.Interval.SparsePolynomial',
+              'open ThomsonNine.Interval.RatInterval', '']
+    groups = [list(range(i * len(blocks) // count, (i + 1) * len(blocks) // count))
+              for i in range(count)]
+    chunk_bounds = []
+    for i, group in enumerate(groups):
+        ks = [k for b in group for k in blocks[b]]
+        lo = text.index(f'private def termBound_{ks[0]:03d}')
+        hi = text.index(f'private def termBound_{ks[-1]+1:03d}') if ks[-1]+1 < NTERMS else block_start
+        blo = text.index(f'def block_{group[0]:02d} :')
+        bhi = text.index(f'def block_{group[-1]+1:02d} :') if group[-1]+1 < len(blocks) else terms_start
+        bound = sum_intervals(block_bounds[b] for b in group)
+        chunk_bounds.append(bound)
+        L = ['import ThomsonNine.LocalSparseHessianAAABase', ''] + header
+        L += [text[lo:hi].rstrip(), '', text[blo:bhi].rstrip(), '',
+              f'def chunkTerms_{i:02d} : List TermIndex :=',
+              '  ' + right_append([f'block_{b:02d}' for b in group]), '',
+              f'def chunkInterval_{i:02d} : RatInterval := {lean_interval(list(bound))}', '',
+              f'theorem chunk{i:02d}_mem (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+              '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+              '    (hx : ∀ j, (relativeBox j).mem (x j)) :',
+              f'    chunkInterval_{i:02d}.mem',
+              f'      (formalHessianEntry exponents c 0 0 x chunkTerms_{i:02d}) := by',
+              '  have hP := power_enclosures x hx',
+              '  have h : (sumIntervals [' + ', '.join(f'blockBound_{b:02d}' for b in group) + ']).mem',
+              f'      (formalHessianEntry exponents c 0 0 x chunkTerms_{i:02d}) := by',
+              f'    simp only [chunkTerms_{i:02d}, hessian_append, hessian_nil]']
+        nested = '(by simpa [sumIntervals, eval] using mem_const (0 : ℚ))'
+        for b in reversed(group):
+            nested = f'(mem_add (block_mem_{b:02d} c x hC hP) {nested})'
+        simp = ', '.join([f'chunkInterval_{i:02d}', 'sumIntervals', 'RatInterval.add',
+                          'RatInterval.const'] + [f'blockBound_{b:02d}' for b in group])
+        L += [f'    exact {nested}', '  exact mem_subset h',
+              f'    (by norm_num [{simp}])', f'    (by norm_num [{simp}])', '', ending]
+        files[prefix + f'Chunk{i:02d}.lean'] = '\n'.join(L)
+    need(sum_intervals(chunk_bounds) == target, 'split chunks differ from archived H00')
+    L = ['import ThomsonNine.LocalSparseHessianAAABase'] + [
+        f'import ThomsonNine.LocalSparseHessianAAAChunk{i:02d}' for i in range(count)]
+    L += [''] + header
+    L += ['def terms : List TermIndex :=',
+          '  ' + right_append([f'chunkTerms_{i:02d}' for i in range(count)]), '',
+          'private theorem formal_h00_mem (c : TermIndex → ℝ) (x : Fin 3 → ℝ)',
+          '    (hC : ∀ k, (coefficientInterval k).mem (c k))',
+          '    (hx : ∀ j, (relativeBox j).mem (x j)) :',
+          '    targetH00.mem (formalHessianEntry exponents c 0 0 x terms) := by',
+          '  have h : (sumIntervals [' + ', '.join(f'chunkInterval_{i:02d}' for i in range(count)) + ']).mem',
+          '      (formalHessianEntry exponents c 0 0 x terms) := by',
+          '    simp only [terms, hessian_append, hessian_nil]']
+    nested = '(by simpa [sumIntervals, eval] using mem_const (0 : ℚ))'
+    for i in reversed(range(count)):
+        nested = f'(mem_add (chunk{i:02d}_mem c x hC hx) {nested})'
+    simp = ', '.join(['targetH00', 'sumIntervals', 'RatInterval.add', 'RatInterval.const'] +
+                     [f'chunkInterval_{i:02d}' for i in range(count)])
+    L += [f'    exact {nested}', '  exact mem_subset h',
+          f'    (by norm_num [{simp}])', f'    (by norm_num [{simp}])', '']
+    actual = text[actual_start:].replace('formal_h00_mem c x hC (power_enclosures x hx)',
+                                       'formal_h00_mem c x hC hx')
+    L += [actual]
+    files[str(OUT.relative_to(BASE))] = '\n'.join(L)
+    return files, groups
+
+
+def render_bundle(row, source, count=8):
+    text, manifest_text = render(row, source)
+    manifest = json.loads(manifest_text)
+    if count:
+        files, groups = split_modules(text, row, count)
+        manifest['mode'] = 'split'
+        manifest['module_chunks'] = count
+        manifest['chunk_blocks'] = groups
+    else:
+        files = {str(OUT.relative_to(BASE)): text}
+        manifest['mode'] = 'monolithic'
+        manifest['module_chunks'] = 0
+    assembly = str(OUT.relative_to(BASE))
+    manifest['generated_lean_sha256'] = sha256(files[assembly].encode()).hexdigest()
+    manifest['generated_files'] = [
+        {'file': name, 'sha256': sha256(content.encode()).hexdigest()}
+        for name, content in files.items()]
+    return files, json.dumps(manifest, indent=2) + '\n'
+
+
+def verify_bundle(files, manifest, saved_files, saved_manifest):
+    need(files.keys() == saved_files.keys(), 'sparse Hessian module set differs')
+    for name, text in files.items():
+        need(saved_files[name] == text, f'sparse Hessian module differs: {name}')
+    need(saved_manifest == manifest, 'sparse Hessian manifest differs')
+
+
+def check_source_hash(raw, source):
+    need(sha256(raw).hexdigest() == source['sha256'], 'AAA source hash mismatch')
+
+
+def same_outputs(text, manifest, saved_text, saved_manifest):
+    need(saved_text == text, 'sparse Hessian Lean differs')
+    need(saved_manifest == manifest, 'sparse Hessian manifest differs')
+
+
+def self_test(row, source, text, manifest):
+    mutations = [
+        lambda r:r.__setitem__('row_index',1),
+        lambda r:r.__setitem__('kind','wrong'),
+        lambda r:r.__setitem__('shifted_polynomial_term_count',806),
+        lambda r:r['shifted_polynomial'].pop(),
+        lambda r:r['shifted_polynomial'][1].__setitem__(0,r['shifted_polynomial'][0][0][:]),
+        lambda r:r['shifted_polynomial'][0][0].__setitem__(0,-1),
+        lambda r:r['shifted_polynomial'][0][0].__setitem__(0,0.5),
+        lambda r:r['shifted_polynomial'][0].__setitem__(1,['2','1']),
+        lambda r:r['relative_sourcebox'].__setitem__(0,['1','-1']),
+        lambda r:r['relative_sourcebox'].__setitem__(0,['-1','1']),
+        lambda r:r['target_Hessian'][0].__setitem__(0,['0','0'])
+    ]
+    for mutate in mutations:
+        bad = deepcopy(row)
+        mutate(bad)
+        try:
+            checked_data(bad)
+        except ValueError:
+            continue
+        raise AssertionError('invalid sparse Hessian data accepted')
+    for saved_text,saved_manifest in [(text+'\n',manifest),(text,manifest+'\n')]:
+        try:
+            same_outputs(text,manifest,saved_text,saved_manifest)
+        except ValueError:
+            continue
+        raise AssertionError('tampered generated output accepted')
+    try:
+        contained((Q(-1),Q(1)),(Q(0),Q(0)),'mutated power witness')
+    except ValueError:
+        pass
+    else:
+        raise AssertionError('invalid power witness accepted')
+    raw = (BASE/source['file']).read_bytes()
+    try:
+        check_source_hash(raw+b' ', source)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError('tampered source accepted')
+    print('LOCAL_SPARSE_HESSIAN_NEGATIVE_TESTS_PASS',len(mutations)+4)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check',action='store_true')
+    parser.add_argument('--self-test',action='store_true')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--chunks', type=int, default=8,
+                      help='emit 1..34 independently compilable module chunks (default: 8)')
+    mode.add_argument('--monolithic', action='store_true',
+                      help='emit the original single-file proof instead of the default split layout')
+    parser.add_argument('--output-root', type=Path, default=BASE,
+                        help='output root containing formal/ and the manifest; source data always uses BASE')
+    args = parser.parse_args()
+    count = 0 if args.monolithic else args.chunks
+    need(args.monolithic or 1 <= count <= 34, 'chunks must be between 1 and 34')
+    rows,sources = load()
+    check_source_hash((BASE/sources[0]['file']).read_bytes(), sources[0])
+    files,manifest = render_bundle(rows[0],sources[0],count)
+    if args.self_test:
+        self_test(rows[0],sources[0],files[str(OUT.relative_to(BASE))],manifest)
+        for name in files:
+            mutated = dict(files)
+            mutated[name] += '\n'
+            try:
+                verify_bundle(files, manifest, mutated, manifest)
+            except ValueError:
+                pass
+            else:
+                raise AssertionError(f'tampered module accepted: {name}')
+        print('LOCAL_SPARSE_HESSIAN_MODULE_TAMPER_TESTS_PASS', len(files))
+    manifest_path = args.output_root / MANIFEST.relative_to(BASE)
+    if args.check:
+        saved = {name:(args.output_root/name).read_text() for name in files}
+        verify_bundle(files,manifest,saved,manifest_path.read_text())
+        print(f'LOCAL_SPARSE_HESSIAN_CHECK_PASS: AAA H00, {len(files)} modules, mode={count or "monolithic"}')
+    else:
+        for name,text in files.items():
+            path = args.output_root/name
+            path.parent.mkdir(parents=True,exist_ok=True)
+            path.write_text(text)
+        manifest_path.parent.mkdir(parents=True,exist_ok=True)
+        manifest_path.write_text(manifest)
+        print(f'LOCAL_SPARSE_HESSIAN_WRITTEN: AAA H00, {len(files)} modules, mode={count or "monolithic"}')
+
+
+if __name__ == '__main__':
+    main()

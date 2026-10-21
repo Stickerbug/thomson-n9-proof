@@ -1,0 +1,473 @@
+{
+  "status": "finite_numerical_strategy_probe_only",
+  "warning": "Each feasible W value is an upper bound on inf W; no certified lower bound or Thomson counterexample. No SDP.",
+  "model": "/home/dsh/Thomson Problem/proof_work/nonsharp_d10_root25_7599205_v10.json",
+  "model_sha256": "6ebdebad61e4ba26f044b07b2ed56bcacdfe8c584b6007561bc17b2cd23b52d0",
+  "triangle_source": "/home/dsh/Thomson Problem/proof_work/two_other_valleys2026_probe.json",
+  "triangle_source_sha256": "c8f1d7b62403ca80de6698c2855efc50345581ec383b571260a6502c529642c2",
+  "residual_terms": 807,
+  "normalization": "W=(phi(q)+phi(r))/5+psi(q,r); sum15W=sum6phi+sum45R; eta20>=0 dropped; necessary external budget K.",
+  "dual_capacity_identity": "If W>=beta+(alpha(q)+alpha(r))/5 for every allowed pair and sum6alpha>=L_alpha by a separate capacity proof, then sum15W>=15beta+L_alpha. Exclude if 15beta+L_alpha>K.",
+  "rows": [
+    {
+      "name": "T2",
+      "triangle_decimal": [
+        ".3464802927157662",
+        ".3464805531965182",
+        ".34648072472904085"
+      ],
+      "anchors_float": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.3464802927157662,
+          0.9380572513229654,
+          0.0
+        ],
+        [
+          0.3464805531965182,
+          0.24138403164396194,
+          0.9064684084533456
+        ]
+      ],
+      "K_exact": "363112992110786940924851710131045481266677379904321852540583695641785635852558795637381419934426710695052817133855152107346942546775788202872419167516146769421785310551633758896096887694466972907733085079552029085247669037130263279668095194790519356003823045712244335452576395182989204852961748094704901986306904268707847790425060167965993187595906015146395956223332910232210522693201602995009532910431931199562326007401105446254814391480121674537640332141213484392045672246561039313290520683/805306368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "K_display": 0.00045090043558526405,
+      "threshold_K_over_15": 3.0060029039017603e-05,
+      "geometrically_feasible_initial_pairs": 385,
+      "initial_scan_best": {
+        "W": 0.00014244959340311587,
+        "angles": [
+          1.0567395602292844,
+          2.505640139827439,
+          2.791902211871849,
+          6.283185307179586
+        ],
+        "q": [
+          -0.700529439010224,
+          0.5171809181771486,
+          0.4917137408629763
+        ],
+        "r": [
+          0.3426070004275775,
+          -8.391451328782173e-17,
+          -0.9394788146935608
+        ],
+        "phi_q": 5.261439294431964e-05,
+        "phi_r": 0.00010044382539645472,
+        "psi": 0.000111837949734961,
+        "min_pair_separation_slack": 0.21739299957242253,
+        "constraints": [
+          1.2605294390102242,
+          0.31757433454233047,
+          0.23215764034507996,
+          0.21739299957242253,
+          0.4412934262053825,
+          1.292901202893761,
+          1.2619609322449923
+        ],
+        "residual_terms": [
+          6.3266724600401176e-06,
+          2.8586408862819436e-05,
+          1.7701311621460087e-05,
+          2.5955566036859895e-05,
+          1.2875605232439555e-05,
+          6.161265412715527e-05,
+          4.060952465560376e-05,
+          3.569177200149276e-05,
+          3.553665307786447e-05
+        ]
+      },
+      "best": {
+        "W": 7.805371594258296e-05,
+        "angles": [
+          1.135493924362929,
+          2.380648127429934,
+          1.1354936805891669,
+          5.119517202508582
+        ],
+        "q": [
+          -0.6566493494106734,
+          0.62529489975183,
+          0.4216846218003313
+        ],
+        "r": [
+          0.3590463678817005,
+          -0.8326269266782423,
+          0.4216848428403651
+        ],
+        "phi_q": 0.00012871604186013853,
+        "phi_r": 0.0001287160870230811,
+        "psi": 2.656729016593905e-05,
+        "min_pair_separation_slack": 0.20095363211829953,
+        "constraints": [
+          1.2166493494106736,
+          0.20095364386795683,
+          0.25433623797884297,
+          0.20095363211829953,
+          1.216649235575096,
+          0.2543362718916585,
+          1.1385869210536583
+        ],
+        "residual_terms": [
+          9.717433915980258e-05,
+          2.366303341005077e-05,
+          7.878669290285167e-06,
+          9.717439446252624e-05,
+          7.878646845761136e-06,
+          2.36630457147937e-05,
+          6.2148156829936706e-06,
+          6.214816092761052e-06,
+          1.4137658390184326e-05
+        ],
+        "W_longdouble": 7.805371594260825e-05,
+        "float_vs_longdouble_abs_error": 2.5292307051016572e-17,
+        "threshold_K_over_15": 3.0060029039017603e-05,
+        "gap_W_minus_K_over_15": 4.799368690359065e-05,
+        "ratio_W_to_threshold": 2.5965948283448212,
+        "15W_minus_K": 0.0007199053035538597,
+        "analytic_vs_finite_difference_gradient_max_error": 4.452327327214003e-11
+      },
+      "optimization_history": [
+        {
+          "kind": "SLSQP",
+          "start": 0,
+          "W": -1.095851344177037,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.13451197900576517
+        },
+        {
+          "kind": "SLSQP",
+          "start": 1,
+          "W": -0.16096821845621156,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.3489241790662353,
+          "seconds": 0.01919010397978127
+        },
+        {
+          "kind": "SLSQP",
+          "start": 2,
+          "W": -1.0958513441770372,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.05329375003930181
+        },
+        {
+          "kind": "SLSQP",
+          "start": 3,
+          "W": -0.06992622953882954,
+          "success": false,
+          "message": "Inequality constraints incompatible",
+          "min_constraint": -0.3464684115384048,
+          "seconds": 0.005116145999636501
+        },
+        {
+          "kind": "SLSQP",
+          "start": 4,
+          "W": 9.245368263898605e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.249897914233025,
+          "seconds": 0.049708332982845604
+        },
+        {
+          "kind": "SLSQP",
+          "start": 5,
+          "W": -1.095851344177037,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.05231406196253374
+        },
+        {
+          "kind": "SLSQP",
+          "start": 6,
+          "W": -1.0958513441770372,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.19394479098264128
+        },
+        {
+          "kind": "SLSQP",
+          "start": 7,
+          "W": -1.0958513441770372,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.17125364596722648
+        },
+        {
+          "kind": "SLSQP",
+          "start": 8,
+          "W": 7.805371594258296e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.20095363211829953,
+          "seconds": 0.0450432290090248
+        },
+        {
+          "kind": "SLSQP",
+          "start": 9,
+          "W": 7.805397557889343e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.20095370030323512,
+          "seconds": 0.041930208040867
+        },
+        {
+          "kind": "DE",
+          "W": 0.00014244959340311587,
+          "success": false,
+          "nit": 9,
+          "min_constraint": 0.21739299957242253,
+          "seconds": 1.6116015629959293
+        }
+      ],
+      "seconds": 4.133416666008998,
+      "prior_failed_attempt_seconds_upper": 20.86400008201599,
+      "cumulative_case_seconds_upper": 24.997419352061115,
+      "current_case_budget": 8.0,
+      "deadline_seconds": 30,
+      "uniform_bound_numerically_refuted": false,
+      "recommendation": "No counter-witness found in the finite search; this is not a lower bound. Additional analysis required before deciding certification."
+    },
+    {
+      "name": "T3",
+      "triangle_decimal": [
+        "-.07134886362384837",
+        ".3392793442065059",
+        ".3392793442065059"
+      ],
+      "anchors_float": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.07134886362384837,
+          0.9974514222054052,
+          0.0
+        ],
+        [
+          0.3392793442065059,
+          0.36441528055872763,
+          0.8672318201554341
+        ]
+      ],
+      "K_exact": "2726508585680467556028016333195274916066488656603054934377707791255469733569346191172079541759635434682006844667201525546272056192780613262394313062608549839700552502669427422269821205582069160149500380808362062872114795234891962340976725501295139389911260713243866909754671218202820288447858747948222537651358410477959098832014335912477646345157701550909647398031847383178376960420321619031167943794167006127720568339312855838995891923048220382120961544489356666103149948129408350299918661113390208070626413361/6000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "K_display": 0.0004544180976134113,
+      "threshold_K_over_15": 3.0294539840894086e-05,
+      "geometrically_feasible_initial_pairs": 255,
+      "initial_scan_best": {
+        "W": 3.8334777676092023e-05,
+        "angles": [
+          0.8946871874316471,
+          5.060657062448369,
+          2.231968515477657,
+          2.864476387370537
+        ],
+        "q": [
+          0.2661954582484679,
+          -0.7331854061820922,
+          0.6257628449896084
+        ],
+        "r": [
+          -0.759160954575806,
+          0.21593173466924506,
+          -0.6140424504953071
+        ],
+        "phi_q": 2.9991646351069625e-05,
+        "phi_r": 3.52724664684857e-05,
+        "psi": 2.528195511218096e-05,
+        "min_pair_separation_slack": 0.19418789394414043,
+        "constraints": [
+          0.29380454175153214,
+          1.3103095695844333,
+          0.19418789394414043,
+          1.319160954575806,
+          0.29045331273830166,
+          1.2713959591403872,
+          1.3046481455450594
+        ],
+        "residual_terms": [
+          1.4576366012385245e-05,
+          8.205282407473187e-06,
+          7.209997931211192e-06,
+          1.109006287298104e-05,
+          8.505616474689965e-06,
+          1.5676787120814698e-05,
+          9.941968537376248e-06,
+          7.006849689570884e-06,
+          8.333136885233827e-06
+        ]
+      },
+      "best": {
+        "W": 3.558551896771816e-05,
+        "angles": [
+          0.897141783814922,
+          5.054157126302434,
+          2.238391866291066,
+          2.85957836057614
+        ],
+        "q": [
+          0.26193821634043535,
+          -0.7363451026294355,
+          0.6238463437851001
+        ],
+        "r": [
+          -0.7542901985834094,
+          0.2185453587226671,
+          -0.6190995255221746
+        ],
+        "phi_q": 3.316681406535979e-05,
+        "phi_r": 3.7826338282942884e-05,
+        "psi": 2.1386888498057627e-05,
+        "min_pair_separation_slack": 0.19844578068208113,
+        "constraints": [
+          0.2980617836595647,
+          1.3131574639272634,
+          0.19844578068208113,
+          1.3142901985834095,
+          0.28819387261415214,
+          1.273176624079007,
+          1.304725209253939
+        ],
+        "residual_terms": [
+          1.3223928182554473e-05,
+          8.179844722230137e-06,
+          1.1763041160575178e-05,
+          1.2481004053609439e-05,
+          8.212283911154418e-06,
+          1.7133050318179026e-05,
+          7.247557192627104e-06,
+          7.424365488253345e-06,
+          6.714965817177178e-06
+        ],
+        "W_longdouble": 3.558551896758827e-05,
+        "float_vs_longdouble_abs_error": 1.2988948588760178e-16,
+        "threshold_K_over_15": 3.0294539840894086e-05,
+        "gap_W_minus_K_over_15": 5.290979126694182e-06,
+        "ratio_W_to_threshold": 1.1746512458839853,
+        "15W_minus_K": 7.936468690041274e-05,
+        "analytic_vs_finite_difference_gradient_max_error": 3.105673434893562e-10
+      },
+      "optimization_history": [
+        {
+          "kind": "SLSQP",
+          "start": 0,
+          "W": -1.0971232486711286,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.029240625037346035
+        },
+        {
+          "kind": "SLSQP",
+          "start": 1,
+          "W": -1.0971232486628921,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.027243749995250255
+        },
+        {
+          "kind": "SLSQP",
+          "start": 2,
+          "W": 3.995497177821567e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.19897079621017516,
+          "seconds": 0.046204166021198034
+        },
+        {
+          "kind": "SLSQP",
+          "start": 3,
+          "W": 3.99549717781129e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.19897079621023822,
+          "seconds": 0.04624427098315209
+        },
+        {
+          "kind": "SLSQP",
+          "start": 4,
+          "W": -1.0971232486711284,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.038433332985732704
+        },
+        {
+          "kind": "SLSQP",
+          "start": 5,
+          "W": -1.0971232486711284,
+          "success": false,
+          "message": "Positive directional derivative for linesearch",
+          "min_constraint": -0.43999999999999995,
+          "seconds": 0.09547187498537824
+        },
+        {
+          "kind": "SLSQP",
+          "start": 6,
+          "W": 3.9980309597845414e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.19756082635493633,
+          "seconds": 0.24759010400157422
+        },
+        {
+          "kind": "SLSQP",
+          "start": 7,
+          "W": 0.0015711236351522084,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.15328147112512547,
+          "seconds": 0.09801562502980232
+        },
+        {
+          "kind": "SLSQP",
+          "start": 8,
+          "W": 4.0127392479401406e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.20277603629565732,
+          "seconds": 0.059488542028702796
+        },
+        {
+          "kind": "SLSQP",
+          "start": 9,
+          "W": 4.012739247958154e-05,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "min_constraint": 0.20277604201471222,
+          "seconds": 0.05067239602794871
+        },
+        {
+          "kind": "DE",
+          "W": 3.558551896771816e-05,
+          "success": false,
+          "nit": 80,
+          "min_constraint": 0.19844578068208113,
+          "seconds": 15.278123434982263
+        }
+      ],
+      "seconds": 16.56612551800208,
+      "prior_failed_attempt_seconds_upper": 0.0,
+      "cumulative_case_seconds_upper": 16.566128642996773,
+      "current_case_budget": 30.0,
+      "deadline_seconds": 30,
+      "uniform_bound_numerically_refuted": false,
+      "recommendation": "No counter-witness found in the finite search; this is not a lower bound. Additional analysis required before deciding certification."
+    }
+  ],
+  "no_SDP": true,
+  "seconds": 22.242227600014303
+}

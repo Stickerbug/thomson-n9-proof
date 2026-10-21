@@ -1,0 +1,7 @@
+=== 02:05:58 building ContactInner ===
+ThomsonNine/ContactInner.lean:26:2: error: `ring_nf` made no progress on the goal
+ThomsonNine/ContactInner.lean:32:2: error: `ring_nf` made no progress on the goal
+ThomsonNine/ContactInner.lean:39:2: error: `ring_nf` made no progress on the goal
+ThomsonNine/ContactInner.lean:53:2: error: No goals to be solved
+=== FAIL ContactInner ===
+=== ALL DONE 02:07:29 ===

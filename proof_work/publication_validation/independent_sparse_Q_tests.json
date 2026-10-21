@@ -1,0 +1,10 @@
+{
+  "status": "INDEPENDENT_SPARSE_Q_AUTODIFF_CROSSCHECK_PASS",
+  "hand_expanded_Q2_verified": true,
+  "rational_point": [
+    "1/3",
+    "-2/7",
+    "3/8"
+  ],
+  "exact_value_and_partial_checks": 44
+}

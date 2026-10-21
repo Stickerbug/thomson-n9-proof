@@ -1,0 +1,24 @@
+{
+  "status": "PREPARED ONLY; no build() or SDP executed",
+  "code_sha256": "13c447d4e1885b7eb4fac97a6ae840e21356a37db9206a566f48226ea4cd8ec3",
+  "source_results_sha256": "70211e9762a6893f3cf2699f115c1d3bf3e8212b58870268ec89b6bd02f7434c",
+  "deterministic_count": 924,
+  "mandatory_initial_count": 1011,
+  "past_discovery_rows": 75,
+  "seed_x_error_existing_N": 3.3306690738754696e-16,
+  "grid_gram_min_float": -1.3367085216486885e-13,
+  "all_grid_box": true,
+  "active_limit": 4500,
+  "invocation_requires": [
+    "--authorized-rounds {1,2,3}",
+    "--authorized-full-domain",
+    "--total-seconds integer180to480"
+  ],
+  "changes": [
+    "deterministic and past discoveries mandatory forever",
+    "originalA and x carryover from round2",
+    "Dred=D@Z and bred=rhs-D@sol precomputed in numpy",
+    "stop when tau>1e-9 for separate pure-min-tau authorization",
+    "no runtime solver/domain authorization assumed"
+  ]
+}

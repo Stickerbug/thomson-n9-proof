@@ -1,0 +1,104 @@
+=== 15:22:48 building DomainCoverage ===
+=== OK DomainCoverage ===
+=== 15:23:11 building Probe ===
+ThomsonNine/Probe.lean:23:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.sin ?x ^ 2 + Real.cos ?x ^ 2
+in the target expression
+  ρ ^ 2 * Real.cos θ ^ 2 + ρ ^ 2 * Real.sin θ ^ 2 = ρ ^ 2
+
+ρ θ h : ℝ
+⊢ ρ ^ 2 * Real.cos θ ^ 2 + ρ ^ 2 * Real.sin θ ^ 2 = ρ ^ 2
+ThomsonNine/Probe.lean:32:2: error: No goals to be solved
+ThomsonNine/Probe.lean:36:23: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.cos (Real.pi / 3)
+in the target expression
+  Real.cos (π / 3) * Real.cos (π / 3) - Real.sin (π / 3) * Real.sin (π / 3) = -1 / 2
+
+π : ℝ
+h : 2 * π / 3 = π / 3 + π / 3
+⊢ Real.cos (π / 3) * Real.cos (π / 3) - Real.sin (π / 3) * Real.sin (π / 3) = -1 / 2
+ThomsonNine/Probe.lean:42:23: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.cos (Real.pi / 3)
+in the target expression
+  Real.sin (π / 3) * Real.cos (π / 3) + Real.cos (π / 3) * Real.sin (π / 3) = √3 / 2
+
+π : ℝ
+h : 2 * π / 3 = π / 3 + π / 3
+⊢ Real.sin (π / 3) * Real.cos (π / 3) + Real.cos (π / 3) * Real.sin (π / 3) = √3 / 2
+ThomsonNine/Probe.lean:48:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.cos (?x + Real.pi)
+in the target expression
+  Real.cos (π + π / 3) = -1 / 2
+
+π : ℝ
+h : 4 * π / 3 = π + π / 3
+⊢ Real.cos (π + π / 3) = -1 / 2
+ThomsonNine/Probe.lean:53:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.sin (?x + Real.pi)
+in the target expression
+  Real.sin (π + π / 3) = -√3 / 2
+
+π : ℝ
+h : 4 * π / 3 = π + π / 3
+⊢ Real.sin (π + π / 3) = -√3 / 2
+ThomsonNine/Probe.lean:58:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.cos (2 * Real.pi - ?x)
+in the target expression
+  Real.cos (2 * π - π / 3) = 1 / 2
+
+π : ℝ
+h : 5 * π / 3 = 2 * π - π / 3
+⊢ Real.cos (2 * π - π / 3) = 1 / 2
+ThomsonNine/Probe.lean:62:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.sin (2 * Real.pi - ?x)
+in the target expression
+  Real.sin (2 * π - π / 3) = -√3 / 2
+
+π : ℝ
+h : 5 * π / 3 = 2 * π - π / 3
+⊢ Real.sin (2 * π - π / 3) = -√3 / 2
+ThomsonNine/Probe.lean:65:33: error(lean.unknownIdentifier): Unknown identifier `π`
+ThomsonNine/Probe.lean:68:78: error: unsolved goals
+π r : ℝ
+⊢ cyl r (2 * sorry () / 3) √(1 - r ^ 2) = cyl r (2 * π / 3) √(1 - r ^ 2)
+ThomsonNine/Probe.lean:69:8: warning: declaration uses `sorry`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/Probe.lean:72:45: error: unsolved goals
+r : ℝ
+h : 0 < r
+h1 : r < 1
+⊢ ‖!₂[r, 0, √(1 - r ^ 2)] - !₂[r * Real.cos (sorry () * (2 / 3)), r * Real.sin (sorry () * (2 / 3)), √(1 - r ^ 2)]‖ ^
+      2 =
+    r ^ 2 * 3
+ThomsonNine/Probe.lean:73:8: warning: declaration uses `sorry`
+ThomsonNine/Probe.lean:73:19: warning: This simp argument is unused:
+  sqdist_cyl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cand, cyl, Real.cos_pi_div_three, Real.sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Probe.lean:73:31: warning: This simp argument is unused:
+  Real.cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cand, cyl, sqdist_cyl, Real.sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Probe.lean:73:54: warning: This simp argument is unused:
+  Real.sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cand, cyl, sqdist_cyl, Real.cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Probe.lean:84:59: error: unsolved goals
+f : Fin 4 → Fin 4 → ℝ
+⊢ f 0 1 + (f 0 2 + f 0 3) + (f 1 2 + f 1 3 + f 2 3) = f 0 1 + f 0 2 + f 0 3 + (f 1 2 + f 1 3) + f 2 3
+=== FAIL Probe ===
+=== ALL DONE 15:24:32 ===

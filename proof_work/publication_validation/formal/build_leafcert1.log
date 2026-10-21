@@ -1,0 +1,11 @@
+=== 23:26:53 building LeafCert ===
+ThomsonNine/LeafCert.lean:41:17: error: Application type mismatch: The argument
+  cert.coeff_nonneg
+has type
+  (0 : ℚ) ≤ (evalTensor cert.n cert.C cert.Iu cert.Iv cert.It ⋯ ⋯ ⋯ ⋯ ⋯ ⋯).lo
+but is expected to have type
+  (0 : ℝ) ≤ ↑(evalTensor cert.n cert.C cert.Iu cert.Iv cert.It ⋯ ⋯ ⋯ ⋯ ⋯ ⋯).lo
+in the application
+  le_trans cert.coeff_nonneg
+=== FAIL LeafCert ===
+=== ALL DONE 23:28:32 ===

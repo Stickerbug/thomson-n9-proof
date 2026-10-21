@@ -1,0 +1,15 @@
+{
+  "status": "certified",
+  "source": "/home/dsh/Thomson Problem/proof_work/conditional_h27_certificate.json",
+  "degree": 27,
+  "domain": [
+    "-1",
+    "14/25"
+  ],
+  "error_upper": "1/100000000000",
+  "positive_nodes": 1,
+  "minorant_nodes": 5,
+  "error_nodes": 5,
+  "arithmetic": "Fraction Bernstein, no floating point discovery",
+  "seconds": 0.47762036323547363
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dsh/Thomson Problem/proof_work/external_pair_field2026_probe.py", line 89, in <module>
+    if __name__=='__main__':main()
+  File "/home/dsh/Thomson Problem/proof_work/external_pair_field2026_probe.py", line 87, in main
+    result['rows'].append(work(row,R,model));out=ROOT/(PREFIX+'data.json');out.write_text(json.dumps(result,indent=2)+'\n')
+  File "/home/dsh/Thomson Problem/proof_work/external_pair_field2026_probe.py", line 82, in work
+    rec={'name':row['name'],'triangle_decimal':coords,'anchors_float':A.tolist(),'K_exact':str(budget),'K_display':float(budget),'threshold_K_over_15':threshold,'geometrically_feasible_initial_pairs':len(initial),'initial_scan_best':scan_best,'best':best,'optimization_history':history,'seconds':time.monotonic()-start,'deadline_seconds':30,'uniform_bound_numerically_refuted':best['W_longdouble']<threshold,'recommendation':'Uniform W>=K/15 has a feasible numerical counter-witness; do not spend effort certifying that false-looking uniform inequality. Retain spatial potentials/cap capacities or optimize a coupled six-point relaxation.'if best['W_longdouble']<threshold else'No counter-witness found in the finite search; this is not a lower bound. Additional analysis required before deciding certification.'};print('RESULT',json.dumps(rec),flush=True);return rec
+KeyError: 'W_longdouble'

@@ -1,0 +1,56 @@
+{
+  "status": "SMOKE_PASSED",
+  "checks": [
+    "100 random lower + 100 random upper int64 splits enclose independent Fraction de Casteljau, including near-2^62 signed values",
+    "unsafe coarse cast rejected before int64 conversion",
+    "strict +/-2^62 edge extrema and alternating endpoints: upper/lower all Fraction-enclose without overflow",
+    "80-bit scale and EACH integer preserved exactly by safe cast; strict endpoints/huge unsafe inputs refused; original object unchanged",
+    "12 cached full-binary-path original-root80 replays outward-enclose independent exact transforms on SAME physical box",
+    "tiny positive, budget-zero pending, uncertain-center local containment, S=R-g, coverage identities",
+    "known positive quadratic+1e-20 TRIGGERS original-root80 upgrade, same-scale int64 fine splits, and closes full tree"
+  ],
+  "upgrade_example": {
+    "visited_nodes": 1411,
+    "split_nodes": 705,
+    "pending_count": 0,
+    "precision_upgrades": 7,
+    "coarse_visited": 455,
+    "fine_visited": 956,
+    "terminal_precision_counts": {
+      "48": 221,
+      "80": 485
+    },
+    "root80_replay_split_steps": 43,
+    "root_coverage": {
+      "binary_partition_complete": true,
+      "terminal_plus_pending_equals_splits_plus_one": true,
+      "visited_equals_terminal_plus_splits": true,
+      "pending_boxes_complete": true
+    },
+    "dtype_cast_counts": {
+      "B": 7,
+      "S": 0
+    },
+    "fine_tensor_splits": {
+      "int64": 478,
+      "object": 478
+    },
+    "fine_tensor_splits_by_role": {
+      "B": {
+        "int64": 478,
+        "object": 0
+      },
+      "G": {
+        "int64": 0,
+        "object": 478
+      },
+      "S": {
+        "int64": 0,
+        "object": 0
+      }
+    },
+    "fine_work_scale_unchanged": true
+  },
+  "replay_test_cache_hits": 11,
+  "conditional_only": true
+}

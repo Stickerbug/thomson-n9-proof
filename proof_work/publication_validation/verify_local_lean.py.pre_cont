@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""Sequential compiler, axiom, and independent-kernel validation of local work.
+The result deliberately does not assert the final Thomson theorem.
+"""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import time
+
+PV = Path(__file__).resolve().parent
+FORMAL = PV / 'formal'
+BIN = PV / 'toolchain' / 'lean-4.34.1-linux_aarch64' / 'bin'
+OUT = FORMAL / '.lake/build/lib/lean'
+MODULES = ['LocalLDLSemantics', 'LocalCerts', 'LocalLDLData',
+           'LocalLDLFactorization', 'LocalNonneg', 'IntervalLocalOps',
+           'LocalLDLReplay', 'GramBoundary', 'IntervalLinear', 'LocalHessianBridge',
+           'IntervalSparsePolynomial', 'IntervalPowerReplay', 'IntervalSparseDerivative',
+           'LocalSparseHessianAAA', 'SparseTranslation', 'LocalVerification']
+REPORT = PV / 'local_lean_verification.json'
+LOGS = PV / 'local_lean_verification_logs'
+ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--reuse-local-build', action='store_true',
+                        help='reuse local artifacts only if newer than source and local dependencies')
+    args = parser.parse_args()
+    env = os.environ.copy()
+    libs = [OUT, FORMAL / '.lake/packages/mathlib/.lake/build/lib/lean']
+    libs += [FORMAL / '.lake/pinned_sources' / n / '.lake/build/lib/lean'
+             for n in ['aesop', 'batteries', 'Qq', 'plausible', 'importGraph',
+                       'proofwidgets', 'LeanSearchClient', 'Cli']]
+    env['LEAN_PATH'] = ':'.join(map(str, libs))
+    env['PATH'] = str(BIN) + os.pathsep + env.get('PATH', '')
+    LOGS.mkdir(exist_ok=True)
+    report = {'status': 'RUNNING', 'scope': 'Local certificate implications only; final ThomsonNineClaim is unproved.',
+              'started_unix': time.time(), 'stages': []}
+
+    def run(name, command):
+        log = LOGS / (name + '.log')
+        start = time.time()
+        print('START', name, flush=True)
+        with log.open('w') as stream:
+            proc = subprocess.run(list(map(str, command)), cwd=FORMAL, env=env,
+                                  stdout=stream, stderr=subprocess.STDOUT)
+        report['stages'].append({'name': name, 'exit_code': proc.returncode,
+                                 'seconds': time.time() - start,
+                                 'log': str(log.relative_to(PV)), 'log_sha256': digest(log)})
+        print('END', name, 'exit', proc.returncode, flush=True)
+        if proc.returncode:
+            raise RuntimeError(name + ' failed; inspect ' + str(log))
+        return log.read_text()
+
+    try:
+        run('export_data', [sys.executable, '-B', PV / 'export_local_lean.py', '--check', '--self-test'])
+        run('export_replay', [sys.executable, '-B', PV / 'export_local_ldl_replay.py', '--check'])
+        run('export_hessian_bridge', [sys.executable, '-B', PV / 'export_local_hessian_bridge.py', '--check', '--self-test'])
+        run('export_sparse_hessian', [sys.executable, '-B', PV / 'export_local_sparse_hessian.py', '--check', '--self-test'])
+        # Transitive local source/artifact correspondence.  A rebuild may consume
+        # an ancestor module whose source changed without appearing in MODULES;
+        # require every reachable local source to be older than the artifact that
+        # was built from the whole import closure.
+        def source_of(module):
+            if module == 'ThomsonNine':
+                return FORMAL / 'ThomsonNine.lean'
+            return FORMAL / 'ThomsonNine' / (module.split('.', 1)[1] + '.lean')
+
+        def closure(module, seen=None):
+            if seen is None:
+                seen = set()
+            if module in seen:
+                return seen
+            seen.add(module)
+            source = source_of(module)
+            if not source.is_file():
+                return seen
+            for imp in re.findall(r'^import (ThomsonNine(?:\.\w+)*)', source.read_text(), re.M):
+                closure(imp, seen)
+            return seen
+
+        for module in MODULES:
+            source = FORMAL / 'ThomsonNine' / (module + '.lean')
+            target = OUT / 'ThomsonNine' / (module + '.olean')
+            if args.reuse_local_build and module != 'LocalVerification':
+                local = closure('ThomsonNine.' + module)
+                stale = [m for m in local
+                         if not (OUT / (m.replace('.', '/') + '.olean')).is_file()
+                         or (OUT / (m.replace('.', '/') + '.olean')).stat().st_mtime_ns
+                            < source_of(m).stat().st_mtime_ns]
+                if not target.is_file() or stale:
+                    raise RuntimeError('stale or missing local artifact: ' + module + ' closure=' + repr(sorted(stale)))
+                print('REUSE', module, len(local), 'local modules', flush=True)
+            else:
+                run('build_' + module, [BIN / 'lean', '-o', target, '-i', target.with_suffix('.ilean'), source.relative_to(FORMAL)])
+        run('root', [BIN / 'lean', '-o', OUT / 'ThomsonNine.olean', '-i', OUT / 'ThomsonNine.ilean', 'ThomsonNine.lean'])
+        audit = run('axioms', [BIN / 'lean', 'ThomsonNine/Axioms.lean'])
+        directives = re.findall(r'^#print axioms (\S+)\s*$',
+                                (FORMAL / 'ThomsonNine/Axioms.lean').read_text(), re.M)
+        printed = re.findall(r"^'(.+)' (?:depends on axioms: \[([^\]]*)\]|does not depend on any axioms)",
+                             audit, re.M)
+        names = [n for n, _ in printed]
+        if names != directives:
+            missing = [d for d in directives if d not in names]
+            extra = [n for n in names if n not in directives]
+            raise RuntimeError('axiom audit mismatch: missing=%r extra=%r duplicate=%r' % (
+                missing[:5], extra[:5], len(names) - len(set(names))))
+        if len(names) < 200:
+            raise RuntimeError('axiom audit too small: %d declarations' % len(names))
+        found = {a.strip() for _, group in printed for a in group.split(',') if a.strip()}
+        if found - ALLOWED_AXIOMS:
+            raise RuntimeError('unexpected axioms: ' + repr(sorted(found - ALLOWED_AXIOMS)))
+        if 'sorryAx' in found:
+            raise RuntimeError('sorryAx reached an audited conclusion')
+        # A `sorry` or declared axiom outside the printed list could still exist.
+        # Scan the local modules actually replayed, not Mathlib.
+        banned = []
+        for module in sorted(closure('ThomsonNine.LocalVerification')):
+            path = source_of(module)
+            if not path.is_file():
+                continue
+            text = path.read_text()
+            if re.search(r'\bsorry\b', text) or re.search(r'^axiom\s', text, re.M) \
+                    or 'native_decide' in text:
+                banned.append(str(path.relative_to(FORMAL)))
+        if banned:
+            raise RuntimeError('forbidden proof escape in replayed sources: ' + repr(banned))
+        report['axiom_audits'] = len(names)
+        report['audited_declarations_sha256'] = hashlib.sha256(
+            '\n'.join(names).encode()).hexdigest()
+        report['axioms'] = sorted(found)
+        run('kernel', [BIN / 'leanchecker', 'ThomsonNine.LocalVerification'])
+        sources = [FORMAL / 'ThomsonNine' / (m + '.lean') for m in MODULES]
+        sources += [FORMAL / 'ThomsonNine.lean', FORMAL / 'ThomsonNine/Axioms.lean', Path(__file__).resolve()]
+        sources += [FORMAL / 'build_direct.sh']
+        sources += [PV / n for n in ['export_local_lean.py', 'local_lean_export_manifest.json',
+                                    'export_local_ldl_replay.py', 'local_ldl_replay_manifest.json',
+                                    'export_local_hessian_bridge.py', 'local_hessian_bridge_manifest.json',
+                                    'export_local_sparse_hessian.py', 'local_sparse_hessian_manifest.json']]
+        report['sources_sha256'] = {str(p.relative_to(PV)): digest(p) for p in sources}
+        report['artifacts_sha256'] = {str((OUT / 'ThomsonNine' / (m + '.olean')).relative_to(PV)):
+                                      digest(OUT / 'ThomsonNine' / (m + '.olean')) for m in MODULES}
+        report['status'] = 'LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS'
+    except Exception as exc:
+        report['status'] = 'FAIL'
+        report['error'] = str(exc)
+    report['finished_unix'] = time.time()
+    REPORT.write_text(json.dumps(report, indent=2) + '\n')
+    print(report['status'], flush=True)
+    return 0 if report['status'].endswith('_PASS') else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

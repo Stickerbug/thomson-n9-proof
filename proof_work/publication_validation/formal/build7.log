@@ -1,0 +1,87 @@
+=== 15:32:52 building Probe ===
+ThomsonNine/Probe.lean:20:2: error: No goals to be solved
+ThomsonNine/Probe.lean:22:62: error: unsolved goals
+h : 2 * π / 3 = π / 3 + π / 3
+⊢ 1 / 4 + √3 ^ 2 * (-1 / 4) = -1 / 2
+ThomsonNine/Probe.lean:66:17: warning: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Probe.lean:66:30: warning: Variable name `hr1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Probe.lean:72:17: warning: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ThomsonNine/Probe.lean:72:30: warning: Variable name `hr1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/Probe.lean:78:57: error: unsolved goals
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+⊢ r ^ 2 * (9 / 4) + r ^ 2 * √3 ^ 2 * (1 / 4) + √(1 - r ^ 2) ^ 2 * 4 = 4 - r ^ 2
+ThomsonNine/Probe.lean:86:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  √3 ^ 2
+in the target expression
+  (2⁻¹ + 1) ^ 2 + (√3 / 2) ^ 2 = 3
+
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+⊢ (2⁻¹ + 1) ^ 2 + (√3 / 2) ^ 2 = 3
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/Probe.lean:90:53: error: unsolved goals
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+⊢ 1 / 4 - r + r ^ 2 + √3 ^ 2 * (1 / 4) + √(1 - r ^ 2) ^ 2 = 2 - r
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ThomsonNine/Probe.lean:96:57: error: unsolved goals
+r : ℝ
+hr : 0 < r
+hr1 : r < 1
+⊢ 1 + r * 2 + r ^ 2 + √(1 - r ^ 2) ^ 2 = 2 + r * 2
+ThomsonNine/Probe.lean:97:23: warning: This simp argument is unused:
+  cos_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, sin_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/Probe.lean:97:41: warning: This simp argument is unused:
+  sin_pi_div_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, sqdist_cyl, cos_pi_div_three]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+=== FAIL Probe ===
+=== ALL DONE 15:35:10 ===

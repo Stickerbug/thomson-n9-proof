@@ -1,0 +1,10 @@
+{
+  "status": "INTEGER640_EQUIVALENCE_TEST_PASS",
+  "seed": 640,
+  "exact_endpoint_comparisons": 897,
+  "negative_tests": [
+    "zero_reciprocal",
+    "reversed_subulp_interval",
+    "negative_sqrt"
+  ]
+}

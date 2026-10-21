@@ -1,0 +1,24 @@
+{
+  "bindings": {
+    "co": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2",
+    "exact_checker": "9ab4b9810740d1b83c4ecf2e9eef76f7d93c42aaff1ba85e51f8bc24c27a13bc",
+    "inputs": "3dd4ba639e78cabaa2c3a8182db3724545751ade50635e6d542067338b281066",
+    "locals": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+    "model_binding": "2acf574e4c71208855bb4aa56ff162174a00860228650553bc1929b10f8b82c3",
+    "sharded_checker": "84fc29d43fe412e7332f799524383c42e97dc33b30f28bf401654b27d5681d3b",
+    "tree": "4712313969755f9fb5126b7a95ced989db5e16710ccddffee5dad1cf91776c12"
+  },
+  "chunk_tree_sha256": "9afbbd2581d8e7163edb23c2316bb38488b0575a4d144afd0b68158b5316d64d",
+  "elapsed_seconds": 4.254714582930319,
+  "id": "chunk-00143",
+  "leaf_counts": {
+    "positive": 1
+  },
+  "leaves": 1,
+  "manifest_sha256": "7dd936c9d7e91c811924d19e611fb1e2b1aa9437186f4ea9df4530bc89621eff",
+  "nodes": 1,
+  "path": "00100011111000001",
+  "splits": 0,
+  "status": "PASS_COMPLETE_SUBTREE",
+  "worker_pid": 32126
+}

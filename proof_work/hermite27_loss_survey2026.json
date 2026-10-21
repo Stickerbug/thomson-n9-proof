@@ -1,0 +1,8 @@
+{
+  "scope": "NUMERICAL_ONE_DIMENSIONAL_HERMITE_LOSS_SURVEY_NOT_A_UNIFORM_BOUND",
+  "grid_points": 1001,
+  "maximum_sampled_loss": "0.0000000003250069764224757459190650834516867670561",
+  "at_t": "-0.97036",
+  "minimum_sampled_loss": "0.0",
+  "loss_at_old_Q": "2.449249349803580024589459051629658136157e-14"
+}

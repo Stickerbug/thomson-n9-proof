@@ -1,0 +1,30 @@
+{
+  "scope": "Frozen direct/transitive local Python source imports plus actual runtime JSON/C/shared library inputs. No local/Hermite/jet proof input is required. Third party symbolic and numeric libraries remain trusted runtime dependencies.",
+  "cwd": "/home/dsh/Thomson Problem",
+  "root_replay_command": "PYTHONPATH=proof_work:proof_work/python_deps OPENBLAS_NUM_THREADS=1 python3 '/home/dsh/Thomson Problem/proof_work/analytic10_2026_verify.py' --replay-root",
+  "prerequisite_only_command": "PYTHONPATH=proof_work:proof_work/python_deps OPENBLAS_NUM_THREADS=1 python3 '/home/dsh/Thomson Problem/proof_work/analytic10_2026_verify.py'",
+  "sha256": {
+    "analytic10_2026_engine.py": "721edff81d54bd92b408ede73238f1ef23ee4f1c16a1337813d901081b6ec8e1",
+    "analytic10_2026_run1.json": "10adc9c59a9bb03f54bd764409ce9faf6cb7ccf779770de1f89e00faf2437ed6",
+    "analytic10_2026_run1.py": "98036710940a5c1cbef0c8085230eb81bb4840a695e558916d06ac91802edf7c",
+    "analytic10_2026_run1_inputs.json": "27868ef83c841bc78f88dd48ce7f5819274fa6815e828fd36e0bbef6cc53aa28",
+    "analytic10_2026_sum.c": "8851f5f168a78d53d35e6ae19d2a2742f2de4d52b0b314e2d74edceba773178b",
+    "analytic10_2026_sum.so": "535dd60d5d5b1aaacf215f525258189a65d6d1829957313d0f0d37c003d3d1d5",
+    "analytic10_2026_verify.py": "c2bd72057d01499f1228f8b0f59db43e42431660955407afc61c3a09f84d546c",
+    "candidate_low_rank.py": "c1da5b6a0670c12f8645c02afbb86119537b7459aa5e8bf8e377b5baff6c1e8e",
+    "candidate_triple_types_v1.json": "adbc95b12ef4d47c2b4a08c7bee33778e23f12f2edd33bbc5ae6c11619db76bb",
+    "certify_pair_moments.py": "ef852263fce0558840f1a26d302146f6f44ea7d0cc586e6117509045e9905efd",
+    "certify_three_point_d4.py": "26d2886d3a50c9fa1446c329fd1d23daf6bba99ce055ca735fd794069c5b75b2",
+    "dyadic_interval.py": "6ca947a97662cd274659eb030c107f1551841664644a8e2cb7344aa4de364adf",
+    "exact128_2026.c": "f7293e5065a2d21ba8b40ded512f198c14cb5162967f05cc2ed7b123b2eb2898",
+    "exact128_2026.py": "9b535ce122f9824cc5b06998d6289005c6fcbc24fbc61a4c2e5f90880a3cca9b",
+    "exact128_2026_f7293e5065a2d21b.so": "e9635586e1be892ad2f3cd3ea62f23be043156a62e21c2bce7b752723c8c3e9a",
+    "exact_tensor_bernstein.py": "381285a027574294dbb07b5ffe8b3a154866b5b7380f87c1db9ff950866b44ae",
+    "narrowroot2026_certificate.json": "ef5780213cf84511456b5fd51222054cd006ee310412b81bb20b107f64e1cc47",
+    "narrowroot2026_coefficients.json": "60880c431cd4433bd0ddcd17254367e9d7c6bd915314f3b56a176bf92a60ded8",
+    "narrowroot2026_kernel.py": "7b8f37997d8aa77e2d81700e72790ad290e1ef41df46a7c0d9da2b7f725561a4",
+    "narrowroot2026_root.json": "d984f42b8cee8b65d0795661f693433548b55a39d7b970cac4be20b20d82947e",
+    "pair056_optimized_certificate.json": "e6e683e00214e7e92ea6e415125ef7b9952278df4503161a9cdcdd706c88178c",
+    "verify_pair056_saved.py": "8ac2885e69b5db83896f153ce328a261903b32e289e8068b431efe9531ff7528"
+  }
+}

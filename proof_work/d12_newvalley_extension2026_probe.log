@@ -1,0 +1,22 @@
+{
+  "elapsed_seconds": 0.6175999999977648,
+  "Gram_display": 1.772767669008469e-05,
+  "remaining_budget_display": 0.0001996593851311931,
+  "one_phi_average_threshold_display": 3.327656418853218e-05,
+  "mesh": {
+    "total_sphere_points": 10000,
+    "allowed_anchor_points": 4103,
+    "eligible_with_old_residual_budget": 0,
+    "minimum_phi_anchor_only": 0.0003603916802592974,
+    "minimum_phi_eligible": null,
+    "below_K_over6_count": 0,
+    "seconds": 0.6169593750382774
+  },
+  "DE": {
+    "seconds": 8.333008736371994e-06,
+    "seconds_limit": 10,
+    "objective_evaluations": 0,
+    "status": "insufficient_feasible_mesh"
+  },
+  "best_numeric_eligible": null
+}

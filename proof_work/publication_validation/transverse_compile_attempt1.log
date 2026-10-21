@@ -1,0 +1,14 @@
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/ThomsonNine/TransverseCoordinates.lean:1:0: error: unknown module prefix 'Aesop'
+
+No directory 'Aesop' or file 'Aesop.olean' in the search path entries:
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/plausible/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/importGraph/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/proofwidgets/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/aesop/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/Qq/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/batteries/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/Cli/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/build/lib/lean
+/home/dsh/Thomson Problem/proof_work/publication_validation/toolchain/lean-4.34.1-linux_aarch64/lib/lean

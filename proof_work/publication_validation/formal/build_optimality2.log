@@ -1,0 +1,14 @@
+=== 09:02:02 building EnergyOptimality ===
+ThomsonNine/EnergyOptimality.lean:44:69: error(lean.unknownIdentifier): Unknown identifier `𝓝`
+ThomsonNine/EnergyOptimality.lean:44:75: error(lean.unknownIdentifier): Unknown identifier `𝓝`
+ThomsonNine/EnergyOptimality.lean:37:58: error: unsolved goals
+x : Fin 9 → R3
+hx : Function.Injective x
+hmin : IsLocalMin energy x
+v : Fin 9 → R3
+hcont : Continuous fun t i => x i + t • v i
+hpt : (fun i => x i + 0 • v i) = x
+ht : Tendsto (fun t i => x i + t • v i) sorry sorry
+⊢ IsLocalMin (fun t => energy fun i => x i + t • v i) 0
+=== FAIL EnergyOptimality ===
+=== ALL DONE 09:03:44 ===

@@ -1,0 +1,26 @@
+{
+  "process_exit_code": 0,
+  "frozen_export_artifacts_unchanged": true,
+  "files": {
+    "independent_pair_reduction.py": {
+      "sha256": "35c084079b2f209d5793b8a53e526f865b8468464365c4dc3794e048f0628527",
+      "bytes": 6946
+    },
+    "independent_pair_reduction_trees.json": {
+      "sha256": "9063b9adf96fc7d38dd2a0dc23132ca06a33ba0182c8a09f597a96cc90c4359d",
+      "bytes": 50381
+    },
+    "independent_pair_reduction_result.json": {
+      "sha256": "4f53a480cce19820aa894f31b0e9d90404dceceb77ec2f52339bf07198dd78d4",
+      "bytes": 4392
+    },
+    "independent_pair_reduction.log": {
+      "sha256": "de6ba31bcd6a948494151552982efd26ac77b3cfc32b4abab87aeeb8e814703a",
+      "bytes": 3748
+    },
+    "README_independent_pair_reduction.md": {
+      "sha256": "c48978b5528119d7b92b9bf4126166a8f1e6747c019b89f9323aadf6f455cb3d",
+      "bytes": 3881
+    }
+  }
+}

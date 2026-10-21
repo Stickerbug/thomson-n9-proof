@@ -1,0 +1,21 @@
+{"stage": "WORKERS_START", "workers": 4, "pending_chunks": 154, "run": "proof_work/publication_validation/sharded_run_v1", "pid": 25755}
+Traceback (most recent call last):
+  File "/home/dsh/Thomson Problem/proof_work/publication_validation/sharded_checker.py", line 169, in <module>
+    if __name__=='__main__':main()
+  File "/home/dsh/Thomson Problem/proof_work/publication_validation/sharded_checker.py", line 168, in main
+    else:run_parallel(a.run_dir,a.workers,a.chunk_nodes,a.resume)
+  File "/home/dsh/Thomson Problem/proof_work/publication_validation/sharded_checker.py", line 158, in run_parallel
+    with ProcessPoolExecutor(max_workers=workers,initializer=initialize_worker,initargs=(manifest,str(run))) as pool:
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 662, in __init__
+    self._call_queue = _SafeQueue(
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 168, in __init__
+    super().__init__(max_size, ctx=ctx)
+  File "/usr/lib/python3.10/multiprocessing/queues.py", line 43, in __init__
+    self._rlock = ctx.Lock()
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/usr/lib/python3.10/multiprocessing/synchronize.py", line 162, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+  File "/usr/lib/python3.10/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+FileNotFoundError: [Errno 2] No such file or directory

@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_PREMISE_ARTIFACT_BINDINGS_MATCH",
+  "root_input_sha256": "3dd4ba639e78cabaa2c3a8182db3724545751ade50635e6d542067338b281066",
+  "source_files": {
+    "d10_relative_normal_exact2026_coefficients.json": {
+      "expected_sha256": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2",
+      "actual_sha256": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2",
+      "matches": true
+    },
+    "d10_relative_normal_exact2026_locals.json": {
+      "expected_sha256": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+      "actual_sha256": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+      "matches": true
+    }
+  },
+  "bits": 96,
+  "delta": "0",
+  "epsF": "75640377291739006408807925031555/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+  "c_interval": [
+    "61024803228185332536997139870118703781479301374352452414782599267050306462878269996874189346078655597539021599880773/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+    "122049606456370665073994279740237407562958602748704904829565198534100612925756539993767288786480245946680264660123275/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+  ],
+  "local_region_count": 12,
+  "boundary_multiplier_count": 3,
+  "assumed_not_proved": [
+    "Enclosure error epsF bounds intended F minus supplied symmetric midpoint both on root cube and at (1,t,t); a coefficient l1 error bound on [-1,1]^3 suffices.",
+    "c_interval encloses the intended constant for the same frozen mathematical parameter ranges.",
+    "Every exported local core is nonnegative for the same intended model; membership and center uncertainty are checked, local proof is not.",
+    "Reduction to ordered Gram-feasible root domain, PSD and pair reduction are valid."
+  ],
+  "enclosure_generation_independently_verified": false,
+  "local_proofs_independently_verified": false,
+  "full_thomson_proof": false
+}

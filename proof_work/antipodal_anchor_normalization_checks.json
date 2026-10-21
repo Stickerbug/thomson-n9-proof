@@ -1,0 +1,6 @@
+{
+  "normalization_trials": 100,
+  "maximum_float_identity_error": 7.993605777301127e-15,
+  "minimum_float_kernel_eigenvalue": 9.215229715630321e-05,
+  "comment": "sanity check only; positivity proof is exact LDL plus SO2 addition formula"
+}

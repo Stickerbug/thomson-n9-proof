@@ -1,0 +1,38 @@
+{
+  "status": "new_necessary_condition_derived_from_existing_certificates_with_exact_point_evaluation",
+  "global_verifier_re_run": false,
+  "warning": "Existing global positivity, minorant and PSD reports are dependencies, not re-proved by this script. Sharp models remain numerical discovery; a failed residual model is not a Thomson counterexample.",
+  "lemma": {
+    "assumptions": [
+      "n=9, competitive E<=U",
+      "all pair dot products lie in [-1,14/25] by existing pair exclusion",
+      "existing model: h<=f, A_k PSD, R_old>=0 on Gram domain; B=12c-1.5F111"
+    ],
+    "identity": "E-B = sum_{i<j}(f(sij)-h(sij)) + (1/7)sum_{i<j<k} R_old(sij,sik,sjk) + (1/6)sum_{i,j,k=1}^9 F_old(sij,sik,sjk)",
+    "nonnegative_terms": "Each pair defect and each distinct-triple R_old is nonnegative. The full ordered sum of F_old is nonnegative by the three-point PSD addition theorem; individual F values need not be nonnegative.",
+    "conclusion": "For every distinct triple, R_old<=7(E-B)<=7(U-B); hence C_kernel=7(U-B)-R_old>=0.",
+    "budget_factor_7": "9-2=7",
+    "U_exact": "1287999326563491578203785113688024701433/50000000000000000000000000000000000000",
+    "B_exact": "51519841/2000000",
+    "seven_U_minus_B_exact": "23110944441047426495795816172910031/50000000000000000000000000000000000000",
+    "seven_U_minus_B_decimal": "0.00046221888882094852991591632345820062"
+  },
+  "dependencies": {
+    "sha256": {
+      "nonsharp_d10_root25_7599205_v10.json": "6ebdebad61e4ba26f044b07b2ed56bcacdfe8c584b6007561bc17b2cd23b52d0",
+      "nonsharp_d10_root25_7599205_v10_result.json": "9b09f1e8e4817fc489f9368f9d0c4a357db8c40bc198de391f56861809667b6d",
+      "conditional_h27_certificate.json": "92ac0c78af04e39811f098c917a04789e29183555fdce98bc00e0f97bb6c35be",
+      "pair056_optimized_certificate.json": "e6e683e00214e7e92ea6e415125ef7b9952278df4503161a9cdcdd706c88178c"
+    },
+    "report_model_hash_match": true,
+    "existing_global_report": {
+      "status": "certified",
+      "nodes": 202923,
+      "pending": 0,
+      "bits": 48,
+      "maxdepth": 40
+    },
+    "residual_terms": 807
+  }
+}
+EXACT_POINT_SIGNS [('first_PSD_worst', 1), ('batch2_round0', -1), ('batch2_round1', 1), ('batch2_round2', 1)]

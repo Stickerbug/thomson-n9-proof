@@ -1,0 +1,15 @@
+#print axioms ThomsonNine.SevenSource.t021_gathered_mem
+#print axioms ThomsonNine.SevenSource.t071_gathered_mem
+#print axioms ThomsonNine.SevenSource.t131_gathered_mem
+#print axioms ThomsonNine.SevenSource.t148_gathered_mem
+#print axioms ThomsonNine.SevenSource.t195_gathered_mem
+#print axioms ThomsonNine.SevenSource.t249_gathered_mem
+#print axioms ThomsonNine.SevenSource.t364_gathered_mem
+#print axioms ThomsonNine.SevenSource.t418_gathered_mem
+#print axioms ThomsonNine.SevenSource.t430_gathered_mem
+#print axioms ThomsonNine.SevenSource.t488_gathered_mem
+#print axioms ThomsonNine.SevenSource.t745_gathered_mem
+#print axioms ThomsonNine.SevenSource.t755_gathered_mem
+#print axioms ThomsonNine.SevenSource.t773_gathered_mem
+#print axioms ThomsonNine.SevenSource.t783_gathered_mem
+#print axioms ThomsonNine.SevenSource.t800_gathered_mem

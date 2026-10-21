@@ -1,0 +1,17 @@
+{
+  "status": "certified_exact_Fraction_comparisons",
+  "global_minimizer_pair_dot_lower": "-9957/10000",
+  "delta": "43/10000",
+  "total_arc_bound": "93/1000",
+  "arc_square_bound": "172/19957",
+  "external_distance_lower": "1783/2000",
+  "internal_distance_lower": "199/100",
+  "Hessian_upper": "207414692687/22673262748",
+  "movement_cost": "1793929677049863/45346525496000000",
+  "energy_lower_after_contradiction": "1168146428119750137/45346525496000000",
+  "candidate_energy_upper": "3219998316408729/125000000000000",
+  "strict_gap": "320970357907796193177/708539460875000000000000",
+  "anchor_projection_upper": "1213/2000",
+  "required_axial_box": "63/100",
+  "theorem_scope": "global minimizers or smooth stationary configurations of energy <= candidate upper, not all competitive configurations"
+}

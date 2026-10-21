@@ -1,0 +1,72 @@
+=== 17:55:08 building SecondDerivative ===
+ThomsonNine/SecondDerivative.lean:51:51: error: Application type mismatch: The argument
+  hsq
+has type
+  HasDerivAt (fun y => y ^ 2) (2 * r) r
+but is expected to have type
+  HasDerivAt (fun y => y⁻¹) ?m.225 (?m.209 ^ 2)
+in the application
+  HasDerivAt.comp ?m.209 hsq
+ThomsonNine/SecondDerivative.lean:51:6: error: Application type mismatch: The argument
+  hasDerivAt_inv (ne_of_gt (pow_pos hr 2))
+has type
+  HasDerivAt (fun y => y⁻¹) (-((r ^ 2) ^ 2)⁻¹) (r ^ 2)
+of sort `Prop` but is expected to have type
+  ℝ
+of sort `Type` in the application
+  @HasDerivAt.comp ℝ DenselyNormedField.toNontriviallyNormedField (hasDerivAt_inv (ne_of_gt (pow_pos hr 2)))
+ThomsonNine/SecondDerivative.lean:104:29: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.add_apply, Pi.neg_apply, id_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SecondDerivative.lean:104:43: warning: This simp argument is unused:
+  Pi.neg_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.add_apply, Pi.sub_apply, id_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SecondDerivative.lean:104:57: warning: This simp argument is unused:
+  id_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.add_apply, Pi.sub_apply, Pi.neg_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ThomsonNine/SecondDerivative.lean:178:43: error: Application type mismatch: The argument
+  hx.left
+has type
+  r ≤ x
+but is expected to have type
+  r < x
+in the application
+  lt_trans hr hx.left
+ThomsonNine/SecondDerivative.lean:178:58: error: Application type mismatch: The argument
+  hx.right
+has type
+  x ≤ s
+but is expected to have type
+  x < s
+in the application
+  lt_trans hx.right
+ThomsonNine/SecondDerivative.lean:192:43: error: Application type mismatch: The argument
+  hx.left
+has type
+  s ≤ x
+but is expected to have type
+  s < x
+in the application
+  lt_trans hs hx.left
+ThomsonNine/SecondDerivative.lean:192:58: error: Application type mismatch: The argument
+  hx.right
+has type
+  x ≤ r
+but is expected to have type
+  x < r
+in the application
+  lt_trans hx.right
+=== FAIL SecondDerivative ===
+=== ALL DONE 17:56:49 ===

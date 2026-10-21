@@ -1,0 +1,27 @@
+{
+  "manifest_sha256": "7dd936c9d7e91c811924d19e611fb1e2b1aa9437186f4ea9df4530bc89621eff",
+  "mathematical_bindings": {
+    "co": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2",
+    "exact_checker": "9ab4b9810740d1b83c4ecf2e9eef76f7d93c42aaff1ba85e51f8bc24c27a13bc",
+    "inputs": "3dd4ba639e78cabaa2c3a8182db3724545751ade50635e6d542067338b281066",
+    "locals": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+    "model_binding": "2acf574e4c71208855bb4aa56ff162174a00860228650553bc1929b10f8b82c3",
+    "sharded_checker": "84fc29d43fe412e7332f799524383c42e97dc33b30f28bf401654b27d5681d3b",
+    "tree": "4712313969755f9fb5126b7a95ced989db5e16710ccddffee5dad1cf91776c12"
+  },
+  "mechanism": "persistent subprocesses and selectors; no POSIX named semaphore",
+  "pending_chunks": 154,
+  "pid": 31435,
+  "started_epoch": 1792232878.499135,
+  "transport_sources": {
+    "run_sharded_subprocess.py": "44911d0c873f43963f1d40c95a4b3c3250f00935bed8c07e124e02aadd570d72",
+    "subprocess_shard_worker.py": "7cd4c0a7a970a70977124e4c1b8940db278a4d81d9c8507674eac256b701f3bf"
+  },
+  "trust": "resume/aggregate trust complete local execution records; fresh run required for external review",
+  "workers": [
+    32123,
+    32126,
+    32127,
+    32128
+  ]
+}

@@ -1,0 +1,65 @@
+=== Mathlib/Analysis/InnerProductSpace/GramMatrix.lean exit=1 132s
+Mathlib/Analysis/InnerProductSpace/GramMatrix.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Matrix/Order.olean' of module Mathlib.Analysis.Matrix.Order does not exist
+
+=== Mathlib/Analysis/Matrix/Order.lean exit=1 23s
+Mathlib/Analysis/Matrix/Order.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Module/PositiveLinearMap.olean' of module Mathlib.Algebra.Order.Module.PositiveLinearMap does not exist
+
+=== Mathlib/Algebra/Order/Module/PositiveLinearMap.lean exit=0 53s
+
+=== Mathlib/Analysis/Matrix/Order.lean exit=1 38s
+Mathlib/Analysis/Matrix/Order.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.olean' of module Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Instances does not exist
+
+=== Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.lean exit=1 15s
+Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Complex/Spectrum.olean' of module Mathlib.Analysis.Complex.Spectrum does not exist
+
+=== Mathlib/Analysis/Complex/Spectrum.lean exit=0 58s
+
+=== Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.lean exit=1 60s
+Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Restrict.olean' of module Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Restrict does not exist
+
+=== Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Restrict.lean exit=1 51s
+Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Restrict.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/NonUnital.olean' of module Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.NonUnital does not exist
+
+=== Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/NonUnital.lean exit=1 67s
+Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/NonUnital.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/ContinuousMap/Compact.olean' of module Mathlib.Topology.ContinuousMap.Compact does not exist
+
+=== Mathlib/Topology/ContinuousMap/Compact.lean exit=1 19s
+Mathlib/Topology/ContinuousMap/Compact.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/ContinuousMap/Bounded/Star.olean' of module Mathlib.Topology.ContinuousMap.Bounded.Star does not exist
+
+=== Mathlib/Topology/ContinuousMap/Bounded/Star.lean exit=1 48s
+Mathlib/Topology/ContinuousMap/Bounded/Star.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/ContinuousMap/Bounded/Normed.olean' of module Mathlib.Topology.ContinuousMap.Bounded.Normed does not exist
+
+=== Mathlib/Topology/ContinuousMap/Bounded/Normed.lean exit=1 49s
+Mathlib/Topology/ContinuousMap/Bounded/Normed.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/MinimalAxioms.olean' of module Mathlib.Algebra.Module.MinimalAxioms does not exist
+
+=== Mathlib/Algebra/Module/MinimalAxioms.lean exit=0 94s
+
+=== Mathlib/Topology/ContinuousMap/Bounded/Normed.lean exit=1 110s
+Mathlib/Topology/ContinuousMap/Bounded/Normed.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/ContinuousMap/Bounded/Basic.olean' of module Mathlib.Topology.ContinuousMap.Bounded.Basic does not exist
+
+=== Mathlib/Topology/ContinuousMap/Bounded/Basic.lean exit=1 22s
+Mathlib/Topology/ContinuousMap/Bounded/Basic.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Algebra/Indicator.olean' of module Mathlib.Topology.Algebra.Indicator does not exist
+
+=== Mathlib/Topology/Algebra/Indicator.lean exit=0 54s
+
+=== Mathlib/Topology/ContinuousMap/Bounded/Basic.lean exit=1 57s
+Mathlib/Topology/ContinuousMap/Bounded/Basic.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Bornology/BoundedOperation.olean' of module Mathlib.Topology.Bornology.BoundedOperation does not exist
+
+=== Mathlib/Topology/Bornology/BoundedOperation.lean exit=0 84s
+
+=== Mathlib/Topology/ContinuousMap/Bounded/Basic.lean exit=1 89s
+Mathlib/Topology/ContinuousMap/Bounded/Basic.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/ContinuousMap/Algebra.olean' of module Mathlib.Topology.ContinuousMap.Algebra does not exist
+
+=== Mathlib/Topology/ContinuousMap/Algebra.lean exit=1 61s
+Mathlib/Topology/ContinuousMap/Algebra.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/UniformSpace/CompactConvergence.olean' of module Mathlib.Topology.UniformSpace.CompactConvergence does not exist
+
+=== Mathlib/Topology/UniformSpace/CompactConvergence.lean exit=1 50s
+Mathlib/Topology/UniformSpace/CompactConvergence.lean:6:0: error: object file '/home/dsh/Thomson Problem/proof_work/publication_validation/formal/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Compactness/CompactlyCoherentSpace.olean' of module Mathlib.Topology.Compactness.CompactlyCoherentSpace does not exist
+
+=== Mathlib/Topology/Compactness/CompactlyCoherentSpace.lean exit=0 42s
+
+=== Mathlib/Topology/UniformSpace/CompactConvergence.lean exit=0 51s
+
+=== Mathlib/Topology/ContinuousMap/Algebra.lean exit=0 75s
+
+

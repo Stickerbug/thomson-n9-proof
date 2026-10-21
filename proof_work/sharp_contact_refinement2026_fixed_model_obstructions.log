@@ -1,0 +1,12 @@
+[
+  {
+    "case": "first_batch_PSD_model",
+    "R_upper_float": -7.737654250724086e-06,
+    "positive_Gram_C_Ckernel": true
+  },
+  {
+    "case": "second_batch_final_NOT_PSD",
+    "R_upper_float": -9.834866924046751e-06,
+    "positive_Gram_C_Ckernel": true
+  }
+]

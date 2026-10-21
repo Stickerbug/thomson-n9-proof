@@ -1,0 +1,161 @@
+{
+  "conclusion": "Failed to attain full-domain nonnegative residual within authorized3 rounds; no global proof, no SDP infeasibility proof, no n9 counterexample",
+  "degree": 12,
+  "unknowns": 322,
+  "nullities": [
+    11,
+    11,
+    9,
+    9,
+    7,
+    7,
+    5,
+    5,
+    3,
+    3,
+    1,
+    1,
+    0
+  ],
+  "contact_rank": 32,
+  "augmented_rank": 33,
+  "initial_compatibility_error": 1.1747547379314938e-14,
+  "model_domain": "Gram PSD intersect [-1,.56]^3; independent pair-exclusion prerequisite; no competitive filtering",
+  "initial_full_pool_count": 13316,
+  "source_training_counts": {
+    "nonsharp": 11632,
+    "sharp": 7988,
+    "union_before_key_neighbors": 11632
+  },
+  "objective": "tau+1e-9 trace scaled1e6",
+  "PSD_margin": 1e-07,
+  "runtime_seconds": 338.334041595459,
+  "rows": [
+    {
+      "round": 1,
+      "active_count": 4043,
+      "tau": 0.0,
+      "trace": 5.658180014274203,
+      "min_B_eig": 9.972320843842468e-08,
+      "contact_max_error": 4.08006961549745e-15,
+      "boundary_tangent_max_error": 3.947734570798847e-15,
+      "interior_H_min": 1.0026534423755543e-07,
+      "boundary_lambda_min": 9.967520341762686e-09,
+      "boundary_tangentH_min": 1.0300676612319454e-07,
+      "boundary_original_stationarity_max": 2.4179228639694707e-15,
+      "worst_R_original": -0.030584647867316545,
+      "worst_point": {
+        "triangle": [
+          -0.9999894066019149,
+          -0.5638075359237393,
+          0.56
+        ],
+        "R": -0.030584647867316545,
+        "gram_determinant": -5.240252676230739e-14
+      },
+      "strict_interior_negative": {
+        "point": [
+          -0.9999884066125083,
+          -0.5638069721162033,
+          0.55999944
+        ],
+        "R_original": -0.03058396939238646,
+        "gram": 1.3685424595788476e-06,
+        "box_strict": true
+      },
+      "CLARABEL_solve_seconds": 69.173706758,
+      "solve_wall_seconds": 91.80403327941895,
+      "solver_status": "AlmostSolved",
+      "compiled_original_discrepancy": 3.130135040052551e-14,
+      "direct_design_discrepancy": 8.743006318923108e-16,
+      "validation_compiled_search_seconds": 0.5952671879786067
+    },
+    {
+      "round": 2,
+      "active_count": 4000,
+      "tau": 0.0,
+      "trace": 7.466516677047649,
+      "min_B_eig": 9.940925848550913e-08,
+      "contact_max_error": 6.5780714209040525e-15,
+      "boundary_tangent_max_error": 1.751550002405515e-15,
+      "interior_H_min": 1.0079880292928187e-07,
+      "boundary_lambda_min": 0.00024880706921835504,
+      "boundary_tangentH_min": 1.594810695158861e-07,
+      "boundary_original_stationarity_max": 2.711253011826675e-15,
+      "worst_R_original": -0.013715069711474598,
+      "worst_point": {
+        "triangle": [
+          -0.3839009081246682,
+          -0.3839009081246682,
+          -0.38390090812466465
+        ],
+        "R": -0.013715069711474598,
+        "gram_determinant": 0.4447017177510923
+      },
+      "strict_interior_negative": {
+        "point": [
+          -0.3839005242237601,
+          -0.3839005242237601,
+          -0.38390052422375653
+        ],
+        "R_original": -0.013715069711223472,
+        "gram": 0.44470294150543566,
+        "box_strict": true
+      },
+      "CLARABEL_solve_seconds": 58.907055197,
+      "solve_wall_seconds": 80.85969591140747,
+      "solver_status": "AlmostSolved",
+      "compiled_original_discrepancy": 1.9914625504213745e-15,
+      "direct_design_discrepancy": 8.500145032286355e-16,
+      "validation_compiled_search_seconds": 0.2557343749795109
+    },
+    {
+      "round": 3,
+      "active_count": 4000,
+      "tau": 0.0,
+      "trace": 7.801171936026683,
+      "min_B_eig": 9.768539625290575e-08,
+      "contact_max_error": 9.103828801926284e-15,
+      "boundary_tangent_max_error": 1.6458110713277486e-15,
+      "interior_H_min": 1.0085599959326484e-07,
+      "boundary_lambda_min": 7.582918962498495e-08,
+      "boundary_tangentH_min": 1.1746033783366309e-07,
+      "boundary_original_stationarity_max": 3.597709888867812e-15,
+      "worst_R_original": -0.004771723031149845,
+      "worst_point": {
+        "triangle": [
+          -0.9802742160668771,
+          0.09931209075543367,
+          0.09931209676035616
+        ],
+        "R": -0.004771723031149845,
+        "gram_determinant": -6.128431095930864e-14
+      },
+      "strict_interior_negative": {
+        "point": [
+          -0.980273235792661,
+          0.0993119914433429,
+          0.09931199744825939
+        ],
+        "R_original": -0.004771475799791577,
+        "gram": 2.0193355775299793e-06,
+        "box_strict": true
+      },
+      "CLARABEL_solve_seconds": 77.231537488,
+      "solve_wall_seconds": 99.54757046699524,
+      "solver_status": "AlmostSolved",
+      "compiled_original_discrepancy": 8.090750291955828e-15,
+      "direct_design_discrepancy": 9.575673587391975e-16,
+      "validation_compiled_search_seconds": 0.29587760398862883
+    }
+  ],
+  "background_jobs": "bash-844, bash-849 and bash-853 all collected with exit0; no remaining jobs",
+  "limitations": [
+    "All results floating point with rational approximation of r; no exactification performed.",
+    "DE and SLSQP searches use shared compiled kernel; only point values/gradients are independently re-evaluated in original A recurrence and direct design.",
+    "Original-basis matrix A has expected roundoff negative eigenvalues near1e-16 from nullspace lifting; B blocks have strictly positive numerical eigenvalues.",
+    "Trace penalty is present; old inherited code comment claiming no penalty is inaccurate. All returned tau values were zero.",
+    "CLARABEL internal solves each<90s; wall times also include about22s canonicalization.",
+    "Initial ghost/EPERM preparation required parent extension; protected run.py path no longer accessed."
+  ]
+}

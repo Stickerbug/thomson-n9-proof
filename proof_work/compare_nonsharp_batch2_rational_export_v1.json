@@ -1,0 +1,31 @@
+{
+  "warning": "Numerical export comparison only",
+  "points": 11632,
+  "source_iteration": 1,
+  "x_reconstructed_A_vs_saved_max": 0.0,
+  "A_rounding_max_change": 1.0004452821732457e-10,
+  "cstar_source": 2.9852726946657295,
+  "cstar_rational": 2.9852726948032733,
+  "cstar_change": 1.3754375416397124e-10,
+  "source_min_R": -2.2005344788578185e-06,
+  "source_worst": [
+    -0.6209653671011,
+    -0.6209642669143,
+    0.3683552649202
+  ],
+  "rational_min_R": -2.201859164996378e-06,
+  "rational_worst": [
+    -0.6209653671011,
+    -0.6209642669143,
+    0.3683552649202
+  ],
+  "residual_max_difference": 2.7997356655262706e-09,
+  "max_difference_point": [
+    -0.3728,
+    0.56,
+    0.56
+  ],
+  "max_difference_source_R": 0.10318987961919207,
+  "max_difference_rational_R": 0.1031898768194564,
+  "seconds": 2.4246957302093506
+}

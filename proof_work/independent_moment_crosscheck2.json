@@ -1,0 +1,124 @@
+{
+  "status": "exact_polynomial_identity_verified",
+  "ring": "QQ[r]",
+  "blocks": [
+    {
+      "k": 0,
+      "m": 11,
+      "checked_upper": 66,
+      "certified_full": 121,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 1,
+      "m": 10,
+      "checked_upper": 55,
+      "certified_full": 100,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 2,
+      "m": 9,
+      "checked_upper": 45,
+      "certified_full": 81,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 3,
+      "m": 8,
+      "checked_upper": 36,
+      "certified_full": 64,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 4,
+      "m": 7,
+      "checked_upper": 28,
+      "certified_full": 49,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 5,
+      "m": 6,
+      "checked_upper": 21,
+      "certified_full": 36,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 6,
+      "m": 5,
+      "checked_upper": 15,
+      "certified_full": 25,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 7,
+      "m": 4,
+      "checked_upper": 10,
+      "certified_full": 16,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 8,
+      "m": 3,
+      "checked_upper": 6,
+      "certified_full": 9,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 9,
+      "m": 2,
+      "checked_upper": 3,
+      "certified_full": 4,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    },
+    {
+      "k": 10,
+      "m": 1,
+      "checked_upper": 1,
+      "certified_full": 1,
+      "all_differences_exact_zero": true,
+      "nonzero_count": 0
+    }
+  ],
+  "failures": [],
+  "counts": {
+    "distinct": 504,
+    "exactly_two_equal": 216,
+    "all_equal": 9,
+    "total": 729
+  },
+  "incidences": {
+    "A": 42,
+    "B": 21,
+    "C": 42,
+    "F": 84,
+    "G": 42,
+    "D": 21
+  },
+  "checked_upper": 286,
+  "certified_full": 506,
+  "elapsed_seconds": 1.3557786460150965,
+  "input_sha256": {
+    "candidate_triple_types_v1.json": "adbc95b12ef4d47c2b4a08c7bee33778e23f12f2edd33bbc5ae6c11619db76bb",
+    "candidate_low_rank.py": "c1da5b6a0670c12f8645c02afbb86119537b7459aa5e8bf8e377b5baff6c1e8e"
+  },
+  "trust_boundary": [
+    "Supplied triangle labels/multiplicities and node formulas assumed; coordinate classification not checked.",
+    "Only triangle labels and multiplicities used from JSON; inner_products, Gram factors, intervals and statuses unused.",
+    "LHS independently rebuilt by six permutations per unordered triangle, all repeated-vertex cases, and Q recurrence.",
+    "RHS evaluated from imported features over formal QQ[r].",
+    "Exact arithmetic depends on SymPy/Python correctness and source integrity. No samples, finite fields, root reduction, intervals, SDP or symbolic N.",
+    "No rank, global optimality, contact solvability or residual nonnegativity certified."
+  ]
+}

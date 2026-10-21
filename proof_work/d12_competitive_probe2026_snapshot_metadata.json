@@ -1,0 +1,14 @@
+{
+  "captured_unix_time": 1792207107.5155778,
+  "source": "/home/dsh/Thomson Problem/proof_work/d12_contact2026_results.json",
+  "sha256": "70211e9762a6893f3cf2699f115c1d3bf3e8212b58870268ec89b6bd02f7434c",
+  "selected_iteration": 2,
+  "history_iterations": [
+    0,
+    1,
+    2
+  ],
+  "source_stop_reason": "Fixed three-round budget exhausted; preserve data and diagnose without repeating",
+  "solution_trace": 7.801171936026683,
+  "solution_min_B_eigenvalue": 9.768539625290575e-08
+}

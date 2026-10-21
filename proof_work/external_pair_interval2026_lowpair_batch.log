@@ -1,0 +1,30 @@
+PREP 894 {'phi_accept': 152032, 'pending': 229292, 'same_capacity_group_excluded': 18741} seconds 4.356135415961035 root_bounds ['-44180265718002115', '1066518328158214']
+PROGRESS 100 {'exclude_pair_cap': 41, 'accept_W': 59} seconds 13.916392705985345
+PROGRESS 200 {'exclude_pair_cap': 77, 'accept_W': 123} seconds 29.84091405797517
+PROGRESS 300 {'exclude_pair_cap': 82, 'accept_W': 217, 'pending': 1} seconds 51.14688540896168
+PROGRESS 400 {'exclude_pair_cap': 89, 'accept_W': 310, 'pending': 1} seconds 74.29918644699501
+{
+  "status": "partial_prefix_coverage_not_T2_proof",
+  "stopping_reason": "time_limit",
+  "elapsed_seconds": 90.00236873596441,
+  "prepare_seconds": 4.356135415961035,
+  "visited_pairs": 487,
+  "counts": {
+    "exclude_pair_cap": 117,
+    "accept_W": 369,
+    "pending": 1
+  },
+  "unvisited_inferred_pending": 228805,
+  "final_pending_unordered": 228806,
+  "next_unvisited_pair": [
+    2,
+    342
+  ],
+  "stats": {
+    "created_nodes": 29371,
+    "resident_created_nodes": 1395,
+    "queries": 1110,
+    "splits": 32096,
+    "cache_resets": 17
+  }
+}

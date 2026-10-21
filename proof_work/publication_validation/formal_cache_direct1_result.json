@@ -1,0 +1,19 @@
+{
+  "returncode": 1,
+  "seconds": 76.5416057179682,
+  "modules": [
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Sqrt",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.LinearAlgebra.Matrix.PosDef",
+    "Mathlib.Algebra.Polynomial.FieldDivision",
+    "Mathlib.RingTheory.Coprime.Lemmas"
+  ]
+}

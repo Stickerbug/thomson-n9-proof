@@ -1,0 +1,39 @@
+{
+  "status": "INDEPENDENT_LOCAL_COMPONENT_TESTS_PASS",
+  "translated_polynomial_coefficients_checked": 22,
+  "derivative_interchecks": "all3gradient+9Hessian entries against direct Fraction monomial derivatives",
+  "graph_interchecks": "closed graph value/gradient/Hessian against independent exact Fraction second-order dual arithmetic at4rational radical-square points",
+  "graph_chainrule_interchecks": "full pulledback synthetic polynomial Hessian against dual arithmetic at4points",
+  "negative_tests": [
+    {
+      "case": "W_nonunit",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "W not exact unit lower triangular"
+    },
+    {
+      "case": "W_upper_nonzero",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "W not exact unit lower triangular"
+    },
+    {
+      "case": "W_wrong_dimension",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "W dimension mismatch"
+    },
+    {
+      "case": "negative_LDL",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "strict LDL pivot nonpositive at 0"
+    },
+    {
+      "case": "zero_LDL",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "strict LDL pivot nonpositive at 1"
+    },
+    {
+      "case": "graph_pole",
+      "status": "REJECTED_MATHEMATICALLY",
+      "reason": "graph arguments must be strictly inside unit interval"
+    }
+  ]
+}

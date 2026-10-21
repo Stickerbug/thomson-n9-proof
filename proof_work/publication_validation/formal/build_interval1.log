@@ -1,0 +1,298 @@
+=== 13:38:59 building Interval ===
+ThomsonNine/Interval.lean:30:44: error: Type mismatch
+  I.lo
+has type
+  ℚ
+but is expected to have type
+  ℝ
+ThomsonNine/Interval.lean:30:44: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:30:65: error: Type mismatch
+  I.hi
+has type
+  ℚ
+but is expected to have type
+  ℝ
+ThomsonNine/Interval.lean:30:61: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:35:43: error: Type mismatch
+  q
+has type
+  ℚ
+but is expected to have type
+  ℝ
+ThomsonNine/Interval.lean:42:19: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd ℝ ℝ ?m.7
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:44:9: error: Type mismatch
+  I.lo + J.lo
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:44:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd ℝ ℝ ?m.22
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:46:4: error: linarith failed to find a contradiction
+case left
+ℝ : Type u_1
+I J : RatInterval
+x y : ℝ
+hx : I.mem x
+hy : J.mem y
+⊢ False
+failed
+ThomsonNine/Interval.lean:47:17: error: Type mismatch
+  I.hi + J.hi
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:47:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd ℝ ℝ ?m.36
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:49:4: error: linarith failed to find a contradiction
+case right
+ℝ : Type u_1
+I J : RatInterval
+x y : ℝ
+hx : I.mem x
+hy : J.mem y
+⊢ False
+failed
+ThomsonNine/Interval.lean:55:72: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Neg ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:57:9: error: Type mismatch
+  -I.hi
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:57:31: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Neg ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:59:4: error: linarith failed to find a contradiction
+case left
+ℝ : Type u_1
+I : RatInterval
+x : ℝ
+hx : I.mem x
+⊢ False
+failed
+ThomsonNine/Interval.lean:60:14: error: Type mismatch
+  -I.lo
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:60:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Neg ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:62:4: error: linarith failed to find a contradiction
+case right
+ℝ : Type u_1
+I : RatInterval
+x : ℝ
+hx : I.mem x
+⊢ False
+failed
+ThomsonNine/Interval.lean:68:19: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub ℝ ℝ ?m.7
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:69:41: error(lean.unknownIdentifier): Unknown identifier `mem_add`
+ThomsonNine/Interval.lean:76:24: error: Type mismatch
+  c
+has type
+  ℚ
+but is expected to have type
+  ℝ
+ThomsonNine/Interval.lean:77:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:77:23: error: Type mismatch
+  c
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:77:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:79:9: error: Type mismatch
+  c * I.lo
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:79:34: error: Type mismatch
+  c
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:79:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:81:4: error: linarith failed to find a contradiction
+case left
+ℝ : Type u_1
+c : ℚ
+hc : 0 ≤ c
+I : RatInterval
+x : ℝ
+hx : I.mem x
+hc' : sorry
+⊢ False
+failed
+ThomsonNine/Interval.lean:82:9: error: Type mismatch
+  c
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:82:23: error: Type mismatch
+  c * I.hi
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:82:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:84:4: error: linarith failed to find a contradiction
+case right
+ℝ : Type u_1
+c : ℚ
+hc : 0 ≤ c
+I : RatInterval
+x : ℝ
+hx : I.mem x
+hc' : sorry
+⊢ False
+failed
+ThomsonNine/Interval.lean:92:63: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul ℝ ℝ ?m.15
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:93:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:93:23: error: Type mismatch
+  I.lo
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:93:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:94:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:94:23: error: Type mismatch
+  J.lo
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:94:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:95:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:95:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:111:28: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HPow ℝ ℕ ?m.10
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:112:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:112:23: error: Type mismatch
+  I.lo
+has type
+  ℚ
+of sort `Type` but is expected to have type
+  ℝ
+of sort `Type u_1`
+ThomsonNine/Interval.lean:112:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:113:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:113:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:123:79: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  LE ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/Interval.lean:123:79: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat ℝ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℝ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+=== FAIL Interval ===
+=== ALL DONE 13:40:30 ===
+EXIT=0

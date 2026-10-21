@@ -1,0 +1,24 @@
+=== 04:57:36 building EnergyForms ===
+ThomsonNine/EnergyForms.lean:43:4: error: Type mismatch: After simplification, term
+  HasDerivAt.inv hlin
+    (Mathlib.Meta.NormNum.isNat_eq_false
+      (Mathlib.Meta.NormNum.isNat_add (Eq.refl HAdd.hAdd) (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one)
+        (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero) (Eq.refl 1))
+      (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero) (Eq.refl false))
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ
+    DenselyNormedField.toNontriviallyNormedField.toDivisionRing.toAddCommGroup (NormedAlgebra.toNormedSpace ℝ).toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => 1 + t)⁻¹ (-1) 0
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => (1 + t)⁻¹) (-1) 0
+ThomsonNine/EnergyForms.lean:46:52: error(lean.unknownIdentifier): Unknown identifier `𝓝`
+ThomsonNine/EnergyForms.lean:39:80: error: unsolved goals
+x : Fin 9 → R3
+hlin : HasDerivAt (fun t => 1 + t) 1 0
+hinv : HasDerivAt (fun t => (1 + t)⁻¹) (-1) 0
+hmul : HasDerivAt (fun t => (1 + t)⁻¹ * energy x) (-1 * energy x) 0
+hev : (fun t => (1 + t)⁻¹ * energy x) =ᶠ[sorry] fun t => energy fun i => (1 + t) • x i
+⊢ HasDerivAt (fun t => energy fun i => (1 + t) • x i) (-energy x) 0
+=== FAIL EnergyForms ===
+=== ALL DONE 05:00:04 ===

@@ -1,0 +1,15 @@
+=== 16:01:02 building CandidateMem ===
+ThomsonNine/CandidateMem.lean:53:13: warning: Unused tactic linter: `(rcases hx with h | h <;> nlinarith [h3, hr, hs])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/CandidateMem.lean:54:13: warning: Unused tactic linter: `(rcases hx with h | h <;> rcases hy with h' | h' <;> nlinarith [h3, hr, hs])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ThomsonNine/CandidateMem.lean:53:13: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ThomsonNine/CandidateMem.lean:54:13: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+=== OK CandidateMem ===
+=== ALL DONE 16:03:13 ===

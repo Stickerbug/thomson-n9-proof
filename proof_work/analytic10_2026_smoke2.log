@@ -1,0 +1,1 @@
+{"status": "PASS", "exact_univariate_fraction_square_points": 250, "native_python_exact_comparisons": 100, "F_degree": [10, 10, 10], "d_degree": 20, "positive_root_closed": true, "zero_budget_fullroot_pending": true, "seconds": 6.144200000038836}

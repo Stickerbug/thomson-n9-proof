@@ -1,0 +1,193 @@
+{
+  "relative_rank": 33,
+  "relative_null_error": 1.5234518852819554e-14,
+  "Q_delta_target": 3.351010913725915e-09,
+  "euclidean_projected_gradient_norm": 6.249959966639248e-05,
+  "euclidean_dx_norm": 5.3616518051520156e-05,
+  "elapsed_seconds": 57.66240978240967,
+  "results_sha256": "4850f93b71a59de33bb9c3e3067e69321de1460044028feca3502f3e60b76d59",
+  "finalA_sha256": "27ad7391c5bca59db39896527da0f6bfa3d518bd04d99485c52c826d9a860b1a",
+  "history": [
+    {
+      "iteration": 0,
+      "mode": "Euclidean",
+      "dx_norm": 5.361651805148269e-05,
+      "minB": -6.977966295546196e-06,
+      "trace": 160.24978296323215,
+      "contact_error": 1.890154699424329e-14,
+      "interior_Hmin": 0.00030317924055259287,
+      "boundary": [
+        {
+          "index": 3,
+          "lambda": 9.604977191090625e-05,
+          "tangent_error": 7.361188559840325e-15,
+          "corrected_eigs": [
+            0.002487377201339639,
+            0.17955151348694348
+          ]
+        },
+        {
+          "index": 4,
+          "lambda": 0.004409299605218791,
+          "tangent_error": 6.694057348297948e-15,
+          "corrected_eigs": [
+            0.004614929027150609,
+            0.1218120874790572
+          ]
+        },
+        {
+          "index": 7,
+          "lambda": -2.4315630638914608e-05,
+          "tangent_error": 1.0602856391753842e-14,
+          "corrected_eigs": [
+            0.020315393522532654,
+            0.02031539352258653
+          ]
+        }
+      ],
+      "Q_R": 1.0000094086137779e-09,
+      "P_R": 2.082811928416639e-05,
+      "minimum_originalA": -3.1231279784549315e-09,
+      "originalA_compiled_error": 4.107825191113079e-15,
+      "elapsed_seconds": 33.43569302558899,
+      "worst_point": [
+        -0.49994284468773215,
+        -0.49994288157910594,
+        -0.4999429587807477
+      ],
+      "Gram": 0.0002569528631150808,
+      "Gram_exact": "1284764315575403880357433732025810608404878833/5000000000000000000000000000000000000000000000000",
+      "worst_kind": "independent_originalA_local"
+    },
+    {
+      "iteration": 1,
+      "mode": "relative",
+      "dx_norm": 0.008692275228951527,
+      "minB": 1.4223392295066098e-06,
+      "trace": 160.24326769748075,
+      "contact_error": 2.220446049250313e-14,
+      "interior_Hmin": 0.000303267811861565,
+      "boundary": [
+        {
+          "index": 3,
+          "lambda": 9.568203305665887e-05,
+          "tangent_error": 8.646230460101474e-15,
+          "corrected_eigs": [
+            0.002421689606866727,
+            0.17970016208941078
+          ]
+        },
+        {
+          "index": 4,
+          "lambda": 0.004394785736996529,
+          "tangent_error": 6.401846454395467e-15,
+          "corrected_eigs": [
+            0.004633831190801366,
+            0.12202286285143832
+          ]
+        },
+        {
+          "index": 7,
+          "lambda": -0.00012067082357521593,
+          "tangent_error": 1.1074369497951249e-14,
+          "corrected_eigs": [
+            0.020395538199921407,
+            0.020395538199974195
+          ]
+        }
+      ],
+      "Q_R": 1.0000092975914754e-09,
+      "P_R": 2.2009839627412653e-05,
+      "minimum_originalA": -7.544092694988791e-08,
+      "originalA_compiled_error": 6.328271240363392e-15,
+      "elapsed_seconds": 46.444276571273804,
+      "relative_y_norm": 0.0015241083352355012,
+      "relative_norm_bound_PSD": true,
+      "active_subset": [
+        0
+      ],
+      "active_multipliers": [
+        693.1956586651468
+      ],
+      "worst_point": [
+        -0.4997217431374278,
+        -0.49972174010386133,
+        -0.49972167495505
+      ],
+      "Gram": 0.0012517981080318785,
+      "Gram_exact": "6258990540159392846062473469363929412594813/5000000000000000000000000000000000000000000000",
+      "worst_kind": "independent_originalA_local"
+    },
+    {
+      "iteration": 2,
+      "mode": "relative",
+      "dx_norm": 0.010131352659854393,
+      "minB": 1.4223392308253994e-06,
+      "trace": 160.24147535894284,
+      "contact_error": 2.170486013142181e-14,
+      "interior_Hmin": 0.00030316228865756513,
+      "boundary": [
+        {
+          "index": 3,
+          "lambda": 9.588988171806922e-05,
+          "tangent_error": 8.671711880889638e-15,
+          "corrected_eigs": [
+            0.002422792180193668,
+            0.1796981279216719
+          ]
+        },
+        {
+          "index": 4,
+          "lambda": 0.004399596571822371,
+          "tangent_error": 6.3915064369839255e-15,
+          "corrected_eigs": [
+            0.004636266017939578,
+            0.12205856271146134
+          ]
+        },
+        {
+          "index": 7,
+          "lambda": -5.936357961867151e-05,
+          "tangent_error": 9.430356994136931e-15,
+          "corrected_eigs": [
+            0.020403801667604964,
+            0.020403801667658338
+          ]
+        }
+      ],
+      "Q_R": 1.0000076322569385e-09,
+      "P_R": 1.989289825399254e-05,
+      "minimum_originalA": -1.8309424976159505e-08,
+      "originalA_compiled_error": 3.6637359812630166e-15,
+      "elapsed_seconds": 57.52850866317749,
+      "relative_y_norm": 0.0015529834835542433,
+      "relative_norm_bound_PSD": true,
+      "active_subset": [
+        0,
+        1
+      ],
+      "active_multipliers": [
+        750.9162969991286,
+        1.1623758557570525
+      ],
+      "worst_point": [
+        -0.4998627803081539,
+        -0.49986288594015493,
+        -0.49986277655263645
+      ],
+      "Gram": 0.0006172228841898106,
+      "Gram_exact": "6172228841898106292783445265032436049470359017/10000000000000000000000000000000000000000000000000",
+      "worst_kind": "independent_originalA_local"
+    }
+  ],
+  "source_frozen": {
+    "d10_relative_patch2026_driver.py": {
+      "sha256": "c64021058b0827798dd32901d0589de2176c494203e3eb9c4ab7a4e40c7ae33b",
+      "text": "\"\"\"No SDP: deterministic Euclidean and relative-PSD contact-kernel patches.\"\"\"\nimport time,json,itertools,hashlib,signal\nimport numpy as np\nfrom scipy.optimize import minimize\nimport d10_nearest_repair2026_resume_driver as m\nROOT=m.ROOT;PREFIX='d10_relative_patch2026_'\ndef main():\n start=time.time();b=m.fastbuild();N=b['N'];ind=b['indices'];comp=b['comp'];C=b['augA'];Z=b['augZ'];prepared=json.loads((ROOT/'d10_nearest_repair2026_results.json').read_text());rawref=np.array(prepared['seed_x']);ref=b['augsol']+Z@(Z.T@(rawref-b['augsol']));BB,AA,c=m.original(ref,N,ind);gQ=-comp.design(m.Q[None])[0];rq=float(comp.kernel(ref)(m.Q)[0]);delta=1e-9-rq;grad=Z@(Z.T@gQ);eu=delta*grad/(grad@grad)\n out={'warning':'numerical linear algebra only; no SDP/no exact certificate','diagnostic':b['diagnostic'],'seed_x':ref.tolist(),'seed_raw_x':rawref.tolist(),'seed_Q_R':rq,'Q_delta_target':delta,'euclidean_projected_gradient_norm':float(np.linalg.norm(grad)),'euclidean_dx_norm':float(np.linalg.norm(eu)),'history':[],'sources':{name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest()for name in ['d10_sharpconvex2026_center_results.json','d10_nearest_repair2026_results.json','d10_nearest_repair2026_resume_driver.py']}};path=ROOT/(PREFIX+'results.json');assert not path.exists()\n def save():path.write_text(json.dumps(out,indent=2)+'\\n')\n save();rng=np.random.default_rng(20270103);mandatory=np.array(prepared['mandatory_points']);curve=np.array(prepared['curve']);points=m.clean(np.vstack([m.random_cond(10000,rng),m.boundary_points(2000,rng),mandatory]));contact=np.array(prepared['full_contact_set']);T=np.zeros((len(ind),len(ind)));index={t:j for j,t in enumerate(ind)};col=0\n for k,block in BB.items():\n  k=int(k);L=np.linalg.cholesky(block);n=len(block)\n  for i in range(n):\n   for j in range(i,n):\n    Y=np.zeros((n,n));Y[i,j]=Y[j,i]=1 if i==j else 1/np.sqrt(2);D=L@Y@L.T\n    for a in range(n):\n     for q in range(a,n):T[index[k,a,q],col]=D[a,q]\n    col+=1\n CT=C@T;_,sv,vh=np.linalg.svd(CT,full_matrices=True);rank=int(sum(sv>sv[0]*1e-10));ZR=vh[rank:].T;W=T@ZR;out['relative_rank']=rank;out['relative_singular_values']=sv.tolist();out['relative_null_error']=float(abs(C@W).max());out['T']=T.tolist();out['Zrel']=ZR.tolist();out['N']=[n.tolist()for n in N];out['indices']=[list(t)for t in ind];save();print('BUILD',time.time()-start,'rank',rank,'eu_dx',np.linalg.norm(eu),flush=True)\n constraints=[m.Q];targets=[1e-9];mode='Euclidean';x=ref+eu\n for iteration in range(3):\n  if time.time()-start>150:out['stop_reason']='180second guard';break\n  bb,aa,cc=m.original(x,N,ind);actual=m.IndependentActual(aa,cc);kernel=comp.kernel(x);vv=kernel(points);ix=np.argsort(vv)[:64];av=actual(points[ix]);rows=[{'point':p.tolist(),'R':float(v),'kind':'compiled_scan_originalA_check'}for p,v in zip(points[ix],av)];seeds=[m.Q]+[points[i]for i in ix[:8]]+list(curve[::10]);valstart=time.time()\n  def alarm(*args):raise TimeoutError()\n  signal.signal(signal.SIGALRM,alarm);signal.setitimer(signal.ITIMER_REAL,13)\n  try:\n   def fg(p):\n    v,g=actual(p,True);return float(v[0]),g[0]\n   for seed in seeds:\n    if time.time()-valstart>11:break\n    op=minimize(fg,seed,jac=True,method='SLSQP',bounds=[(-1,.56)]*3,constraints=[{'type':'ineq','fun':lambda z:m.gram(z)[0]}],options={'maxiter':80,'ftol':1e-14});q=op.x\n    if min(q)>=-1 and max(q)<=.56 and m.gram(q)[0]>=-1e-12:rows.append({'point':q.tolist(),'R':float(actual(q)[0]),'kind':'independent_originalA_local','success':bool(op.success)})\n  except TimeoutError:pass\n  finally:signal.setitimer(signal.ITIMER_REAL,0)\n  rows.sort(key=lambda t:t['R']);checks=np.array([t['point']for t in rows]);checked=actual(checks);gg,hh=m.jets(x,comp,b['cand']);bd=[]\n  for j in np.flatnonzero(b['boundary']):\n   g,Hg,tan=m.gram_geometry(b['cand'][j]);lam=float(g@gg[j]/(g@g));bd.append({'index':int(j),'lambda':lam,'tangent_error':float(np.linalg.norm(tan.T@gg[j])),'corrected_eigs':np.linalg.eigvalsh(tan.T@(hh[j]-lam*Hg)@tan).tolist()})\n  row={'iteration':iteration,'mode':mode,'dx_norm':float(np.linalg.norm(x-ref)),'minB':float(min(np.linalg.eigvalsh(v).min()for v in bb.values())),'trace':float(sum(np.trace(v)for v in bb.values())),'contact_error':float(max(abs(C@x-b['augb']))),'interior_Hmin':float(np.linalg.eigvalsh(hh[b['interior']]).min()),'boundary':bd,'Q_R':float(actual(m.Q)[0]),'P_R':float(actual(m.P)[0]),'minimum_originalA':float(checked.min()),'originalA_compiled_error':float(max(abs(checked-kernel(checks)))),'worst_points':rows,'solution':{'x':x.tolist(),'B':{k:v.tolist()for k,v in bb.items()},'A':[a.tolist()for a in aa],'N':[n.tolist()for n in N],'c':cc},'elapsed_seconds':time.time()-start}\n  if mode=='relative':row.update(relative_y_norm=float(np.linalg.norm(y)),relative_norm_bound_PSD=bool(np.linalg.norm(y)<1),active_subset=list(active),active_multipliers=mult.tolist())\n  scan=ROOT/(PREFIX+f'scan_{iteration}.npz');np.savez_compressed(scan,points=points,compiled_R=vv,verified_points=checks,originalA_R=checked);out['history'].append(row);out['solution']=row['solution'];save();print('PATCH',iteration,mode,'minR',row['minimum_originalA'],'minB',row['minB'],'dx',row['dx_norm'],'seconds',time.time()-start,flush=True)\n  if row['minB']>0 and row['minimum_originalA']>=-5e-12:out['stop_reason']='finite validation threshold reached';break\n  if mode=='relative' or row['minB']>0:\n   p=np.array(rows[0]['point']);p=(1-1e-7)*p if m.gram(p)[0]<0 else p\n   if float(actual(p)[0])< -5e-12:constraints.append(p);targets.append(1e-9)\n  G=-comp.design(np.array(constraints))@W;need=np.array(targets)-comp.kernel(ref)(np.array(constraints));best=None\n  for nactive in range(1,len(constraints)+1):\n   for subset in itertools.combinations(range(len(constraints)),nactive):\n    H=G[list(subset)];mul=np.linalg.lstsq(H@H.T,need[list(subset)],rcond=1e-12)[0];yy=H.T@mul\n    if min(mul)>=-1e-8 and np.min(G@yy-need)>=-1e-12 and(best is None or yy@yy<best[0]):best=(yy@yy,yy,subset,mul)\n  if best is None:out['stop_reason']='small active set no feasible numerical candidate';break\n  _,y,active,mult=best;x=ref+W@y;mode='relative'\n out.setdefault('stop_reason','three deterministic patches exhausted');out['elapsed_seconds']=time.time()-start;save();print('FINAL',out['stop_reason'],out['elapsed_seconds'],flush=True)\nif __name__=='__main__':main()\n"
+    },
+    "d10_nearest_repair2026_resume_driver.py": {
+      "sha256": "fc9d02f9dca461c60a3e67b21b3d0d2dc1f0396b7d5264de6b3da007634972e5",
+      "text": "\"\"\"New cone directions, normalized ridge positivity; numerical discovery only.\"\"\"\nimport time,json,hashlib,itertools,signal\nimport numpy as np\nimport cvxpy as cp\nfrom scipy.optimize import minimize,differential_evolution,NonlinearConstraint\nfrom sharp_contact_refinement2026_core import *\nfrom sharp_contact_refinement2026_refine import IndependentActual,solver_info\nfrom sharp_boundary_actualf_v3 import random_cond,boundary_points\nPREFIX='d10_nearest_repair2026_resume_'\nQ=np.array([-.7319927153030016,-.7319927162082746,.34931898965249153]);P=np.array([.56,.56,.56])\ndef gram(p):\n p=np.atleast_2d(p);return 1+2*np.prod(p,axis=1)-np.sum(p*p,axis=1)\ndef clean(p):\n p=np.atleast_2d(p);p=p[(p.min(axis=1)>=-1)&(p.max(axis=1)<=.56)&(gram(p)>=-2e-13)];_,ix=np.unique(np.round(p,13),axis=0,return_index=True);return p[np.sort(ix)]\ndef dist2(p,contacts):return np.min(np.sum((np.atleast_2d(p)[:,None,:]-contacts[None,:,:])**2,axis=2),axis=1)\ndef selected(pool,mandatory,res,contacts):\n mandatory=clean(mandatory);pool=clean(pool);keys={tuple(np.round(p,13)) for p in mandatory};remain=np.array([p for p in pool if tuple(np.round(p,13))not in keys]).reshape(-1,3);remain=remain[np.argsort(res(remain)/np.maximum(dist2(remain,contacts),1e-6))[:max(0,5000-len(mandatory))]];return clean(np.vstack([mandatory,remain]))\ndef validate(actual,comp,x,rng,curve,contacts,mandatory,iteration):\n start=time.time();rows=[];res=comp.kernel(x);pool=clean(np.vstack([random_cond(60000,rng),boundary_points(6000,rng),mandatory]));v=np.concatenate([res(pool[i:i+4000])for i in range(0,len(pool),4000)]);ix=np.argsort(v)[:64];original=actual(pool[ix]);np.savez_compressed(ROOT/(PREFIX+f\"scan_{iteration}.npz\"),points=pool,compiled_R=v,verified_points=pool[ix],originalA_R=original);v[ix]=original;rows.extend([{'point':p.tolist(),'R':float(a),'kind':'compiled_scan_originalA_check'}for p,a in zip(pool[ix],v[ix])]);seeds=[Q]+[pool[i] for i in ix[:10]]+list(curve[::10])+OLDPOINTS\n def alarm(*a):raise TimeoutError()\n signal.signal(signal.SIGALRM,alarm);signal.setitimer(signal.ITIMER_REAL,max(.1,24-time.time()+start))\n try:\n  def fg(p):\n   z,g=actual(p,True);return float(z[0]),g[0]\n  for p in seeds:\n   if time.time()-start>19:break\n   op=minimize(fg,p,jac=True,method='SLSQP',bounds=[(-1,.56)]*3,constraints=[{'type':'ineq','fun':lambda z:gram(z)[0]}],options={'maxiter':90,'ftol':1e-14});z=op.x\n   if gram(z)[0]>=-1e-12 and z.min()>=-1 and z.max()<=.56:rows.append({'point':z.tolist(),'R':float(actual(z)[0]),'kind':'independent_originalA_local','success':bool(op.success)})\n  if time.time()-start<20:\n   def con(z):\n    z=np.asarray(z);single=z.ndim==1;p=z.reshape(3,-1).T;v=gram(p);return v[0] if single else v[None,:]\n   de=differential_evolution(lambda z:float(res(z)[0])if np.ndim(z)==1 else res(z.T),[(-1,.56)]*3,constraints=[NonlinearConstraint(con,0,np.inf)],vectorized=True,updating='deferred',popsize=8,maxiter=35,polish=False,seed=202611+iteration);z=de.x\n   if gram(z)[0]>=-1e-12:rows.append({'point':z.tolist(),'R':float(actual(z)[0]),'kind':'compiled_DE_originalA_check'})\n except TimeoutError:pass\n finally:signal.setitimer(signal.ITIMER_REAL,0)\n rows.sort(key=lambda z:z['R']);checks=np.array([z['point']for z in rows]);vv=actual(checks);return {'seconds':time.time()-start,'scan_size':len(pool),'worst_points':rows,'minimum_originalA':float(vv.min()),'compiled_original_error':float(np.max(abs(vv-res(checks))))},checks\n\ndef eigencuts(xx,b):\n gg,hh=jets(xx,b['comp'],b['cand']);out=[]\n for j,p in enumerate(b['cand']):\n  if b['interior'][j]:directions=np.linalg.eigh(hh[j])[1].T\n  else:\n   g,Hg,T=gram_geometry(p);lam=g@gg[j]/(g@g);directions=(T@np.linalg.eigh(T.T@(hh[j]-lam*Hg)@T)[1]).T\n  for v in directions:\n   for radius in [1e-4,1e-3,.01]:\n    for sign in [-1,1]:\n     q=p+sign*radius*v\n     if not b['interior'][j]:\n      axis=int(np.argmax(abs(g)))\n      for _ in range(6):\n       dg=gram_geometry(q)[0][axis]\n       if abs(dg)<1e-10:break\n       q[axis]-=gram(q)[0]/dg\n      q*=1-1e-13\n     out.extend(itertools.permutations(q))\n return clean(np.array(out))\ndef fastbuild():\n prepared=json.loads((ROOT/'d10_nearest_repair2026_results.json').read_text());N=list(map(np.array,prepared['N']));P,indices=polynomials(N,DEGREE);comp=Compiled(P);diag=prepared['diagnostic'];cand=np.array(diag['candidate_points']);interior=np.array([Fr(v)>0 for v in diag['candidate_gram_determinants']]);boundary=~interior\n Aeq=np.vstack([derivative(comp,cand)]+[derivative(comp,cand[interior],(i,))for i in range(3)]);target=np.concatenate([np.sum((2-2*cand)**(-.5),axis=1)-ENERGY/12]+[(2-2*cand[interior,i])**(-1.5)for i in range(3)]);Dr=np.stack([derivative(comp,cand,(i,))for i in range(3)],axis=1);fprime=(2-2*cand)**(-1.5);tang=[];targ=[]\n for j in np.flatnonzero(boundary):\n  g,H,T=gram_geometry(cand[j]);tang.append(T.T@Dr[j]);targ.append(T.T@fprime[j])\n AA=np.vstack([Aeq,np.vstack(tang)]);bb=np.r_[target,np.concatenate(targ)];ss,_,rank,sv=np.linalg.lstsq(AA,bb,rcond=1e-10);_,_,vh=np.linalg.svd(AA,full_matrices=True);ZZ=vh[rank:].T;diag['rebuild_rank']=int(rank);diag['rebuild_contact_error']=float(max(abs(AA@ss-bb)))\n return dict(N=N,indices=indices,comp=comp,cand=cand,interior=interior,boundary=boundary,augA=AA,augb=bb,augsol=ss,augZ=ZZ,Dr=Dr,fprime=fprime,diagnostic=diag)\n\ndef run():\n start=time.time();rng=np.random.default_rng(20261117);b=fastbuild();N=b['N'];ind=b['indices'];comp=b['comp'];cand=b['cand'];contacts=np.unique(np.array([p for z in cand for p in itertools.permutations(z)]),axis=0);assert b['diagnostic']['contact_plus_tangent_max_error']<1e-8\n source=ROOT/'d10_sharpconvex2026_center_results.json';mix=json.loads(source.read_text())['weights_proposal'];old=json.loads((ROOT/'d10_ridge_repair2026_b2_results.json').read_text());global OLDPOINTS;OLDPOINTS=[np.array(w['point'])for row in old['history']for w in row['validation']['worst_points']];A0=list(map(np.array,mix['A']));B0=[n.T@a@n for n,a in zip(N,A0)];ref=np.array([B0[k][i,j]for k,i,j in ind]);sol=b['augsol'];Z=b['augZ'];ref_projected=sol+Z@(Z.T@(ref-sol));sol=ref_projected;Z=1e-4*Z;free=cp.Variable(Z.shape[1]);free.value=np.zeros(Z.shape[1]);x=sol+Z@free\n index={z:j for j,z in enumerate(ind)};B={k:cp.bmat([[x[index[k,min(i,j),max(i,j)]]for j in range(n.shape[1])]for i in range(n.shape[1])])for k,n in enumerate(N)if n.shape[1]};trace=sum(cp.trace(v)for v in B.values());constraints=[v>>1e-8*np.eye(v.shape[0])for v in B.values()]+[trace<=2000]\n for j,p in enumerate(cand):\n  H=cp.bmat([[(float(3*(2-2*p[i])**(-2.5))if i==q else 0.)-derivative(comp,p[None],(i,q))[0]@x for q in range(3)]for i in range(3)])\n  if b['interior'][j]:constraints.extend([H>>1e-6*np.eye(3),H>>2e-7*np.eye(3)])\n  else:\n   g,Hg,T=gram_geometry(p);lam=g@(b['fprime'][j]-b['Dr'][j]@x)/(g@g);constraints.extend([lam>=1e-8,T.T@H@T-lam*(T.T@Hg@T)>>1e-6*np.eye(2),T.T@H@T-lam*(T.T@Hg@T)>>2e-7*(T.T@T)])\n r=float(RSTRING);cgf=np.array([r*r/2-1,-r,r/2]);swap=cgf[[1,0,2]];curve=np.array([(1-t)*cgf+t*swap for t in np.linspace(0,1,81)]);lateral=np.vstack([curve+rng.normal(0,s,curve.shape)for s in [1e-4,1e-3,3e-3,1e-2]]);annuli=[]\n for radius in [1e-4,1e-3,1e-2,.03,.05]:\n  for p in contacts:\n   u=rng.normal(0,1,(5,3));u/=np.linalg.norm(u,axis=1)[:,None];annuli.append(p+radius*u)\n valleys=np.array([[-.759220762336624,-.29211600772137486,.32931701954562287],[.346480293,.346480553,.346480725],[-.071348864,.339279344,.339279344]])\n prepared=json.loads((ROOT/'d10_nearest_repair2026_results.json').read_text());curve=np.array(prepared['curve']);initial_eigen=np.array(prepared['initial_eigencuts']);mandatory=np.array(prepared['mandatory_points']);pool=np.array(prepared['initial_pool']);points=selected(pool,mandatory,comp.kernel(ref),contacts)\n out=ROOT/(PREFIX+'results.json');assert not out.exists();result={'warning':'NUMERICAL DISCOVERY ONLY; no proof or cone infeasibility claim','source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'diagnostic':b['diagnostic'],'seed_x':ref.tolist(),'N':[n.tolist()for n in N],'indices':[list(z)for z in ind],'full_contact_set':contacts.tolist(),'curve':curve.tolist(),'initial_pool':pool.tolist(),'mandatory_points':mandatory.tolist(),'history':[],'initial_eigencuts':initial_eigen.tolist(),'seed_projected':ref_projected.tolist(),'objective':'min sum_squares(z); x=oldref_projected+1e-4augZ@z; eta=1e-7 fixed','domain':'full Gram box[-1,.56]^3','build_seconds':time.time()-start};save=lambda:out.write_text(json.dumps(result,indent=2)+'\\n');save();print('BUILD',len(points),'mandatory',len(mandatory),'seconds',time.time()-start,flush=True);assert time.time()-start<=70,'build70 cap'\n eta=1e-7;do_trace=False\n constraints.extend([1e6*(np.sum((2-2*Q)**(-.5))-ENERGY/12-comp.design(Q[None,:])[0]@x)>=1e-3,1e6*(np.sum((2-2*P)**(-.5))-ENERGY/12-comp.design(P[None,:])[0]@x)>=.1])\n for iteration in range(2):\n  if time.time()-start>105:result['stop_reason']='total300 guard';break\n  D=comp.design(points);rhs=np.sum((2-2*points)**(-.5),axis=1)-ENERGY/12;dd=dist2(points,contacts);scale=1/np.maximum(dd,1e-6);Dred=(D@Z)*scale[:,None];bred=(rhs-D@sol)*scale;con=constraints+[Dred@free+eta*(dd*scale)<=bred]\n  prob=cp.Problem(cp.Minimize(cp.sum_squares(free)),con);err=None;st=time.time()\n  try:prob.solve(solver='CLARABEL',time_limit=55,max_iter=250,tol_feas=1e-10,tol_gap_abs=1e-10,tol_gap_rel=1e-10,warm_start=True)\n  except cp.error.SolverError as ex:err=repr(ex)\n  row={'iteration':iteration,'mode':'min_distance','error':err,'solve_wall_seconds':time.time()-st,'cuts':points.tolist(),'solver':solver_info(prob)if prob.solver_stats else None}\n  if x.value is None:row['no_iterate']=True;result['history'].append(row);result['stop_reason']='no iterate';save();break\n  xx=np.asarray(x.value).ravel();bb,AA,c=original(xx,N,ind);gg,hh=jets(xx,comp,cand);actual=IndependentActual(AA,c);validation,additions=validate(actual,comp,xx,rng,curve,contacts,mandatory,iteration);row.update({'eta':eta,'z_squared_norm_objective':float(np.sum(np.asarray(free.value)**2)),'x_oldref_distance':float(np.linalg.norm(xx-ref)),'x_projectedref_distance':float(np.linalg.norm(xx-ref_projected)), 'affine_projection_error':float(np.linalg.norm(ref-ref_projected)),'trace':float(sum(np.trace(v)for v in bb.values())),'min_B_eigenvalue':float(min(np.linalg.eigvalsh(v).min()for v in bb.values())),'contact_error':float(np.max(abs(b['augA']@xx-b['augb']))),'interior_H_min':float(np.linalg.eigvalsh(hh[b['interior']]).min()),'training_minR':float(min(rhs-D@xx)),'validation':validation,'Q_R':float(actual(Q)[0]),'P_R':float(actual(P)[0]),'solution':{'x':xx.tolist(),'B':{k:v.tolist()for k,v in bb.items()},'A':[a.tolist()for a in AA],'N':[n.tolist()for n in N],'c':c}});row['boundary_jets']=[]\n  for j in np.flatnonzero(b['boundary']):\n   g,Hg,T=gram_geometry(cand[j]);lam=float(g@gg[j]/(g@g));row['boundary_jets'].append({'index':int(j),'lambda':lam,'tangent_error':float(np.linalg.norm(T.T@gg[j])),'tangent_H_eigenvalues':np.linalg.eigvalsh(T.T@(hh[j]-lam*Hg)@T).tolist()})\n  result['history'].append(row);result['solution']=row['solution'];save();print('VALIDATED',iteration,json.dumps({k:v for k,v in row.items()if k not in ['cuts','solution','validation','boundary_jets']}),'minR',validation['minimum_originalA'],'seconds',time.time()-start,flush=True)\n  if err or prob.status in ['infeasible','unbounded']:result['stop_reason']='finite model solver failure';break\n  do_trace=False\n  mandatory=clean(np.vstack([mandatory,additions,eigencuts(xx,b)]));pool=clean(np.vstack([pool,mandatory]));points=selected(pool,mandatory,comp.kernel(xx),contacts);result['mandatory_points']=mandatory.tolist()\n result.setdefault('stop_reason','two resumed rounds exhausted');result['elapsed_seconds']=time.time()-start;save();print('FINAL',result['stop_reason'],result['elapsed_seconds'],flush=True)\nif __name__=='__main__':run()\n"
+    }
+  }
+}

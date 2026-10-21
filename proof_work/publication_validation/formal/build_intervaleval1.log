@@ -1,0 +1,11 @@
+=== 15:39:05 building IntervalEval ===
+ThomsonNine/IntervalEval.lean:45:68: error: Application type mismatch: The argument
+  mem_const 1
+has type
+  (const 1).mem ↑1
+but is expected to have type
+  (const 1).mem 1
+in the application
+  mem_sub (mem_const 1)
+=== FAIL IntervalEval ===
+=== ALL DONE 15:40:45 ===

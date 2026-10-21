@@ -1,0 +1,8 @@
+=== 01:15:55 building StrictConvex ===
+=== OK StrictConvex ===
+=== 01:17:06 building EnergyContinuity ===
+ThomsonNine/EnergyContinuity.lean:23:22: error(lean.invalidField): Invalid field `comp_continuousAt`: The environment does not contain `Continuous.comp_continuousAt`, so it is not possible to project the field `comp_continuousAt` from an expression
+  continuous_norm
+of type `Continuous fun a => ‖a‖`
+=== FAIL EnergyContinuity ===
+=== ALL DONE 01:18:08 ===

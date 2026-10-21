@@ -1,0 +1,9 @@
+=== 01:14:31 building StrictConvex ===
+ThomsonNine/StrictConvex.lean:22:6: error: Type mismatch
+  Eq.symm (HasDerivAt.deriv (hasDerivAt_familyEnergy y hy.left hy.right))
+has type
+  familyEnergyDeriv y = deriv familyEnergy y
+but is expected to have type
+  deriv familyEnergy y = familyEnergyDeriv y
+=== FAIL StrictConvex ===
+=== ALL DONE 01:15:45 ===

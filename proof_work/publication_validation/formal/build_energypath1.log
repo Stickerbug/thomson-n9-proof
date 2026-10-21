@@ -1,0 +1,37 @@
+=== 07:55:06 building EnergyPath ===
+ThomsonNine/EnergyPath.lean:120:20: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ i, ∑ j > i, ⟪x i - x j, v j⟫_ℝ / ‖x i - x j‖ ^ 3
+in the target expression
+  ∑ i, ∑ j > i, (fun a b => ⟪x b - x a, v a⟫_ℝ / ‖x a - x b‖ ^ 3) j i =
+    ∑ i, ∑ j < i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3
+
+case e_a
+x : Fin 9 → R3
+hx : Function.Injective x
+v : Fin 9 → R3
+hfun : (fun t => energy fun i => x i + t • v i) = fun t => ∑ i, ∑ j > i, ‖x i + t • v i - (x j + t • v j)‖⁻¹
+hderiv :
+  HasDerivAt (fun t => ∑ i, ∑ j > i, ‖x i + t • v i - (x j + t • v j)‖⁻¹)
+    (∑ i, ∑ j > i, -⟪x i - x j, v i - v j⟫_ℝ / ‖x i - x j‖ ^ 3) 0
+hB :
+  ∑ i, ∑ j > i, ⟪x i - x j, v j⟫_ℝ / ‖x i - x j‖ ^ 3 =
+    ∑ i, ∑ j > i, (fun a b => ⟪x b - x a, v a⟫_ℝ / ‖x a - x b‖ ^ 3) j i
+⊢ ∑ i, ∑ j > i, (fun a b => ⟪x b - x a, v a⟫_ℝ / ‖x a - x b‖ ^ 3) j i =
+    ∑ i, ∑ j < i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3
+ThomsonNine/EnergyPath.lean:126:16: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ j < i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3 + ∑ j > i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3
+in the target expression
+  ∑ j > i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3 + ∑ j < i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3 = ⟪v i, gradAt x i⟫_ℝ
+
+x : Fin 9 → R3
+hx : Function.Injective x
+v : Fin 9 → R3
+hfun : (fun t => energy fun i => x i + t • v i) = fun t => ∑ i, ∑ j > i, ‖x i + t • v i - (x j + t • v j)‖⁻¹
+hderiv :
+  HasDerivAt (fun t => ∑ i, ∑ j > i, ‖x i + t • v i - (x j + t • v j)‖⁻¹)
+    (∑ i, ∑ j > i, -⟪x i - x j, v i - v j⟫_ℝ / ‖x i - x j‖ ^ 3) 0
+i : Fin 9
+a✝ : i ∈ Finset.univ
+⊢ ∑ j > i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3 + ∑ j < i, ⟪x j - x i, v i⟫_ℝ / ‖x i - x j‖ ^ 3 = ⟪v i, gradAt x i⟫_ℝ
+=== FAIL EnergyPath ===
+=== ALL DONE 07:57:12 ===

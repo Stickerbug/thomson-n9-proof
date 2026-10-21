@@ -1,0 +1,122 @@
+{
+  "high_precision_negative_witnesses": {
+    "CP_final": {
+      "point_decimal": [
+        "0.3727866847029806",
+        "0.56",
+        "-0.040144373353202034"
+      ],
+      "R_decimal_80digit": "-0.00040480776326901792414784827197415147698638223197798549276877984059167490493121823",
+      "gram_decimal_80digit": "0.529057394602202126178118413365457596",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "CP_final_key": {
+      "point_decimal": [
+        "-0.29693709",
+        "0.4225354",
+        "0.4225354"
+      ],
+      "R_decimal_80digit": "0.00077395648719487393096297698583548587567038665841500843417596897317884603557465498",
+      "gram_decimal_80digit": "0.4487280179298211925912",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "original_PSD": {
+      "point_decimal": [
+        "0.56",
+        "0.56",
+        "0.56"
+      ],
+      "R_decimal_80digit": "-0.00040895741418393560368501804128327567322947242673515683086184676097411403188199799",
+      "gram_decimal_80digit": "0.410432",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "original_PSD_key": {
+      "point_decimal": [
+        "-0.29693709",
+        "0.4225354",
+        "0.4225354"
+      ],
+      "R_decimal_80digit": "-0.000012336612083503335823613130444521927127133427202432324790578019401719511485036662",
+      "gram_decimal_80digit": "0.4487280179298211925912",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "augmented_contact_PSD": {
+      "point_decimal": [
+        "0.56",
+        "0.56",
+        "0.56"
+      ],
+      "R_decimal_80digit": "-0.00042228834563176499176130135206971968037504385233346118387148454657411403188201339",
+      "gram_decimal_80digit": "0.410432",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "augmented_contact_PSD_key": {
+      "point_decimal": [
+        "-0.29693709",
+        "0.4225354",
+        "0.4225354"
+      ],
+      "R_decimal_80digit": "-0.000013013694681460008861095830900723506825032825807158288661251036851813129929149475",
+      "gram_decimal_80digit": "0.4487280179298211925912",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "augmented_contact_PSD_local_Hessian": {
+      "point_decimal": [
+        "-0.9980259689148432286249420934937912",
+        "-0.03141680342712138",
+        "-0.03141680342712138"
+      ],
+      "R_decimal_80digit": "-0.0014292250788546837144271636381484557815801669177960699768173484942265724340633464",
+      "gram_decimal_80digit": "0.000000000019980259689148432286249420934937912000000000000000000000000000000000001445612425",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    },
+    "augmented_contact_PSD_local_Hessian_key": {
+      "point_decimal": [
+        "-0.29693709",
+        "0.4225354",
+        "0.4225354"
+      ],
+      "R_decimal_80digit": "-0.000019466768133550104332521509860263088440869721250054200049110218974455591041057337",
+      "gram_decimal_80digit": "0.4487280179298211925912",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    }
+  },
+  "training_audits": {
+    "iteration_0": {
+      "full_final_training_count": 14031,
+      "minimum_R_independent_original_A": -0.0012134705415915992,
+      "worst_point": [
+        -0.0871214616309,
+        0.56,
+        0.56
+      ]
+    },
+    "iteration_1": {
+      "full_final_training_count": 14031,
+      "minimum_R_independent_original_A": -6.772937641841281e-07,
+      "worst_point": [
+        -0.5134525210405,
+        0.3334820759186,
+        0.38901603034
+      ]
+    },
+    "iteration_2": {
+      "full_final_training_count": 14031,
+      "minimum_R_independent_original_A": -3.8191672047105385e-14,
+      "worst_point": [
+        0.2426815973766,
+        0.2426815973766,
+        0.2426815973766
+      ]
+    }
+  },
+  "elapsed_export_seconds": 16.260645866394043
+}

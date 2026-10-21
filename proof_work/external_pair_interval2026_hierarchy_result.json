@@ -1,0 +1,86 @@
+{
+  "status": "partial_hierarchical_low_pair_domain",
+  "global_T2_proof": false,
+  "threshold_exact": "1/25000",
+  "T2_triangle_exact": [
+    ".3464802927157662",
+    ".3464805531965182",
+    ".34648072472904085"
+  ],
+  "T2_budget_exact": "363112992110786940924851710131045481266677379904321852540583695641785635852558795637381419934426710695052817133855152107346942546775788202872419167516146769421785310551633758896096887694466972907733085079552029085247669037130263279668095194790519356003823045712244335452576395182989204852961748094704901986306904268707847790425060167965993187595906015146395956223332910232210522693201602995009532910431931199562326007401105446254814391480121674537640332141213484392045672246561039313290520683/805306368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "cells": 894,
+  "ordered_pair_universe": 799236,
+  "chart_root_nodes": [
+    0,
+    897
+  ],
+  "product_roots": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "low_set_tree_nodes": 1786,
+  "processed_blocks": 2012,
+  "total_product_blocks": 3862,
+  "terminal_blocks": 1933,
+  "counts_blocks": {
+    "split": 1929,
+    "exclude_pair_cap": 40,
+    "accept_psi": 40,
+    "exclude_capacity": 3,
+    "pending_budget": 1850
+  },
+  "counts_ordered_pairs": {
+    "exclude_pair_cap": 78683,
+    "accept_psi": 51689,
+    "exclude_capacity": 2352,
+    "pending_budget": 666512
+  },
+  "pending_ordered_pairs": 666512,
+  "pending_stack_blocks": 1850,
+  "processed_block_budget": 3000,
+  "seconds_budget": 118,
+  "elapsed_seconds": 118.45663852401776,
+  "prepare_seconds": 1.1830645829904824,
+  "stopping_reason": "time_limit",
+  "bits": 48,
+  "I_bits": 384,
+  "root_int_bounds": [
+    "-44180265718002115",
+    "1066518328158214"
+  ],
+  "root_shape": [
+    28,
+    28,
+    28
+  ],
+  "max_query_splits": 30,
+  "max_query_leaves": 8,
+  "stats": {
+    "created_nodes": 44409,
+    "resident_created_nodes": 1097,
+    "queries": 3521,
+    "splits": 34286,
+    "cache_resets": 30
+  },
+  "memoized_oracle_blocks": 1183,
+  "mask_min": 1,
+  "mask_max": 1,
+  "coverage": "All four ordered chart products start at complete 894x894 universe. Every split replaces one ID set by disjoint exhaustive children. Terminal ID products including every budget pending block mark every ordered cell pair exactly once. Nonconnected set bboxes enclose unions.",
+  "query_policy": "The old independent-replayed lower-only 3D int48 oracle is reused. Boxes with width>1/2 may use zero splits (valid coarse lower), forcing partition if insufficient. Once a partial psi sum reaches threshold, remaining psi terms use old R>=0. Canonical node-pair memo uses exact R permutation symmetry.",
+  "warning": "Fixed rational T2 low cells only. Unary/root coverage/capacity/global R proofs are dependencies. Pending blocks remain unresolved; no true-root or neighborhood assertion. No new SDP, no repeated prefix run.",
+  "dependencies": {
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_universe.json": "d044f73f2660a8ecb33457e6905a3051411c016f1f564b2f8a5fbc2e6cf34e89",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_replay.json": "63ed98862a1a051f80c199ed41ec55c98b638bb0e74d577d1b53e97ca5a6f335",
+    "/home/dsh/Thomson Problem/proof_work/two_other_valleys2026_probe.json": "c8f1d7b62403ca80de6698c2855efc50345581ec383b571260a6502c529642c2",
+    "/home/dsh/Thomson Problem/proof_work/nonsharp_d10_root25_7599205_v10.json": "6ebdebad61e4ba26f044b07b2ed56bcacdfe8c584b6007561bc17b2cd23b52d0",
+    "/home/dsh/Thomson Problem/proof_work/nonsharp_d10_root25_7599205_v10_result.json": "9b09f1e8e4817fc489f9368f9d0c4a357db8c40bc198de391f56861809667b6d",
+    "/home/dsh/Thomson Problem/proof_work/dyadic_interval.py": "6ca947a97662cd274659eb030c107f1551841664644a8e2cb7344aa4de364adf",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_bounded.py": "0abc64ef37c5936a4bd0975a3b24a06e37f8d4e3718e95369950c4eed678198e",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_batch.py": "5d1db67bd74eb94897db907c9e2aee2157f16bb2f58641ce113935ef1c4b0ed1",
+    "/home/dsh/Thomson Problem/proof_work/exact_tensor_bernstein.py": "381285a027574294dbb07b5ffe8b3a154866b5b7380f87c1db9ff950866b44ae",
+    "/home/dsh/Thomson Problem/proof_work/certify_d4_int64.py": "ebee5228df7df6cca9df9c0c7feeea3b8941ee9489810fe3ccc98533b9a46d91",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy.py": "a31a52f7c5ff8d1212e39609ac169bb00f10db06c141d3b698286bc2ab42370b"
+  }
+}

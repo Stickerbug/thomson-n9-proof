@@ -1,0 +1,11 @@
+=== 13:45:32 building IntervalTensor ===
+ThomsonNine/IntervalTensor.lean:27:23: error: Application type mismatch: The argument
+  fun i j k => ?m.56
+has type
+  (i : ?m.52) → (j : ?m.57 i) → (k : ?m.58 i j) → ?m.59 i j k
+but is expected to have type
+  ℕ
+in the application
+  tensor_nonneg fun i j k => ?m.56
+=== FAIL IntervalTensor ===
+=== ALL DONE 13:46:40 ===

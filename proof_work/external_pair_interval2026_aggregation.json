@@ -1,0 +1,52 @@
+{
+  "status": "data_only_union_and_exact_symmetry_closure",
+  "global_T2_proved": false,
+  "new_global_lower_bound": null,
+  "existing_global_lower_bound": "25.7599205",
+  "cells": 894,
+  "ordered_pair_universe": 799236,
+  "input_resolved_counts": {
+    "initial_pruning": 340652,
+    "hierarchy_terminals": 132724,
+    "prefix_resolved_bidirectional": 972
+  },
+  "initial_action_counts_ordered": {
+    "phi_accept": 303673,
+    "pending": 458584,
+    "capacity_exclude": 36979
+  },
+  "prefix_record_counts_unordered": {
+    "exclude_pair_cap": 117,
+    "accept_W": 369,
+    "pending": 1
+  },
+  "stages_ordered_pairs": {
+    "initial_resolved": 340652,
+    "initial_or_hierarchy_resolved": 398001,
+    "initial_or_hierarchy_or_bidirectional_prefix_resolved": 398783,
+    "after_exact_transpose_symmetry_closure_resolved": 399788,
+    "union_pending": 399448,
+    "new_resolved_beyond_initial": 59136,
+    "added_by_prefix_beyond_initial_or_hierarchy": 782,
+    "added_by_symmetry_closure": 1005
+  },
+  "resolved_mask_sha256": "f82c1ef49eec190c071ad23ce193cd3706d34621fdf21c6e4b3dc2bfa3f54816",
+  "checksum_encoding": "SHA256 of row-major 894x894 uint8 matrix; each resolved entry byte=1, pending=0. Rows/columns use universe cell IDs.",
+  "exact_rules": "C = initial_phi_or_capacity_mask OR hierarchy_resolved_terminal_ID_products OR both_orientations_of_486_prefix_resolved_pairs; then C |= C.T. No pending entry removed except by one of those established predicates or exact q/r symmetry.",
+  "symmetry_dependency": "Old exact residual polynomial is invariant under all six coordinate permutations (asserted by hierarchy source). W=(phi(q)+phi(r))/5+sum_a R(a.q,a.r,q.r) is symmetric in q/r; cap constraints and capacity exclusions are symmetric. Transposing a resolved acceptance/exclusion therefore preserves its predicate.",
+  "verification_scope": "Data aggregation only; no polynomial evaluation, tensor/split/oracle/solver call, or hierarchy tree reconstruction. Existing initial-pruning, prefix replay and hierarchy audit dependencies retained. Hierarchy new terminal coefficient minima have not received a separate full coefficient replay. All coefficient replay uses the same underlying coefficients/split64 and I384 implementations, not an entirely independent implementation.",
+  "polynomial_evaluations": 0,
+  "oracle_calls": 0,
+  "solver_calls": 0,
+  "elapsed_seconds": 4.449190104031004,
+  "dependencies": {
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_universe.json": "d044f73f2660a8ecb33457e6905a3051411c016f1f564b2f8a5fbc2e6cf34e89",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_records.json": "bc209efe0640383cbdee73f169dccd5b59cba5d0c587dc1c587d1babff44cf80",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_result.json": "9f65d5fdee9293d49ee7b70b4591651f1a1ca1d4ae38a7c8fd55b683b1386189",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_audit.json": "27738d95720cf887dc87da93cd92a1eedcac6f540057c2955cca574ab915cb7f",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_lowpair_replay.json": "63ed98862a1a051f80c199ed41ec55c98b638bb0e74d577d1b53e97ca5a6f335",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_result.json": "38c9d9ca83f4302f7f4a4deec9cc2bf3e9c410d0f43f970427ef9bce518f620c",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_blocks.json": "2e5914c893d6de1dca780ef04cb42754a634cb475204e32f5d5084752e2043bd",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_audit.json": "1d48d01902b47ca7ec573f13c6e0c95bd1710a2819c7cec2acbea9b9c8f0887c"
+  }
+}

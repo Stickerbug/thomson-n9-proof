@@ -1,0 +1,35 @@
+=== 18:40:59 building Minimum ===
+ThomsonNine/Minimum.lean:44:4: error: failed to synthesize
+  ContinuousSMul ?𝕜 ℝ
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+ThomsonNine/Minimum.lean:57:4: error: failed to synthesize
+  ContinuousSMul ?𝕜 ℝ
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+ThomsonNine/Minimum.lean:72:54: error: Application type mismatch: The argument
+  hr1
+has type
+  r < 1
+but is expected to have type
+  r < r
+in the application
+  ⟨hr, hr1⟩
+ThomsonNine/Minimum.lean:74:52: error: Application type mismatch: The argument
+  hs
+has type
+  0 < s
+but is expected to have type
+  r < s
+in the application
+  And.intro hs
+ThomsonNine/Minimum.lean:74:24: error: Application type mismatch: The argument
+  hr
+has type
+  0 < r
+but is expected to have type
+  r < r
+in the application
+  And.intro hr
+=== FAIL Minimum ===
+=== ALL DONE 18:43:08 ===

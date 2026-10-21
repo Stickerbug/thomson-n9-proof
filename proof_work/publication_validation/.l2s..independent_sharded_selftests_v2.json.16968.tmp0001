@@ -1,0 +1,33 @@
+{
+  "exact_checker_sha256": "9ab4b9810740d1b83c4ecf2e9eef76f7d93c42aaff1ba85e51f8bc24c27a13bc",
+  "groups": 24,
+  "scope": "Additional exact Gram and recoverable-sharding tests; no local nonnegativity or PSD proof.",
+  "sharded_checker_sha256": "84fc29d43fe412e7332f799524383c42e97dc33b30f28bf401654b27d5681d3b",
+  "status": "PASS",
+  "tests": [
+    "integer_Gram_and_ceil_equal_exact_Fraction_at_three_geometries",
+    "valid_complete_variable_depth_frontiers",
+    "frontier_missing_domain",
+    "frontier_empty",
+    "frontier_duplicate",
+    "frontier_overlap_ancestor",
+    "frontier_illegal_path",
+    "subtree_spans_and_early_singletons",
+    "structure_missing_child",
+    "structure_extra_child",
+    "structure_wrong_geometry",
+    "structure_illegal_terminal",
+    "complete_shards_from_global_root_then_global_aggregate",
+    "wrong_chunk_status",
+    "wrong_chunk_path",
+    "wrong_chunk_manifest_hash",
+    "wrong_chunk_bytes_hash",
+    "wrong_chunk_counts",
+    "wrong_chunk_binding",
+    "rehash_cannot_hide_frontier_gap",
+    "wrong_frontier_byte_span",
+    "wrong_frontier_ancestor_axis",
+    "wrong_frontier_geometry",
+    "bound_frontier_and_report_mutations_checked"
+  ]
+}

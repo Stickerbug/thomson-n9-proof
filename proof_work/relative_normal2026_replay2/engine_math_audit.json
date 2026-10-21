@@ -1,0 +1,19 @@
+{
+  "status": "SHARP_ENGINE_MATHEMATICAL_SOURCE_AUDIT_PASS_WITH_EXPLICIT_EXTERNAL_PREMISES",
+  "engine_sha256": "25b42d62d857003d8ac3f28db294b9e42b58afb9db3a2de4a5b06d7b1208c562",
+  "audit_markdown_sha256": "c122d5180cdd82ca269d46e27759a87b6a45c98ccc7dc0fac5a2eaa1a796f0f0",
+  "full_replay_report_sha256": "6aad54e84753d27dae3c6827bdbcd72d771e77b4976981b4e4574ac0cf395d92",
+  "fresh_nodes": 136125,
+  "fresh_pending": 0,
+  "delta": "0",
+  "bits": 96,
+  "no_engine_mathematical_bug_found": true,
+  "external_premises": [
+    "WM/rank33 full45 exact contact theorem mathematical audit by311",
+    "PSD anchored-circle Chebyshev theorem",
+    "total energy normalization audit byparent",
+    "Python C compiler runtime and interval arithmetic correctness"
+  ],
+  "not_an_independent_implementation": true,
+  "not_a_claim_of_academic_resolution": true
+}

@@ -1,0 +1,7 @@
+BUILD 5478 mandatory 5478 seconds 83.22764587402344
+Traceback (most recent call last):
+  File "/home/dsh/Thomson Problem/proof_work/d10_nearest_repair2026_driver.py", line 91, in <module>
+    if __name__=='__main__':run()
+  File "/home/dsh/Thomson Problem/proof_work/d10_nearest_repair2026_driver.py", line 72, in run
+    out=ROOT/(PREFIX+'results.json');assert not out.exists();result={'warning':'NUMERICAL DISCOVERY ONLY; no proof or cone infeasibility claim','source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'diagnostic':b['diagnostic'],'seed_x':ref.tolist(),'N':[n.tolist()for n in N],'indices':[list(z)for z in ind],'full_contact_set':contacts.tolist(),'curve':curve.tolist(),'initial_pool':pool.tolist(),'mandatory_points':mandatory.tolist(),'history':[],'initial_eigencuts':initial_eigen.tolist(),'seed_projected':ref_projected.tolist(),'objective':'min sum_squares(z); x=oldref_projected+1e-4augZ@z; eta=1e-7 fixed','domain':'full Gram box[-1,.56]^3','build_seconds':time.time()-start};save=lambda:out.write_text(json.dumps(result,indent=2)+'\n');save();print('BUILD',len(points),'mandatory',len(mandatory),'seconds',time.time()-start,flush=True);assert time.time()-start<=70,'build70 cap'
+AssertionError: build70 cap

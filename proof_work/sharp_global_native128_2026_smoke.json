@@ -1,0 +1,42 @@
+{
+  "status": "SMOKE_PASSED",
+  "conditional_only": true,
+  "seconds": 0.1991359379608184,
+  "checks": [
+    "80 random signed128 upper/lower splits equal independent Python-object STEPWISE floor/ceil, including strict +/-2^124 extrema",
+    "unsafe strict endpoints refused before native arithmetic",
+    "Native and old final-binomial-outward backends independently close same positive quadratic full-root tree; no integer-equality assumption",
+    "local and S=R-g terminal toys ACTUALLY TRIGGER; uncertain-center midpoint shortcut rejected; complete pending and coverage identities"
+  ],
+  "native_positive": {
+    "visited_nodes": 177,
+    "counts": {
+      "positive": 62,
+      "gram_negative": 0,
+      "ordered_disjoint": 27,
+      "local_region": 0,
+      "boundary_multiplier": 0
+    },
+    "pending_count": 0,
+    "native_tensor_split_calls": 176,
+    "native_backend_sha256": {
+      "C": "f7293e5065a2d21ba8b40ded512f198c14cb5162967f05cc2ed7b123b2eb2898",
+      "wrapper": "9b535ce122f9824cc5b06998d6289005c6fcbc24fbc61a4c2e5f90880a3cca9b",
+      "loaded_shared_library": "e9635586e1be892ad2f3cd3ea62f23be043156a62e21c2bce7b752723c8c3e9a"
+    }
+  },
+  "local_counts": {
+    "positive": 0,
+    "gram_negative": 0,
+    "ordered_disjoint": 0,
+    "local_region": 1,
+    "boundary_multiplier": 0
+  },
+  "S_counts": {
+    "positive": 0,
+    "gram_negative": 0,
+    "ordered_disjoint": 0,
+    "local_region": 0,
+    "boundary_multiplier": 1
+  }
+}

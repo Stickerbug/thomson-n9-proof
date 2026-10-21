@@ -1,0 +1,45 @@
+{
+  "status": "certified",
+  "target": "129/5",
+  "object_integer_bits": 70,
+  "symmetry_pruning": false,
+  "nodes": 211,
+  "positive_leaves": 106,
+  "gram_excluded_leaves": 0,
+  "pending_boxes": 0,
+  "maxdepth": 9,
+  "minorant_nodes": 11,
+  "psd_pivots": [
+    [
+      "124811/40000000",
+      "7819988123/1560137500000000"
+    ],
+    [
+      "534088393/1000000000",
+      "88707974431/133522098250000000"
+    ],
+    [
+      "485247903/1000000000",
+      "14960879048769449/121311975750000000"
+    ],
+    [
+      "267996843/500000000"
+    ],
+    [
+      "156345531/1000000000"
+    ],
+    [
+      "12177549/100000000"
+    ],
+    [
+      "19431193/500000000"
+    ]
+  ],
+  "near_antipodal_delta": "1/80000",
+  "near_antipodal_dot_threshold": "-79999/80000",
+  "distance_lower": "469/500",
+  "epsilon": "1/200",
+  "near_antipodal_energy_lower": "8051419/312555",
+  "near_antipodal_loss": "2500/62511",
+  "seconds": 3.098280668258667
+}

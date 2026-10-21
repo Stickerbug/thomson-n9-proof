@@ -1,0 +1,298 @@
+{
+  "status": "INDEPENDENT_TWELVE_LOCAL_ARITHMETIC_PASS_CONDITIONAL_ON_EXACT_CONTACTS",
+  "elapsed_seconds": 86.69966144498903,
+  "process_exit_code": 0,
+  "component_test_exit_code": 0,
+  "interior_count": 9,
+  "boundary_count": 3,
+  "pending": [],
+  "pivot_count": 33,
+  "smallest_exact_pivot_lower": "1062168933439336694398392908692845225510326552163864709228346596165417089904457156014728771706554033971336738630453600795525587952367112321268127589358180604159730043018474888859760109060391/1140610154405548804660292901425072831223307126812139982644798129474818791802169346626478202829342849944660577393398601827672176180343859499563165329930553547062998668590066237520718548061650944",
+  "smallest_pivot_lower_display": 0.000931228719415449,
+  "boundary_Ru_lower_displays": [
+    0.006166617874557294,
+    0.00014570990671210974,
+    6.22653073426508e-08
+  ],
+  "all_source_boxes_exactly_original": true,
+  "all_source_hashes_correct": true,
+  "row_checks": {
+    "0": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "A",
+        "A",
+        "A"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "1": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "C",
+        "B",
+        "A"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "2": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "C",
+        "C",
+        "A"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "3": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "A",
+        "F",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "4": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "G",
+        "A",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "5": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "B",
+        "F",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "8": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "C",
+        "G",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "10": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "D",
+        "F",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "11": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "G",
+        "D",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 3,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807
+    },
+    "6": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "G",
+        "G",
+        "B"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 2,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807,
+      "expanded_hull_contains_entire_source_and_graph": true,
+      "strict_Ru_lower": "14067413932117624076429870709119937109248753986740080673598010862892434955281251389592055664200539354942659526354118763635684699579014346594128655839179984862718389890101237505796566270088679/2281220308811097609320585802850145662446614253624279965289596258949637583604338693252956405658685699889321154786797203655344352360687718999126330659861107094125997337180132475041437096123301888",
+      "Ru_lower_display": 0.006166617874557294
+    },
+    "7": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "C",
+        "F",
+        "F"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 2,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807,
+      "expanded_hull_contains_entire_source_and_graph": true,
+      "strict_Ru_lower": "664792796773270361969040005027902175540098868800267029749172406093803283308421074013342867085572920021759131327987325004649614767804200378651139496397651583174774788772732994834918195251397/4562440617622195218641171605700291324893228507248559930579192517899275167208677386505912811317371399778642309573594407310688704721375437998252661319722214188251994674360264950082874192246603776",
+      "Ru_lower_display": 0.00014570990671210974
+    },
+    "9": {
+      "status": "INDEPENDENT_LOCAL_FULL_SOURCEBOX_ARITHMETIC_PASS",
+      "labels": [
+        "D",
+        "D",
+        "D"
+      ],
+      "sourcebox_exactly_original": true,
+      "source_bindings_match": true,
+      "positive_pivot_count": 2,
+      "all_pivot_lower_bounds_strictly_positive": true,
+      "shifted_term_count": 807,
+      "expanded_hull_contains_entire_source_and_graph": true,
+      "strict_Ru_lower": "284081767288839522912361894523685489064666268334665044820062515538023259914631437522481627338067241324711775679565791989975925955174373963387070952159671832852760945284401104310660539163/4562440617622195218641171605700291324893228507248559930579192517899275167208677386505912811317371399778642309573594407310688704721375437998252661319722214188251994674360264950082874192246603776",
+      "Ru_lower_display": 6.22653073426508e-08
+    }
+  },
+  "previous_artifacts": {
+    "sharp_tree_completion.json": {
+      "checked_file_count": 10,
+      "all_unchanged": true
+    },
+    "independent_pair_reduction_completion.json": {
+      "checked_file_count": 5,
+      "all_unchanged": true
+    },
+    "independent_candidate_bounds_completion.json": {
+      "checked_file_count": 4,
+      "all_unchanged": true
+    },
+    "independent_psd_blocks_completion.json": {
+      "checked_file_count": 4,
+      "all_unchanged": true
+    },
+    "independent_contact_construction_completion.json": {
+      "checked_file_count": 59,
+      "all_unchanged": true
+    },
+    "independent_hermite_RH_completion.json": {
+      "checked_file_count": 5,
+      "all_unchanged": true
+    }
+  },
+  "all_previous_artifacts_unchanged": true,
+  "source_sha256": {
+    "d10_relative_normal_exact2026_locals.json": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+    "independent_kernel_refined_result.json": "25eed8b02a987716d4aa7a2cf752ba485846611dff82529548a809500efafe90"
+  },
+  "files": {
+    "independent_local_arithmetic.py": {
+      "sha256": "6c5963bda859307b1ece331115e26df9ff89d13e5dae13dc27bfc4718935d9ba",
+      "bytes": 10133
+    },
+    "independent_local_arithmetic_result.json": {
+      "sha256": "f84b67276971c9331fdcf28f8ad80070dbcb6169f4f190c2feefe7a27bc6b29a",
+      "bytes": 5739
+    },
+    "independent_local_arithmetic.log": {
+      "sha256": "9eb31bf6f453d5f536bd6e0600a4eed71d71abca9966127c80883875355ded12",
+      "bytes": 9166
+    },
+    "independent_local_component_tests.py": {
+      "sha256": "700459b3e8610c68add49b19dbaafc816b5db587363f5deecd4f95fb2533856b",
+      "bytes": 4500
+    },
+    "independent_local_component_tests.json": {
+      "sha256": "87bd48304f4fea89ee0d259f1fce66fbb4569f06a55e43d56229df9ff221005f",
+      "bytes": 1350
+    },
+    "README_independent_local_arithmetic.md": {
+      "sha256": "be9216439635b9cd93980d598bd621afb5b87c266ba0094fbda64b164d34f24b",
+      "bytes": 6643
+    },
+    "independent_local_00_AAA.json": {
+      "sha256": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5",
+      "bytes": 743071
+    },
+    "independent_local_01_CBA.json": {
+      "sha256": "9370f0f76e4ca1c945de39661c9d6d7908c4c31feec805c2d5ea02001612cb00",
+      "bytes": 743156
+    },
+    "independent_local_02_CCA.json": {
+      "sha256": "bcc1ebde610e5cb3e496b3a799b0da3ee0ef23ca9fd8c6f59b5bd5e7c6743943",
+      "bytes": 744207
+    },
+    "independent_local_03_AFF.json": {
+      "sha256": "59f76b8de023d04616ae1efb57dc9fb22892dfb04d42805519ade2157dc2d9fe",
+      "bytes": 743551
+    },
+    "independent_local_04_GAF.json": {
+      "sha256": "5ea3d7226c0ad28bba35074a54168e78f73978584f524044e0d308dd4d42c77b",
+      "bytes": 744134
+    },
+    "independent_local_05_BFF.json": {
+      "sha256": "206bb814ea78c19412f4f4b22eca6755788671bd0eed9d6004ecf03cd904cf66",
+      "bytes": 743204
+    },
+    "independent_local_08_CGF.json": {
+      "sha256": "bbde094a487a3d22fc7c7c2bc42f066ffb3010953f496ca098b82cdd2a91bed5",
+      "bytes": 744159
+    },
+    "independent_local_10_DFF.json": {
+      "sha256": "cc07b6aacafda071a260b20ecebb68adf841b17185ff24f799fb7210308a808d",
+      "bytes": 742396
+    },
+    "independent_local_11_GDF.json": {
+      "sha256": "48c2756ca908b86278689ebbb827b95d7eaee8258897a32bad58e1faf9b07d7b",
+      "bytes": 741938
+    },
+    "independent_local_06_GGB.json": {
+      "sha256": "ac880bffdd6e9ea7ce864278dcfc3fedbecae23030a45058b4b450c7d00b1110",
+      "bytes": 749243
+    },
+    "independent_local_07_CFF.json": {
+      "sha256": "6eea673d975d85e886e9d6e5d8eae60514e6ce18376c614383a499932994ab09",
+      "bytes": 749953
+    },
+    "independent_local_09_DDD.json": {
+      "sha256": "575ea3c4c887e858bc9072c79bfe8acaed9f32c2bc5c04f2c2f43cdfcdf222b9",
+      "bytes": 743852
+    }
+  },
+  "conditional_premises": [
+    "Exact45contact compatibility gives exact values and appropriate first derivatives",
+    "Exact confluent Hermite interpolation theorem; alternatively independently validated exact algebraic minorant construction"
+  ],
+  "no_full_Thomson_proof_claimed": true,
+  "Lean_installed": false
+}

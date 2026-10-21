@@ -1,0 +1,19 @@
+{
+  "target": "25.746",
+  "status": "certified",
+  "nodes": 313265,
+  "positive_leaves": 78476,
+  "excluded_leaves": 78157,
+  "pending": 0,
+  "maxdepth": 44,
+  "bits": 40,
+  "coefficient_bounds": [
+    -8350142221460,
+    6045615776113,
+    -4398046511104,
+    4398046511104
+  ],
+  "source": "three_point_d4_exact_25_745.json",
+  "logic": "Source rational PSD/minorant certificate plus residual constant shifted by -(target-25.745)/12; full Gram domain. Exact integer outward Bernstein. All initial coefficients abs<2^60, convex/outward averaging preserves extrema so int64 additions abs<2^61. Binary box endpoints exact because each axis depth<50.",
+  "seconds": 47.820778608322144
+}

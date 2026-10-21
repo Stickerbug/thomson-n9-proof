@@ -1,0 +1,97 @@
+{
+  "warning": "PROPOSAL ONLY; no global nonnegativity or strict bound claim",
+  "source_sha256": {
+    "/home/dsh/Thomson Problem/proof_work/nonsharp_d10_root25_7599205_v10.json": "6ebdebad61e4ba26f044b07b2ed56bcacdfe8c584b6007561bc17b2cd23b52d0",
+    "/home/dsh/Thomson Problem/proof_work/sharp_contact_refinement2026_results.json": "f95360aec45fe934b194ed1b94559530851391ea2bacf128f88f34642c21c4be",
+    "/home/dsh/Thomson Problem/proof_work/conditional_h27_certificate.json": "92ac0c78af04e39811f098c917a04789e29183555fdce98bc00e0f97bb6c35be",
+    "/home/dsh/Thomson Problem/proof_work/negative_valley_seed1_2026_summary.json": "ff7701808262e5e2391fda2a792d3310e230ffd2aeb7abd5c368b06de0652ad7"
+  },
+  "seed_iteration": 2,
+  "seed_trace": 660.6648846376025,
+  "seed_min_reduced_eigenvalue": 2.344369573299672e-06,
+  "seed_original_min_eigenvalue": -9.569023032370692e-15,
+  "seed_quantization": "symmetric 1e-14, diagonal shift at most1e-10",
+  "seed_diagonal_shift": "1/100000000000",
+  "seed_fraction_LDL_passed": true,
+  "domain": "full Gram PSD intersection [-1,.56]^3, no extra budget constraints",
+  "history": [
+    {
+      "theta": "1/2",
+      "target": "515199/20000",
+      "random_min_R": 3.1033424526199255e-06,
+      "random_negative_count": 0,
+      "boundary_min_R": 3.2760969243102226e-06,
+      "pool_min_R": 3.042259020855839e-06,
+      "observed_min_R_original_recurrence": 2.9993891930146788e-06,
+      "worst_point": [
+        -0.755399723159038,
+        -0.6961096742657686,
+        0.36062595304502076
+      ],
+      "worst_gram": 0.1940153650193157,
+      "compiled_recurrence_difference": 1.119243586700236e-14,
+      "DE_seconds": 0.45204531302442774,
+      "DE_evaluations": 7726,
+      "DE_status": "Optimization terminated successfully.",
+      "known_R": [
+        6.936665560828478e-06,
+        5.4482126117530384e-06,
+        3.859851090395628e-06,
+        0.000387284889267009,
+        0.0011073925830391523,
+        0.05646066880963585,
+        0.0036534945808004713,
+        0.007682579647461747
+      ],
+      "seconds": 9.82881770702079
+    }
+  ],
+  "proposal": "/home/dsh/Thomson Problem/proof_work/d10_convexmix2026_proposal.json",
+  "random_count": 50000,
+  "boundary_count": 10000,
+  "known_points": [
+    [
+      -0.7592207724988085,
+      -0.2921166354694738,
+      0.3293172392294345
+    ],
+    [
+      0.3464802927157662,
+      0.3464805531965182,
+      0.34648072472904085
+    ],
+    [
+      -0.07134886362384837,
+      0.3392793442065059,
+      0.3392793442065059
+    ],
+    [
+      -0.296937,
+      0.422535,
+      0.422535
+    ],
+    [
+      0.3727866847029806,
+      0.56,
+      -0.040144373353202034
+    ],
+    [
+      0.56,
+      0.56,
+      0.56
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -1.0,
+      -0.56,
+      0.56
+    ]
+  ],
+  "build_and_pool_seconds": 9.265886456996668,
+  "stop_reason": "positive numerical residual and exact PSD proposal exported",
+  "elapsed_seconds": 9.88334635301726
+}

@@ -1,0 +1,132 @@
+{
+  "status": "AAA_H00_ACTUAL_COORDINATE_DERIVATIVE_EXPORT_UNCOMPILED",
+  "source": {
+    "file": "independent_local_00_AAA.json",
+    "sha256": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5"
+  },
+  "source_bindings": {
+    "d10_relative_normal_exact2026_locals.json": "c97df856e866f0ec464c16948e506162e48697950e653984198a7558b8e3beec",
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+    "independent_kernel_refined_result.json": "25eed8b02a987716d4aa7a2cf752ba485846611dff82529548a809500efafe90"
+  },
+  "scope": "AAA H00 only; 807 original guarded terms, all other entries excluded",
+  "coefficient_terms": 807,
+  "nonzero_hessian_terms": 550,
+  "power_witnesses": 28,
+  "term_enclosure_witnesses": 807,
+  "sum_chunks": 34,
+  "chunk_size": 24,
+  "rounded_sum_equals_archived_H00": true,
+  "generated_lean": "formal/ThomsonNine/LocalSparseHessianAAA.lean",
+  "generated_lean_sha256": "a5cb5bced8242e05f8a5a32cf40dd31de0dd519db62991a05eb3b1bb0c7b429f",
+  "exporter_sha256": "4db77e71f581f5ebb70c0d48fe8b7696712e7c2afc58ccb225b7fd03c48a7e8b",
+  "theorem": "ThomsonNine.LocalSparseHessianAAA.actual_h00_mem",
+  "remaining_premises": [
+    "one fixed real coefficient family belongs to archived shifted intervals",
+    "evaluation point belongs to archived relative_sourcebox"
+  ],
+  "not_proved": [
+    "actual residual-to-shifted-polynomial identity and coefficient membership",
+    "exact contacts",
+    "other Hessian entries or boundary graph derivatives",
+    "n9 final theorem"
+  ],
+  "arithmetic_trust": "Rational literals and norm_num proof terms intended for Lean kernel checking; no native_decide",
+  "compilation": "not run by exporter; parent must compile separately",
+  "mode": "split",
+  "module_chunks": 8,
+  "chunk_blocks": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    [
+      17,
+      18,
+      19,
+      20
+    ],
+    [
+      21,
+      22,
+      23,
+      24
+    ],
+    [
+      25,
+      26,
+      27,
+      28
+    ],
+    [
+      29,
+      30,
+      31,
+      32,
+      33
+    ]
+  ],
+  "generated_files": [
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAABase.lean",
+      "sha256": "ad257b45ca8c0236b3fba7a23f559ed770d1e3810d00fc9cc204e2dda1c5d77b"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk00.lean",
+      "sha256": "233141eaef3719db2e93b68b50f09f8e760b3a47b42d1d92ae0d105e760026b1"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk01.lean",
+      "sha256": "26a8403b102060cb0c632bc9f183a8a3471b592747db930be9492847d2298dd3"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk02.lean",
+      "sha256": "96629eeab0c46eef6709596f5ab041c3945ecedebd9cc311b97941226a8225f5"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk03.lean",
+      "sha256": "475fa95254162d001bd26d5cd74f4fadc0ba30a4232f88e7e2c606139beb75a8"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk04.lean",
+      "sha256": "f15bbd4f64c83fd6fd043899176f1bf1c80309015792e98258f120ec1e055d27"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk05.lean",
+      "sha256": "686c808edbf0ff3451b3073c6c3a92f6fdf73884c9e2210e6481cb4c00ab39f1"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk06.lean",
+      "sha256": "daa90839ad28d05d835119d77a7d0542262f5df80d7e4415b84df3a8f864a799"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAAChunk07.lean",
+      "sha256": "8739c39850e6f28d4e265c72c7564ce45dbbbdb25f1951f1a11e711ba0915679"
+    },
+    {
+      "file": "formal/ThomsonNine/LocalSparseHessianAAA.lean",
+      "sha256": "a5cb5bced8242e05f8a5a32cf40dd31de0dd519db62991a05eb3b1bb0c7b429f"
+    }
+  ]
+}

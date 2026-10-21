@@ -1,0 +1,8 @@
+{
+  "claim": "For every -1<=t<=57/100, f(t)-h(t)<3/10000, for the saved rational h. Lower error >=0 follows from the prior full-domain minorant certificate.",
+  "epsilon": "3/10000",
+  "positive_bernstein_leaves": 1,
+  "nodes": 1,
+  "max_depth": 0,
+  "arithmetic": "Exact Fraction throughout"
+}

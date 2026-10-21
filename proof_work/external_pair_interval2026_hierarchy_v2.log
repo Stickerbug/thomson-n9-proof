@@ -1,0 +1,32 @@
+PREP 894 nodes 1786 seconds 6.534244790964294
+BLOCKS 200 frontier 198 {'split': 197, 'accept_inherited': 3} seconds 9.78391770698363
+BLOCKS 400 frontier 384 {'split': 390, 'accept_inherited': 10} seconds 16.241741143981926
+BLOCKS 600 frontier 568 {'split': 582, 'accept_inherited': 18} seconds 43.37705520197051
+BLOCKS 800 frontier 760 {'split': 778, 'accept_inherited': 22} seconds 90.87329581996892
+BLOCKS 1000 frontier 932 {'split': 964, 'accept_inherited': 36} seconds 146.04370674898382
+{
+  "status": "partial_hierarchical_low_pair_domain",
+  "processed_blocks": 1067,
+  "total_product_blocks": 2058,
+  "counts_blocks": {
+    "split": 1027,
+    "accept_inherited": 40,
+    "pending_budget": 991
+  },
+  "counts_ordered_pairs": {
+    "accept_inherited": 106124,
+    "pending_budget": 693112
+  },
+  "pending_ordered_pairs": 693112,
+  "elapsed_seconds": 178.1043510150048,
+  "prepare_seconds": 6.534244790964294,
+  "stopping_reason": "time_limit",
+  "stats": {
+    "created_nodes": 31381,
+    "resident_created_nodes": 1335,
+    "coarse_oracle_triples_skipped": 511,
+    "queries": 549,
+    "splits": 21518,
+    "cache_resets": 20
+  }
+}

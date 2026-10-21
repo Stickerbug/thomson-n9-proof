@@ -1,0 +1,387 @@
+"""Hybrid 48-bit int64 / 80-bit object conditional Gram-domain coverage.
+
+This module verifies only a polynomial interval and geometric coverage statement.
+It does not establish coefficient enclosures, symmetry of the unknown true R,
+local nonnegativity certificates, PSD, pair reduction, or any Thomson bound.
+No CLI or resume interface is supplied.
+"""
+if not __debug__:
+    raise RuntimeError('Conditional away replay requires assertions; do not use python -O.')
+from fractions import Fraction
+from hashlib import sha256
+from itertools import permutations
+from math import isfinite
+from pathlib import Path
+from time import monotonic
+import json
+from collections import OrderedDict
+import numpy as np
+from exact_tensor_bernstein import coefficients
+
+ROOT_BOX = ((Fraction(-1), Fraction(14, 25)),) * 3
+GRAM = {(0, 0, 0): Fraction(1), (1, 1, 1): Fraction(2),
+        (2, 0, 0): Fraction(-1), (0, 2, 0): Fraction(-1),
+        (0, 0, 2): Fraction(-1)}
+
+
+def _rational(value):
+    if isinstance(value, (float, np.floating, bool)):
+        raise TypeError('Exact rational input required; floating-point and bool inputs are rejected.')
+    return Fraction(value)
+
+
+def _center(value):
+    if len(value) != 3:
+        raise ValueError('center must contain three rational intervals')
+    ans = tuple(tuple(_rational(z) for z in pair) for pair in value)
+    if any(len(p) != 2 or p[0] > p[1] for p in ans):
+        raise ValueError('invalid center interval')
+    return ans
+
+
+def split_outward(tensor, axis, upper=False):
+    """Split integer-scaled tensor at 1/2; round each final coefficient outward.
+
+    Integer binomial sums are accumulated without intermediate rounding. This
+    preserves the same lower/upper enclosure under any subsequent subdivision.
+    """
+    assert tensor.dtype == object
+    a = np.moveaxis(tensor, axis, 0)
+    n = len(a) - 1
+    row = a.copy()
+    left, right = np.empty_like(a), np.empty_like(a)
+    left[0], right[0] = row[0], row[-1]
+    for j in range(1, n + 1):
+        row = row[:-1] + row[1:]
+        denominator = 1 << j
+        left[j] = -((-row[0]) // denominator) if upper else row[0] // denominator
+        right[j] = -((-row[-1]) // denominator) if upper else row[-1] // denominator
+    return np.moveaxis(left, 0, axis), np.moveaxis(right[::-1], 0, axis)
+
+
+def _normalize(poly_intervals, local_regions, boundary_multipliers):
+    poly = {}
+    for powers, interval in poly_intervals.items():
+        if len(powers) != 3 or any(type(n) is not int or n < 0 for n in powers):
+            raise ValueError('powers must be triples of nonnegative Python integers')
+        if len(interval) != 2:
+            raise ValueError('each coefficient requires a lower and an upper endpoint')
+        lo, hi = map(_rational, interval)
+        if lo > hi:
+            raise ValueError('coefficient interval is reversed')
+        poly[tuple(powers)] = (lo, hi)
+    local = []
+    for i, region in enumerate(local_regions):
+        center = _center(region['center'])
+        width = _rational(region['halfwidth'])
+        if width < 0:
+            raise ValueError('local halfwidth must be nonnegative')
+        # Intersection of the cubes for ALL possible exact centers; never midpoint +/- delta.
+        core = tuple((hi - width, lo + width) for lo, hi in center)
+        local.append({'id': str(region.get('id', i)), 'center': center,
+                      'halfwidth': width, 'core': core})
+    boundary = []
+    for i, item in enumerate(boundary_multipliers):
+        center = _center(item['centerI'])
+        lam = _rational(item['lambda'])
+        assert lam >= 0, 'boundary lambda must be nonnegative'
+        radius = _rational(item.get('activation_radius', Fraction(1, 20)))
+        if radius < 0:
+            raise ValueError('activation radius must be nonnegative')
+        activation = tuple((lo - radius, hi + radius) for lo, hi in center)
+        boundary.append({'id': str(item.get('id', i)), 'centerI': center,
+                         'lambda': lam, 'activation_radius': radius,
+                         'activation': activation})
+    return poly, local, boundary
+
+
+def _serial(obj):
+    if isinstance(obj, Fraction):
+        return str(obj)
+    if isinstance(obj, dict):
+        return {str(k): _serial(v) for k, v in obj.items()}
+    if isinstance(obj, (tuple, list)):
+        return [_serial(x) for x in obj]
+    return obj
+
+
+def _hash(obj):
+    return sha256(json.dumps(_serial(obj), sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+
+
+def _intersects(box, other):
+    return all(lo <= oh and ol <= hi for (lo, hi), (ol, oh) in zip(box, other))
+
+
+def _contained(box, other):
+    return all(ol <= lo <= hi <= oh for (lo, hi), (ol, oh) in zip(box, other))
+
+
+
+COARSE_BITS = 48
+FINE_BITS = 80
+SAFE_ABS = 1 << 60
+
+
+def coarsen80(tensor, upper=False):
+    """Outward-rescale in Python integers, assert safety BEFORE casting."""
+    assert tensor.dtype == object
+    divisor = 1 << (FINE_BITS - COARSE_BITS)
+    exact = -((-tensor) // divisor) if upper else tensor // divisor
+    assert int(exact.min()) > -SAFE_ABS and int(exact.max()) < SAFE_ABS, 'coarse tensor exceeds safe int64 range; refusing cast'
+    return exact.astype(np.int64)
+
+
+def split_int64(tensor, axis, upper=False):
+    """Stepwise outward de Casteljau; root bound proves all sums fit int64.
+
+    Every row entry stays strictly within +/-2^60 by monotone averaging.
+    Thus each sum plus the upper-rounding flag has magnitude <2^61+1.
+    """
+    assert tensor.dtype == np.int64
+    a = np.moveaxis(tensor, axis, 0)
+    n = len(a) - 1
+    row = a.copy()
+    left, right = np.empty_like(a), np.empty_like(a)
+    left[0], right[0] = row[0], row[-1]
+    for j in range(1, n + 1):
+        row = (row[:-1] + row[1:] + int(upper)) // 2
+        left[j], right[j] = row[0], row[-1]
+    return np.moveaxis(left, 0, axis), np.moveaxis(right[::-1], 0, axis)
+
+
+class RootReplay80:
+    """Reconstruct the SAME physical node from original 80-bit root bounds.
+
+    Cache entries are deterministic root replays, never rescaled coarse data.
+    All boundary tensors that intersect a cached prefix activation cube are
+    retained there, avoiding loss of an S needed by a later sibling replay.
+    """
+    def __init__(self, b, g, active, boundary, maxsize=64):
+        self.root = (b, g, active, ROOT_BOX, (0, 0, 0))
+        self.boundary = boundary
+        self.maxsize = maxsize
+        self.cache = OrderedDict()
+        self.calls = self.cache_hits = self.split_steps = 0
+
+    def __call__(self, path):
+        self.calls += 1
+        state, prefix = self.root, ''
+        for length in range(len(path), 0, -1):
+            key = path[:length]
+            if key in self.cache:
+                state, prefix = self.cache[key], key
+                self.cache.move_to_end(key)
+                self.cache_hits += 1
+                break
+        for char in path[len(prefix):]:
+            assert char in '01'
+            b, g, active, box, levels = state
+            side = int(char)
+            axis = min(range(3), key=lambda i: levels[i])
+            lo, hi = box[axis]
+            middle = (lo + hi) / 2
+            childbox = list(box)
+            childbox[axis] = (lo, middle) if side == 0 else (middle, hi)
+            childbox = tuple(childbox)
+            childlevels = list(levels)
+            childlevels[axis] += 1
+            childlevels = tuple(childlevels)
+            cb = split_outward(b, axis)[side]
+            cg = split_outward(g, axis, upper=True)[side]
+            cs = {}
+            for i, sb in active.items():
+                if _intersects(childbox, self.boundary[i]['activation']):
+                    cs[i] = split_outward(sb, axis)[side]
+            state = (cb, cg, cs, childbox, childlevels)
+            prefix += char
+            self.cache[prefix] = state
+            self.cache.move_to_end(prefix)
+            while len(self.cache) > self.maxsize:
+                self.cache.popitem(last=False)
+            self.split_steps += 1
+        return state
+
+
+def _terminal(b, g, active, box, local):
+    if any(box[i][0] > box[j][1] for i in range(3) for j in range(i + 1, 3)):
+        return 'ordered_disjoint', None, None
+    gram_max = int(g.max())
+    if gram_max < 0:
+        return 'gram_negative', None, gram_max
+    lower_min = int(b.min())
+    if lower_min >= 0:
+        return 'positive', None, lower_min
+    for region in local:
+        if _contained(box, region['core']):
+            return 'local_region', region['id'], None
+    for i, sb in active.items():
+        sb_min = int(sb.min())
+        if sb_min >= 0:
+            return 'boundary_multiplier', i, sb_min
+    return None, None, None
+
+
+def check_away(poly_intervals, local_regions, boundary_multipliers, budget, seconds, bits=80):
+    """Return conditional coverage or a complete list of unresolved physical boxes.
+
+    Preconditions supplied by the caller, NOT checked here:
+      * true R is symmetric and each monomial coefficient lies in poly_intervals;
+      * true R >= 0 on Gram >= 0 in each exact-center +/- local halfwidth cube.
+    A local terminal uses [center_hi-delta, center_lo+delta], contained in every
+    possible exact-center cube. Only u<=v<=t is traversed, using true symmetry.
+    The boundary lemma uses L-lambda*g >= 0 and lambda >= 0 on Gram >= 0.
+    seconds includes normalization/root transforms; transforms are not preempted.
+    budget counts visited DFS nodes; budget=0 retains the complete root as pending.
+    The return value contains JSON-compatible strings for all exact rationals.
+    """
+    start = monotonic()
+    assert bits == FINE_BITS, 'hybrid replay requires original 80-bit root tensors'
+    if type(budget) is not int or budget < 0:
+        raise ValueError('budget must be a nonnegative integer')
+    if type(bits) is not int or bits < 1:
+        raise ValueError('bits must be a positive integer')
+    if not isfinite(seconds) or seconds < 0:
+        raise ValueError('seconds must be finite and nonnegative')
+    poly, local, boundary = _normalize(poly_intervals, local_regions, boundary_multipliers)
+    canonical_inputs = {'poly_intervals': [[list(k), list(v)] for k, v in sorted(poly.items())],
+                        'local_regions': local, 'boundary_multipliers': boundary,
+                        'root_box': ROOT_BOX, 'bits': bits, 'coarse_bits': COARSE_BITS,
+                        'upgrade_min_axis_levels': 11, 'budget': budget, 'seconds': seconds}
+    midpoint, eps = {}, Fraction(0)
+    rounding_scale = 1 << 200
+    for powers, (lo, hi) in poly.items():
+        mid = Fraction(round((lo + hi) * rounding_scale / 2), rounding_scale)
+        if mid:
+            midpoint[powers] = mid
+        eps += max(mid - lo, hi - mid)
+    # True R symmetric => averaging p over all six permutations preserves eps error.
+    symmetric = {}
+    for permutation in permutations(range(3)):
+        for powers, value in midpoint.items():
+            key = tuple(powers[j] for j in permutation)
+            symmetric[key] = symmetric.get(key, Fraction(0)) + value / 6
+    lower = {k: v for k, v in symmetric.items() if v}
+    lower[(0, 0, 0)] = lower.get((0, 0, 0), Fraction(0)) - eps
+    lower = {k: v for k, v in lower.items() if v}
+    assert eps >= 0
+    degree = tuple(max((p[i] for p in lower), default=0) for i in range(3))
+    degrees = tuple(max(n, 2) for n in degree) if boundary else degree
+    B = coefficients(lower, ROOT_BOX, degrees=degrees, bits=bits)
+    G = coefficients(GRAM, ROOT_BOX, bits=bits, upper=True)
+    S = {}
+    for i, item in enumerate(boundary):
+        if not _intersects(ROOT_BOX, item['activation']):
+            continue
+        shifted = lower.copy()
+        for powers, value in GRAM.items():
+            shifted[powers] = shifted.get(powers, Fraction(0)) - item['lambda'] * value
+        S[i] = coefficients({k: v for k, v in shifted.items() if v}, ROOT_BOX,
+                            degrees=degrees, bits=bits)
+    for tensor in (B, G, *S.values()):
+        assert tensor.dtype == object
+    initial_bounds = {'R_lower_min': str(min(B.flat)), 'R_lower_max': str(max(B.flat)),
+                      'Gram_upper_min': str(min(G.flat)), 'Gram_upper_max': str(max(G.flat))}
+    # Each stack entry represents one leaf of an exact binary partition of ROOT_BOX.
+    replay80 = RootReplay80(B, G, S, boundary, maxsize=64)
+    B = coarsen80(B)
+    G = coarsen80(G, upper=True)
+    S = {i: coarsen80(sb) for i, sb in S.items()}
+    stack = [(B, G, S, ROOT_BOX, (0, 0, 0), '', COARSE_BITS)]
+    counts = {'positive': 0, 'gram_negative': 0, 'ordered_disjoint': 0,
+              'local_region': 0, 'boundary_multiplier': 0}
+    local_counts = {x['id']: 0 for x in local}
+    boundary_counts = {x['id']: 0 for x in boundary}
+    visited = splits = maxdepth = activation_dropped = 0
+    precision_upgrades = coarse_visited = fine_visited = 0
+    terminal_precision_counts = {str(COARSE_BITS): 0, str(FINE_BITS): 0}
+    transcript = sha256()
+    scale = 1 << bits
+    while stack and visited < budget and monotonic() - start < seconds:
+        b, g, active, box, levels, path, precision = stack.pop()
+        visited += 1
+        maxdepth = max(maxdepth, len(path))
+        coarse_visited += precision == COARSE_BITS
+        fine_visited += precision == FINE_BITS
+        kind, identifier, witness = _terminal(b, g, active, box, local)
+        if kind is None and precision == COARSE_BITS and min(levels) >= 11:
+            b, g, active, replay_box, replay_levels = replay80(path)
+            assert replay_box == box and replay_levels == levels
+            precision = FINE_BITS
+            precision_upgrades += 1
+            kind, identifier, witness = _terminal(b, g, active, box, local)
+        if kind == 'local_region':
+            local_counts[identifier] += 1
+        elif kind == 'boundary_multiplier':
+            identifier = boundary[identifier]['id']
+            boundary_counts[identifier] += 1
+        if kind is not None:
+            counts[kind] += 1
+            terminal_precision_counts[str(precision)] += 1
+            transcript.update(json.dumps([path, precision, kind, identifier, witness], separators=(',', ':')).encode() + b'\n')
+            continue
+        axis = min(range(3), key=lambda i: levels[i])
+        levels_child = list(levels)
+        levels_child[axis] += 1
+        levels_child = tuple(levels_child)
+        lo, hi = box[axis]
+        middle = (lo + hi) / 2
+        boxes = [list(box), list(box)]
+        boxes[0][axis], boxes[1][axis] = (lo, middle), (middle, hi)
+        boxes = [tuple(x) for x in boxes]
+        split_fn = split_int64 if precision == COARSE_BITS else split_outward
+        bs, gs = split_fn(b, axis), split_fn(g, axis, upper=True)
+        children_active = [{}, {}]
+        for i, sb in active.items():
+            eligible = [_intersects(child, boundary[i]['activation']) for child in boxes]
+            activation_dropped += sum(not x for x in eligible)
+            if any(eligible):
+                ss = split_fn(sb, axis)
+                for side in range(2):
+                    if eligible[side]:
+                        children_active[side][i] = ss[side]
+        # Right pushed first, so the traversal is left-first DFS. Both closed
+        # children cover their parent exactly and overlap only on their face.
+        for side in (1, 0):
+            stack.append((bs[side], gs[side], children_active[side], boxes[side],
+                          levels_child, path + str(side), precision))
+        splits += 1
+    terminals = sum(counts.values())
+    assert visited == terminals + splits
+    assert terminals + len(stack) == splits + 1
+    pending = [{'path': path, 'box': _serial(box), 'axis_split_counts': list(levels),
+                'active_boundary_ids': [boundary[i]['id'] for i in active], 'precision_bits': precision}
+               for _, _, active, box, levels, path, precision in reversed(stack)]
+    status = 'away_certified_given_local_regions' if not stack else 'incomplete_budget_or_time'
+    return {'status': status,
+            'conditional_only': True,
+            'premises_NOT_verified': ['true residual symmetric', 'true coefficient enclosure',
+                                      'every supplied exact-center local Gram nonnegativity certificate'],
+            'statement': 'R_true >= 0 on Gram PSD in [-1,14/25]^3, conditional on the explicitly listed premises' if not stack else 'No complete away-region conclusion; every unresolved partition leaf is retained',
+            'root_box': _serial(ROOT_BOX), 'ordered_wedge': 'u <= v <= t',
+            'degree': list(degree), 'tensor_degrees': list(degrees), 'bits': bits,
+            'midpoint_rounding_bits': 200, 'eps': str(eps),
+            'lower_polynomial_sha256': _hash([[list(p), v] for p, v in sorted(lower.items())]),
+            'parent_selfhash': sha256(Path(__file__).read_bytes()).hexdigest(),
+            'selfhash_scope': 'this engine module only; exact_tensor_bernstein dependency separately hashed',
+            'bernstein_dependency_sha256': sha256(Path(__import__('exact_tensor_bernstein').__file__).read_bytes()).hexdigest(),
+            'inputhash': _hash(canonical_inputs), 'terminal_transcript_sha256': transcript.hexdigest(),
+            'counts': counts, 'local_counts': local_counts, 'boundary_counts': boundary_counts,
+            'activation_dropped_children': activation_dropped,
+            'visited_nodes': visited, 'split_nodes': splits, 'terminal_leaves': terminals,
+            'pending_count': len(pending), 'pending': pending,
+            'root_coverage': {'binary_partition_complete': True,
+                              'terminal_plus_pending_equals_splits_plus_one': terminals + len(stack) == splits + 1,
+                              'visited_equals_terminal_plus_splits': visited == terminals + splits,
+                              'pending_boxes_complete': True},
+            'maxdepth': maxdepth, 'precision_upgrades': precision_upgrades,
+            'coarse_bits': COARSE_BITS, 'fine_bits': FINE_BITS, 'upgrade_min_axis_levels': 11,
+            'terminal_precision_counts': terminal_precision_counts,
+            'coarse_visited': coarse_visited, 'fine_visited': fine_visited,
+            'root80_replay_calls': replay80.calls, 'root80_replay_cache_hits': replay80.cache_hits,
+            'root80_replay_split_steps': replay80.split_steps, 'root80_cache_limit': 64,
+            'restart_from_full_root': True, 'frontier_resumed': False,
+            'local_regions': _serial(local),
+            'boundary_multipliers': _serial(boundary),
+            'initial_scaled_integer_bounds': initial_bounds,
+            'scale': str(scale), 'elapsed_seconds': monotonic() - start}

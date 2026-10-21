@@ -1,0 +1,77 @@
+{
+  "status": "INDEPENDENT_H27_RH_BINDING_PASS",
+  "bits": 640,
+  "elapsed_seconds": 3.4631046869326383,
+  "process_exit_code": 0,
+  "component_test_exit_code": 0,
+  "H_coefficient_count": 28,
+  "all_H_contained_in_original": true,
+  "R_coefficient_count": 807,
+  "all_R_contained_in_original": true,
+  "different_node_strict_divisor_count": 364,
+  "dependency_bindings": {
+    "H_F_root_intervals_identical": true,
+    "H_F_same_N_file": true,
+    "H_saved_input_hashes_correct": true
+  },
+  "previous_artifacts": {
+    "sharp_tree_completion.json": {
+      "count": 10,
+      "all_unchanged": true
+    },
+    "independent_pair_reduction_completion.json": {
+      "count": 5,
+      "all_unchanged": true
+    },
+    "independent_candidate_bounds_completion.json": {
+      "count": 4,
+      "all_unchanged": true
+    },
+    "independent_psd_blocks_completion.json": {
+      "count": 4,
+      "all_unchanged": true
+    },
+    "independent_contact_construction_completion.json": {
+      "count": 59,
+      "all_unchanged": true
+    }
+  },
+  "all_previous_artifacts_unchanged": true,
+  "source_sha256": {
+    "independent_kernel_refined_result.json": "25eed8b02a987716d4aa7a2cf752ba485846611dff82529548a809500efafe90",
+    "independent_coefficient_binding_result.json": "5c21029acab9bab672d6ca9e12d266a4253f7c1086ad7fb2b376953ab8eae970",
+    "d10_relative_normal_exact2026_coefficients.json": "860f37384e2b1d704956269b63acbf0b8ee6faad84e30f5857c8b2e3acb715a2"
+  },
+  "node_specification_file": {
+    "path": "/home/dsh/Thomson Problem/proof_work/contact_minorant_factor_v1.py",
+    "sha256": "78ae1a648c38fc08d286d05f8c0d93a177395fdbf758997e7ab78b50186c38ec"
+  },
+  "files": {
+    "independent_hermite_RH.py": {
+      "sha256": "f0a36a5df72c64c185230a2feaeeff3a77e6dc01b3668f04f80970f7376a2482",
+      "bytes": 5798
+    },
+    "independent_hermite_RH_result.json": {
+      "sha256": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+      "bytes": 1423898
+    },
+    "independent_hermite_RH.log": {
+      "sha256": "af40d63d18b71520fa9dc441ad3767f279fccd0885ec4e41a22d95b648a1be19",
+      "bytes": 2175
+    },
+    "independent_hermite_component_tests.json": {
+      "sha256": "215d0c67ebe51cf7ff6e9c5f5c06027646581e53bdb75610e3b0a43b0cd38932",
+      "bytes": 872
+    },
+    "README_independent_hermite_RH.md": {
+      "sha256": "69d7ca05e783477725f72f5e8bd07a8dfd198bfbabe924d49f41afec29392c5c",
+      "bytes": 4852
+    }
+  },
+  "remaining_obligations": [
+    "45contact rank33/W exact compatibility",
+    "12independent local checks",
+    "independent main tree leaf checks"
+  ],
+  "Lean_installed": false
+}

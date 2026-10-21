@@ -1,0 +1,23 @@
+{
+  "status": "INTEGER640_EXTENDED_ENDPOINT_EQUIVALENCE_PASS",
+  "seed": 641,
+  "cases": 206,
+  "comparisons_by_operation": {
+    "reciprocal": 91,
+    "pow": 1236,
+    "sqrt": 52,
+    "add": 1236,
+    "sub": 1236,
+    "mul": 1236
+  },
+  "covers": [
+    "negative reciprocal",
+    "interval touching zero",
+    "interval straddling zero",
+    "exact zero",
+    "subulp dyadic input",
+    "wide signed rational intervals",
+    "powers 0,1,2,3,4,7",
+    "sqrt including zero"
+  ]
+}

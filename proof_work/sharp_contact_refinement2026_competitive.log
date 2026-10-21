@@ -1,0 +1,68 @@
+BUILD competitive seconds 17.974070072174072 fullbox_worst_C -0.0017373224042854041224612638554518677846230386351644043948962785528653326480005553
+LOCALS [{'point': [-0.759220762336624, -0.29211600772137486, 0.32931701954562287], 'R_compiled': -7.737654252104598e-06, 'R_actual': -7.73765424932904e-06, 'constraint_values': [0.3758745842903279, 0.030367191162598905, 0.4671047546152492, 0.6214330272669977], 'success': True, 'message': 'Optimization terminated successfully'}, {'point': [-0.7592206637966461, -0.2921169455638921, 0.3293172485175872], 'R_compiled': -7.737654253991977e-06, 'R_actual': -7.737654247552683e-06, 'constraint_values': [0.37587458676155255, 0.030367192962776506, 0.467103718232754, 0.6214341940814794], 'success': True, 'message': 'Optimization terminated successfully'}] seconds 20.74887490272522
+FINAL_COMPETITIVE {
+  "best_strict_feasible": {
+    "point": [
+      -0.759220762336624,
+      -0.29211600772137486,
+      0.32931701954562287
+    ],
+    "R_actual": -7.73765424932904e-06,
+    "constraint_values": [
+      0.3758745842903279,
+      0.030367191162598905,
+      0.4671047546152492,
+      0.6214330272669977
+    ],
+    "direct_original_A_polish": true,
+    "C_decimal_80digit": "0.030367191162598904809916182441277837010704396561260660049144365491641246312775207",
+    "R_gram_decimal_80digit": {
+      "point_decimal": [
+        "-0.759220762336624",
+        "-0.29211600772137486",
+        "0.32931701954562287"
+      ],
+      "R_decimal_80digit": "-0.0000077376542507240858555040745229768330183647287001196750746148410267713792524346964",
+      "gram_decimal_80digit": "0.3758745842903280841186196845880507300501580825536",
+      "precision_digits": 80,
+      "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+    }
+  },
+  "best_numeric": {
+    "point": [
+      -0.759220762336624,
+      -0.29211600772137486,
+      0.32931701954562287
+    ],
+    "R_compiled": -7.737654252104598e-06,
+    "R_actual": -7.73765424932904e-06,
+    "constraint_values": [
+      0.3758745842903279,
+      0.030367191162598905,
+      0.4671047546152492,
+      0.6214330272669977
+    ],
+    "success": true,
+    "message": "Optimization terminated successfully"
+  },
+  "DE": {
+    "point": [
+      -0.7592207777703155,
+      -0.29211659038274473,
+      0.32931708717908137
+    ],
+    "R_compiled": -7.7376542543528e-06,
+    "R_actual": -7.737654247996772e-06,
+    "constraint_values": [
+      0.3758745002277657,
+      0.030367192815112794,
+      0.46710418738757076,
+      0.6214336775618261
+    ],
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "iterations": 85,
+    "evaluations": 86
+  },
+  "elapsed_seconds": 22.16434931755066
+}

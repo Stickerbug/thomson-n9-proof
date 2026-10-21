@@ -1,0 +1,31 @@
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Warning: your project pins different versions of some dependencies than Mathlib.
+This will cause `lake exe cache get` to compute wrong hashes.
+
+  plausible:
+    project: path:.lake/pinned_sources/plausible
+    mathlib: 118aa17ee846
+  LeanSearchClient:
+    project: path:.lake/pinned_sources/LeanSearchClient
+    mathlib: ddf04cf3949f
+  importGraph:
+    project: path:.lake/pinned_sources/importGraph
+    mathlib: e928b7254487
+  proofwidgets:
+    project: path:.lake/pinned_sources/proofwidgets
+    mathlib: 106ff4fafc74
+  aesop:
+    project: path:.lake/pinned_sources/aesop
+    mathlib: 355695d523e4
+  Qq:
+    project: path:.lake/pinned_sources/Qq
+    mathlib: 6a489d9af5d0
+  batteries:
+    project: path:.lake/pinned_sources/batteries
+    mathlib: f2effa3d803f
+  Cli:
+    project: path:.lake/pinned_sources/Cli
+    mathlib: e92c9f15fdfa
+
+Some mismatched dependencies come transitively from other packages in your lakefile. Try putting `require mathlib` last in your lakefile so that Mathlib's versions take precedence, then run `lake update`.

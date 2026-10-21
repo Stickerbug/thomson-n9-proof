@@ -1,0 +1,5 @@
+=== 02:44:43 building DistanceValues ===
+ThomsonNine/DistanceValues.lean:46:25: error: expected token
+ThomsonNine/DistanceValues.lean:51:14: error: expected token
+=== FAIL DistanceValues ===
+=== ALL DONE 02:46:12 ===

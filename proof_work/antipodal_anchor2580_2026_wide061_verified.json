@@ -1,0 +1,46 @@
+{
+  "status": "certified",
+  "target": "1289/50",
+  "source": "antipodal_anchor_exact_export.json",
+  "nodes": 89,
+  "positive_leaves": 42,
+  "excluded_leaves": 3,
+  "pending": 0,
+  "maxdepth": 9,
+  "bits": 48,
+  "initial_coefficient_bounds": [
+    -7407595098192,
+    26888029230993,
+    -418947355336140,
+    651389391103801
+  ],
+  "minorant_nodes": 11,
+  "psd_pivots": [
+    [
+      "124811/40000000",
+      "7819988123/1560137500000000"
+    ],
+    [
+      "534088393/1000000000",
+      "88707974431/133522098250000000"
+    ],
+    [
+      "485247903/1000000000",
+      "14960879048769449/121311975750000000"
+    ],
+    [
+      "267996843/500000000"
+    ],
+    [
+      "156345531/1000000000"
+    ],
+    [
+      "12177549/100000000"
+    ],
+    [
+      "19431193/500000000"
+    ]
+  ],
+  "seconds": 1.4466440677642822,
+  "claim": "Any configuration containing an antipodal pair with remaining z,w in [-.61,.61] and all remaining pair dot products <=.57 has Coulomb energy >=25.78. This wider axial box is intended for stationary-minimizer arc displacement; no unrestricted competitive transfer asserted."
+}

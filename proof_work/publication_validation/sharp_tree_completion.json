@@ -1,0 +1,61 @@
+{
+  "status": "CONDITIONAL_SHARP_CLOSED",
+  "process_exit_code": 0,
+  "initial_shell_python_missing_exit_code": 127,
+  "recovered_interpreter": "/usr/bin/python3",
+  "root_invocations": 1,
+  "root_elapsed_seconds": 91.73774425697047,
+  "selfcheck_elapsed_seconds": 56.89282707509119,
+  "total_driver_seconds": 150.33032081008423,
+  "visited_nodes": 136125,
+  "split_nodes": 68062,
+  "leaf_nodes": 68063,
+  "pending_count": 0,
+  "frozen_sources_unchanged": true,
+  "files": {
+    "sharp_tree_export.py": {
+      "sha256": "a388fdd01b89195844cfa259090d0c7b909e164ba92fa09774f45c167502409c",
+      "bytes": 9146
+    },
+    "sharp_tree_engine_instrumented.py": {
+      "sha256": "a803e146c160546271a12a4042ec967c178272fce0f664e93eb609c8417ce79b",
+      "bytes": 14047
+    },
+    "sharp_tree_instrumentation.patch": {
+      "sha256": "604008ca201941377431a2eb32b9e97d694358ea13da3d2abc6238bdb95ef554",
+      "bytes": 10093
+    },
+    "sharp_root_tree.jsonl": {
+      "sha256": "4712313969755f9fb5126b7a95ced989db5e16710ccddffee5dad1cf91776c12",
+      "bytes": 33256808
+    },
+    "sharp_root_inputs.json": {
+      "sha256": "3dd4ba639e78cabaa2c3a8182db3724545751ade50635e6d542067338b281066",
+      "bytes": 467331
+    },
+    "sharp_tree_metadata.json": {
+      "sha256": "2a0541d2099379d943416c4762c7e6d9ce832db21b979fdb5c927974fb7f4cb8",
+      "bytes": 1784
+    },
+    "sharp_tree_result.json": {
+      "sha256": "97fb4415aba0c7b59b27c2113ff280275fa4cae10f500dfd53ac5b7f981078a6",
+      "bytes": 471380
+    },
+    "sharp_tree_selfcheck.json": {
+      "sha256": "270030941b6dd41488515c49c7c214de967708a968f3ac5344c7b0c7919c17d9",
+      "bytes": 922
+    },
+    "sharp_tree_export.log": {
+      "sha256": "6d39e52409397e53a620edf4782a92b912dfcddc968922b7fbb698ea44a95572",
+      "bytes": 3556
+    },
+    "README_tree_export.md": {
+      "sha256": "bb53958d6f02a0e069a5bfb5a54bdc7ed7723038dea7e31fa898fac026a6aafd",
+      "bytes": 5410
+    }
+  },
+  "root_inputs_canonical_sha256": "39b8f9336b863708472534a94ed499b41e8a2274916274327c2da48b0f9273cc",
+  "leaf_transcript_sha256": "22cb4c8b935bf04c1eb71307dd8b84b6dbb6fd88d1da167b5aa460338e388a0b",
+  "conditional_only": true,
+  "independent_leaf_witness_checker_performed_by_exporter": false
+}

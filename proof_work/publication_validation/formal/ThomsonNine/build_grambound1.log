@@ -1,0 +1,119 @@
+=== 03:31:56 building GramBound ===
+ThomsonNine/GramBound.lean:31:45: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:31:60: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:31:75: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:32:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:32:25: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:32:36: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:33:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:34:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:35:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:36:19: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:36:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub R3 R3 ?m.87
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:36:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:36:34: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub R3 R3 ?m.98
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:36:63: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:32:49: error: unsolved goals
+R3 : Type u_1
+a b c : R3
+ha : sorry = 1
+hb : sorry = 1
+hc : sorry = 1
+haa : sorry = 1
+hbb : sorry = 1
+hcc : sorry = 1
+⊢ 0 ≤ gram sorry sorry sorry
+ThomsonNine/GramBound.lean:55:47: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:55:62: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:56:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:57:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  SeminormedAddCommGroup R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:64:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:63:56: error: Function expected at
+  SphereConfig
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  9
+
+Hint: The identifier `SphereConfig` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+ThomsonNine/GramBound.lean:70:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:70:29: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:70:44: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/GramBound.lean:69:58: error: Function expected at
+  SphereConfig
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  9
+
+Hint: The identifier `SphereConfig` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+=== FAIL GramBound ===
+=== ALL DONE 03:33:52 ===

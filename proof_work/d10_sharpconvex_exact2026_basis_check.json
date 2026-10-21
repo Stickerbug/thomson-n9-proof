@@ -1,0 +1,121 @@
+{
+  "source_sha256": "099e143bb86171f6292ef19ff7ae051510c76f0585e42bdcada7c866f46b4929",
+  "comparisons": [
+    [
+      {
+        "k": 0,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 1,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 2,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 3,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 4,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 5,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 6,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 7,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 8,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 9,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 10,
+        "equal": true,
+        "max_difference": 0.0
+      }
+    ],
+    [
+      {
+        "k": 0,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 1,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 2,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 3,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 4,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 5,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 6,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 7,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 8,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 9,
+        "equal": true,
+        "max_difference": 0.0
+      },
+      {
+        "k": 10,
+        "equal": true,
+        "max_difference": 0.0
+      }
+    ]
+  ],
+  "all_bases_identical": true,
+  "consequence": "If identical, coordinatewise rational combination of190 seed B entries needs no projection. True-root basis remains archived rationalT1 analytic construction."
+}

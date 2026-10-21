@@ -1,0 +1,25 @@
+=== 06:02:01 building PairDeriv ===
+ThomsonNine/PairDeriv.lean:32:24: error: Application type mismatch: The argument
+  LT.lt.ne' hxpos
+has type
+  ‖x‖ ≠ 0
+but is expected to have type
+  ‖x + 0 • v‖ ≠ 0
+in the application
+  pow_ne_zero 2 (LT.lt.ne' hxpos)
+ThomsonNine/PairDeriv.lean:50:4: error: Tactic `rfl` failed: The left-hand side
+  -⟪x, v⟫_ℝ / ‖x‖ ^ 3
+is not definitionally equal to the right-hand side
+  -(⟪x, v⟫_ℝ / ‖x‖) / ‖x + 0 • v‖ ^ 2
+
+case e'_9
+x v : R3
+hx : x ≠ 0
+hxpos : 0 < ‖x‖
+hn : HasDerivAt (fun t => ‖x + t • v‖) (⟪x, v⟫_ℝ / ‖x‖) 0
+h0 : (fun t => ‖x + t • v‖) 0 ≠ 0
+hinv : HasDerivAt (fun t => ‖x + t • v‖)⁻¹ (-(⟪x, v⟫_ℝ / ‖x‖) / ‖x + 0 • v‖ ^ 2) 0
+⊢ -⟪x, v⟫_ℝ / ‖x‖ ^ 3 = -(⟪x, v⟫_ℝ / ‖x‖) / ‖x + 0 • v‖ ^ 2
+ThomsonNine/PairDeriv.lean:51:2: error: No goals to be solved
+=== FAIL PairDeriv ===
+=== ALL DONE 06:03:30 ===

@@ -1,0 +1,496 @@
+{
+  "warning": "NUMERICAL DISCOVERY ONLY. Rational r0 is not true stationary root. Fixed decimal residual intervals prove only those saved kernels fail nonnegativity. No global Thomson proof or family infeasibility.",
+  "source_results": "/home/dsh/Thomson Problem/proof_work/sharp_contact_refinement2026_batch3_results.json",
+  "source_results_sha256": "8f9c1a2122537de3183859314f5ea6e7547ed0076fb837a8a3634d61dda0cf9b",
+  "runtime_stop": {
+    "job": "bash-602",
+    "status": "killed SIGTERM after two validated rounds",
+    "completed_solve_rounds": 2,
+    "third_returned_iterate": false,
+    "reason": "Two consecutive strengthened-domain residuals failed to improve the first PSD seed competitive residual. Manual stop follows parent instruction.",
+    "baseline_R": -7.73765424932904e-06,
+    "observed_R": [
+      -1.1937226343905483e-05,
+      -4.071769757579835e-05
+    ],
+    "source_process_difference": "Launched process initialized best_score from the old full-box residual -0.000404807..., so stored stagnation counts are 0,1. Source was corrected after launch to first competitive residual. Manual corrected counts are 1,2. Constraints, objective, seeds and saved iterates were unchanged.",
+    "pool_after_last_round": "Not reconstructed after cancellation; each solve pool_count and all active_points are preserved in source_results."
+  },
+  "settings": {
+    "solver": "CLARABEL",
+    "tol_gap_abs": 1e-10,
+    "tol_gap_rel": 1e-10,
+    "tol_feas": 1e-10,
+    "max_iter": 350,
+    "time_limit": 90,
+    "warm_start": true
+  },
+  "objective": "tau+1e-9*trace, scaled by1e6",
+  "trace_cap": 2000,
+  "PSD_margin": 1e-06,
+  "internal_Hessian_margin": 1e-06,
+  "active_limit": 3500,
+  "contact_rank": 32,
+  "contact_plus_tangent_rank": 33,
+  "unknowns": 190,
+  "nullities": [
+    9,
+    9,
+    7,
+    7,
+    5,
+    5,
+    3,
+    3,
+    1,
+    1,
+    0
+  ],
+  "initial_pool_count": 24954,
+  "best_completed_batch3_iteration": 0,
+  "best_completed_batch3_R": -1.1937226343905483e-05,
+  "all_jobs_collected": true,
+  "job_receipts": {
+    "bash-516": "exit2 initial missing diagnostics file due write-backend symlink issue",
+    "bash-524": "exit0",
+    "bash-534": "exit0",
+    "bash-539": "exit0",
+    "bash-546": "exit0",
+    "bash-550": "exit0",
+    "bash-556": "exit0",
+    "bash-569": "exit0",
+    "bash-602": "SIGTERM manually stopped after two completed validation rounds",
+    "bash-606": "exit0",
+    "bash-608": "exit0",
+    "bash-620": "exit0 archive-only; collected with job_output"
+  },
+  "history_metrics": [
+    {
+      "iteration": 0,
+      "active_count": 3500,
+      "pool_count": 24954,
+      "min_active_joint_budget": -2.9563157477596747e-14,
+      "min_active_C": -2.9563157477596747e-14,
+      "min_active_Ckernel": 5.489419747564331e-12,
+      "min_active_Gram": -1.7341683644644945e-13,
+      "solver_error": null,
+      "solve_wall_seconds": 29.161821603775024,
+      "solver_precision": {
+        "cvxpy_status": "optimal_inaccurate",
+        "objective": 0.014957977195875976,
+        "num_iters": 38,
+        "solve_time": 22.474721873,
+        "status": "AlmostSolved",
+        "iterations": 38,
+        "res_primal": 9.429719279211867e-12,
+        "res_dual": 1.1976578394160945e-09,
+        "gap_abs": 5.697201251216033e-07,
+        "gap_rel": 5.697201251216033e-07,
+        "cost_primal": 0.01436519851841145,
+        "cost_dual": 0.014364628798286328
+      },
+      "tau": 0.0,
+      "trace": 14.957977195875976,
+      "min_B_eigenvalue": 9.956139173715375e-07,
+      "min_original_A_eigenvalue": -4.305095545576787e-16,
+      "block_eigenvalues": {
+        "0": [
+          9.971047526400914e-07,
+          9.99268947374569e-07,
+          1.0195752816698146e-06,
+          1.0521929370134487e-06,
+          1.1096315647576691e-06,
+          1.1294002550690424e-06,
+          1.2187130741910261e-06,
+          0.6406459883663321,
+          2.1593146225778845
+        ],
+        "1": [
+          9.965604840547968e-07,
+          1.0011235184113541e-06,
+          1.0091677028503895e-06,
+          1.086280086010687e-06,
+          1.186420429248368e-06,
+          0.028533774171712326,
+          0.9508065687548013,
+          1.2615868185063825,
+          3.5029881270877956
+        ],
+        "2": [
+          9.956139173715375e-07,
+          1.0057777106082878e-06,
+          1.009901346465648e-06,
+          1.0549300002699888e-06,
+          1.103765226880757e-06,
+          0.2495697577026689,
+          1.6280864433937352
+        ],
+        "3": [
+          9.964771242746777e-07,
+          9.98897728055452e-07,
+          1.0051436223273763e-06,
+          1.2380032635604956e-06,
+          0.220897889827593,
+          0.5883387333420546,
+          1.0571196456468526
+        ],
+        "4": [
+          1.0107662367080315e-06,
+          1.0424111404731826e-06,
+          0.11062320897088128,
+          0.1388358058263578,
+          0.8043487730378034
+        ],
+        "5": [
+          9.965905725632306e-07,
+          9.993155056569746e-07,
+          1.0083552065667206e-06,
+          0.2201442051316931,
+          1.2058138587933882
+        ],
+        "6": [
+          9.987277855616019e-07,
+          0.079466507808905,
+          0.0969338498211596
+        ],
+        "7": [
+          9.98924760870612e-07,
+          9.994449888990398e-07,
+          0.013890349795702518
+        ],
+        "8": [
+          9.994033862391338e-07
+        ],
+        "9": [
+          9.994237177915477e-07
+        ]
+      },
+      "contact_max_error": 4.496403249731884e-15,
+      "boundary_tangent_max_error": 1.5327923706150874e-15,
+      "internal_Hessian_min_eigenvalue": 9.97310416980448e-07,
+      "active_min_R_compiled": -1.1248929010498898e-09,
+      "boundary_jets": [
+        {
+          "index": 3,
+          "lambda": 9.05842780303232e-10,
+          "tangent_gradient": [
+            9.856058367930519e-16,
+            8.745835343822351e-16
+          ],
+          "curvature_corrected_Hessian_eigenvalues": [
+            -3.78176088153541e-09,
+            0.1550038480711569
+          ]
+        },
+        {
+          "index": 4,
+          "lambda": 0.004191766357131836,
+          "tangent_gradient": [
+            6.043943556524266e-16,
+            -1.2141492672536747e-16
+          ],
+          "curvature_corrected_Hessian_eigenvalues": [
+            5.977338376660534e-06,
+            0.15054462193055956
+          ]
+        },
+        {
+          "index": 7,
+          "lambda": 2.959104185888221e-05,
+          "tangent_gradient": [
+            1.6727872801024865e-15,
+            -1.7689024021696043e-15
+          ],
+          "curvature_corrected_Hessian_eigenvalues": [
+            0.01685098743100574,
+            0.01685098743102632
+          ]
+        }
+      ],
+      "full_previous_training_original_A_audit": {
+        "count": 14031,
+        "competitive_count": 5796,
+        "competitive_min_R": -7.825165182051563e-06,
+        "competitive_worst_point": [
+          -0.1517227377439,
+          0.3105540240666,
+          0.31056105561
+        ],
+        "noncompetitive_count": 8235,
+        "noncompetitive_min_R_diagnostic_only": -0.03131425198178056,
+        "noncompetitive_worst_point_diagnostic_only": [
+          0.56,
+          0.56,
+          0.56
+        ]
+      },
+      "key_R_actual": 2.108669657552298e-06,
+      "previous_valley_R_actual": 7.781933240413874e-06,
+      "elapsed_seconds": 220.58680200576782,
+      "consecutive_no_improvement": 0,
+      "strict_negative_point": {
+        "point": [
+          -0.9655589353845775,
+          -0.4069479195173,
+          0.5089797406978045
+        ],
+        "R_actual": -1.1937226321728778e-05,
+        "constraints": [
+          0.043018015119139275,
+          8.895176262235793e-13,
+          0.0002535405086445913,
+          0.5586110158672775,
+          0.9159276602151045
+        ],
+        "C_decimal_80digit": "0.00000000000088949954051026418362954311402343583121949655777455058273667613514527058383709051",
+        "Ckernel_decimal_80digit": "0.00025354050864459105625697874075515464759509968261587200738278842545965770002955258",
+        "Ckernel_exact_fraction": "102088893078724113179795612185373583266564830002670312709151266309677836467016241103344457947289236548184961257409444445715118239898214890624913751983793489504639298796340731931099946798370826851587472645064335301243684340288410178247841857581413416141425370576783283711223570976120680989518282777589708330964674717131752413924761141455069578478384387994473766103667348753287803966710408278310062873424573203835604902168906244508240192049822560143567336777575802301/402653184000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "R_gram_decimal_80digit": {
+          "point_decimal": [
+            "-0.9655589353845775",
+            "-0.4069479195173",
+            "0.5089797406978045"
+          ],
+          "R_decimal_80digit": "-0.0000119372263220070572196568506623541336608012999448564705751939907078888967181392",
+          "gram_decimal_80digit": "0.043018015119139404884649889512619246490666749999999999999999999999999999999999999",
+          "precision_digits": 80,
+          "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+        }
+      },
+      "validation_summary": {
+        "random_competitive_count_original_A": 10000,
+        "boundary_competitive_count": 1500,
+        "total_scan_count": 36454,
+        "random_min_R_original_A": -5.004558678189941e-06,
+        "random_compiled_vs_original_max_error": 4.9960036108132044e-15,
+        "local_seeds": 79,
+        "direct_original_A_polishes": 5,
+        "elapsed_seconds": 75.87477278709412
+      },
+      "c": 2.7368685955222625,
+      "F111": 4.721624409998214,
+      "independent_actual_min_R": -1.1937226343905483e-05,
+      "manual_correct_competitive_stagnation_count": 1
+    },
+    {
+      "iteration": 1,
+      "active_count": 3500,
+      "pool_count": 36753,
+      "min_active_joint_budget": -2.9563157477596747e-14,
+      "min_active_C": -2.9563157477596747e-14,
+      "min_active_Ckernel": 5.489419747564331e-12,
+      "min_active_Gram": -1.7641443861293737e-13,
+      "solver_error": null,
+      "solve_wall_seconds": 31.319194316864014,
+      "solver_precision": {
+        "cvxpy_status": "optimal_inaccurate",
+        "objective": 0.015435858233645215,
+        "num_iters": 37,
+        "solve_time": 23.900855212,
+        "status": "AlmostSolved",
+        "iterations": 37,
+        "res_primal": 1.1406724130750165e-11,
+        "res_dual": 1.322895738907982e-09,
+        "gap_abs": 7.044852214175418e-07,
+        "gap_rel": 7.044852214175418e-07,
+        "cost_primal": 0.014843078543728676,
+        "cost_dual": 0.014842374058507258
+      },
+      "tau": 0.0,
+      "trace": 15.435858233645215,
+      "min_B_eigenvalue": 9.94919233844734e-07,
+      "min_original_A_eigenvalue": -2.0015008100245552e-16,
+      "block_eigenvalues": {
+        "0": [
+          9.965597258350365e-07,
+          1.000222422299084e-06,
+          1.0249382142077861e-06,
+          1.0555374018139668e-06,
+          1.1264488819015644e-06,
+          1.1889066870283497e-06,
+          1.2169345963519946e-06,
+          0.595142370368958,
+          2.284216939482118
+        ],
+        "1": [
+          9.95907033235877e-07,
+          1.0030423944890906e-06,
+          1.0187770486571778e-06,
+          1.1091075848220437e-06,
+          1.2826985595608868e-06,
+          0.03632695725878753,
+          0.975433070349385,
+          1.3358993766774163,
+          3.6918737930490964
+        ],
+        "2": [
+          9.94919233844734e-07,
+          1.0053164627885156e-06,
+          1.0160195066825249e-06,
+          1.0977028250608823e-06,
+          1.1297606402680551e-06,
+          0.1942044044153148,
+          1.730385724758914
+        ],
+        "3": [
+          9.959039376804894e-07,
+          1.0020583938584762e-06,
+          1.015801638197913e-06,
+          1.1755084352256106e-06,
+          0.2097595325410917,
+          0.5553755060996325,
+          1.1056530322877247
+        ],
+        "4": [
+          1.0135786080654011e-06,
+          1.031568310806285e-06,
+          0.09744026504594364,
+          0.13748293608382392,
+          0.8339574849221754
+        ],
+        "5": [
+          9.962457011197384e-07,
+          9.98538277874653e-07,
+          1.0641523026738034e-06,
+          0.23724595632094003,
+          1.2186173486940999
+        ],
+        "6": [
+          1.0006190232358454e-06,
+          0.0886837731441856,
+          0.09356329857751793
+        ],
+        "7": [
+          9.987347801029317e-07,
+          9.99163076424647e-07,
+          0.014563910284427608
+        ],
+        "8": [
+          9.992981098751186e-07
+        ],
+        "9": [
+          9.993138495763276e-07
+        ]
+      },
+      "contact_max_error": 3.608224830031759e-15,
+      "boundary_tangent_max_error": 1.7763568394002505e-15,
+      "internal_Hessian_min_eigenvalue": 0.00030555445566936724,
+      "active_min_R_compiled": -3.8295505655483453e-10,
+      "boundary_jets": [
+        {
+          "index": 3,
+          "lambda": 3.925802836936795e-10,
+          "tangent_gradient": [
+            1.6182281755687606e-15,
+            1.396183570656654e-15
+          ],
+          "curvature_corrected_Hessian_eigenvalues": [
+            -3.870085966558348e-09,
+            0.1395771149019296
+          ]
+        },
+        {
+          "index": 4,
+          "lambda": 0.0052741900025380485,
+          "tangent_gradient": [
+            2.0570378008450917e-16,
+            4.8303277563228195e-16
+          ],
+          "curvature_corrected_Hessian_eigenvalues": [
+            0.0003369614631946704,
+            0.11542772698531198
+          ]
+        },
+        {
+          "index": 7,
+          "lambda": 3.4913908350839605e-08,
+          "tangent_gradient": [
+            1.7626332124592005e-15,
+            -1.345991258145599e-15
+          ],
+          "curvature_corrected_Hessian_eigenvalues": [
+            0.015023405865875824,
+            0.01502340586589535
+          ]
+        }
+      ],
+      "full_previous_training_original_A_audit": {
+        "count": 14031,
+        "competitive_count": 5796,
+        "competitive_min_R": -3.9964733324016066e-05,
+        "competitive_worst_point": [
+          -0.99944504073,
+          -0.0168978561318,
+          -0.0164175828721
+        ],
+        "noncompetitive_count": 8235,
+        "noncompetitive_min_R_diagnostic_only": -0.03264527237561793,
+        "noncompetitive_worst_point_diagnostic_only": [
+          0.56,
+          0.56,
+          0.56
+        ]
+      },
+      "key_R_actual": 1.2514068448155058e-06,
+      "previous_valley_R_actual": 1.537601641271591e-05,
+      "elapsed_seconds": 427.1073863506317,
+      "consecutive_no_improvement": 1,
+      "strict_negative_point": {
+        "point": [
+          -0.9993574670431118,
+          -0.017923913623535643,
+          -0.017923901694124156
+        ],
+        "R_actual": -4.071769590346941e-05,
+        "constraints": [
+          5.071110198429096e-11,
+          0.0031542749946841184,
+          0.00034436495208892587,
+          0.9814335534195762,
+          1.1929411486422126e-08
+        ],
+        "C_decimal_80digit": "0.0031542749946841090163027524689691868454695517795377422001468447316184465330166769",
+        "Ckernel_decimal_80digit": "0.0003443649520889259972403007452973807002507596544119370695018227145831103740587753",
+        "Ckernel_exact_fraction": "2066189712533555983441804471784284201504557926471622417010936287498662244352651798289542332002327055075741975076417948143255801333296207595299389170015948738043733556874170709128250152298370231801288493000159839912207109147209613970538750976888518244775400223895892404905385649942899857584223860641150987664326655844963998555278140513841675443189024540674010248898699760420049282834511146971332624445912691782586346132761319085730332082344157257718135979505181917212004005598503498003500588960359049513750188543063181544953124722773051631/6000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "R_gram_decimal_80digit": {
+          "point_decimal": [
+            "-0.9993574670431118",
+            "-0.017923913623535643",
+            "-0.017923901694124156"
+          ],
+          "R_decimal_80digit": "-0.000040717695904622881919082584035151427085866002001979695710266352347076690266279121",
+          "gram_decimal_80digit": "0.000000000050711058439537010497924436792841305351931200000000000000000000000000000083382753",
+          "precision_digits": 80,
+          "interpretation": "finite JSON decimal A,c,point interpreted exactly; high precision evaluation is numerical, not interval proof"
+        }
+      },
+      "validation_summary": {
+        "random_competitive_count_original_A": 10000,
+        "boundary_competitive_count": 1500,
+        "total_scan_count": 48253,
+        "random_min_R_original_A": -2.070813762172774e-05,
+        "random_compiled_vs_original_max_error": 8.604228440844963e-15,
+        "local_seeds": 79,
+        "direct_original_A_polishes": 5,
+        "elapsed_seconds": 101.5664610862732
+      },
+      "c": 2.789787409757307,
+      "F111": 5.144974923878571,
+      "independent_actual_min_R": -4.071769757579835e-05,
+      "manual_correct_competitive_stagnation_count": 2
+    }
+  ],
+  "r_approximation": "0.71054833409295381132770417927279124",
+  "runtime_versions": {
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "cvxpy": "1.7.5",
+    "clarabel": "0.11.1",
+    "sympy": "1.14.0",
+    "PYTHONPATH": "proof_work:proof_work/python_deps",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "active_background_jobs": 0,
+  "new_lower_bound": null
+}

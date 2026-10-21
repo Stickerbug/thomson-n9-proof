@@ -1,0 +1,25 @@
+=== 16:40:05 building ParamProbe ===
+ThomsonNine/ParamProbe.lean:15:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  HasFDerivAtFilter ((fun x => 1) - fun x => x ^ 2) (-ContinuousLinearMap.toSpanSingleton ℝ (x * 2))
+    (Filter.map (fun a => (a, x)) (nhds x))
+but is expected to have type
+  HasDerivAt (fun y => 1 - y ^ 2) (-(x * 2)) x
+ThomsonNine/ParamProbe.lean:21:21: error(lean.invalidField): Invalid field `inv`: The environment does not contain `HasFDerivAtFilter.inv`, so it is not possible to project the field `inv` from an expression
+  hcomp
+of type
+  HasFDerivAtFilter (fun y => √(1 - y ^ 2)) (ContinuousLinearMap.toSpanSingleton ℝ (1 / (2 * √(1 - x ^ 2)) * -(2 * x)))
+    (nhds x ×ˢ pure x)
+ThomsonNine/ParamProbe.lean:10:45: error: unsolved goals
+x : ℝ
+hx : 0 < x
+hx1 : x < 1
+hpos : 0 < 1 - x ^ 2
+hsqrt_ne : √(1 - x ^ 2) ≠ 0
+hinner : HasDerivAt (fun y => 1 - y ^ 2) (-(2 * x)) x
+hsqrt : HasDerivAt sqrt (1 / (2 * √(1 - x ^ 2))) (1 - x ^ 2)
+hcomp : HasDerivAt (fun y => √(1 - y ^ 2)) (1 / (2 * √(1 - x ^ 2)) * -(2 * x)) x
+⊢ HasDerivAt (fun y => (√(1 - y ^ 2))⁻¹) (x / √(1 - x ^ 2) ^ 3) x
+=== FAIL ParamProbe ===
+=== ALL DONE 16:41:40 ===

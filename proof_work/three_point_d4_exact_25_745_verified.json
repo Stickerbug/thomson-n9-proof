@@ -1,0 +1,17 @@
+{
+  "certificate": "/home/dsh/Thomson Problem/proof_work/three_point_d4_exact_25_745.json",
+  "bound_exact": "5149/200",
+  "input_arithmetic": "Fraction of saved rational strings only; no numerical proposal files",
+  "minorant_bernstein_nodes": 11,
+  "global": {
+    "status": "certified",
+    "visited": 172137,
+    "positive_leaves": 43623,
+    "gram_or_symmetry_excluded_leaves": 42446,
+    "pending_boxes": 0,
+    "max_depth": 41,
+    "seconds": 234.96650409698486,
+    "minimum_pending_lower_coefficient": null
+  },
+  "total_seconds": 237.49339318275452
+}

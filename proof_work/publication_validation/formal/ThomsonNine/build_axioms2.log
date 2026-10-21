@@ -1,0 +1,15 @@
+=== 17:30:48 building Axioms ===
+'ThomsonNine.Family.candidate_eq_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.energy_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.energy_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.candidate_mem_sphere' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Coverage.coverage_sound_on_domain' does not depend on any axioms
+'ThomsonNine.Semantics.energy_lower_of_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.hasDerivAt_familyEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.familyEnergyDeriv_half_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.familyEnergyDeriv_nine_tenths_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.continuousOn_familyEnergyDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.exists_familyEnergyDeriv_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThomsonNine.Family.exists_stationary_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+=== OK Axioms ===
+=== ALL DONE 17:32:19 ===

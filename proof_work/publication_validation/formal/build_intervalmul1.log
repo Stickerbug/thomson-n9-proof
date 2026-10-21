@@ -1,0 +1,16 @@
+=== 15:23:18 building IntervalMul ===
+ThomsonNine/IntervalMul.lean:37:15: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+ThomsonNine/IntervalMul.lean:40:17: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+ThomsonNine/IntervalMul.lean:40:29: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+ThomsonNine/IntervalMul.lean:57:17: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+ThomsonNine/IntervalMul.lean:57:29: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+ThomsonNine/IntervalMul.lean:62:47: error: Application type mismatch: The argument
+  hIhi0
+has type
+  0 < ↑I.hi
+but is expected to have type
+  ↑I.hi < 0
+in the application
+  le_of_lt hIhi0
+=== FAIL IntervalMul ===
+=== ALL DONE 15:25:36 ===

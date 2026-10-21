@@ -1,0 +1,18 @@
+=== 08:20:37 building GradientZero ===
+ThomsonNine/GradientZero.lean:20:14: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+x : Fin 9 → R3
+h : ∀ (v : Fin 9 → R3), ∑ i, ⟪v i, gradAt x i⟫_ℝ = 0
+i : Fin 9
+hv : ∑ i_1, ⟪if i_1 = i then gradAt x i else 0, gradAt x i_1⟫_ℝ = 0
+⊢ ⟪if i = i then gradAt x i else 0, gradAt x i⟫_ℝ = ⟪gradAt x i, gradAt x i⟫_ℝ
+ThomsonNine/GradientZero.lean:23:41: error: Application type mismatch: The argument
+  hi
+has type
+  Fin 9
+of sort `Type` but is expected to have type
+  i ∉ Finset.univ
+of sort `Prop` in the application
+  absurd (Finset.mem_univ i) hi
+=== FAIL GradientZero ===
+=== ALL DONE 08:23:23 ===

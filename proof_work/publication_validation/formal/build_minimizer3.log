@@ -1,0 +1,9 @@
+=== 09:49:56 building Minimizer ===
+ThomsonNine/Minimizer.lean:38:28: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+ThomsonNine/Minimizer.lean:43:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ThomsonNine/Minimizer.lean:45:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:52:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ThomsonNine/Minimizer.lean:62:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ThomsonNine/Minimizer.lean:64:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+=== OK Minimizer ===
+=== ALL DONE 09:51:40 ===

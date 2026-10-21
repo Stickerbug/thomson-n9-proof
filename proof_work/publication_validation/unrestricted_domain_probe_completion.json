@@ -1,0 +1,68 @@
+{
+  "status": "DISCOVERY_EXPLICIT_NEGATIVE_VALLEY",
+  "process_exit_code": 0,
+  "elapsed_seconds": 0.1069406250026077,
+  "total_samples": 5,
+  "negative_point": [
+    0.58,
+    0.58,
+    0.58
+  ],
+  "gram_determinant_exact_decimal": ".381024",
+  "Rf_decimal": "-0.00040000154324718690233141914696295809752881643959803068197384292366541032302079528259888",
+  "source_sha256": "368ec491d7c66398ac1cb7639e24fb24059af586fca73980a9f36bfdc177a2fb",
+  "files": {
+    "unrestricted_domain_probe.py": {
+      "sha256": "bbf4a17b1781700ac08cd34a395374f069258d088aa7475f73addfa7baf5c15a",
+      "bytes": 5057
+    },
+    "unrestricted_domain_probe_result.json": {
+      "sha256": "848d0bbac6b3f1ac46bc053e47f78485b20082489595d6012207e07a8ad659d8",
+      "bytes": 2731
+    },
+    "unrestricted_domain_probe_controls.json": {
+      "sha256": "ab9a1d8927592e34e4d4b1ebb814d91194c7fef6b0ba48f59abffc28fe7d8395",
+      "bytes": 100
+    },
+    "unrestricted_domain_probe.log": {
+      "sha256": "baf21ea79d8112f6cb33dbfbe03df9fcc6eeb0eb0e3715a8b54b48eda69d6a92",
+      "bytes": 2409
+    },
+    "unrestricted_domain_probe_README.md": {
+      "sha256": "904dc33cf5d0f9aca4121e5083263320bb1b8fdfbe2a85233045e04a91be750c",
+      "bytes": 1812
+    }
+  },
+  "previous_modules": {
+    "sharp_tree_completion.json": {
+      "independent_code_files_checked": 2,
+      "all_code_hashes_unchanged": true
+    },
+    "independent_pair_reduction_completion.json": {
+      "independent_code_files_checked": 1,
+      "all_code_hashes_unchanged": true
+    },
+    "independent_candidate_bounds_completion.json": {
+      "independent_code_files_checked": 1,
+      "all_code_hashes_unchanged": true
+    },
+    "independent_psd_blocks_completion.json": {
+      "independent_code_files_checked": 1,
+      "all_code_hashes_unchanged": true
+    },
+    "independent_contact_construction_completion.json": {
+      "independent_code_files_checked": 7,
+      "all_code_hashes_unchanged": true
+    },
+    "independent_hermite_RH_completion.json": {
+      "independent_code_files_checked": 1,
+      "all_code_hashes_unchanged": true
+    },
+    "independent_local_arithmetic_completion.json": {
+      "independent_code_files_checked": 2,
+      "all_code_hashes_unchanged": true
+    }
+  },
+  "recommendation": "Retain existing pair reduction; do not attempt to certify this sharp kernel on the unrestricted Gram domain",
+  "scope": "Discovery only; no exact interval claim"
+}

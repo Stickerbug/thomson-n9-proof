@@ -1,0 +1,19 @@
+=== 18:43:31 building Minimum ===
+ThomsonNine/Minimum.lean:47:48: error: Application type mismatch: The argument
+  hx.right
+has type
+  x ≤ r
+but is expected to have type
+  x < r
+in the application
+  lt_trans hx.right
+ThomsonNine/Minimum.lean:62:48: error: Application type mismatch: The argument
+  hx.right
+has type
+  x ≤ s
+but is expected to have type
+  x < s
+in the application
+  lt_trans hx.right
+=== FAIL Minimum ===
+=== ALL DONE 18:45:44 ===

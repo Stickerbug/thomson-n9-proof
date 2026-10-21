@@ -1,0 +1,12 @@
+=== 06:30:57 building EnergyGradient ===
+ThomsonNine/EnergyGradient.lean:18:8: error(lean.unknownIdentifier): Unknown identifier `real_inner_sub_left`
+ThomsonNine/EnergyGradient.lean:23:36: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv R3 ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/EnergyGradient.lean:28:44: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HDiv R3 ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+=== FAIL EnergyGradient ===
+=== ALL DONE 06:32:51 ===

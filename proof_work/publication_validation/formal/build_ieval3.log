@@ -1,0 +1,48 @@
+=== 16:48:23 building IntervalTensorEval ===
+ThomsonNine/IntervalTensorEval.lean:19:31: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:21:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:22:26: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:26:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:27:30: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:28:28: error: No applicable extensionality theorem found for type
+  RatInterval
+
+Note: Extensionality theorems can be registered by marking them with the `[ext]` attribute
+ThomsonNine/IntervalTensorEval.lean:37:4: error: Type mismatch: After simplification, term
+  mem_const 0
+ has type
+  (const 0).mem 0
+but is expected to have type
+  mem 0 0
+ThomsonNine/IntervalTensorEval.lean:40:23: error: Application type mismatch: The argument
+  Finset.mem_insert_self a s
+has type
+  a ∈ insert a s
+but is expected to have type
+  a ∈ s✝
+in the application
+  h a (Finset.mem_insert_self a s)
+ThomsonNine/IntervalTensorEval.lean:41:7: error: Function expected at
+  ih
+but this term has type
+  (∑ i ∈ s, f i).mem (∑ i ∈ s, g i)
+
+Note: Expected a function because this term is being applied to the argument
+  (fun i hi => h i (Finset.mem_insert_of_mem hi))
+=== FAIL IntervalTensorEval ===
+=== ALL DONE 16:51:29 ===

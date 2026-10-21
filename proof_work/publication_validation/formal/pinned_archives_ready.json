@@ -1,0 +1,976 @@
+{
+  "status": "PINNED_ARCHIVES_READY_VERIFICATION_LEVELS_RECORDED",
+  "dependencies": [
+    {
+      "name": "plausible",
+      "repo": "leanprover-community/plausible",
+      "commit": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "git_tree": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "verified_blobs": 35,
+      "archive_sha256": "e5ed8b63ae57811987cc68e89b87fdd9932ed8ec4bda187abd4db5d9321a8f48",
+      "path": ".lake/pinned_sources/plausible",
+      "source_url": "https://codeload.github.com/leanprover-community/plausible/tar.gz/118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "verification": "Every archive blob and executable/symlink mode matches GitHub git-tree API for the exact pinned commit. API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "LeanSearchClient",
+      "repo": "leanprover-community/LeanSearchClient",
+      "commit": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "git_tree": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "verified_blobs": 15,
+      "archive_sha256": "55f9b52a8134dd4e14176999cda127af2c1190241048864b546ae7c802ae6e37",
+      "path": ".lake/pinned_sources/LeanSearchClient",
+      "source_url": "https://codeload.github.com/leanprover-community/LeanSearchClient/tar.gz/ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "verification": "Every archive blob and executable/symlink mode matches GitHub git-tree API for the exact pinned commit. API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "importGraph",
+      "repo": "leanprover-community/import-graph",
+      "commit": "e928b72544873815af278d38681b31c0293588e3",
+      "git_tree": "e928b72544873815af278d38681b31c0293588e3",
+      "verified_blobs": 73,
+      "observed_blobs": {
+        ".github/workflows/build.yml": {
+          "sha": "07cfddf91bb706e6151523b500ca80fd10feff8e",
+          "mode": "100644"
+        },
+        ".gitignore": {
+          "sha": "79b29269ca61e35a5682e86891e27d048c19a185",
+          "mode": "100644"
+        },
+        ".gitpod.yml": {
+          "sha": "0134f377bec639d05efedce887dc54b08a3c6efa",
+          "mode": "100644"
+        },
+        "ImportGraph.lean": {
+          "sha": "105e049b863eab1602123c0d25f66d5cd5e012cc",
+          "mode": "100644"
+        },
+        "ImportGraph/Export/DotFile.lean": {
+          "sha": "f49aceeee9ece9303bce062206bbfc4bc5c04cb0",
+          "mode": "100644"
+        },
+        "ImportGraph/Export/Gexf.lean": {
+          "sha": "08f8f8ac6517360a27738ca88381642d9d49350a",
+          "mode": "100644"
+        },
+        "ImportGraph/FromSource.lean": {
+          "sha": "1fe88b84fc9e6257e16354e1a7d1498f98cf6127",
+          "mode": "100644"
+        },
+        "ImportGraph/Graph/Filter.lean": {
+          "sha": "0db5a2514f56ce2d4290c2ec7739ac6cd42c812e",
+          "mode": "100644"
+        },
+        "ImportGraph/Graph/TransitiveClosure.lean": {
+          "sha": "d2dac54f2eb12588e0da77d9aff9deb8508538a3",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports.lean": {
+          "sha": "b3807d6c3654d7760d286e83a17a2b0942a32dba",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports/FromSource.lean": {
+          "sha": "a7801267c008fb0ce964685d7f90ce433b1d2d3d",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports/ImportGraph.lean": {
+          "sha": "39b05d69ba7494c240cd75b0ea5aeeda258e60ac",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports/Pretty.lean": {
+          "sha": "df54fdcc122f7e059adaf9cbb095a25050d3da6a",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports/Redundant.lean": {
+          "sha": "7faa004720b314fce1c4130eac4e0e9509039f66",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports/RequiredModules.lean": {
+          "sha": "7eaa8035d1d1ea4f116ec634224aacf7f1625602",
+          "mode": "100644"
+        },
+        "ImportGraph/Imports/Unused.lean": {
+          "sha": "fdf7073c96116daba1c0fd28f2f9294162ffb783",
+          "mode": "100644"
+        },
+        "ImportGraph/Lean/EnvExtension.lean": {
+          "sha": "2aad39cb110769ab12c79c606fb7b8474e60c758",
+          "mode": "100644"
+        },
+        "ImportGraph/Lean/Environment.lean": {
+          "sha": "9ca5123fc456102d02055dbd23f58dbbda69c8c2",
+          "mode": "100644"
+        },
+        "ImportGraph/Lean/Name.lean": {
+          "sha": "a98b2313979bded212013ec20e4579b0ce59b33a",
+          "mode": "100644"
+        },
+        "ImportGraph/Lean/Syntax.lean": {
+          "sha": "0b2a6655a8ce6469ae1057c34f7150fc88c716a4",
+          "mode": "100644"
+        },
+        "ImportGraph/Lean/WithImportModules.lean": {
+          "sha": "b557d093ab2835370f265a3ea547decb821c823b",
+          "mode": "100644"
+        },
+        "ImportGraph/Meta.lean": {
+          "sha": "01a5ffe3a71db1cda2d956270b58b0b6d72d9e6c",
+          "mode": "100644"
+        },
+        "ImportGraph/RequiredModules.lean": {
+          "sha": "01a29d1c0b6526bb07ca4501841c1b84a5fdbc95",
+          "mode": "100644"
+        },
+        "ImportGraph/Shake/Algebra.lean": {
+          "sha": "e79c161787ced9f1e634f69a6613b8748809c061",
+          "mode": "100644"
+        },
+        "ImportGraph/Shake/Basic.lean": {
+          "sha": "a9be5046eb29a20ef9cd9c27da3621166eb03423",
+          "mode": "100644"
+        },
+        "ImportGraph/Shake/Core.lean": {
+          "sha": "751c70a263de781ca9c00b9092b2009117ced4d0",
+          "mode": "100644"
+        },
+        "ImportGraph/Shake/DeclNeeds.lean": {
+          "sha": "50ebe6549e1e693c5dbd37181e9ff4ed58b00464",
+          "mode": "100644"
+        },
+        "ImportGraph/Shake/EnvExtension.lean": {
+          "sha": "54e50ed1ff3049557ebce4d8b8f83728e9a90198",
+          "mode": "100644"
+        },
+        "ImportGraph/Tools.lean": {
+          "sha": "35c7f7a6b1e017a76d2303747114695f7932d976",
+          "mode": "100644"
+        },
+        "ImportGraph/Tools/FindHome.lean": {
+          "sha": "9b0b04f532b898d0f1758e7e62b7a35d294b2177",
+          "mode": "100644"
+        },
+        "ImportGraph/Tools/ImportDiff.lean": {
+          "sha": "c4756efc414fa6c226b85c870f85a27dc409129e",
+          "mode": "100644"
+        },
+        "ImportGraph/Tools/MinImports.lean": {
+          "sha": "70b220bb8b15f6d089cd74e9a220aab0cbe9b988",
+          "mode": "100644"
+        },
+        "ImportGraph/Tools/RedundantImports.lean": {
+          "sha": "8902ef928dba2c6277507ccff849edac2123cce0",
+          "mode": "100644"
+        },
+        "ImportGraph/Util/CurrentModule.lean": {
+          "sha": "bc19ddf2f47f489d19a24bfbda6ba1be58c1e626",
+          "mode": "100644"
+        },
+        "ImportGraph/Util/FindSorry.lean": {
+          "sha": "5cbbfb99788f5ec968a38c0a76a0212dfd6aa905",
+          "mode": "100644"
+        },
+        "ImportGraph/Widget/Collapsible.lean": {
+          "sha": "4476746754e9c8de96f5709ca14f854751c820bb",
+          "mode": "100644"
+        },
+        "ImportGraph/Widget/Copy.lean": {
+          "sha": "bff02f3daf4f2589bb96292f98acb5eb10e90aee",
+          "mode": "100644"
+        },
+        "ImportGraph/Widget/GoToModule.lean": {
+          "sha": "430778863f5c4fb657a7da80d69df9d93783590e",
+          "mode": "100644"
+        },
+        "ImportGraphTest.lean": {
+          "sha": "90c6f49d22d280523356072b9fbe483cf29c0b33",
+          "mode": "100644"
+        },
+        "ImportGraphTest/.gitignore": {
+          "sha": "ed91303aaece75fed8b6650e4c697edc0efd0496",
+          "mode": "100644"
+        },
+        "ImportGraphTest/AnotherFileWithTransitiveImports.lean": {
+          "sha": "fd9f645316f4ee9cef81538de54711cc8d806191",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Dot.lean": {
+          "sha": "86b25e5a0e4cfac3fed74884420feda190f7b6d8",
+          "mode": "100644"
+        },
+        "ImportGraphTest/FileWithTransitiveImports.lean": {
+          "sha": "d235427167cd217db21dcc578dae498144b8dedb",
+          "mode": "100644"
+        },
+        "ImportGraphTest/FromSource.lean": {
+          "sha": "73175099ad49bef2f1e89f5950007f278881a253",
+          "mode": "100644"
+        },
+        "ImportGraphTest/ImportPretty.lean": {
+          "sha": "9017303de2759059c0b9356eebd29093654d302c",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Imports.lean": {
+          "sha": "007da542b1de6befac87344e977ea3d24fd12dd7",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Shake/Algebra.lean": {
+          "sha": "0117a0bbf1d60bbe4c6d7b2303730f6ffd5b0b33",
+          "mode": "100644"
+        },
+        "ImportGraphTest/ToTarget.lean": {
+          "sha": "e349606c70ac07d86af452800e325efd9f29d426",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Unused.lean": {
+          "sha": "dd8b1d89ae6dd424b90872891fe22cdd6e457d11",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Used.lean": {
+          "sha": "25f380671fe44070ccae60031b4cc08dc105b01f",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Widget/Collapsible.lean": {
+          "sha": "5bfdff0aaa7548d958191ac8be2c82d465662e10",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Widget/Copy.lean": {
+          "sha": "35d85399d1114a02b4288ab2765d4665e6bbdaea",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Widget/GoToModule/Decls.lean": {
+          "sha": "b7993b6f8c383edd00c0232328d4a00df772a1c4",
+          "mode": "100644"
+        },
+        "ImportGraphTest/Widget/GoToModule/Msg.lean": {
+          "sha": "6c395fdf7efec8477508041a0d5b7bc714b21dc2",
+          "mode": "100644"
+        },
+        "ImportGraphTest/WithSorry/Def.lean": {
+          "sha": "33514f35818b18636dd680b5cc357613255edb33",
+          "mode": "100644"
+        },
+        "ImportGraphTest/WithSorry/Thm.lean": {
+          "sha": "af14bbb0d8fc8cc26aede806be07b0872836b70e",
+          "mode": "100644"
+        },
+        "ImportGraphTest/expected.dot": {
+          "sha": "17428ac4649d5c2d8e46c4eb1d476ac9bf10d137",
+          "mode": "100644"
+        },
+        "LICENSE": {
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "mode": "100644"
+        },
+        "MainGraph.lean": {
+          "sha": "3f90406cb9cc2874df944074e87d466dab8955e5",
+          "mode": "100644"
+        },
+        "MainUnusedTransitiveImports.lean": {
+          "sha": "cdd9fd6c42e04fc6dfacf770f2bb96fb5e9884cd",
+          "mode": "100644"
+        },
+        "README.md": {
+          "sha": "08870d0f530ec56a446609f7b40520c57edd3dd8",
+          "mode": "100644"
+        },
+        "html-template/.gitignore": {
+          "sha": "f02965957c5f06ff208e90b77b96fabf3620360a",
+          "mode": "100644"
+        },
+        "html-template/LICENSE_source": {
+          "sha": "9c0b6d7205b531c3afbaef35b18acd460bc8d2a5",
+          "mode": "100644"
+        },
+        "html-template/README.md": {
+          "sha": "34f6f507a664b93040149f8d7de17b7739c9da40",
+          "mode": "100644"
+        },
+        "html-template/index.html": {
+          "sha": "80ddb67bb334384cc594b8012bdf0cf579cfdeb5",
+          "mode": "100644"
+        },
+        "html-template/vendor/graphology-LICENSE": {
+          "sha": "158967c8da93f1ea5ab5ac8efa7d7269392a0737",
+          "mode": "100644"
+        },
+        "html-template/vendor/graphology-library.min.js": {
+          "sha": "6fc85881e7750a4bd2af4839a73f28c1a3197e46",
+          "mode": "100644"
+        },
+        "html-template/vendor/graphology.min.js": {
+          "sha": "2ef09f003ab18c29621fc4bcde5bb0b9043e628c",
+          "mode": "100644"
+        },
+        "html-template/vendor/sigma-LICENSE": {
+          "sha": "ccfe3cb9cc7f22954148a5f96b537b7ad394adb8",
+          "mode": "100644"
+        },
+        "html-template/vendor/sigma.min.js": {
+          "sha": "3e6579f268f79490d13a6ff82506a8ce63a69a19",
+          "mode": "100644"
+        },
+        "lake-manifest.json": {
+          "sha": "dec7df26a889f669ab5dbad2aaeb3081d6a438fc",
+          "mode": "100644"
+        },
+        "lakefile.toml": {
+          "sha": "f9322d899942d918801ea94b81036bea462aee53",
+          "mode": "100644"
+        },
+        "lean-toolchain": {
+          "sha": "12359f928f18e4a89ebd1444a0310b025931b17d",
+          "mode": "100644"
+        }
+      },
+      "archive_sha256": "5daec3b3889d425440a93f4a47de29a41836266359e29472abbc767ed2188eed",
+      "path": ".lake/pinned_sources/importGraph",
+      "source_url": "https://codeload.github.com/leanprover-community/import-graph/tar.gz/e928b72544873815af278d38681b31c0293588e3",
+      "verification": "Every archive blob and mode matches GitHub git-tree API for the pinned commit; API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "proofwidgets",
+      "repo": "leanprover-community/ProofWidgets4",
+      "commit": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "git_tree": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "verified_blobs": 111,
+      "observed_blobs": {
+        ".github/workflows/build.yml": {
+          "sha": "ad657ce1c0cbaf92a5de8e46dc09bdbb4533827d",
+          "mode": "100644"
+        },
+        ".gitignore": {
+          "sha": "2329d15579aaf99061bb1b5ed1a2a43c614377a0",
+          "mode": "100644"
+        },
+        ".vscode/settings.json": {
+          "sha": "2971aeff92b4561144dc6f39910134c768f19553",
+          "mode": "100644"
+        },
+        "LICENSE": {
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "mode": "100644"
+        },
+        "ProofWidgets.lean": {
+          "sha": "c08bdb224a0f4eae1c44ec8558565dfe29d55b11",
+          "mode": "100644"
+        },
+        "ProofWidgets/Cancellable.lean": {
+          "sha": "8520668dd2079be2e5e490b183c50601787fea3e",
+          "mode": "100644"
+        },
+        "ProofWidgets/Compat.lean": {
+          "sha": "3b92fd58b692aaf2ac139163bf22ba452dc6e83b",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/Basic.lean": {
+          "sha": "849fe4497da56a720789551510d9d3a965749980",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/FilterDetails.lean": {
+          "sha": "a6c5863a60bd543492d23416d37040569107d421",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/ForceGraphDisplay.lean": {
+          "sha": "6abe28747de1a71c635db81784e3878219b1cfbc",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/GraphDisplay.lean": {
+          "sha": "7c1f7a13821dbf75900cbc3b51bb6b497811cf6e",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/GraphvizDisplay.lean": {
+          "sha": "009d2812e6198fce991f617b96a12ebbfb2c6766",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/HtmlDisplay.lean": {
+          "sha": "edcd0a76c64c3ff41ad2d69f421cc231e934620b",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/InteractiveSvg.lean": {
+          "sha": "46023e34705957753372aa9b00034b7a2ee6ebd3",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/MakeEditLink.lean": {
+          "sha": "84956ff7eb4e50c418f8b44287e02ea46a129840",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/Maximizable.lean": {
+          "sha": "1adff7e331f36f0f0f97717e2cb9b121e806c831",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/OfRpcMethod.lean": {
+          "sha": "23ee32b3557b403e6c593b5e306e42020be66d23",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/Panel/Basic.lean": {
+          "sha": "c92368428dc3810ce7decbd61ca90fffbd972c8c",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/Panel/GoalTypePanel.lean": {
+          "sha": "65ab81804f7a1cf1521ab40dd3ebc323f351cd40",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/Panel/SelectionPanel.lean": {
+          "sha": "919662ae9e1ac45e778ba4118f5629e359b6379e",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/PenroseDiagram.lean": {
+          "sha": "7e23e22fc8f1725a5cfe9ec3245ce7f03c741eab",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/Recharts.lean": {
+          "sha": "d62c45b43889085432103a0da73f2ce0fe5d283e",
+          "mode": "100644"
+        },
+        "ProofWidgets/Component/RefreshComponent.lean": {
+          "sha": "83c7baf9958b2602042ea685855fa08b1f9f28e8",
+          "mode": "100644"
+        },
+        "ProofWidgets/Data/Html.lean": {
+          "sha": "076df38623e4a54b7d938614c177a72a5607d29e",
+          "mode": "100644"
+        },
+        "ProofWidgets/Data/Svg.lean": {
+          "sha": "c02a858dffba8738475fec47da6906ca60af9ec1",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Dynkin.lean": {
+          "sha": "be815f0852d73e8a84a1917409e5137b50bf0aa1",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Euclidean.lean": {
+          "sha": "64fd7924bb6502748f0e9d89d96928e1f43526ee",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/ExprPresentation.lean": {
+          "sha": "cbcae93e1b9558a73e3f3ef3474331d788515e89",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Graph/Basic.lean": {
+          "sha": "c7c1052efa0d34c46397d73da39e88a00003a259",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Graph/ExprGraph.lean": {
+          "sha": "66a762b47d145c5773a25f40ee80f8985911b219",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Graph/Graphviz.lean": {
+          "sha": "08ee71bf4afd779f74f558403dba038b2357964e",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Graph/MVarGraph.lean": {
+          "sha": "6b350ecd3c7993df157622d3aef442311d2a02e1",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/InteractiveSvg.lean": {
+          "sha": "d6c88456eeb989c38d75fb465b7ef6bcc11c9b83",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Jsx.lean": {
+          "sha": "61ea7af35ee266b541d364fe26d9f44922452bcb",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/LazyComputation.lean": {
+          "sha": "a9fc520023547eafd8deb21230fd3c08b7beb885",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Macro.lean": {
+          "sha": "1ab4c96535974a27940bf8421122d8a32caf5fac",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Maximizable.lean": {
+          "sha": "977b49d0c2c2a1fba23b2b3e175e7cee6ae48470",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Plot.lean": {
+          "sha": "2fcadec22ab7111c4b204773a81136811fae2a36",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/RbTree.lean": {
+          "sha": "444c50fb9b38e90af6cb8d949d7b991240b382bb",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/RefreshComponent.lean": {
+          "sha": "a89e9ff967279cbdd81486d97bfc772d02f2c620",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Rubiks.lean": {
+          "sha": "66e190c3bac9ab079e5fb939d15d7711be017893",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/SelectInsertConv.lean": {
+          "sha": "52d33e41a22864ee71b28e7cfeebba0f2028c316",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Svg.lean": {
+          "sha": "c089519abf9ccf0a735e6fcba448fd6bf5ba6986",
+          "mode": "100644"
+        },
+        "ProofWidgets/Demos/Venn.lean": {
+          "sha": "9e1bbf44634ec95affa43a8c3e97d7d0470b6838",
+          "mode": "100644"
+        },
+        "ProofWidgets/Extra/CheckHighlight.lean": {
+          "sha": "c4abc75f5530f70229f0ac1662e6286bc7984903",
+          "mode": "100644"
+        },
+        "ProofWidgets/Presentation/Expr.lean": {
+          "sha": "5ebd0201277845e94b9e482a7ca3e51231e3b047",
+          "mode": "100644"
+        },
+        "ProofWidgets/Util.lean": {
+          "sha": "bc4662740898c08f5c07ed7b4a450162a0cd897a",
+          "mode": "100644"
+        },
+        "README.md": {
+          "sha": "d771d7f3f5dac97ede26a7f577b5453256f2403e",
+          "mode": "100644"
+        },
+        "RELEASES.md": {
+          "sha": "bc0346fae23e2472e85a90e5052e5fa0b3acc26b",
+          "mode": "100644"
+        },
+        "doc/infoview-rbtree.png": {
+          "sha": "d020db4e17104ec8c5154076b0c1ea398535273b",
+          "mode": "100644"
+        },
+        "lake-manifest.json": {
+          "sha": "f3d250716b1ffb8430acbd64b642e0307671061d",
+          "mode": "100644"
+        },
+        "lakefile.lean": {
+          "sha": "bf4cc987afca64eeb8957597421b4d133dc4d809",
+          "mode": "100644"
+        },
+        "lean-toolchain": {
+          "sha": "12359f928f18e4a89ebd1444a0310b025931b17d",
+          "mode": "100644"
+        },
+        "test/checkh.lean": {
+          "sha": "b1c0ec36c71a752cb61b9e2c5bb6f2e2932b5325",
+          "mode": "100644"
+        },
+        "test/delab.lean": {
+          "sha": "57be16e5fc8474f0cd102289fb5276ffc4869635",
+          "mode": "100644"
+        },
+        "widget/js/RefreshComponent.js": {
+          "sha": "3a639d64132ecd255c733331df8add4bd03b4757",
+          "mode": "100644"
+        },
+        "widget/js/animatedHtml.js": {
+          "sha": "587440c36a779c20f3e091bd6f0971183149a87c",
+          "mode": "100644"
+        },
+        "widget/js/cancellable.js": {
+          "sha": "d228770c899fecb8721e02edba135241f6ee08fd",
+          "mode": "100644"
+        },
+        "widget/js/d3Graph.js": {
+          "sha": "51379d4fcc5ebb3bc7e28b41a771acd0f4274f8b",
+          "mode": "100644"
+        },
+        "widget/js/exprPresentation.js": {
+          "sha": "08bd5efe09d55a905680ed2456b84b0a25a19090",
+          "mode": "100644"
+        },
+        "widget/js/filterDetails.js": {
+          "sha": "c3528933a9d1712156c406337dccef3b1620c0a3",
+          "mode": "100644"
+        },
+        "widget/js/forceGraphDisplay.js": {
+          "sha": "51379d4fcc5ebb3bc7e28b41a771acd0f4274f8b",
+          "mode": "100644"
+        },
+        "widget/js/goalTypePanel.js": {
+          "sha": "68edbf3903d9bd24b037f20adab6809f003ccadb",
+          "mode": "100644"
+        },
+        "widget/js/graphvizDisplay.js": {
+          "sha": "fbe879546476a102a488b3ed45233a9cf164eb8b",
+          "mode": "100644"
+        },
+        "widget/js/htmlDisplay.js": {
+          "sha": "ca7c3e32fe145edef50e15dd166e94391c6550d3",
+          "mode": "100644"
+        },
+        "widget/js/htmlDisplayPanel.js": {
+          "sha": "a4c2d584072fe0de0383c3f278f428da668bf987",
+          "mode": "100644"
+        },
+        "widget/js/index.js": {
+          "sha": "984cb086c4aa9734a8cf146153f71c32ba135f75",
+          "mode": "100644"
+        },
+        "widget/js/interactiveExpr.js": {
+          "sha": "10e7911ce62c855985df0bc3c5ee7cbeb0476dbc",
+          "mode": "100644"
+        },
+        "widget/js/interactiveSvg.js": {
+          "sha": "b42c981abde1db10f6f5d55bca76636ef4aed1a7",
+          "mode": "100644"
+        },
+        "widget/js/lake.trace": {
+          "sha": "03c13f137f036cf7439a6d979e0afa6d71d8c9d6",
+          "mode": "100644"
+        },
+        "widget/js/makeEditLink.js": {
+          "sha": "e42dfcffd7323c954465c16e3d9d754dbce6b1b9",
+          "mode": "100644"
+        },
+        "widget/js/maximizable.js": {
+          "sha": "9b303b162564e8c632ef8c17617a0fc417809830",
+          "mode": "100644"
+        },
+        "widget/js/ofRpcMethod.js": {
+          "sha": "997739028e8362afc13c3ce9c9a59d3ef1e697b6",
+          "mode": "100644"
+        },
+        "widget/js/penroseCanvas.js": {
+          "sha": "90f71764d851d85bca3cce17b8a082b11ab06cd8",
+          "mode": "100644"
+        },
+        "widget/js/penroseDisplay.js": {
+          "sha": "59d753a6508b643aad8636e4afdc3df9d5d52596",
+          "mode": "100644"
+        },
+        "widget/js/presentSelection.js": {
+          "sha": "5fb5ec69a72b9f508559a0857b322e989f827131",
+          "mode": "100644"
+        },
+        "widget/js/rbTree.js": {
+          "sha": "6b7d7367b296be9b9878d3b140b55ac90087eaf7",
+          "mode": "100644"
+        },
+        "widget/js/recharts.js": {
+          "sha": "804ac567f8acc57f64f345e732a8c9ce6f856f4e",
+          "mode": "100644"
+        },
+        "widget/js/rubiks.js": {
+          "sha": "772230811865266ca7b4b0d0a958412a219d094e",
+          "mode": "100644"
+        },
+        "widget/package-lock.json": {
+          "sha": "06d5baf2fae78fed1fdae485f4c2c054a0bccfb2",
+          "mode": "100644"
+        },
+        "widget/package-lock.json.trace": {
+          "sha": "b2c1f4c41b2937a0d65713b836769ddc66548469",
+          "mode": "100644"
+        },
+        "widget/package.json": {
+          "sha": "1d23bde82bbaf997d884842fc36bc7e6c3cd345f",
+          "mode": "100644"
+        },
+        "widget/penrose/euclidean.dsl": {
+          "sha": "5aa3850d8169ca23cb33d27bec17443e9700758f",
+          "mode": "100644"
+        },
+        "widget/penrose/euclidean.sty": {
+          "sha": "b8151ebcc1b8477696e8212c7da0b0b54aa8b014",
+          "mode": "100644"
+        },
+        "widget/penrose/setTheory.dsl": {
+          "sha": "309f5ca53582d24758a3b55c8c0c20d704b624be",
+          "mode": "100644"
+        },
+        "widget/penrose/venn.sty": {
+          "sha": "9dea515cf3d73e346956dbd01d8327b69f95aa4f",
+          "mode": "100644"
+        },
+        "widget/rollup.config.js": {
+          "sha": "679db231b9bc16fea0f25bfd4ef1dba5bac82df7",
+          "mode": "100644"
+        },
+        "widget/src/RefreshComponent.tsx": {
+          "sha": "4299af65ee779f4500bdb6fb03e60388ef189194",
+          "mode": "100644"
+        },
+        "widget/src/animatedHtml.tsx": {
+          "sha": "a1966f82401f1046b347ffaf1942870b36ced1e6",
+          "mode": "100644"
+        },
+        "widget/src/cancellable.ts": {
+          "sha": "7375b0e9ace28fce77ab98c7c598c12fb1c86f1b",
+          "mode": "100644"
+        },
+        "widget/src/d3-graphviz.d.ts": {
+          "sha": "482a343bad80ad2eb0869a07c59bc5d728dbcf5b",
+          "mode": "100644"
+        },
+        "widget/src/exprPresentation.tsx": {
+          "sha": "28764ee0fa21826391992636241d2f4a2e6ed6f1",
+          "mode": "100644"
+        },
+        "widget/src/filterDetails.tsx": {
+          "sha": "61ab3bbd9a2ec80f2efb036e8d053ec5f48d2a39",
+          "mode": "100644"
+        },
+        "widget/src/forceGraphDisplay.tsx": {
+          "sha": "08aa4a8082ef0027b253a4e5eb41427eeccf4191",
+          "mode": "100644"
+        },
+        "widget/src/goalTypePanel.tsx": {
+          "sha": "d4e516db6dded5a1e8d040aadfad9e2f7162cc28",
+          "mode": "100644"
+        },
+        "widget/src/graphvizDisplay.tsx": {
+          "sha": "87cd95af25af5a63d5b6765a7e6a80a7dfe497a7",
+          "mode": "100644"
+        },
+        "widget/src/htmlDisplay.tsx": {
+          "sha": "61eb60ea87b1fe1d0d9c142bd9db401dd995c132",
+          "mode": "100644"
+        },
+        "widget/src/htmlDisplayPanel.tsx": {
+          "sha": "b6e58cfba397bb37c05d99d746ee696793db246b",
+          "mode": "100644"
+        },
+        "widget/src/index.ts": {
+          "sha": "e9527166ba7704d07cd6fd1ccb95d2edd562151e",
+          "mode": "100644"
+        },
+        "widget/src/interactiveExpr.tsx": {
+          "sha": "97ca63048219179093156d8e455a550b1beba700",
+          "mode": "100644"
+        },
+        "widget/src/interactiveSvg.tsx": {
+          "sha": "73350a24e5fd55f5f83a715ed906c49082766d7b",
+          "mode": "100644"
+        },
+        "widget/src/makeEditLink.tsx": {
+          "sha": "4989571a2556fd911f6572aeb935e5215687eaaa",
+          "mode": "100644"
+        },
+        "widget/src/maximizable.tsx": {
+          "sha": "8a2cd8359227cd5bc6dea2d11100c842c9c3953f",
+          "mode": "100644"
+        },
+        "widget/src/ofRpcMethod.tsx": {
+          "sha": "b1eb6f715f6a6c018b9627c2a1036824f5247dda",
+          "mode": "100644"
+        },
+        "widget/src/penroseCanvas.tsx": {
+          "sha": "1d60441a4a3b92ee61c2a76c62dfc220b773c2da",
+          "mode": "100644"
+        },
+        "widget/src/penroseDisplay.tsx": {
+          "sha": "29397c15f6fd29212582a3bc7d37c626e20d5b8a",
+          "mode": "100644"
+        },
+        "widget/src/presentSelection.tsx": {
+          "sha": "74bbdbcff5a8ff6056f667249537a412e5c53d5c",
+          "mode": "100644"
+        },
+        "widget/src/rbTree.tsx": {
+          "sha": "36c7e9e84d451ba2edb2c636fc7411be1edad19f",
+          "mode": "100644"
+        },
+        "widget/src/recharts.tsx": {
+          "sha": "2e7ee20a3d6a3631fab2aa5e68c976826ec9eec8",
+          "mode": "100644"
+        },
+        "widget/src/rubiks.tsx": {
+          "sha": "d2d8f97853757257cd237a2b2e72eecae310503d",
+          "mode": "100644"
+        },
+        "widget/tsconfig.json": {
+          "sha": "aa7465e1e2cba8892bb14e6034c58cca6caf3cf8",
+          "mode": "100644"
+        }
+      },
+      "archive_sha256": "c6cf369f63a997035e36c5f6f76afdba77c2e047988cb6abdec362a1098552de",
+      "path": ".lake/pinned_sources/proofwidgets",
+      "source_url": "https://codeload.github.com/leanprover-community/ProofWidgets4/tar.gz/106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "verification": "Every archive blob and mode matches GitHub git-tree API for the pinned commit; API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "aesop",
+      "repo": "leanprover-community/aesop",
+      "commit": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "git_tree": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "verified_blobs": 258,
+      "archive_sha256": "80792fbdc4f7a12a9783c32ee5eba7387d450bc26ababf5ff6f16c4dc59b633a",
+      "path": ".lake/pinned_sources/aesop",
+      "source_url": "https://codeload.github.com/leanprover-community/aesop/tar.gz/355695d523e41d0554926416cba2a2b3544fbbc9",
+      "verification": "Every archive blob and executable/symlink mode matches GitHub git-tree API for the exact pinned commit. API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "Qq",
+      "repo": "leanprover-community/quote4",
+      "commit": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "git_tree": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "verified_blobs": 35,
+      "observed_blobs": {
+        ".github/workflows/build.yml": {
+          "sha": "469828eed14400e9c2afeed7c4621f10c00f3145",
+          "mode": "100644"
+        },
+        ".gitignore": {
+          "sha": "362a3e5d86a691d36d20d262461ad695cf3a5787",
+          "mode": "100644"
+        },
+        "LICENSE": {
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "mode": "100644"
+        },
+        "Qq.lean": {
+          "sha": "e76fee57ba9b2bfb14ba2709cd788aec8a5e2dfd",
+          "mode": "100644"
+        },
+        "Qq/AssertInstancesCommute.lean": {
+          "sha": "25212d19c86424a4670f66ba9e8e4926bbf1a3f8",
+          "mode": "100644"
+        },
+        "Qq/Commands.lean": {
+          "sha": "893b511bb02ba627311047e9fda778725598009c",
+          "mode": "100644"
+        },
+        "Qq/Delab.lean": {
+          "sha": "8f9c24b2c95aa76691ce27d57bc5cf49881a7251",
+          "mode": "100644"
+        },
+        "Qq/ForLean/Do.lean": {
+          "sha": "40503606a22b64e26f116203ea44199db6119028",
+          "mode": "100644"
+        },
+        "Qq/ForLean/ReduceEval.lean": {
+          "sha": "8e7d846413d4d42b6d66e239fdf3d32315a6a31b",
+          "mode": "100644"
+        },
+        "Qq/ForLean/ToExpr.lean": {
+          "sha": "6396d46178cc9ac32cbd7e8e50470968aa40fd91",
+          "mode": "100644"
+        },
+        "Qq/Macro.lean": {
+          "sha": "80dd26726f6355f44af9535c64e12a255ff5f39e",
+          "mode": "100644"
+        },
+        "Qq/Match.lean": {
+          "sha": "5282c3d9163e2bea7f38434eb7519de759ac252d",
+          "mode": "100644"
+        },
+        "Qq/MatchImpl.lean": {
+          "sha": "98a9e9a19a9524cfaa8133728e0f37ab0d83052d",
+          "mode": "100644"
+        },
+        "Qq/MetaM.lean": {
+          "sha": "4ddee37c642fe505c18ce7f18904b7ad7b07bf4f",
+          "mode": "100644"
+        },
+        "Qq/Simp.lean": {
+          "sha": "5600aa303a683d4a0d3204f7db629abc28dda878",
+          "mode": "100644"
+        },
+        "Qq/SortLocalDecls.lean": {
+          "sha": "d719b4c8cdafa77f9a6981d0c0246b792dc119c9",
+          "mode": "100644"
+        },
+        "Qq/Typ.lean": {
+          "sha": "bddb912947dd12ea055b9f71a336219cbe992d31",
+          "mode": "100644"
+        },
+        "QqTest/betterApp.lean": {
+          "sha": "d44b3feca098c2738f8383a15fc53484a65ad0dc",
+          "mode": "100644"
+        },
+        "QqTest/clauseConvertProp.lean": {
+          "sha": "c887ca429f544c4028010ca7315def25ab87df8d",
+          "mode": "100644"
+        },
+        "QqTest/clauseConvertType.lean": {
+          "sha": "2567daa785e71f4968ea8ca8cf7b5d83ac1134c1",
+          "mode": "100644"
+        },
+        "QqTest/commandTest.lean": {
+          "sha": "44af23c3f7bb0167203b898232f83f71037ee964",
+          "mode": "100644"
+        },
+        "QqTest/conjs.lean": {
+          "sha": "9204571c027491621ea2803fdc5dd9f19ec17e86",
+          "mode": "100644"
+        },
+        "QqTest/defeqs.lean": {
+          "sha": "52badcb1147c0f7a0e3937e341b4296dd97552f5",
+          "mode": "100644"
+        },
+        "QqTest/hoMatching.lean": {
+          "sha": "f58210a968e3c9d5debfacbb9745632bbfc88314",
+          "mode": "100644"
+        },
+        "QqTest/introQ.lean": {
+          "sha": "ece67901e03e973d4abc2d6839eedbffc00a4f53",
+          "mode": "100644"
+        },
+        "QqTest/matchMotive.lean": {
+          "sha": "a0438b257defbea4537e550187666abe78bbb35a",
+          "mode": "100644"
+        },
+        "QqTest/matching.lean": {
+          "sha": "8a611d02608fa3e3295678e742822b42d23837c6",
+          "mode": "100644"
+        },
+        "QqTest/misc.lean": {
+          "sha": "8147076ebb7020cb37d73484dcf75e10d695056a",
+          "mode": "100644"
+        },
+        "QqTest/mkPairwiseEquality.lean": {
+          "sha": "c9ed71934cce08e5828162a0dbe8e101d70523dc",
+          "mode": "100644"
+        },
+        "QqTest/strengthenInstance.lean": {
+          "sha": "247afe24c58c8f41931d12c972fe5b35132a5b4d",
+          "mode": "100644"
+        },
+        "QqTest/typeclass.lean": {
+          "sha": "356a1b1bb7d3b35d938992f344517ed7100edc3f",
+          "mode": "100644"
+        },
+        "README.md": {
+          "sha": "5b61a364b5fe27c5c9508e8c95a81b44b4ff6187",
+          "mode": "100644"
+        },
+        "lake-manifest.json": {
+          "sha": "4b43f7ccc9dab593f2f4a9a50d02ac2303f3b03a",
+          "mode": "100644"
+        },
+        "lakefile.toml": {
+          "sha": "1814352b329fd3ccaed8bf4b9e1bb778771edb63",
+          "mode": "100644"
+        },
+        "lean-toolchain": {
+          "sha": "12359f928f18e4a89ebd1444a0310b025931b17d",
+          "mode": "100644"
+        }
+      },
+      "archive_sha256": "c61940f3fe63e39db9b25b8ac4ce1bc9a9466801055b9218804556d85e9a6e29",
+      "path": ".lake/pinned_sources/Qq",
+      "source_url": "https://codeload.github.com/leanprover-community/quote4/tar.gz/6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "verification": "Every archive blob and mode matches GitHub git-tree API for the pinned commit; API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "batteries",
+      "repo": "leanprover-community/batteries",
+      "commit": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "git_tree": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "verified_blobs": 290,
+      "archive_sha256": "1987093d3e0af3c75084f48095a8eb0fac0751b11712c51fb05b31e71d64220b",
+      "path": ".lake/pinned_sources/batteries",
+      "source_url": "https://codeload.github.com/leanprover-community/batteries/tar.gz/f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "verification": "Every archive blob and executable/symlink mode matches GitHub git-tree API for the exact pinned commit. API/TLS is trusted for commit-to-tree binding."
+    },
+    {
+      "name": "Cli",
+      "repo": "leanprover/lean4-cli",
+      "commit": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "git_tree": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "verified_blobs": 12,
+      "archive_sha256": "1ccb3440fc468e393b064a446368c4b317b7c57ffe78cee3b2b932333834e007",
+      "path": ".lake/pinned_sources/Cli",
+      "source_url": "https://codeload.github.com/leanprover/lean4-cli/tar.gz/e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "verification": "Every archive blob and executable/symlink mode matches GitHub git-tree API for the exact pinned commit. API/TLS is trusted for commit-to-tree binding."
+    }
+  ],
+  "seconds": 5.624526040977798
+}

@@ -1,0 +1,4 @@
+=== 16:50:20 building ParamProbe ===
+ThomsonNine/ParamProbe.lean:27:4: error: No goals to be solved
+=== FAIL ParamProbe ===
+=== ALL DONE 16:52:29 ===

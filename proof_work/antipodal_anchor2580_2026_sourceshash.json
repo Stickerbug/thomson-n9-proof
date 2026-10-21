@@ -1,0 +1,29 @@
+{
+  "hash_algorithm": "SHA256",
+  "old_sources_frozen": true,
+  "files": {
+    "antipodal_anchor2580_2026_export.json": "9a46d849758ee8e9c46a609759ceadac68372b15ee9ea6831b6d6df478c439fb",
+    "antipodal_anchor2580_2026_notes_zh.md": "bb4fef5871130c8205369104a343c6fbf10ed05d33b2b4eb775782a19ae6e573",
+    "antipodal_anchor2580_2026_object_replay.json": "1b0aed2f2fe0e9af7f70c2e42430d9c8cfae3cd2f6ba21859afc8993dd2f36d2",
+    "antipodal_anchor2580_2026_object_replay.py": "48844d0b9dacd57dccebb6dea5df855b644cb0385fc0ac0950df32ee6fa0db9b",
+    "antipodal_anchor2580_2026_symmetric9957_check.py": "85ffeb1a6d0e25db2986f06dc88185cf12b719132500cecd2b8b9d59a2211268",
+    "antipodal_anchor2580_2026_symmetric9957_exact.json": "8a5faf865f6505505124b9f4e5123058c95e7c498a1d36fb3f073d85f3ee0643",
+    "antipodal_anchor2580_2026_verified.json": "e339669f9921990269c286eb43b7c9d19a769ce1d6b90ebc4df57d6513fadea8",
+    "antipodal_anchor2580_2026_verify.py": "1e41373bd1c9d628d84ba7961a9d8bd16b97f17a34857ff6be862942fdbc3d92",
+    "antipodal_anchor2580_2026_wide061_object_replay.json": "a2f63150c8bc6d62467d628c551a7cba16821dfc32bb110de141b974fddd1ffb",
+    "antipodal_anchor2580_2026_wide061_object_replay.py": "9944cb9ffa49b64411d86bd74b1d321681bd704beae789c6729e480b17e80470",
+    "antipodal_anchor2580_2026_wide061_verified.json": "8867837350c675feb780532b6865db9d4d49e752802bba53031c1cce9111a663",
+    "antipodal_anchor2580_2026_wide061_verify.py": "645ccb96ccdf926d0046b5500ab773219b6d9a897dab28acc62ae43ca62c0115",
+    "antipodal_anchor2580_2026_wide063_object_replay.json": "c049113b63c082f2d91f668cefbef61e71d71b80ee640cc749f56e74e984360a",
+    "antipodal_anchor2580_2026_wide063_object_replay.py": "4b6783e287adf7a81281c23f6af86cbcf3c730605f5cc4251e02db13d60999ea",
+    "antipodal_anchor2580_2026_wide063_verified.json": "51f5798c3f7b62731a53fd5087949478f8ebde27ab260de9059d7ea37d6c318a",
+    "antipodal_anchor2580_2026_wide063_verify.py": "0571dbaf3eb2b1a92799cf6c49196376dd6d1ab5c68522efc72e865ccc85f2c9",
+    "antipodal_anchor_exact_export.json": "8ad9a4a9f692cc044fd0bfd3b0e21d03a1c7c10b9d4f7127d5a408063397caaf",
+    "antipodal_anchor_object_replay.py": "5dcb2c8396edcb60c13d5699edec14007ab72d383a57c9f49dde4ced87f50ece",
+    "certify_d4_int64.py": "ebee5228df7df6cca9df9c0c7feeea3b8941ee9489810fe3ccc98533b9a46d91",
+    "certify_three_point_d4.py": "26d2886d3a50c9fa1446c329fd1d23daf6bba99ce055ca735fd794069c5b75b2",
+    "competitive_pair056_proof_zh.md": "76a44c6b6298b7cb2d3398442719a2321b2bb81c524fa82ed1ec3eff62904554",
+    "pair056_optimized_certificate.json": "e6e683e00214e7e92ea6e415125ef7b9952278df4503161a9cdcdd706c88178c",
+    "verify_antipodal_anchor_exact.py": "0747f0276c44990d75def5d1de81701fab40a0592ea89616a2507997fd297205"
+  }
+}

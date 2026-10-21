@@ -1,0 +1,14 @@
+{
+  "status": "ROOT_INPUTS_REBUILT_IDENTICAL_FROM_REPLAYED_TRUE_F_C",
+  "root_inputs_sha256": "2d4d88b893ad6a5a6602d8c632a1667775a0abab4dbc17f82d319ca0d488ddb2",
+  "zero_visited_nodes": true,
+  "no_global_search": true,
+  "K_floor80_D_ceil80_Gram_ceil80_and_error_and_symmetry_arrays_identical": true,
+  "all_boundary_multipliers_nonnegative": true,
+  "seconds": 1.5779609680175781,
+  "source_sha256": {
+    "proof_work/analytic10_2026_engine.py": "721edff81d54bd92b408ede73238f1ef23ee4f1c16a1337813d901081b6ec8e1",
+    "proof_work/analytic10_2026_run1.json": "10adc9c59a9bb03f54bd764409ce9faf6cb7ccf779770de1f89e00faf2437ed6",
+    "proof_work/analytic10_2026_audit_coefficients.json": "1b70641e398c091d61150e5ff9960ad866e34a6a55804cbc1e95a4d44b3eff47"
+  }
+}

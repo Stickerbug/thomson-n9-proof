@@ -1,0 +1,63 @@
+=== 05:59:10 building PairDeriv ===
+ThomsonNine/PairDeriv.lean:26:52: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat R3 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  R3
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:27:34: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSMul ℝ R3 ?m.16
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:27:43: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:27:54: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:28:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSMul ℝ R3 ?m.47
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:28:59: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:29:4: error(lean.unknownIdentifier): Unknown identifier `hasDerivAt_norm_sq_affine`
+ThomsonNine/PairDeriv.lean:27:64: error: unsolved goals
+R3 : Type u_1
+x v : R3
+hx : x ≠ 0
+⊢ HasDerivAt (fun t => ‖sorry‖) (sorry / sorry) 0
+ThomsonNine/PairDeriv.lean:42:56: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat R3 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  R3
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:43:34: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSMul ℝ R3 ?m.19
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:43:47: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Inner ℝ R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:43:59: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:44:25: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Norm R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+ThomsonNine/PairDeriv.lean:44:32: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  NormedAddGroup R3
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+=== FAIL PairDeriv ===
+=== ALL DONE 06:00:21 ===

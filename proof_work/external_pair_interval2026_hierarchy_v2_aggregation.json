@@ -1,0 +1,33 @@
+{
+  "status": "data_only_inherited_or_v2_terminal_and_symmetry_closure",
+  "global_T2_proved": false,
+  "existing_global_lower_bound": "25.7599205",
+  "new_global_lower_bound": null,
+  "cells": 894,
+  "ordered_pair_universe": 799236,
+  "stages_ordered_pairs": {
+    "inherited_resolved": 399788,
+    "v2_resolved_terminal_products": 106124,
+    "union_before_new_transpose_closure": 399788,
+    "union_resolved": 399788,
+    "union_pending": 399448,
+    "new_resolved_beyond_inherited": 0,
+    "new_resolved_before_transpose": 0,
+    "added_by_new_transpose_closure": 0,
+    "resolved_mask_sha256": "f82c1ef49eec190c071ad23ce193cd3706d34621fdf21c6e4b3dc2bfa3f54816"
+  },
+  "checksum_encoding": "SHA256 row-major 894x894 uint8 resolved=1,pending=0",
+  "exact_rule": "C=inherited_full_symmetric_mask OR all_v2_resolved_terminal_ID_products; C|=C.T",
+  "polynomial_evaluations": 0,
+  "oracle_calls": 0,
+  "dependency_scope": "Old unary/capacity, prefix replay and hierarchy proofs plus new v2 oracle records and full ID/geometry audit. New query minima remain supplied records, without separate full coefficient replay.",
+  "dependencies": {
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_aggregation.json": "eb5b17c46606fea35d859c64c941ed3a4781c2c43098233dc5e3edb983b7e803",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_v2_result.json": "1fc0b6d27328b8bd1330c035d29271d119ec6a55edc9e2f2357976ac283a697d",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_v2_tree.json": "10c42e5e7a8abe8fcd645d6c45499ecb6fbe3732fa114f0e2a782d1f679f0396",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_v2_blocks.json": "8bfa653bb2aa4e5ee7b94f17dabdd2a781e5f753af878c0f6871357c10e0b9df",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_v2_frontier.json": "32695f30236c8fe75a3ef7a0a8351286ae032c3df4b2e90fc6e34aabe1d16d2f",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_v2_audit.json": "156e41329cf39e9c1411d747382cf799d77e8c059fd4b4e8da5708f2b3de835b",
+    "/home/dsh/Thomson Problem/proof_work/external_pair_interval2026_hierarchy_v2_verify.py": "48eb115f15bef27b6cb046221f9d6027946a2b8ad221a882280506b0ed960e1a"
+  }
+}
