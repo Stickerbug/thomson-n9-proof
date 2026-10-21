@@ -54,13 +54,6 @@ import ThomsonNine.Grouped739
 import ThomsonNine.Grouped103
 import ThomsonNine.Grouped517
 import ThomsonNine.Grouped629
-import ThomsonNine.Grouped762
-import ThomsonNine.Grouped738
-import ThomsonNine.Grouped720
-import ThomsonNine.Grouped697
-import ThomsonNine.Grouped677
-import ThomsonNine.Grouped664
-import ThomsonNine.Grouped646
 import ThomsonNine.Grouped615
 import ThomsonNine.Grouped574
 import ThomsonNine.Grouped547
@@ -800,10 +793,3 @@ import ThomsonNine.SparseTranslation
 #print axioms ThomsonNine.Grouped574.t574_gathered
 #print axioms ThomsonNine.Grouped615.t615_gathered
 #print axioms ThomsonNine.Grouped629.t629_gathered
-#print axioms ThomsonNine.Grouped646.t646_gathered
-#print axioms ThomsonNine.Grouped664.t664_gathered
-#print axioms ThomsonNine.Grouped677.t677_gathered
-#print axioms ThomsonNine.Grouped697.t697_gathered
-#print axioms ThomsonNine.Grouped720.t720_gathered
-#print axioms ThomsonNine.Grouped738.t738_gathered
-#print axioms ThomsonNine.Grouped762.t762_gathered
