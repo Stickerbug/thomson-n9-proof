@@ -1,0 +1,45 @@
+{
+  "updated": "2026-10-21",
+  "repo": "https://github.com/Stickerbug/thomson-n9-proof",
+  "verified": {
+    "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
+    "axiom_audits": 644,
+    "modules": 115,
+    "coverage": "279/807"
+  },
+  "bundle": {
+    "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
+    "entries": 304,
+    "bytes": 16641132,
+    "sha256": "7d99da9b3c542ca84b14a793875ab6ad13354d80dd61717f5a3a755247d0cac9"
+  },
+  "pending_11_source": {
+    "verified": [
+      "t103",
+      "t123",
+      "t224",
+      "t242",
+      "t312",
+      "t328",
+      "t463",
+      "t469",
+      "t517",
+      "t531",
+      "t547",
+      "t574",
+      "t615",
+      "t629"
+    ],
+    "experimental": [
+      "t646",
+      "t664",
+      "t677",
+      "t697",
+      "t720",
+      "t738",
+      "t762"
+    ]
+  },
+  "release": "https://github.com/Stickerbug/thomson-n9-proof/releases/tag/data-2026-10-21",
+  "warning": "Conditional local certificate only; final ThomsonNineClaim unproved; no external review."
+}
