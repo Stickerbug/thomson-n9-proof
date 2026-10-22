@@ -12,6 +12,7 @@
 - [x] 英文论文初稿已编译为 5 页 PDF：`paper/main.tex`、`paper/main.pdf`；源码与 PDF SHA-256 写在 `paper/README.md`。
 - [x] 已生成紧凑投稿源包 `paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip`，包含源码和 PDF，并纳入复核包清单。
 - [x] 论文明确写出 Lean fresh replay、条件式 Python 检查器和未声称的全等唯一性范围。
+- [x] 论文、README 和 cover letter 已引用 Aravind Karthigeyan 的先行九点 Lean/Nanoda 项目（DOI `10.5281/zenodo.23192843`），并明确不主张优先权。
 - [x] 当前 canonical 复核包包含 5637 条目，含紧凑投稿源包。
 - [x] 作者 Jingxing Huang、Qian Xuesen College、Xi'an Jiaotong University、ORCID、通讯邮箱、无资助和无利益冲突声明已写入论文。
 - [ ] 提交前补充代码许可证、DOI 和正式 release version（若尚未归档）。

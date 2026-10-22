@@ -270,8 +270,8 @@
       "sha256": "668afbbaee32dc920a147e27707009b4b03190e2e6e1bed35769e3576ff1540b"
     },
     "proof_work/publication_validation/README_PUBLICATION_READINESS_2026-10-22_zh.md": {
-      "bytes": 6604,
-      "sha256": "34878eb2b502b72faff4106fff78b525d733b8d5b15812f811483ca960493c5c"
+      "bytes": 7052,
+      "sha256": "d3d0e53e7e000124b8007971ac0ba232897b96be0d03952ef952c36164521987"
     },
     "proof_work/publication_validation/README_independent_candidate_bounds.md": {
       "bytes": 3875,
@@ -314,8 +314,8 @@
       "sha256": "0f7e78c3db1cebac46ca3e219690a0b473daa81fb90f94d981ab14588827ec9d"
     },
     "proof_work/publication_validation/SUBMISSION_CHECKLIST_zh.md": {
-      "bytes": 1871,
-      "sha256": "33b654154a3ee8e5ec6e57c9a1a912f43c15667c29768f828379b031fb0c2895"
+      "bytes": 2043,
+      "sha256": "d10bfb7719d1a0887b93e3215b26ecf32fca2fea0e2310ec53cb4175041df8bf"
     },
     "proof_work/publication_validation/SUBMISSION_MANUSCRIPT_en.md": {
       "bytes": 33031,
@@ -22550,7 +22550,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-22T23:12:55.132932+00:00",
+  "generated_utc": "2026-10-22T23:16:40.971984+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
