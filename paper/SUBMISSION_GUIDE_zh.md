@@ -54,7 +54,7 @@
 
 1. 在 GitHub 仓库中提交当前源码、论文和复核包，创建带说明的 release。release 说明应包含 Lean 版本、fresh replay 状态、复核包 SHA-256 和文章范围限制。
 2. 将 GitHub release 连接到 Zenodo，创建对应的 DOI。Zenodo 元数据填写作者、单位、ORCID、关键词（Thomson problem、sphere energy、Lean、formal verification、computer-assisted proof）和许可证。
-3. DOI 产生后，再把 DOI 和正式 release version 写回论文、`paper/README.md` 和 arXiv comments；这一步会改变文件哈希，应重新编译论文并重建复核包。
+3. 当前归档 DOI 已生成：`10.5281/zenodo.23573472`（https://doi.org/10.5281/zenodo.23573472），对应 GitHub release `n9-proof-2026-10-23`。该 DOI、release tag 和文件哈希已经写入论文、`paper/README.md`、复核包和发布记录。若以后上传新版本，应为新版本生成新的 DOI 记录并重新编译。
 
 ## 没有 arXiv endorsement 时的替代路线
 
@@ -82,7 +82,7 @@ ResearchGate 等社交平台可以作为分享入口，但不应作为唯一的�
 ## 提交前最终检查
 
 - [ ] arXiv 编号和版本号已保存。
-- [ ] GitHub release 已创建，Zenodo DOI 已生成或明确暂未生成。
+- [ ] GitHub release `n9-proof-2026-10-23` 已创建，Zenodo DOI `10.5281/zenodo.23573472` 已生成。
 - [ ] 目标期刊和 cover letter 已确定。
 - [ ] 作者、单位、ORCID、邮箱和通讯作者标记正确。
 - [ ] Funding、Conflict of interest、AI disclosure 与论文一致。

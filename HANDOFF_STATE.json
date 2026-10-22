@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T17:13:14.741874+00:00",
+  "updated": "2026-10-23T00:00:00+00:00",
   "repo": "https://github.com/Stickerbug/thomson-n9-proof",
   "verified": {
     "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
@@ -31,8 +31,8 @@
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
     "entries": 5639,
-    "bytes": 80811284,
-    "sha256": "801d976583330f7ae11991d0c0cf701bcfc35dddc5d201abc5dd24e2d8f91c15"
+    "bytes": 80811896,
+    "sha256": "b5030fca0f6d47e0ee0d8d9662c7dab91078bf0837d59a02f27481dbd9c38135"
   },
   "pending_11_source": {
     "verified": [
@@ -61,7 +61,7 @@
     "experimental": [],
     "three_axis_grouped": "21/21 integrated and verified"
   },
-  "release": "https://github.com/Stickerbug/thomson-n9-proof/releases/tag/data-2026-10-21",
+  "release": "https://github.com/Stickerbug/thomson-n9-proof/releases/tag/n9-proof-2026-10-23",
   "warning": "The unchanged frozen ThomsonNineClaim is proved and passed compiler, axiom and complete fresh Lean-kernel replay. Lean built-in kernel replay is not external independent verification. No peer review or congruence-uniqueness theorem for all minimizers is claimed.",
   "historical_baseline": {
     "axiom_audits": 644,
@@ -896,13 +896,19 @@
     "latex_build": "PASS",
     "pages": 5,
     "route": "arXiv preprint followed by journal submission",
-    "pre_submission_action": "add repository DOI and release version when archived",
+    "pre_submission_action": "DOI and release metadata integrated; arXiv endorsement or alternate preprint submission remains optional",
     "scope_disclosure": "Lean fresh-kernel replay is not external independent verification; no congruence-uniqueness theorem is claimed.",
     "preprint_alternatives": [
       "GitHub release + Zenodo DOI",
       "Xi'an Jiaotong University institutional repository",
       "HAL or OSF Preprints",
       "Direct journal submission"
-    ]
+    ],
+    "zenodo_doi": "10.5281/zenodo.23573472",
+    "zenodo_url": "https://doi.org/10.5281/zenodo.23573472",
+    "github_release": "https://github.com/Stickerbug/thomson-n9-proof/releases/tag/n9-proof-2026-10-23",
+    "github_tag": "n9-proof-2026-10-23",
+    "github_commit": "667a6297dc203232b9f0f796acc825dc3179fb12",
+    "release_status": "GitHub release created; Zenodo archival DOI assigned"
   }
 }

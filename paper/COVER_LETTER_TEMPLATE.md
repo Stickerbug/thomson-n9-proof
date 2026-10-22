@@ -12,7 +12,7 @@ The companion repository provides the Lean sources, exact certificate data, vali
 
 The author received no external funding and declares no competing interests. Language-model assistance was used for proof discovery, formal-code engineering, validation-script engineering, and manuscript editing. The models used were DeepSeek-V4.1-Flash-1017, ChatGPT-6.1 Sol, and ChatGPT-6 Astra. Jingxing Huang is responsible for the mathematical statement, formal code, validation records, and release artifacts.
 
-This manuscript is [not under consideration elsewhere / describe the current preprint status]. The arXiv record is [arXiv identifier] and the code release is [GitHub release/Zenodo DOI, if available].
+This manuscript is currently a preprint/research archive and is not under consideration elsewhere. The code and validation release is available at https://github.com/Stickerbug/thomson-n9-proof/releases/tag/n9-proof-2026-10-23 and is archived at https://doi.org/10.5281/zenodo.23573472. No arXiv identifier has been assigned.
 
 Thank you for your consideration.
 
