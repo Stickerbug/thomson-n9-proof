@@ -50,6 +50,8 @@ Our contribution has three parts.  First, we give the mathematical reduction fro
 
 The formal theorem is intentionally stated at the strength that is actually proved.  It asserts that the specified candidate attains the global minimum and that the radius in the candidate family is the unique stationary radius.  It does not assert that every minimizer is congruent to the candidate.  A congruence-classification theorem would be a separate result.
 
+A related public formalization by Aravind Karthigeyan was released earlier, on 6 October 2026, in a Lean repository that reports global optimality together with a congruence-and-permutation uniqueness theorem and a separate Nanoda kernel check \cite{Karthigeyan2026}.  Its release is archived at DOI 10.5281/zenodo.23192843.  We learned of this work before submitting the present manuscript and make no priority claim.  The present repository should therefore be read as a separate certificate and verification implementation of the stated global-minimum theorem; we have not performed a line-by-line provenance audit of all upstream components.  The two projects also differ in their stated theorem strength and recorded validation artifacts, so readers should consult both repositories when comparing the formal results.
+
 \section{Statement of the theorem}
 
 For $0<r<1$, put $h=\sqrt{1-r^2}$ and, for $k=0,1,2$, define
@@ -229,6 +231,9 @@ The mathlib Community, The Lean mathematical library, in \emph{CPP 2020}, ACM, 2
 
 \bibitem{Tran}
 H.-W. Tran, A Lean formalization of the N=7 Thomson problem, GitHub repository, commit 25f2fa5 (2026).
+
+\bibitem{Karthigeyan2026}
+A. Karthigeyan, The Nine-Point Coulomb Thomson Problem: Lean Proof and Certificates, GitHub repository, commit 168ff0c (6 October 2026), DOI: \url{https://doi.org/10.5281/zenodo.23192843}.
 \end{thebibliography}
 
 \end{document}

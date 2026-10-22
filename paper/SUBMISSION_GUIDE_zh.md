@@ -2,6 +2,8 @@
 
 这份指南按“先 arXiv，再投期刊”的路线编写。当前论文和复核包已经完成，外部网站的账号创建、上传和发布仍需要作者本人操作。
 
+**先例与署名边界：** Aravind Karthigeyan 已于 2026 年 10 月 6 日公开一个相关的 Lean/Nanoda 九点 Thomson 形式化项目（commit `168ff0c`，DOI `10.5281/zenodo.23192843`），其 README 报告了包含全体极小构型全等分类的更强定理。本项目不主张首证或优先权；投稿时应在 related work 和 cover letter 中明确引用该项目，并把本项目定位为不同证书和验证记录的实现。
+
 ## 当前稿件信息
 
 - 标题：`A Lean-Verified Computer-Assisted Proof of the Nine-Point Thomson Minimum`

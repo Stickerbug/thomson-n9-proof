@@ -31,8 +31,8 @@
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
     "entries": 5639,
-    "bytes": 80811896,
-    "sha256": "b5030fca0f6d47e0ee0d8d9662c7dab91078bf0837d59a02f27481dbd9c38135"
+    "bytes": 80816144,
+    "sha256": "6da22ccdfd4cfd6a030264720d4d0f4935ccd33908fbeecc836cf71455e7d551"
   },
   "pending_11_source": {
     "verified": [
@@ -909,6 +909,16 @@
     "github_release": "https://github.com/Stickerbug/thomson-n9-proof/releases/tag/n9-proof-2026-10-23",
     "github_tag": "n9-proof-2026-10-23",
     "github_commit": "667a6297dc203232b9f0f796acc825dc3179fb12",
-    "release_status": "GitHub release created; Zenodo archival DOI assigned"
+    "release_status": "GitHub release created; Zenodo archival DOI assigned",
+    "related_work": {
+      "repository": "https://github.com/aravindkarthigeyan/thomson-n9-lean",
+      "author": "Aravind Karthigeyan",
+      "commit": "168ff0c98cab4dfda0460ba55f8d169070ac385e",
+      "public_date": "2026-10-06",
+      "doi": "10.5281/zenodo.23192843",
+      "reported_scope": "global optimality and congruence/permutation uniqueness; separate Nanoda kernel check",
+      "priority_claim": "none",
+      "provenance_comparison": "not line-by-line audited"
+    }
   }
 }
