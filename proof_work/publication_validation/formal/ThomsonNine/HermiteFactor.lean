@@ -2,8 +2,7 @@ import Mathlib.Algebra.Polynomial.FieldDivision
 import Mathlib.RingTheory.Coprime.Lemmas
 import Mathlib.Tactic.Ring
 
-/-! DRAFT_NOT_COMPILED: the attempted Lean invocation stopped at the missing Mathlib
-import before checking these proofs. Recompile after the parent cache download completes.
+/-! Recovered finite factorization proof; compiled before formal integration.
 Finite algebraic Hermite factorization. Independent of analytic remainder theorems,
 interval code, numerical coefficients, and Thomson optimality. -/
 namespace ThomsonNine.HermiteFactor

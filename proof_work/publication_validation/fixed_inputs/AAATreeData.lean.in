@@ -1,0 +1,56 @@
+import ThomsonNine.AAAIndexedData
+import ThomsonNine.FixedTree
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+noncomputable section
+namespace ThomsonNine.AAATreeData
+open ThomsonNine.Interval ThomsonNine.Interval.RatInterval
+open ThomsonNine.Interval.SparsePolynomial ThomsonNine.Interval.SparsePolynomial.Grouped
+open ThomsonNine.LocalSparseHessianAAA ThomsonNine.GatheredBinding
+open ThomsonNine.AAAGroupedData ThomsonNine.AAAFixedData ThomsonNine.AAAIndexedData ThomsonNine.FixedInterval
+
+def treeIndices : FixedInterval.Tree ℕ := @@INDICES@@
+
+def tree : FixedInterval.Tree Entry := @@TREE@@
+
+def entryAt (n : ℕ) : Entry := (entries[n]?).getD ⟨.t000,0,0,0,zero⟩
+ theorem flat_entries : flatten tree = (flatten treeIndices).map entryAt := by rfl
+ theorem range_entries : (List.range 807).map entryAt = entries := by rfl
+ theorem indices_perm : (flatten treeIndices).Perm (List.range 807) := by decide +kernel
+ theorem tree_perm : (flatten tree).Perm entries := by
+  rw [flat_entries, ← range_entries]
+  exact indices_perm.map entryAt
+ theorem tree_compatible : Compatible entryExp tree := by
+  unfold Compatible
+  decide +kernel
+
+def computed (k : TermIndex) : Bounds :=
+  treeCompute precision entryExp (exponents k) Entry.coeff powers tree
+
+ theorem computed_mem (c : TermIndex → ℝ) (a : Fin 3 → ℝ)
+    (hC : ∀ t, (sourceInterval t).mem (c t)) (ha : ∀ i, (centerInterval i).mem (a i))
+    (k : TermIndex) : Mem precision (AAATreeData.computed k) (gathered (exponents k) c a) := by
+  have heq : gatheredOn entryExp (exponents k) (fun E => c E.index) a entries =
+      gathered (exponents k) c a := by
+    rw [entries_eq]
+    simp only [gatheredOn, eligible, List.filter_map, List.map_map, Function.comp_def,
+      entryExp_pack, gathered]
+  rw [← heq, ← gatheredOn_perm entryExp (exponents k) (fun E => c E.index) a tree_perm]
+  apply treeCompute_mem precision_pos _ _ _ _ _ _ _ tree_compatible
+  · intro E hE
+    have hm : E ∈ entries := tree_perm.mem_iff.mp hE
+    rw [entries_eq] at hm
+    obtain ⟨i, hi, rfl⟩ := List.mem_map.mp hm
+    exact mem_of_rat (hC i) precision_pos (source_bounds i hi).1 (source_bounds i hi).2
+  · intro i n
+    exact power_mem precision_pos
+      (mem_of_rat (ha i) precision_pos (center_bounds i).1 (center_bounds i).2) n
+
+ theorem gathered_of_bounds (c : TermIndex → ℝ) (a : Fin 3 → ℝ)
+    (hC : ∀ t, (sourceInterval t).mem (c t)) (ha : ∀ i, (centerInterval i).mem (a i))
+    (k : TermIndex)
+    (h : (precision : ℚ)*(coefficientInterval k).lo ≤ ((AAATreeData.computed k).lo : ℚ) ∧
+      ((AAATreeData.computed k).hi : ℚ) ≤ (precision : ℚ)*(coefficientInterval k).hi) :
+    (coefficientInterval k).mem (gathered (exponents k) c a) :=
+  mem_to_rat (computed_mem c a hC ha k) precision_pos h.1 h.2
+end ThomsonNine.AAATreeData

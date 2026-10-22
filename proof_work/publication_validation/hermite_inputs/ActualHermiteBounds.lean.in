@@ -1,0 +1,20 @@
+import ThomsonNine.ActualHermiteArray
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+noncomputable section
+namespace ThomsonNine.ActualHermite.CertifiedCoefficients
+open ThomsonNine.Interval ThomsonNine.Interval.RatInterval
+open ThomsonNine.ActualHermite.CoefficientData ThomsonNine.ActualHermite.Coefficients
+
+def coefficientInterval : Fin 28 → RatInterval := @@H_INTERVALS@@
+
+def computed (n : ℕ) : FixedInterval.Bounds := (fixedCoefficients[n]?).getD FixedInterval.zero
+
+theorem computed_bounds : ∀ n : Fin 28,
+    (unitScale : ℚ)*(coefficientInterval n).lo ≤ ((computed n).lo : ℚ) ∧
+    ((computed n).hi : ℚ) ≤ (unitScale : ℚ)*(coefficientInterval n).hi := by
+  decide +kernel
+
+theorem H_coefficient_mem (n : Fin 28) : (coefficientInterval n).mem (H.coeff n) :=
+  FixedInterval.mem_to_rat (fixed_coefficient_mem n) unitScale_pos (computed_bounds n).1 (computed_bounds n).2
+end ThomsonNine.ActualHermite.CertifiedCoefficients

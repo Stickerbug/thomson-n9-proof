@@ -1,4 +1,35 @@
+# Current certification update: the frozen global theorem is proved
+
+Updated 2026-10-22T14:31:45.644413+08:00. The exact unchanged `ThomsonNineClaim` is proved by `ThomsonNine.thomsonNineClaim_proved`. Compiler checks, 1507 ordered axiom audits and a complete fresh Lean-kernel replay of the 2390-module import closure pass. The full replay took 13228.2 seconds. The final certificate includes all actual residual bindings, 45 contact equations, 12 local neighborhoods and the entire 68063-leaf coverage tree.
+
+See [the final proof record](GLOBAL_THEOREM_2026-10-22_zh.md) and [the verification report](local_lean_verification.json). The frozen statement asserts global energy minimality of the specified candidate at its unique stationary radius; it does not assert congruence uniqueness of every minimizer. Lean's built-in kernel replay is not an external independent implementation or peer review.
+
+The following manuscript records the earlier proof-candidate presentation. Its older statements about incomplete Lean formalization describe that historical stage and are superseded by this certification update.
+
+---
+
 # A certified computer-assisted proof candidate for the nine-point Thomson problem
+
+> Current checkpoint (2026-10-22T03:22:23+08:00): actual H28 coefficient enclosures and the Coulomb minorant on [-1,1) are proved. All807 conditional gathered bounds persist; 1446 audits /183 modules, fresh replay 939.9s. F/c/residual binding and the final global claim remain open. Built-in kernel replay is not external independent verification.
+
+
+> Current checkpoint (2026-10-22T02:46:04+08:00): full collected translation, the actual stationary radius in a 2^-800 bracket, actual AAA center and exact Hermite interpolation/node factorization are proved. All807 conditional gathered bounds persist; 1363 audits /174 modules, fresh replay 901.1s. Actual H coefficient enclosures and residual F/c binding remain open; no final global theorem or external independent verification.
+
+
+> Current result (2026-10-22T01:47:58+08:00): all 807 conditional archived gathered coefficient bounds are kernel-certified using fixed integer intervals and a shared grouping tree. The uniform theorem supplies the existing full AAA H00 certificate. Coverage 807/807, 1217 audits, 154 modules; fresh replay 889.3 s. Actual residual identification and the final global theorem remain unproved. Lean kernel replay is not external independent verification.
+
+
+> Current result (2026-10-22T01:01:24+08:00): generic keyed grouping equals the complete gathered coefficient and its interval implementation is sound. The t000 pilot checks all 807 contributing source terms by ordinary kernel reduction. Formal coverage is 293/807, 674 audits, 138 modules; a full LocalVerification replay passes (615.2 s). Bulk numeric Python checks are not Lean certificates. No actual residual or final global theorem is established.
+
+
+> Current result (2026-10-22T00:24:25+08:00): all 45 grouped modules use compact proofs (7,255,420,392 → 50,256,824 bytes); exact conditional coverage and audit names unchanged at 292/807 targets, 664 audits, 135 modules. One full leanchecker --fresh LocalVerification replay (551.8 s) covers the formal root by actual import-closure checks. This remains partial formalization, not external independent verification. See COMPACT45_INTEGRATION_2026-10-22_zh.md.
+
+
+> Current validation (2026-10-22T00:04:17+08:00): 664 axiom audits, 135 local modules, 292/807 distinct conditional gathered targets (299 declarations). All targets with at most 13 contributing sources are covered. Both integration roots pass Lean built-in leanchecker --fresh. The final global theorem remains unproved; this is not external independent verification. See NEXT13_INTEGRATION_zh.md.
+
+
+> Status update 2026-10-21: partial conditional formalization; 651 axiom audits, 122 local modules, and 279/807 distinct conditional gathered-coefficient targets (286 gathered declarations). All 21 eleven-source three-axis grouped targets are integrated. Both integration roots pass Lean built-in leanchecker --fresh. This is not an external independent verifier; the final ThomsonNineClaim and global uniqueness remain unproved. See CONTINUATION_2026-10-21_zh.md for the current validation scope.
+
 
 **Status: proof candidate prepared for external review.**  The mathematical
 argument, the exact interval certificates and a full replay from a rational seed

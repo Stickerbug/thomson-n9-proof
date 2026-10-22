@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "hermite_coefficients": 28,
+  "quotient_degree_bound": 27,
+  "bernstein_domain": [
+    "-1",
+    "1"
+  ],
+  "generated_modules": [
+    "ActualHermiteScalar",
+    "ActualHermiteBounds",
+    "ActualQuotientBernstein"
+  ],
+  "scope": "Actual constructed H coefficient intervals and algebraic Coulomb minorant. Final global ThomsonNineClaim remains separate.",
+  "inputs_sha256": {
+    "semantic_inputs/radius_inputs.json": "6eaa17db59163c845be7adba325589f89c94996b97f96dd84314a9c776efcfa2",
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff"
+  },
+  "templates_sha256": {
+    "hermite_inputs/ActualHermiteBounds.lean.in": "b5b19054132ad10bde63e1bcdf5c43276171d7a06ab90e75401cf80ada20d8d1",
+    "hermite_inputs/ActualHermiteScalar.lean.in": "5e085a4db13c9228987d4109190619ea7039e87c0467602e77bb6b8d52e6866f",
+    "hermite_inputs/ActualQuotientBernstein.lean.in": "53add117691dd197f6a2689bbe21c6fb500519030297191a2f46e8937c7b2049"
+  },
+  "source_sha256": {
+    "ActualHermiteScalar": "453506c0a33fca5dbbe85e42405b609e3b20698dae118bfd9f93bd5d4f54a977",
+    "ActualHermiteBounds": "2e2ac48d4b9b2722b5eb36248d5e318f6e696c9fcdec3b18b7dc7caed3e7ecc6",
+    "ActualQuotientBernstein": "542544e101c1220af71d255ff87b2e04fb244138d950658b598a64ec72dccc0d"
+  }
+}

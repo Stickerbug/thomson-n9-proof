@@ -24,3 +24,10 @@ proof_work/publication_validation/THOMSON_N9_REVIEW_BUNDLE_2026-*.zip
 # Files above GitHub's 100 MB limit (to be uploaded as release assets)
 proof_work/nonsharp_d10_root25_759925_v9_depth1000_frontier.json
 proof_work/nonsharp_d10_root25_759925_v9_depth300_frontier.json
+
+# Continuation scratch files and local build logs
+/work/
+
+# Historical C source payloads required by the review bundle
+!proof_work/analytic10_2026_sum.c
+!proof_work/exact128_2026.c

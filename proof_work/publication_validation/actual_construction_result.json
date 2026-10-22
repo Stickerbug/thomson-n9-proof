@@ -1,0 +1,17 @@
+{
+  "status": "ACTUAL_CONSTRUCTION_IN_FROZEN_GLOBAL_ROOT_COMPLETE_FRESH_PASS",
+  "updated": "2026-10-22T14:31:45.644413+08:00",
+  "current_global_root_modules": 2390,
+  "current_axiom_audits": 1507,
+  "actual_construction_historical_template_modules": 394,
+  "actual_construction_original_source_modules": 779,
+  "theorem": "ThomsonNine.thomsonNineClaim_proved",
+  "global_root_result": "global_theorem_result.json",
+  "construction_source_manifest": "actual_construction_manifest.json",
+  "manifest_sha256": "9348f1b824b5b4184359277c6a4e96efdaab61a31e5cb86c980f8b35a6815620",
+  "compiler_axiom_pass": true,
+  "complete_fresh_kernel_pass": true,
+  "external_independent_verification": false,
+  "historical_433_fresh": "Interrupted by environment recovery; no PASS inferred. Historical Construction aliases are superseded by exact original-name modules in the final root.",
+  "verification_report_sha256": "75b83de2dd2ff65a3222e221d95760625e2da5e7e2b4111be6c3f82e833fab64"
+}

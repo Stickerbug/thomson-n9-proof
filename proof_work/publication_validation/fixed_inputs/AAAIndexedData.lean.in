@@ -1,0 +1,29 @@
+import ThomsonNine.AAAFixedData
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+noncomputable section
+namespace ThomsonNine.AAAIndexedData
+open ThomsonNine.Interval ThomsonNine.Interval.RatInterval
+open ThomsonNine.Interval.SparsePolynomial ThomsonNine.Interval.SparsePolynomial.Grouped
+open ThomsonNine.LocalSparseHessianAAA ThomsonNine.GatheredBinding
+open ThomsonNine.AAAGroupedData ThomsonNine.AAAFixedData ThomsonNine.FixedInterval
+
+structure Entry where
+  index : TermIndex
+  u : ℕ
+  v : ℕ
+  t : ℕ
+  coeff : Bounds
+
+def entryExp (E : Entry) : Exp3 := ![E.u,E.v,E.t]
+
+def entries : List Entry := @@ENTRIES@@
+ theorem entries_eq : entries = allTerms.map (fun i =>
+    (⟨i, exponents i 0, exponents i 1, exponents i 2, source i⟩ : Entry)) := by rfl
+
+ theorem entryExp_pack (i : TermIndex) :
+    entryExp ⟨i, exponents i 0, exponents i 1, exponents i 2, source i⟩ = exponents i := by
+  funext j
+  fin_cases j <;> rfl
+
+end ThomsonNine.AAAIndexedData

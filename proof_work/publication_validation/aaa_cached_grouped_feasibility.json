@@ -1,0 +1,23 @@
+{
+  "scope": "Exact Python feasibility only; cache widening soundness and finite witnesses still require Lean proofs.",
+  "input_sha256": {
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+    "independent_local_00_AAA.json": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5"
+  },
+  "cases": [
+    {
+      "bits": 768,
+      "seconds": 3.6923529140003666,
+      "contained": 807,
+      "not_contained_targets": [],
+      "max_final_denominator_bits": 1537
+    },
+    {
+      "bits": 1024,
+      "seconds": 4.501407825999195,
+      "contained": 807,
+      "not_contained_targets": [],
+      "max_final_denominator_bits": 2049
+    }
+  ]
+}

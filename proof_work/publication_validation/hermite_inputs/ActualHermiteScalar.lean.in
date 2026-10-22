@@ -1,0 +1,78 @@
+import ThomsonNine.ActualHermite
+import ThomsonNine.IntervalInverse
+import ThomsonNine.IntervalListPolynomial
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+noncomputable section
+namespace ThomsonNine.ActualHermite.CoefficientData
+open ThomsonNine.Interval ThomsonNine.Interval.RatInterval
+open ThomsonNine.FixedInterval (Bounds Mem mem_of_rat)
+
+def unitScale : ℤ := 2^1024
+theorem unitScale_pos : 0<unitScale := by decide +kernel
+
+def inverseInterval (i j : Fin 14) : RatInterval := @@INVERSE@@
+
+def sqrtInterval : Fin 14 → RatInterval := @@SQRT@@
+
+def valueInterval : Fin 14 → RatInterval := @@VALUE@@
+
+def inputNode : Fin 14 → Bounds := @@NODE_INPUT@@
+
+def inputInverse (i j : Fin 14) : Bounds := @@INVERSE_INPUT@@
+
+def inputValue : Fin 14 → Bounds := @@VALUE_INPUT@@
+
+theorem inverse_signs : ∀ i j : Fin 14, i≠j →
+    0<(sub (nodeInterval i) (nodeInterval j)).lo ∨
+    (sub (nodeInterval i) (nodeInterval j)).hi<0 := by decide +kernel
+
+theorem inverse_bounds : ∀ i j : Fin 14, i≠j →
+    (inverseInterval i j).lo ≤ 1/(sub (nodeInterval i) (nodeInterval j)).hi ∧
+    1/(sub (nodeInterval i) (nodeInterval j)).lo ≤ (inverseInterval i j).hi := by decide +kernel
+
+theorem inverse_mem (i j : Fin 14) (h : i≠j) :
+    (inverseInterval i j).mem ((node i-node j)⁻¹) :=
+  mem_inv_of_bounds (mem_sub (node_mem i) (node_mem j)) (inverse_signs i j h)
+    (inverse_bounds i j h).1 (inverse_bounds i j h).2
+
+def squareArgument (i : Fin 14) : RatInterval := sub (const 2) (mul (const 2) (nodeInterval i))
+
+theorem sqrt_bounds : ∀ i : Fin 14, 0≤(sqrtInterval i).lo ∧
+    (sqrtInterval i).lo^2 ≤ (squareArgument i).lo ∧
+    (squareArgument i).hi ≤ (sqrtInterval i).hi^2 := by decide +kernel
+
+theorem sqrt_positive : ∀ i : Fin 14, 0<(sqrtInterval i).lo := by decide +kernel
+
+theorem value_bounds : ∀ i : Fin 14,
+    (valueInterval i).lo ≤ 1/(sqrtInterval i).hi ∧
+    1/(sqrtInterval i).lo ≤ (valueInterval i).hi := by decide +kernel
+
+theorem value_mem (i : Fin 14) : (valueInterval i).mem (value i) := by
+  have ha : (squareArgument i).mem (2-2*node i) := by
+    simpa [squareArgument] using mem_sub (mem_const 2) (mem_mul (mem_const 2) (node_mem i))
+  have hs := mem_sqrt_of_bounds ha (sqrt_bounds i).1 (sqrt_bounds i).2.1 (sqrt_bounds i).2.2
+  exact mem_inv_of_bounds hs (Or.inl (sqrt_positive i)) (value_bounds i).1 (value_bounds i).2
+
+theorem node_fixed_bounds : ∀ i : Fin 14,
+    ((inputNode i).lo : ℚ) ≤ (unitScale : ℚ)*(nodeInterval i).lo ∧
+    (unitScale : ℚ)*(nodeInterval i).hi ≤ ((inputNode i).hi : ℚ) := by decide +kernel
+
+theorem inverse_fixed_bounds : ∀ i j : Fin 14,
+    ((inputInverse i j).lo : ℚ) ≤ (unitScale : ℚ)*(inverseInterval i j).lo ∧
+    (unitScale : ℚ)*(inverseInterval i j).hi ≤ ((inputInverse i j).hi : ℚ) := by decide +kernel
+
+theorem value_fixed_bounds : ∀ i : Fin 14,
+    ((inputValue i).lo : ℚ) ≤ (unitScale : ℚ)*(valueInterval i).lo ∧
+    (unitScale : ℚ)*(valueInterval i).hi ≤ ((inputValue i).hi : ℚ) := by decide +kernel
+
+theorem inputNode_mem (i : Fin 14) : Mem unitScale (inputNode i) (node i) :=
+  mem_of_rat (node_mem i) unitScale_pos (node_fixed_bounds i).1 (node_fixed_bounds i).2
+
+theorem inputInverse_mem (i j : Fin 14) (h : i≠j) :
+    Mem unitScale (inputInverse i j) ((node i-node j)⁻¹) :=
+  mem_of_rat (inverse_mem i j h) unitScale_pos (inverse_fixed_bounds i j).1 (inverse_fixed_bounds i j).2
+
+theorem inputValue_mem (i : Fin 14) : Mem unitScale (inputValue i) (value i) :=
+  mem_of_rat (value_mem i) unitScale_pos (value_fixed_bounds i).1 (value_fixed_bounds i).2
+end ThomsonNine.ActualHermite.CoefficientData

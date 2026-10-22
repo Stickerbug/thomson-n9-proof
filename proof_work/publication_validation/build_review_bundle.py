@@ -11,10 +11,13 @@ import json
 import os
 import zipfile
 from datetime import datetime, timezone
+from verify_local_lean import (kernel_coverage, local_closure, LOCAL_ROOT,
+                               ROOT_MODULE, AUDIT_MODULE)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PROOF = os.path.join(ROOT, "proof_work")
 PV = os.path.join(PROOF, "publication_validation")
+EXPECTED = json.load(open(os.path.join(PV, "local_lean_expected.json")))
 OLD_BUNDLE = os.path.join(PROOF, "THOMSON_N9_REVIEW_BUNDLE.zip")
 NEW_BUNDLE = os.path.join(PROOF, "THOMSON_N9_REVIEW_BUNDLE_v2.zip")
 MANIFEST = os.path.join(PROOF, "SHARP_N9_REVIEW_MANIFEST.json")
@@ -74,42 +77,35 @@ def source_safe(name):
             and not normalized.endswith(FORBIDDEN_SUFFIXES))
 
 
-LEAN_MODULES = [
-    "Statement", "CoverageSoundness", "DomainCoverage", "TaylorTen",
-    "LeafSemantics", "ReducedPSD", "Family", "CandidateMem", "HermiteFactor",
-    "TransverseCoordinates", "Axioms", "Derivative", "Stationary",
-    "SecondDerivative", "Minimum", "StrictConvex", "EnergyContinuity",
-    "Applications", "ContactInner", "EnergyBounds", "DistanceValues", "GramBound",
-    "EnergyValue", "EnergyForms", "PairDeriv", "EnergyGradient", "EnergyPath", "GradientZero", "EnergyOptimality", "EnergySymmetry", "Minimizer", "ThreePoint",
-    "ThreePointBound", "TreeSemantics", "PSDSemantics", "FinalAssembly", "DomainChamber",
-    "Interval", "IntervalTensor", "IntervalMul", "IntervalEval",
-    "IntervalSum", "IntervalTensorEval", "LeafCert",
-    "LocalCerts", "LocalLDLSemantics", "LocalLDLFactorization",
-    "LocalLDLData", "LocalNonneg", "IntervalLocalOps", "LocalLDLReplay",
-    "LocalVerification", "GramBoundary",
-    "IntervalLinear", "LocalHessianBridge", "IntervalSparsePolynomial",
-    "IntervalPowerReplay", "IntervalSparseDerivative",
-    "LocalSparseHessianAAABase",
-    "LocalSparseHessianAAAChunk00", "LocalSparseHessianAAAChunk01",
-    "LocalSparseHessianAAAChunk02", "LocalSparseHessianAAAChunk03",
-    "LocalSparseHessianAAAChunk04", "LocalSparseHessianAAAChunk05",
-    "LocalSparseHessianAAAChunk06", "LocalSparseHessianAAAChunk07",
-    "LocalSparseHessianAAA", "SparseTranslation", "TargetBinding", "TwoSourceBindings",
-    "ChainBindings", "GatheredBinding", "MultiCornerBindings", "MultiCornerPowBindings", "MultiCornerPBindings", "GroupedT114", "Grouped124", "Grouped321", "Grouped329", "Grouped396", "Grouped403", "Grouped583", "Grouped590", "Grouped612", "Grouped647", "Grouped739", "Grouped103", "Grouped123", "Grouped224", "Grouped242", "Grouped312", "Grouped328", "Grouped463", "Grouped469", "Grouped517", "Grouped531", "Grouped547", "Grouped574", "Grouped615", "Grouped629", "GatheredTwoSource", "GatheredChain", "SingleSourceBindings", "FiveSourceBindings", "ChainRestBindings",
-    "SevenSourceBindings",
-    "EightSourceBindings",
-    "NineSourceBindings",
-    "TenSourceBindings", "ElevenSourceBindings",
-    "TwelveSourceBindings", "ThirteenSourceBindings", "FourteenSourceBindings",
-    "FifteenSourceBindings", "SixteenSourceBindings", "SeventeenSourceBindings",
-]
-
-# These are explicit because they are the review-facing reproducibility
-# interface, rather than incidental files matching a broad directory glob.
 PV_EXPLICIT_REQUIRED = (
     "export_local_lean.py", "local_lean_export_manifest.json",
     "export_local_ldl_replay.py", "local_ldl_replay_manifest.json",
-    "verify_local_lean.py",
+    "verify_local_lean.py", "export_grouped_generic.py",
+    "CONTINUATION_2026-10-21_zh.md", "local_lean_expected.json",
+    "NEXT13_INTEGRATION_zh.md",
+    "OPTIMIZATION_2026-10-21_zh.md", "grouped_optimization_benchmark.json",
+    "export_grouped_compact.py", "benchmark_grouped_compact.py",
+    "compact_grouped_manifest.json", "compact_inputs/GroupedT114.lean",
+    "COMPACT45_INTEGRATION_2026-10-22_zh.md", "compact_grouped_result.json",
+    "test_compact_validation.py",
+    "export_aaa_grouped_data.py", "aaa_grouped_data_manifest.json",
+    "GROUPED_BRIDGE_2026-10-22_zh.md", "aaa_grouped_bridge_result.json",
+    "check_cached_grouped_numeric.py", "aaa_cached_grouped_feasibility.json",
+    "export_aaa_fixed_tree.py", "aaa_fixed_tree_manifest.json",
+    "fixed_inputs/AAAFixedData.lean.in", "fixed_inputs/AAAIndexedData.lean.in",
+    "fixed_inputs/AAATreeData.lean.in", "fixed_inputs/baseline_targets.json",
+    "FIXED_TREE_807_2026-10-22_zh.md", "aaa_fixed_tree_result.json",
+    "export_semantic_inputs.py", "semantic_inputs_manifest.json",
+    "semantic_inputs/AAASupport.lean.in", "semantic_inputs/ActualHermite.lean.in",
+    "semantic_inputs/RadiusEndpoint.lean.in", "semantic_inputs/radius_inputs.json",
+    "independent_kernel_refined_result.json",
+    "SEMANTIC_RADIUS_HERMITE_2026-10-22_zh.md", "semantic_radius_hermite_result.json",
+    "export_hermite_coefficients.py", "hermite_coefficients_manifest.json",
+    "export_actual_construction.py", "actual_construction_manifest.json",
+    "ACTUAL_CONSTRUCTION_2026-10-22_zh.md", "actual_construction_result.json",
+    "hermite_inputs/ActualHermiteScalar.lean.in", "hermite_inputs/ActualHermiteBounds.lean.in",
+    "hermite_inputs/ActualQuotientBernstein.lean.in",
+    "ACTUAL_HERMITE_MINORANT_2026-10-22_zh.md", "actual_hermite_minorant_result.json",
     "export_local_hessian_bridge.py", "local_hessian_bridge_manifest.json",
     "export_local_sparse_hessian.py", "local_sparse_hessian_manifest.json",
     "local_lean_verification.json", "local_lean_build_stamp.json",
@@ -130,12 +126,22 @@ def sha256(path):
             h.update(block)
     return h.hexdigest()
 
+PV_EXPLICIT_REQUIRED += tuple(item['template'] for item in json.load(open(os.path.join(PV, 'actual_construction_manifest.json')))['files'].values())
+PV_EXPLICIT_REQUIRED += tuple(item['formal'] for item in json.load(open(os.path.join(PV, 'actual_construction_manifest.json')))['files'].values())
+PACKED_PATH = os.path.join(PV, 'packed_coverage_manifest.json')
+PACKED = json.load(open(PACKED_PATH)) if os.path.exists(PACKED_PATH) else None
+if PACKED:
+    PV_EXPLICIT_REQUIRED += ('export_packed_coverage.py', 'packed_coverage_manifest.json')
+    PV_EXPLICIT_REQUIRED += tuple(item['template'] for item in PACKED['files'].values())
+    if EXPECTED.get('global_theorem'):
+        PV_EXPLICIT_REQUIRED += ('GLOBAL_THEOREM_2026-10-22_zh.md', 'global_theorem_result.json')
+
 def validate_verification_report():
     """Refuse to pack a stale or failed Lean verification report.
 
     The report is evidence, not decoration: every source/artifact hash it
     records must still match disk, its module set must match the stamp, and the
-    audit must cover the current 606+ directives.  This prevents the bundle from
+    audit must match the registered expectations and the full fresh replay. This prevents the bundle from
     shipping an old PASS after the Lean tree has changed.
     """
     report_path = os.path.join(PV, "local_lean_verification.json")
@@ -148,13 +154,71 @@ def validate_verification_report():
         stamp = json.load(f)
     if report.get("status") != "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS":
         raise SystemExit("verification report is not PASS: " + repr(report.get("status")) + " / " + repr(report.get("error")))
-    if int(report.get("axiom_audits", 0)) < 644:
-        raise SystemExit("verification report has too few axiom audits: " + repr(report.get("axiom_audits")))
+    if EXPECTED.get('global_theorem'):
+        theorem = report.get('frozen_global_theorem', {})
+        statement_hash = sha256(os.path.join(PV, 'formal/ThomsonNine/Statement.lean'))
+        if (theorem.get('declaration') != EXPECTED['global_theorem']
+                or theorem.get('type') != 'ThomsonNine.ThomsonNineClaim'
+                or theorem.get('statement_sha256') != statement_hash
+                or EXPECTED.get('frozen_statement_sha256') != statement_hash
+                or theorem.get('compiler_axioms_and_complete_fresh_kernel_pass') is not True):
+            raise SystemExit('missing verified frozen global theorem')
+    if int(report.get("axiom_audits", 0)) != EXPECTED["axiom_audits"]:
+        raise SystemExit("verification report has an unexpected axiom audit count: " + repr(report.get("axiom_audits")))
     modules = set(report.get("modules", []))
     required = {"ThomsonNine.LocalVerification", "ThomsonNine.Axioms", "ThomsonNine",
                 "ThomsonNine.LocalSparseHessianAAA", "ThomsonNine.SparseTranslation",
                 "ThomsonNine.LocalHessianBridge", "ThomsonNine.Family",
                 "ThomsonNine.FinalAssembly"}
+    required.update(EXPECTED["required_root_modules"])
+    if len(modules) != EXPECTED["modules"]:
+        raise SystemExit("module closure differs from local_lean_expected.json")
+    coverage = report.get("conditional_coverage", {})
+    if coverage.get("covered") != len(EXPECTED["conditional_targets"]) or coverage.get("total") != EXPECTED["total_targets"]:
+        raise SystemExit("conditional coverage differs from local_lean_expected.json")
+    if coverage.get("targets") != EXPECTED["conditional_targets"]:
+        raise SystemExit("coverage target list is missing or duplicated")
+    if set(report.get("root_modules", [])) != set(EXPECTED["required_root_modules"]):
+        raise SystemExit("formal root closure differs from registered expectations")
+    expected_hash = sha256(os.path.join(PV, "local_lean_expected.json"))
+    if report.get("expected_configuration_sha256") != expected_hash or stamp.get("expected_configuration_sha256") != expected_hash:
+        raise SystemExit("verification expectations do not match report and stamp")
+    actual_local = local_closure(LOCAL_ROOT)
+    actual_root = local_closure(ROOT_MODULE)
+    actual_all = actual_local | actual_root | local_closure(AUDIT_MODULE)
+    actual_coverage = kernel_coverage(actual_local, actual_root, actual_all)
+    if EXPECTED.get('kernel_replay_policy') != actual_coverage['policy']:
+        raise SystemExit("unexpected registered kernel replay policy")
+    if actual_all != modules or set(report.get("root_modules", [])) != actual_root:
+        raise SystemExit("reported module sets differ from actual imports")
+    if report.get("local_verification_modules") != sorted(actual_local):
+        raise SystemExit("reported fresh closure differs from actual imports")
+    if report.get("kernel_replay_coverage") != actual_coverage or stamp.get("kernel_replay_coverage") != actual_coverage:
+        raise SystemExit("fresh replay does not cover every proof-bearing module")
+    if report.get("kernel_replay_modules") != [LOCAL_ROOT] or stamp.get("kernel_replay_modules") != [LOCAL_ROOT]:
+        raise SystemExit("unexpected fresh replay roots")
+    stages = {stage["name"]: stage for stage in report.get("stages", [])}
+    if len(stages) != len(report.get("stages", [])):
+        raise SystemExit("duplicate verification stages")
+    for name in ("validation_self_tests", "export_data", "export_replay", "export_hessian_bridge", "export_sparse_hessian",
+                 "export_compact_grouped", "export_aaa_grouped_data", "export_aaa_fixed_tree", "export_semantic_inputs", "export_hermite_coefficients", "export_actual_construction", "root", "build_ThomsonNine.LocalVerification",
+                 "axioms", "kernel_local_fresh"):
+        stage = stages.get(name, {})
+        if stage.get("exit_code") != 0:
+            raise SystemExit("missing successful verification stage: " + name)
+        log = os.path.join(PV, stage.get("log", ""))
+        if not os.path.isfile(log) or sha256(log) != stage.get("log_sha256"):
+            raise SystemExit("verification log hash mismatch: " + name)
+    if PACKED:
+        stage = stages.get('export_packed_coverage', {})
+        if stage.get('exit_code') != 0:
+            raise SystemExit('missing successful packed coverage export check')
+        log = os.path.join(PV, stage.get('log', ''))
+        if not os.path.isfile(log) or sha256(log) != stage.get('log_sha256'):
+            raise SystemExit('packed coverage export log hash mismatch')
+    for name, module in (("kernel_local_fresh", LOCAL_ROOT),):
+        if stages[name].get("command", [])[1:] != ["--fresh", module]:
+            raise SystemExit("fresh replay command mismatch: " + name)
     missing = sorted(required - modules)
     if missing:
         raise SystemExit("verification report misses required modules: " + repr(missing))
@@ -169,7 +233,7 @@ def validate_verification_report():
         if not os.path.isfile(path) or sha256(path) != expected:
             raise SystemExit("verification artifact hash mismatch: " + rel)
     for module, expected in stamp.get("sources", {}).items():
-        rel = "formal/ThomsonNine.lean" if module == "ThomsonNine" else "formal/" + module.replace(".", "/") + ".lean"
+        rel = "formal/" + module.replace(".", "/") + ".lean"
         if report.get("sources_sha256", {}).get(rel) != expected:
             raise SystemExit("build stamp source differs from verification report: " + module)
     for module, expected in stamp.get("artifacts", {}).items():
@@ -179,7 +243,8 @@ def validate_verification_report():
     return report
 
 
-validate_verification_report()
+verification = validate_verification_report()
+LEAN_SOURCES = [m.replace(".", "/") + '.lean' for m in verification["modules"]]
 
 # ---- file list -----------------------------------------------------------
 files = []
@@ -197,6 +262,8 @@ if os.path.exists(seed_bundle):
     with zipfile.ZipFile(seed_bundle) as z:
         for name in z.namelist():
             if name in ("README_REVIEW.txt", "proof_work/SHARP_N9_REVIEW_MANIFEST.json"):
+                continue
+            if name.startswith("proof_work/publication_validation/local_lean_verification_logs/"):
                 continue
             if source_safe(name) and os.path.isfile(os.path.join(ROOT, name)):
                 files.append(name)
@@ -235,16 +302,22 @@ for name in sorted(os.listdir(PV)):
         pv_names.append(name)
 for name in PV_EXPLICIT_REQUIRED:
     add_file(os.path.join("proof_work", "publication_validation", name), required=True)
+for source_manifest in [json.load(open(os.path.join(PV, 'actual_construction_manifest.json'))), PACKED]:
+    if source_manifest is None:
+        continue
+    for relative, expected_hash in source_manifest['input_sha256'].items():
+        absolute = os.path.realpath(os.path.join(PV, relative))
+        if os.path.commonpath([absolute, os.path.realpath(PROOF)]) != os.path.realpath(PROOF):
+            raise SystemExit('bound input escapes proof directory: ' + relative)
+        if not os.path.isfile(absolute) or sha256(absolute) != expected_hash:
+            raise SystemExit('bound input hash changed: ' + relative)
+        add_file(os.path.relpath(absolute, ROOT), required=True)
 for name in PV_EXPLICIT_OPTIONAL:
     if os.path.isfile(os.path.join(PV, name)):
         add_file(os.path.join("proof_work", "publication_validation", name))
-# Verification logs are generated by the serial verifier; include only log
-# files, never a broad directory walk that could pull caches into the bundle.
-log_dir = os.path.join(PV, "local_lean_verification_logs")
-if os.path.isdir(log_dir):
-    for name in sorted(os.listdir(log_dir)):
-        if name.endswith(".log") and os.path.isfile(os.path.join(log_dir, name)):
-            pv_names.append(os.path.join("local_lean_verification_logs", name))
+# Include only logs bound to stages in the current PASS report.
+for stage in verification["stages"]:
+    pv_names.append(stage["log"])
 for name in pv_names:
     add_file(os.path.join("proof_work", "publication_validation", name))
 
@@ -254,13 +327,20 @@ for n in ("aggregate.json", "manifest.json",
     add_file(os.path.join("proof_work", "publication_validation",
                           "sharded_run_v1", n))
 
-for m in LEAN_MODULES:
-    add_file(os.path.join("proof_work", "publication_validation", "formal",
-                          "ThomsonNine", m + ".lean"), required=True)
+for relative in LEAN_SOURCES:
+    add_file(os.path.join("proof_work", "publication_validation", "formal", relative), required=True)
 for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain",
-          "lake-manifest.json", "ThomsonNine.lean"):
+          "lake-manifest.json", "lake-manifest.original_git.json", "ThomsonNine.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
+
+# Include the publication manuscript as a reviewable artifact.  Keep the
+# selection explicit so LaTeX auxiliary files and local build logs do not
+# silently enter the canonical source archive.
+for name in ("paper/main.tex", "paper/README.md", "paper/main.pdf",
+             "paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip",
+             "paper/SUBMISSION_GUIDE_zh.md", "paper/COVER_LETTER_TEMPLATE.md"):
+    add_file(name, required=True)
 
 # Deduplicate and reject any inherited entry that was not source-safe.
 files = sorted(set(f for f in files if source_safe(f)))
@@ -273,110 +353,141 @@ for f in files:
     p = os.path.join(ROOT, f)
     manifest_files[f] = {"sha256": sha256(p), "bytes": os.path.getsize(p)}
 
-readme = """Thomson n=9 proof candidate -- review bundle (regenerated)
-===========================================================
+readme = f"""Thomson n=9 proof candidate -- review bundle
+===========================================
 
-SCOPE.  This package records a locally closed computer-assisted proof chain for
-the frozen statement described in THOMSON_N9_PROOF_CANDIDATE_zh.md.  It is a
-proof CANDIDATE: it has not been externally peer reviewed, the nine-point
-energy theorem has not been formally verified, and no statement about the
-global uniqueness of the minimizer is made.
+SCOPE: Partial, conditional Lean formalization and recorded exact-arithmetic
+checks. The final ThomsonNineClaim is UNPROVED. No external independent
+verification or peer review of the whole theorem is claimed. Global uniqueness
+of the minimizer is also unproved.
 
 START HERE
-  1. proof_work/THOMSON_N9_PROOF_CANDIDATE_zh.md   (frozen statement + proof)
-  2. proof_work/THOMSON_N9_CURRENT_zh.md           (full technical record)
-  3. proof_work/publication_validation/VALIDATION_STATUS_zh.md
-                                                   (what has been verified)
-  4. proof_work/publication_validation/README_independent_checker.md
-  5. proof_work/publication_validation/SUBMISSION_MANUSCRIPT_en.md
-  6. proof_work/publication_validation/SUBMISSION_CHECKLIST_zh.md
+  proof_work/publication_validation/SEMANTIC_RADIUS_HERMITE_2026-10-22_zh.md
+  proof_work/publication_validation/FIXED_TREE_807_2026-10-22_zh.md
+  proof_work/publication_validation/GROUPED_BRIDGE_2026-10-22_zh.md
+  proof_work/publication_validation/COMPACT45_INTEGRATION_2026-10-22_zh.md
+  proof_work/publication_validation/NEXT13_INTEGRATION_zh.md
+  proof_work/publication_validation/CONTINUATION_2026-10-21_zh.md
+  proof_work/publication_validation/VALIDATION_STATUS_zh.md
+  proof_work/publication_validation/README_local_lean.md
+  proof_work/publication_validation/formal/README_build.md
+  proof_work/THOMSON_N9_PROOF_CANDIDATE_zh.md
 
-REQUIREMENTS.  Python 3, numpy, sympy; a little-endian 64-bit machine and GCC
-with signed __int128 for the historical shared objects.  The independent
-checker itself is pure Python stdlib.
+CURRENT LEAN CHECK
+  Status: {verification['status']}
+  Lean 4.34.1; Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612.
+  {len(verification["modules"])} local modules, {verification["axiom_audits"]} distinct #print axioms directives.
+  Allowed axioms: propext, Classical.choice, Quot.sound; no sorryAx.
+  Fresh replay: leanchecker --fresh ThomsonNine.LocalVerification
+  The entire ThomsonNine root closure is contained in this fresh replay.
+  Axioms is separately compiled and restricted to imports/axiom-print directives.
+  leanchecker uses Lean's own kernel; it is NOT an external independent verifier.
+  LocalVerification imports the formal root, including all integrated grouped
+  certificates. Exact expected counts and targets are in local_lean_expected.json.
+  45 grouped modules now use compact proofs, preserving their statements and
+  interval definitions. See compact_grouped_result.json for measured sizes.
+  Fixed integer intervals and a shared grouping tree now check all 807 archived
+  coefficient bounds using ordinary kernel reduction. The all_gathered theorem
+  supplies the full coefficient premises for the existing AAA H00 certificate.
+  Actual N/contact33/190X/PSD/F/c construction and physical R_H identification
+  now discharge all807 archived source interval premises. All12 actual residual
+  contact values and the weighted moment value/derivative are proved.
+  The full45 contact equations additionally compile in the isolated workspace;
+  they are outside this unified checkpoint. The final global theorem remains open.
 
-(T1) INDEPENDENT EXACT ARITHMETIC CHECK (fresh recomputation of the whole tree)
-  python3 -u proof_work/publication_validation/test_checker_exact.py
-  python3 -u proof_work/publication_validation/checker_exact.py \\
-    --inputs proof_work/publication_validation/sharp_root_inputs.json \\
-    --tree proof_work/publication_validation/sharp_root_tree.jsonl \\
-    --output proof_work/publication_validation/independent_full_result.json \\
-    --expected-input-sha256 3dd4ba639e78cabaa2c3a8182db3724545751ade50635e6d542067338b281066
-  Recorded sharded replay: proof_work/publication_validation/sharded_run_v1/
-  (154 shards, 136125 nodes, 68063 leaves, pending=0).
+CONDITIONAL COVERAGE
+  {verification["conditional_coverage"]["covered"]} DISTINCT gathered-coefficient targets out of 807.
+  Historical baseline: 279 declarations represented only 272 distinct targets;
+  seven targets had duplicate declarations. The prior seven-target integration
+  gave 286 declarations and 279 distinct targets. The subsequent thirteen-target
+  integration gave 299 declarations and 292 distinct targets.
+  All 21 eleven-source, three-axis grouped targets are integrated.
+  The previous coefficient batch added t597, t381/t409/t653, and all nine thirteen-source multi-axis
+  targets (286, 334, 703, 388, 402, 456, 475, 589, 596).
+  This does not identify the source coefficient family with the true residual.
 
-(T2) NEGATIVE / FAILURE-PROPAGATION TESTS
-  python3 -u proof_work/publication_validation/test_checker_exact.py
-  python3 -u proof_work/publication_validation/test_checker_supplemental.py
+REPRODUCE
+  Set LEAN_BIN_DIR to the pinned toolchain's bin directory (or put it on PATH).
+  Keep/reuse formal/.lake; see formal/README_build.md for dependency caches.
+  python3 -B proof_work/publication_validation/verify_local_lean.py
+  A matching prior PASS stamp permits --reuse-local-build. Explicit adoption
+  of externally compiled artifacts uses --adopt-build and is reported as such.
+  After PASS: python3 proof_work/publication_validation/build_review_bundle.py
+  The builder checks current source/artifact/log hashes and refuses stale PASS.
 
-(T3) HISTORICAL FULL REPLAY (same implementation, not an independent kernel)
-  OPENBLAS_NUM_THREADS=1 python3 proof_work/verify_thomson_n9_sharp.py \\
-    --outdir proof_work/new_external_replay
+HISTORICAL EXACT-ARITHMETIC EVIDENCE
+  The independent Python int/Fraction checker, archived tree (136125 nodes,
+  68063 leaves), recorded sharded results, and tests are included. This update
+  did not rerun the entire tree. See README_independent_checker.md for details.
 
-(T4) LEAN 4 SOURCES (partial formalization; final theorem NOT formalized)
-  proof_work/publication_validation/formal/README_build.md explains the pinned
-  Lean 4.34.1 / Mathlib d13f23b7 toolchain.  The modules Statement, Family,
-  CandidateMem, DomainCoverage, LeafSemantics, Derivative, Stationary,
-  SecondDerivative, Minimum, StrictConvex, EnergyContinuity, Applications and
-  ContactInner compile; the axiom audit and the coverage lemmas are included.
-  Applications.lean proves isometry invariance, the inner-product form of the
-  energy and a crude unconditional lower bound; ContactInner.lean computes the
-  six candidate-family inner products A, B, C, D, F, G.  Stationary.lean formalizes the endpoint signs, continuity and the
-  existence of the family stationary point; SecondDerivative.lean formalizes
-  positivity of the second derivative and Rolle-theorem uniqueness
-  (exists_unique_stationary_point); Minimum.lean formalizes strict monotonicity
-  of the derivative and the unique strict global minimum of the family energy
-  (exists_unique_familyEnergy_min); EnergyPath.lean proves the multi-point path
-  derivative, GradientZero.lean the equivalence of vanishing gradient and
-  stationarity, EnergyOptimality.lean first-order optimality, EnergySymmetry.lean
-  relabeling invariance, and Minimizer.lean the existence of a global minimizer
-  (exists_global_minimizer, exists_global_minimizer_lt_26).  ThreePoint.lean is
-  an attributed adaptation of the Bachoc-Vallentin three-point positivity from
-  the N=7 Lean project (quad_Y3_nonneg, bv_positivity); its general-PSD pairing
-  lemma is explicitly deferred.  ThreePointBound.lean ports the reduced-kernel
-  combinatorics (dsum, Rs, dsum_Rs, dsum_H, Rk, sum4_swap) and the exact
-  three_point_identity from the same project; three_point_bound still awaits the
-  PSD moment inequality matDot_moment_nonneg.  FinalAssembly.lean proves the frozen claim is
-  equivalent to the global lower bound (thomsonNineClaim_iff_global_lower_bound);
-  the unformalized part is exactly that bound.  DomainChamber.lean sorts any
-  physical inner-product triple into the ordered chamber with the Gram constraint
-  preserved.  There is no Lean proof of the nine-point energy
-  statement, and `sorry`/`axiom` are absent from the sources. The independent
-  `verify_aaa_shift_binding.py` replays the formal three-axis interval
-  algorithm exactly and checks 807/807 archived shifted-coefficient targets.
-  `TwoSourceBindings.lean` and `ChainBindings.lean` prove 32 two-source plus
-  54 three/four-source target interval bounds (together with TargetBinding
-  .t126, 87 of the 807 targets), and `MultiCornerBindings.lean` adds 15
-  five-source multi-axis delta≤1 targets and `MultiCornerPowBindings.lean` adds 9
-  delta≥2 five-source multi-axis targets, `MultiCornerPBindings.lean` adds 13
-  eight-source multi-axis targets whose per-source intervals are contained; for 254 of the 807 targets; these are
-  interval arithmetic certificates.  `GatheredBinding.lean` additionally
-  proves that the full 807-term gathered coefficient for `.t126` equals its two
-  contributing binomial terms and lies in the archived interval.
+OPEN PROOF OBLIGATIONS
+  Actual residual/shifted-coefficient binding; complete Hessians for the other
+  classes; 45 contact equations and rank-33/W compatibility; instantiation of
+  the 68063-leaf coverage; final energy lower bound and ThomsonNineClaim.
 
-(T5) LEAN LOCAL CERTIFICATE (conditional; NOT the global theorem)
-  The 12-class LDL replay and the AAA H00 sparse Hessian certificate are
-  compiled and checked by the unified local verifier:
-  python3 -B proof_work/publication_validation/verify_local_lean.py --adopt-build
-  Recorded result (2026-10-20 14:08 UTC): status
-  LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS, 644 #print axioms directives,
-  90-module closure, and leanchecker ThomsonNine.LocalVerification exit 0.
-  See proof_work/publication_validation/local_lean_verification.json and
-  local_lean_build_stamp.json.  The AAA theorem assumes a fixed real
-  coefficient family in coefficientInterval and a point in relativeBox; its
-  binding to the true residual/shifted coefficients is NOT proved.  Other
-  classes, the 45 contact equations, the 68,063-leaf coverage instantiation,
-  and the final ThomsonNineClaim remain unformalized.  This is a local,
-  conditional certificate, not an external review or a solution of the
-  nine-point problem.
+INTEGRITY
+  proof_work/SHARP_N9_REVIEW_MANIFEST.json records every payload file's SHA-256
+  and size. Build caches and toolchain binaries are intentionally excluded.
+  Generated {datetime.now(timezone.utc).isoformat()} UTC.
+"""
 
-CAVEATS.  The manuscript-style links in THOMSON_N9_CURRENT_zh.md use original
-absolute paths; open the corresponding extracted files instead.  The full
-replay uses the same implementation, not an independent proof checker.  Files
-were hashed at packing time; see proof_work/SHARP_N9_REVIEW_MANIFEST.json.
+if verification.get('frozen_global_theorem'):
+    readme = f"""Thomson n=9 -- frozen global theorem, Lean proof and review sources
+==================================================================
 
-Generated %s UTC.
-""" % datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
+The exact, unchanged ThomsonNineClaim is proved by
+  ThomsonNine.thomsonNineClaim_proved : ThomsonNine.ThomsonNineClaim
+
+The theorem states that the specified three-ring candidate at the unique
+stationary radius r in (0,1) lies on the unit sphere, has the stated energy,
+and has energy no greater than every injective nine-point sphere configuration.
+It does not state that all minimizing configurations are congruent.
+
+START HERE
+  proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md
+  proof_work/publication_validation/formal/ThomsonNine/Statement.lean
+  proof_work/publication_validation/formal/MainCoverage/Final.lean
+  proof_work/publication_validation/local_lean_verification.json
+  proof_work/publication_validation/README_local_lean.md
+
+VERIFICATION
+  {verification['status']}
+  {len(verification['modules'])} modules in the complete import closure.
+  {verification['axiom_audits']} distinct, ordered axiom audits.
+  Only propext, Classical.choice and Quot.sound are allowed; no sorryAx.
+  All 807 archived coefficient targets and all 12 actual local neighborhoods
+  are connected to the actual residual. The archived 136125-node tree has
+  68063 leaves and is checked through 498 certified frontier subtrees.
+  Complete replay: leanchecker --fresh ThomsonNine.LocalVerification
+  The formal root and final theorem are contained in that replay closure.
+  Original module names and exact existing compiler artifacts were explicitly
+  adopted, then the entire imported proof was replayed in a fresh kernel.
+
+Lean 4.34.1 and Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612 are pinned.
+leanchecker uses Lean's own kernel. This is not an external independent
+implementation or peer review. Earlier Python exact-arithmetic evidence is
+included with its original scope; it is not a substitute for that distinction.
+
+REPRODUCE
+  Set LEAN_BIN_DIR to the pinned Lean bin directory, preserve formal/.lake,
+  then run python3 -B proof_work/publication_validation/verify_local_lean.py
+  A prior matching PASS stamp permits --reuse-local-build. --adopt-build
+  explicitly adopts existing artifacts with source/artifact hash checks.
+  The verifier discovers owned modules through packed_coverage_manifest.json,
+  checks source templates and input hashes, rejects unregistered local imports,
+  audits all declared conclusions, and runs one complete fresh kernel replay.
+  After PASS: python3 proof_work/publication_validation/build_review_bundle.py
+
+The earlier ThomsonNine/Construction copies remain as historical reproducibility
+sources. They are superseded by the original-name modules and are not imported
+alongside them. Exact current import counts are in local_lean_expected.json.
+Progress documents dated before the final theorem describe historical stages.
+
+INTEGRITY
+  proof_work/SHARP_N9_REVIEW_MANIFEST.json hashes every payload file.
+  Compiled caches and toolchain binaries are excluded from this source archive.
+  Generated {datetime.now(timezone.utc).isoformat()} UTC.
+"""
 
 manifest = {
     "status": "PUBLICATION_CANDIDATE_PACKAGE_UNREVIEWED",
@@ -386,8 +497,16 @@ manifest = {
               "verified as a whole; no global uniqueness claim."),
     "generated_utc": datetime.now(timezone.utc).isoformat(),
     "file_count": len(files) + 2,
+    "lean_verification": {"status": verification["status"], "modules": len(verification["modules"]),
+                          "axiom_audits": verification["axiom_audits"],
+                          "distinct_conditional_targets": verification["conditional_coverage"]["covered"],
+                          "total_targets": 807, "external_independent_verification": False},
     "files": manifest_files,
 }
+if verification.get('frozen_global_theorem'):
+    manifest['scope'] = ('Unchanged frozen ThomsonNineClaim proved in Lean; complete compiler, axiom and fresh Lean-kernel replay PASS. '
+                         'No external independent verification or peer review; no theorem of congruence uniqueness of all minimizers.')
+    manifest['lean_verification']['frozen_global_theorem'] = verification['frozen_global_theorem']
 
 with open(MANIFEST, "w", encoding="utf-8") as f:
     json.dump(manifest, f, ensure_ascii=False, indent=2, sort_keys=True)

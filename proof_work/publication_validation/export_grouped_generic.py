@@ -1,7 +1,8 @@
 import json,sys
+from pathlib import Path
 from fractions import Fraction as F
 from math import comb
-P='/home/dsh/Thomson Problem/proof_work/publication_validation/'
+P=str(Path(__file__).resolve().parent)+'/'
 R=json.load(open(P+'independent_hermite_RH_result.json'))['R_coefficients']
 J=json.load(open(P+'independent_local_00_AAA.json'))
 QM={tuple(e):v for e,v in J['shifted_polynomial']}; A=[(F(x[0]),F(x[1])) for x in J['new_center_intervals']]
@@ -10,6 +11,9 @@ K=tuple(R[IDX][0]); TARGET=f't{IDX:03d}'; Q=tuple(map(F,QM[K]))
 src=[(i,tuple(x[0]),(F(x[1][0]),F(x[1][1]))) for i,x in enumerate(R) if all(x[0][j]>=K[j] for j in range(3))]
 M=len(src)
 assert M>=2
+MAX_SHIFT=max(e[j]-K[j] for _,e,_ in src for j in range(3))
+HEARTBEATS=10000000 if MAX_SHIFT >= 5 else 1000000
+LINT_OPTION='set_option linter.unusedSimpArgs false\n' if MAX_SHIFT >= 5 else ''
 def rat(q): return f'({q.numerator} / {q.denominator} : ℚ)'
 def idef(n,I):
  pr='by rw [Rat.le_iff]' if I[0]==I[1] else 'by rw [Rat.le_iff]; norm_num'
@@ -28,8 +32,8 @@ open ThomsonNine.LocalSparseHessianAAA
 open ThomsonNine.Interval.SparsePolynomial
 open ThomsonNine.GatheredBinding
 set_option maxRecDepth 100000
-set_option maxHeartbeats 1000000
-''')
+set_option maxHeartbeats {HEARTBEATS}
+{LINT_OPTION}''')
 for i in range(3): n=f'A{i}'; L.append(idef(n,A[i])); defs.append(n)
 L.append(idef('Q_'+TARGET,Q)); defs.append('Q_'+TARGET)
 for j,(_,e,I) in enumerate(src): n=f'R{j}_{TARGET}'; L.append(idef(n,I)); defs.append(n)

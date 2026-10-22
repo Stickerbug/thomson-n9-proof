@@ -50,48 +50,36 @@ theorem t583_sum (c0 c1 c2 c3 c4 c5 c6 c7 : ℝ) (a : Fin 3 → ℝ)
   Q_t583.mem (c0 + ((c3) * (7 * a 0) + ((c6) * ((28 * a 0 * a 0)))) + ((c2 + ((c5) * (7 * a 0))) * (3 * a 1)) + ((c1 + ((c4) * (7 * a 0) + ((c7) * ((28 * a 0 * a 0))))) * (8 * a 2))) := by
   have hSb0_7_t583 : Sb0_7_t583.mem (7 : ℝ) := by constructor <;> simp [Sb0_7_t583]
   have hS0_7_1_t583 : S0_7_1_t583.mem (7 * a 0) := by
-    refine mem_mul_of_bounds hSb0_7_t583 ha0 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S0_7_1_t583, Sb0_7_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb0_7_t583 ha0
   have hSb0_8_t583 : Sb0_8_t583.mem (28 : ℝ) := by constructor <;> simp [Sb0_8_t583]
   have hS0_8_1_t583 : S0_8_1_t583.mem (28 * a 0) := by
-    refine mem_mul_of_bounds hSb0_8_t583 ha0 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S0_8_1_t583, Sb0_8_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb0_8_t583 ha0
   have hS0_8_2_t583 : S0_8_2_t583.mem ((28 * a 0) * a 0) := by
-    refine mem_mul_of_bounds hS0_8_1_t583 ha0 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S0_8_2_t583, S0_8_1_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hS0_8_1_t583 ha0
   have hSb1_3_t583 : Sb1_3_t583.mem (3 : ℝ) := by constructor <;> simp [Sb1_3_t583]
   have hS1_3_1_t583 : S1_3_1_t583.mem (3 * a 1) := by
-    refine mem_mul_of_bounds hSb1_3_t583 ha1 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S1_3_1_t583, Sb1_3_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb1_3_t583 ha1
   have hSb2_8_t583 : Sb2_8_t583.mem (8 : ℝ) := by constructor <;> simp [Sb2_8_t583]
   have hS2_8_1_t583 : S2_8_1_t583.mem (8 * a 2) := by
-    refine mem_mul_of_bounds hSb2_8_t583 ha2 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S2_8_1_t583, Sb2_8_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb2_8_t583 ha2
   have hT0_3_t583 : T0_3_t583.mem ((c3) * (7 * a 0)) := by
-    refine mem_mul_of_bounds h3 hS0_7_1_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_3_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h3 hS0_7_1_t583
   have hT0_4_t583 : T0_4_t583.mem ((c4) * (7 * a 0)) := by
-    refine mem_mul_of_bounds h4 hS0_7_1_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_4_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h4 hS0_7_1_t583
   have hT0_5_t583 : T0_5_t583.mem ((c5) * (7 * a 0)) := by
-    refine mem_mul_of_bounds h5 hS0_7_1_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_5_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h5 hS0_7_1_t583
   have hT0_6_t583 : T0_6_t583.mem ((c6) * ((28 * a 0 * a 0))) := by
-    refine mem_mul_of_bounds h6 hS0_8_2_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_6_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h6 hS0_8_2_t583
   have hT0_7_t583 : T0_7_t583.mem ((c7) * ((28 * a 0 * a 0))) := by
-    refine mem_mul_of_bounds h7 hS0_8_2_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_7_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h7 hS0_8_2_t583
   have hG0_0_t583 : G0_0_t583.mem (c0 + ((c3) * (7 * a 0) + ((c6) * ((28 * a 0 * a 0))))) := by simpa [G0_0_t583, add_assoc] using mem_add h0 (mem_add hT0_3_t583 (hT0_6_t583))
   have hG0_1_t583 : G0_1_t583.mem (c1 + ((c4) * (7 * a 0) + ((c7) * ((28 * a 0 * a 0))))) := by simpa [G0_1_t583, add_assoc] using mem_add h1 (mem_add hT0_4_t583 (hT0_7_t583))
   have hG0_2_t583 : G0_2_t583.mem (c2 + ((c5) * (7 * a 0))) := by simpa [G0_2_t583, add_assoc] using mem_add h2 (hT0_5_t583)
   have hT1_2_t583 : T1_2_t583.mem ((c2 + ((c5) * (7 * a 0))) * (3 * a 1)) := by
-    refine mem_mul_of_bounds hG0_2_t583 hS1_3_1_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T1_2_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hG0_2_t583 hS1_3_1_t583
   have hG1_0_t583 : G1_0_t583.mem (c0 + ((c3) * (7 * a 0) + ((c6) * ((28 * a 0 * a 0)))) + ((c2 + ((c5) * (7 * a 0))) * (3 * a 1))) := by simpa [G1_0_t583, add_assoc] using mem_add hG0_0_t583 (hT1_2_t583)
   have hT2_1_t583 : T2_1_t583.mem ((c1 + ((c4) * (7 * a 0) + ((c7) * ((28 * a 0 * a 0))))) * (8 * a 2)) := by
-    refine mem_mul_of_bounds hG0_1_t583 hS2_8_1_t583 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T2_1_t583, A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hG0_1_t583 hS2_8_1_t583
   have hG2_0_t583 : G2_0_t583.mem (c0 + ((c3) * (7 * a 0) + ((c6) * ((28 * a 0 * a 0)))) + ((c2 + ((c5) * (7 * a 0))) * (3 * a 1)) + ((c1 + ((c4) * (7 * a 0) + ((c7) * ((28 * a 0 * a 0))))) * (8 * a 2))) := by simpa [G2_0_t583, add_assoc] using mem_add hG1_0_t583 (hT2_1_t583)
   refine mem_subset hG2_0_t583 ?_ ?_
   · simp only [A0, A1, A2, Q_t583, R0_t583, R1_t583, R2_t583, R3_t583, R4_t583, R5_t583, R6_t583, R7_t583, Sb0_7_t583, S0_7_1_t583, Sb0_8_t583, S0_8_1_t583, S0_8_2_t583, Sb1_3_t583, S1_3_1_t583, Sb2_8_t583, S2_8_1_t583, T0_3_t583, T0_4_t583, T0_5_t583, T0_6_t583, T0_7_t583, G0_0_t583, G0_1_t583, G0_2_t583, T1_2_t583, G1_0_t583, T2_1_t583, G2_0_t583, RatInterval.const]
@@ -108,7 +96,8 @@ theorem t583_gathered (c : TermIndex → ℝ) (a : Fin 3 → ℝ)
   have hQ : coefficientInterval .t583 = Q_t583 := by rfl
   rw [hQ]
   have heq : (expandedCoefficient (exponents .t583) (exponents .t583) (c .t583) a + (expandedCoefficient (exponents .t584) (exponents .t583) (c .t584) a + (expandedCoefficient (exponents .t592) (exponents .t583) (c .t592) a + (expandedCoefficient (exponents .t648) (exponents .t583) (c .t648) a + (expandedCoefficient (exponents .t649) (exponents .t583) (c .t649) a + (expandedCoefficient (exponents .t657) (exponents .t583) (c .t657) a + (expandedCoefficient (exponents .t708) (exponents .t583) (c .t708) a + (expandedCoefficient (exponents .t709) (exponents .t583) (c .t709) a)))))))) = (c .t583) + (((c .t648)) * (7 * a 0) + (((c .t708)) * ((28 * a 0 * a 0)))) + (((c .t592) + (((c .t657)) * (7 * a 0))) * (3 * a 1)) + (((c .t584) + (((c .t649)) * (7 * a 0) + (((c .t709)) * ((28 * a 0 * a 0))))) * (8 * a 2)) := by
-    simp [expandedCoefficient, shiftFactor, Nat.choose, exponents]
+    change (((((c .t583) * ((Nat.choose 6 6 : ℝ) * a 0 ^ 0)) * ((Nat.choose 2 2 : ℝ) * a 1 ^ 0)) * ((Nat.choose 7 7 : ℝ) * a 2 ^ 0)) + (((((c .t584) * ((Nat.choose 6 6 : ℝ) * a 0 ^ 0)) * ((Nat.choose 2 2 : ℝ) * a 1 ^ 0)) * ((Nat.choose 8 7 : ℝ) * a 2 ^ 1)) + (((((c .t592) * ((Nat.choose 6 6 : ℝ) * a 0 ^ 0)) * ((Nat.choose 3 2 : ℝ) * a 1 ^ 1)) * ((Nat.choose 7 7 : ℝ) * a 2 ^ 0)) + (((((c .t648) * ((Nat.choose 7 6 : ℝ) * a 0 ^ 1)) * ((Nat.choose 2 2 : ℝ) * a 1 ^ 0)) * ((Nat.choose 7 7 : ℝ) * a 2 ^ 0)) + (((((c .t649) * ((Nat.choose 7 6 : ℝ) * a 0 ^ 1)) * ((Nat.choose 2 2 : ℝ) * a 1 ^ 0)) * ((Nat.choose 8 7 : ℝ) * a 2 ^ 1)) + (((((c .t657) * ((Nat.choose 7 6 : ℝ) * a 0 ^ 1)) * ((Nat.choose 3 2 : ℝ) * a 1 ^ 1)) * ((Nat.choose 7 7 : ℝ) * a 2 ^ 0)) + (((((c .t708) * ((Nat.choose 8 6 : ℝ) * a 0 ^ 2)) * ((Nat.choose 2 2 : ℝ) * a 1 ^ 0)) * ((Nat.choose 7 7 : ℝ) * a 2 ^ 0)) + (((((c .t709) * ((Nat.choose 8 6 : ℝ) * a 0 ^ 2)) * ((Nat.choose 2 2 : ℝ) * a 1 ^ 0)) * ((Nat.choose 8 7 : ℝ) * a 2 ^ 1)))))))))) = _
+    norm_num only [Nat.choose, Nat.cast_add, Nat.cast_mul, Nat.cast_ofNat, Nat.cast_one, Nat.cast_zero]
     ring
   rw [heq]
   exact t583_sum (c .t583) (c .t584) (c .t592) (c .t648) (c .t649) (c .t657) (c .t708) (c .t709) a h0 h1 h2 h3 h4 h5 h6 h7 ha0 ha1 ha2

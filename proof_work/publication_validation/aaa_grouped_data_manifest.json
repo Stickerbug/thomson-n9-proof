@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_terms": 807,
+  "target_terms": 807,
+  "scope": "Uniform computed-interval bridge only; archived endpoint certificates separate; no actual residual binding.",
+  "inputs_sha256": {
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+    "independent_local_00_AAA.json": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5"
+  },
+  "source_sha256": "3d5f9c3dc506de3be3f2bd5d1e27408bd5d37d88cffaeec48d02c70ce6917e47"
+}

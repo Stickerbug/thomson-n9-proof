@@ -1,5 +1,5 @@
-# Experimental 11-source grouped certificates
+# 11 源 grouped 模块已迁入正式目录
 
-These seven Lean modules were generated and compiled, but were not integrated into the canonical 644-audit / 279-of-807 verified configuration before publication.
-
-They are kept for continuation work. To include them, add the imports and `#print axioms` directives, rebuild root/Axioms/LocalVerification, and run the unified verifier.
+`Grouped646/664/677/697/720/738/762.lean` 已迁入
+`proof_work/publication_validation/formal/ThomsonNine/`，并加入正式根入口和公理审计。
+验证是否通过以最新 `local_lean_verification.json` 为准。

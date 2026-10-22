@@ -1,0 +1,45 @@
+import ThomsonNine.SparseSupport
+import ThomsonNine.AAAGroupedData
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+noncomputable section
+namespace ThomsonNine.AAASupport
+open ThomsonNine.Interval.SparsePolynomial ThomsonNine.Interval.SparsePolynomial.Grouped
+open ThomsonNine.Interval.SparsePolynomial.Collected
+open ThomsonNine.LocalSparseHessianAAA ThomsonNine.GatheredBinding
+
+def support : List Exp3 := @@SUPPORT@@
+def codes : List ℕ := @@CODES@@
+def mask : ℕ := @@MASK@@
+
+theorem support_eq : support = allTerms.map exponents := by rfl
+theorem codes_eq : support.map encode = codes := by rfl
+theorem mask_eq : natMask codes = mask := by decide +kernel
+theorem codes_nodup : codes.Nodup := by
+  have h : List.IsChain (·<·) codes := by decide +kernel
+  exact h.pairwise.nodup
+theorem support_nodup : support.Nodup := by
+  apply List.Nodup.of_map encode
+  rw [codes_eq]
+  exact codes_nodup
+
+theorem support_bounded : ∀ e ∈ support, bounded e := by
+  unfold bounded
+  decide +kernel
+
+theorem predecessor0 : ∀ e ∈ support, 0 < e 0 →
+    mask.testBit (encode (exponentTriple (e 0-1) (e 1) (e 2))) = true := by decide +kernel
+theorem predecessor1 : ∀ e ∈ support, 0 < e 1 →
+    mask.testBit (encode (exponentTriple (e 0) (e 1-1) (e 2))) = true := by decide +kernel
+theorem predecessor2 : ∀ e ∈ support, 0 < e 2 →
+    mask.testBit (encode (exponentTriple (e 0) (e 1) (e 2-1))) = true := by decide +kernel
+
+theorem support_lower_closed : ∀ e ∈ support, ∀ k : Exp3,
+    (∀ j, k j ≤ e j) → k ∈ support := by
+  apply lower_closed_of_mask support mask
+  · rw [codes_eq]; exact mask_eq
+  · exact support_bounded
+  · exact predecessor0
+  · exact predecessor1
+  · exact predecessor2
+end ThomsonNine.AAASupport

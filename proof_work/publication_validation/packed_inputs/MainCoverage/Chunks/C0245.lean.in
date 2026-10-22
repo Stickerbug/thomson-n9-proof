@@ -1,0 +1,8 @@
+import MainCoverage.RootData
+set_option maxRecDepth 100000
+set_option maxHeartbeats 1000000000
+namespace ThomsonNine.PackedMain
+def tree0245 : Tree := (Tree.split 19 (Tree.split 16 (Tree.split 16 (Tree.order 0 1) (Tree.split 16 Tree.gram (Tree.split 16 (Tree.split 16 (Tree.order 0 1) (Tree.split 16 Tree.gram (Tree.split 16 Tree.gram (Tree.order 0 1)))) (Tree.order 0 1)))) (Tree.order 0 1)) (Tree.split 19 (Tree.split 19 (Tree.order 0 1) (Tree.split 19 (Tree.split 18 (Tree.split 18 (Tree.order 0 1) (Tree.split 18 (Tree.split 16 (Tree.split 16 (Tree.order 0 1) (Tree.split 16 Tree.gram (Tree.split 16 Tree.gram (Tree.order 0 1)))) (Tree.order 0 1)) (Tree.split 18 (Tree.split 18 (Tree.order 0 1) (Tree.split 18 (Tree.split 18 (Tree.split 18 (Tree.order 0 1) (Tree.split 18 (Tree.split 18 (Tree.split 18 (Tree.order 0 1) (Tree.split 18 Tree.gram (Tree.positive 1 1732 1731 2360))) (Tree.order 0 1)) (Tree.positive 1 1049 1048 1545))) (Tree.order 0 1)) (Tree.split 2 (Tree.split 2 (Tree.order 0 1) (Tree.positive 1 1049 1048 920)) (Tree.order 0 1)))) (Tree.order 0 1)))) (Tree.order 0 1)) (Tree.split 1 (Tree.split 1 (Tree.order 0 1) (Tree.split 1 (Tree.split 1 (Tree.split 1 (Tree.order 0 1) (Tree.positive 0 613 612 533)) (Tree.order 0 1)) (Tree.positive 0 351 350 534))) (Tree.order 0 1)))) (Tree.order 0 1)))
+def path0245 : List Bool := [false,false,true,false,false,false,true,true,false,true,true,true,false,false,true,false,false,true,true,false]
+theorem checked0245 : pathOK rootState path0245=true ∧ check axisLookup localCores (atPath rootState path0245) tree0245=true := by decide +kernel
+end ThomsonNine.PackedMain

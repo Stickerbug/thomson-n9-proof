@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "source_terms": 807,
+  "hermite_nodes": 14,
+  "tight_radius_bits": 800,
+  "generated_modules": [
+    "AAASupport",
+    "RadiusEndpointLo",
+    "RadiusEndpointHi",
+    "RadiusEndpointTightLo",
+    "RadiusEndpointTightHi",
+    "ActualHermite"
+  ],
+  "scope": "Finite Lean certificates; actual H coefficient bounds and final global claim are separate.",
+  "inputs_sha256": {
+    "independent_kernel_refined_result.json": "25eed8b02a987716d4aa7a2cf752ba485846611dff82529548a809500efafe90",
+    "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+    "independent_local_00_AAA.json": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5",
+    "semantic_inputs/radius_inputs.json": "6eaa17db59163c845be7adba325589f89c94996b97f96dd84314a9c776efcfa2"
+  },
+  "templates_sha256": {
+    "semantic_inputs/AAASupport.lean.in": "6598ab4b5d943c087e58e8258df296029da9133b39ab43ab85a7ca1476a9e57f",
+    "semantic_inputs/ActualHermite.lean.in": "6b9f5cd33854eb7a23624bcd270d8eea94979fc2d3367446b4993a98c5f0393f",
+    "semantic_inputs/RadiusEndpoint.lean.in": "69685c3ec76ca335b3653cb2887fe1c1a830acd88ed6e2643fd76545543f8199"
+  },
+  "source_sha256": {
+    "AAASupport": "b54c979934cb351fc9f9aa9cee5ea062143925532cacbf08cd26362aff18884a",
+    "RadiusEndpointLo": "85ef7c0ffbc911201a691383bc61279b65fc6d17e8b2296023d5c85f8bf377f1",
+    "RadiusEndpointHi": "a2ba3036a4dd2b8fbca9806a19749706bebfa723517ab533f4825d562fa3d1a4",
+    "RadiusEndpointTightLo": "3aa9f14307b0c449a86f6f4c7a8df63ffb29a3e509ea5eac9b98d4d2e404bb17",
+    "RadiusEndpointTightHi": "e786123b0e4c9beb359744392d31e8525712c5834762e4d932c757b86209d0c3",
+    "ActualHermite": "50f25609faea929837bfe09f809cb0089136f0256200b48a2226445c4fc40117"
+  }
+}

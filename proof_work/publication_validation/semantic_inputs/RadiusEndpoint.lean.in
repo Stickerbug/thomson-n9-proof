@@ -1,0 +1,145 @@
+import ThomsonNine.IntervalSqrt
+import ThomsonNine.SecondDerivative
+set_option maxRecDepth 100000
+set_option maxHeartbeats 10000000
+noncomputable section
+namespace ThomsonNine.@@NAMESPACE@@
+open ThomsonNine.Interval ThomsonNine.Interval.RatInterval
+open ThomsonNine.Interval.SparsePolynomial ThomsonNine.Family
+
+def point : ℚ := @@POINT@@
+
+def sqrt0 : RatInterval := @@SQRT0@@
+theorem sqrt0_mem : sqrt0.mem (Real.sqrt (3)) := by
+  have h := mem_sqrt_of_bounds (I := const (3 : ℚ)) (K := sqrt0)
+    (mem_const (3 : ℚ)) (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  simpa only [Rat.cast_sub, Rat.cast_add, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using h
+
+def sqrt1 : RatInterval := @@SQRT1@@
+theorem sqrt1_mem : sqrt1.mem (Real.sqrt (1-(point : ℝ)^2)) := by
+  have h := mem_sqrt_of_bounds (I := const (1-point^2 : ℚ)) (K := sqrt1)
+    (mem_const (1-point^2 : ℚ)) (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  simpa only [Rat.cast_sub, Rat.cast_add, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using h
+
+def sqrt2 : RatInterval := @@SQRT2@@
+theorem sqrt2_mem : sqrt2.mem (Real.sqrt (4-(point : ℝ)^2)) := by
+  have h := mem_sqrt_of_bounds (I := const (4-point^2 : ℚ)) (K := sqrt2)
+    (mem_const (4-point^2 : ℚ)) (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  simpa only [Rat.cast_sub, Rat.cast_add, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using h
+
+def sqrt3 : RatInterval := @@SQRT3@@
+theorem sqrt3_mem : sqrt3.mem (Real.sqrt (2-(point : ℝ))) := by
+  have h := mem_sqrt_of_bounds (I := const (2-point : ℚ)) (K := sqrt3)
+    (mem_const (2-point : ℚ)) (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  simpa only [Rat.cast_sub, Rat.cast_add, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using h
+
+def sqrt4 : RatInterval := @@SQRT4@@
+theorem sqrt4_mem : sqrt4.mem (Real.sqrt (2+2*(point : ℝ))) := by
+  have h := mem_sqrt_of_bounds (I := const (2+2*point : ℚ)) (K := sqrt4)
+    (mem_const (2+2*point : ℚ)) (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  simpa only [Rat.cast_sub, Rat.cast_add, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using h
+
+def numerator0 : RatInterval := mul (const (-2)) sqrt0
+def denominator0 : RatInterval := const (point^2)
+def term0 : RatInterval := @@TERM0@@
+theorem term0_mem : term0.mem ((-2*Real.sqrt 3) / ((point : ℝ)^2)) := by
+  have hn : numerator0.mem (-2*Real.sqrt 3) := by
+    simpa only [numerator0, Rat.cast_mul, Rat.cast_neg, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using mem_mul (mem_const (-2)) sqrt0_mem
+  have hd : denominator0.mem ((point : ℝ)^2) := by
+    have he : ((point^2 : ℚ) : ℝ) = (point : ℝ)^2 := Rat.cast_pow point 2
+    rw [← he]
+    exact mem_const (point^2)
+  exact mem_div_pos_of_bounds (I := numerator0) (J := denominator0) (K := term0)
+    (by decide +kernel) hn hd
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+
+def numerator1 : RatInterval := const (3*point)
+def denominator1 : RatInterval := mul (const 2) (powInterval sqrt1 3)
+def term1 : RatInterval := @@TERM1@@
+theorem term1_mem : term1.mem ((3*(point : ℝ)) / (2*(Real.sqrt (1-(point : ℝ)^2))^3)) := by
+  have hn : numerator1.mem (3*(point : ℝ)) := by
+    simpa only [numerator1, Rat.cast_mul, Rat.cast_neg, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using mem_const (3*point)
+  have hd : denominator1.mem (2*(Real.sqrt (1-(point : ℝ)^2))^3) := by
+    simpa only [denominator1, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using mem_mul (mem_const 2) (powInterval_mem _ _ sqrt1_mem 3)
+  exact mem_div_pos_of_bounds (I := numerator1) (J := denominator1) (K := term1)
+    (by decide +kernel) hn hd
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+
+def numerator2 : RatInterval := const (6*point)
+def denominator2 : RatInterval := powInterval sqrt2 3
+def term2 : RatInterval := @@TERM2@@
+theorem term2_mem : term2.mem ((6*(point : ℝ)) / ((Real.sqrt (4-(point : ℝ)^2))^3)) := by
+  have hn : numerator2.mem (6*(point : ℝ)) := by
+    simpa only [numerator2, Rat.cast_mul, Rat.cast_neg, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using mem_const (6*point)
+  have hd : denominator2.mem ((Real.sqrt (4-(point : ℝ)^2))^3) := by
+    simpa only [denominator2, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using powInterval_mem _ _ sqrt2_mem 3
+  exact mem_div_pos_of_bounds (I := numerator2) (J := denominator2) (K := term2)
+    (by decide +kernel) hn hd
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+
+def numerator3 : RatInterval := const 6
+def denominator3 : RatInterval := powInterval sqrt3 3
+def term3 : RatInterval := @@TERM3@@
+theorem term3_mem : term3.mem ((6) / ((Real.sqrt (2-(point : ℝ)))^3)) := by
+  have hn : numerator3.mem (6) := by
+    simpa only [numerator3, Rat.cast_mul, Rat.cast_neg, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using mem_const 6
+  have hd : denominator3.mem ((Real.sqrt (2-(point : ℝ)))^3) := by
+    simpa only [denominator3, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using powInterval_mem _ _ sqrt3_mem 3
+  exact mem_div_pos_of_bounds (I := numerator3) (J := denominator3) (K := term3)
+    (by decide +kernel) hn hd
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+
+def numerator4 : RatInterval := const 6
+def denominator4 : RatInterval := powInterval sqrt4 3
+def term4 : RatInterval := @@TERM4@@
+theorem term4_mem : term4.mem ((6) / ((Real.sqrt (2+2*(point : ℝ)))^3)) := by
+  have hn : numerator4.mem (6) := by
+    simpa only [numerator4, Rat.cast_mul, Rat.cast_neg, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using mem_const 6
+  have hd : denominator4.mem ((Real.sqrt (2+2*(point : ℝ)))^3) := by
+    simpa only [denominator4, Rat.cast_mul, Rat.cast_pow, Rat.cast_ofNat, Rat.cast_one] using powInterval_mem _ _ sqrt4_mem 3
+  exact mem_div_pos_of_bounds (I := numerator4) (J := denominator4) (K := term4)
+    (by decide +kernel) hn hd
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+    (by decide +kernel)
+
+def result : RatInterval := sub (add (add (add term0 term1) term2) term3) term4
+ theorem result_mem : result.mem (familyEnergyDeriv point) := by
+  exact mem_sub (mem_add (mem_add (mem_add term0_mem term1_mem) term2_mem) term3_mem) term4_mem
+
+@@SIGN@@
+
+end ThomsonNine.@@NAMESPACE@@

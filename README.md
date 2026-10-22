@@ -1,41 +1,24 @@
-# Thomson n=9 — locally verified proof candidate
+# Thomson n=9 — frozen global theorem proved in Lean
 
-This repository contains the Lean formalization, exact-arithmetic checks, status documents and the canonical review bundle for the Thomson n=9 program.
+`ThomsonNine.thomsonNineClaim_proved : ThomsonNine.ThomsonNineClaim` proves the unchanged frozen specification: the stated candidate at its unique stationary radius attains the global minimum among injective nine-point configurations on the unit sphere.
 
-**Status: locally verified proof candidate, not a solved theorem and not externally reviewed.**
+Compiler, axiom audit and one complete fresh Lean-kernel replay pass: **2390 modules, 1507 audits, 807/807 distinct coefficient targets**. The replay took 13228.2 seconds. Only `propext`, `Classical.choice` and `Quot.sound` occur in audited conclusions.
 
-The canonical locally verified configuration is:
+See the [complete proof and validation record](proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md), [frozen statement](proof_work/publication_validation/formal/ThomsonNine/Statement.lean), [final theorem](proof_work/publication_validation/formal/MainCoverage/Final.lean), and [verification report](proof_work/publication_validation/local_lean_verification.json).
 
-- 644 `#print axioms` audits, 115-module closure;
-- only `propext`, `Classical.choice`, `Quot.sound`;
-- unified verifier status `LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS`;
-- 279/807 archived sparse-Hessian coefficient targets have conditional interval certificates;
-- canonical bundle `proof_work/THOMSON_N9_REVIEW_BUNDLE.zip`, 304 entries, 16,641,132 bytes, SHA-256 `7d99da9b3c542ca84b14a793875ab6ad13354d80dd61717f5a3a755247d0cac9`.
+For the n=7/n=8 comparison and publication checklist, see [publication readiness](proof_work/publication_validation/README_PUBLICATION_READINESS_2026-10-22_zh.md).
 
-## What is included
+The current manuscript draft is available as [PDF](paper/main.pdf), with its [LaTeX source](paper/main.tex), [compact submission package](paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip), [build notes](paper/README.md), [Chinese submission guide](paper/SUBMISSION_GUIDE_zh.md), and [cover-letter template](paper/COVER_LETTER_TEMPLATE.md).
 
-- `proof_work/publication_validation/formal/` — Lean sources and build scripts;
-- `proof_work/publication_validation/` — exact checkers, verification reports, status docs and the review bundle;
-- `proof_work/` — certificates, independent checks and research notes.
+Lean's built-in `leanchecker --fresh` is not an external independent verifier. No external peer review is claimed. The frozen theorem does not assert congruence uniqueness of all minimizers.
 
-## What is excluded
+To reproduce, use Lean 4.34.1 and pinned Mathlib, preserve `formal/.lake`, and run:
 
-The following are reproducible or too large for a normal Git repository:
+```bash
+export LEAN_BIN_DIR=/path/to/lean-4.34.1/bin
+python3 -B proof_work/publication_validation/verify_local_lean.py
+```
 
-- `.lake/` build directories, Lean toolchain and Python wheels;
-- large frontier JSON files above GitHub's 100 MB limit;
-- old review-bundle archives.
+A matching PASS stamp permits `--reuse-local-build`; explicit existing-build adoption uses `--adopt-build`. All modes run the complete fresh replay. Original module names preserve compiler-cache identity; their owned sources are registered in `packed_coverage_manifest.json`.
 
-The canonical bundle is included; large omitted data can be attached to a GitHub Release if needed.
-
-## Verification
-
-The verifier is `proof_work/publication_validation/verify_local_lean.py`. It rebuilds or adopts the Lean artifacts, checks the 644 axiom directives, scans for banned tokens, and runs `leanchecker` on `ThomsonNine.LocalVerification`.
-
-## Remaining trust gaps
-
-The certificates are conditional: the AAA theorem assumes the coefficient family lies in archived `coefficientInterval` and the point lies in `relativeBox`. The true residual/shifted-coefficient binding, the other 11 classes, 45 contact equations, rank-33/W compatibility, the 68,063-leaf coverage instantiation and the final `ThomsonNineClaim` remain unformalized.
-
-## Transfer
-
-For a complete continuation brief, see `HANDOFF_TO_NEXT_AI_zh.md` and `HANDOFF_STATE.json`.
+The canonical source review archive is `proof_work/THOMSON_N9_REVIEW_BUNDLE.zip`; its size and SHA-256 are in `HANDOFF_STATE.json`. Historical progress records remain available. The original coverage baseline was 272 distinct targets, then 279 after the first seven additions.

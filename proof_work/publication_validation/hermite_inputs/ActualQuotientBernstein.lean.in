@@ -1,0 +1,57 @@
+import ThomsonNine.RationalListPolynomial
+import ThomsonNine.ActualQuotientArray
+set_option maxRecDepth 100000
+set_option maxHeartbeats 1000000000
+noncomputable section
+namespace ThomsonNine.ActualHermite.QuotientBernstein
+open Polynomial ThomsonNine.RationalListPolynomial
+open ThomsonNine.FixedInterval
+open ThomsonNine.ActualHermite.CoefficientData
+open ThomsonNine.ActualHermite.QuotientStructure
+open scoped BigOperators
+
+def matrix : Fin 28 → Fin 28 → ℚ := @@MATRIX@@
+
+theorem matrix_identity : ∀ k : Fin 28,
+    linearCombination (fun i => matrix i k) = unit k := by
+  decide +kernel
+
+theorem monomial_identity (k : Fin 28) :
+    ∑ i : Fin 28, C (matrix i k : ℝ)*B i = X^(k : ℕ) := by
+  rw [← linearCombination_polynomial,matrix_identity,unit_polynomial]
+
+def matrixInput : Fin 28 → Fin 28 → Bounds := @@MATRIX_INPUT@@
+
+theorem matrixInput_bounds : ∀ i j : Fin 28,
+    ((matrixInput i j).lo : ℚ) ≤ (unitScale : ℚ)*matrix i j ∧
+    (unitScale : ℚ)*matrix i j ≤ ((matrixInput i j).hi : ℚ) := by decide +kernel
+
+theorem matrixInput_mem (i j : Fin 28) : Mem unitScale (matrixInput i j) (matrix i j : ℝ) :=
+  mem_of_rat (Interval.RatInterval.mem_const (matrix i j)) unitScale_pos
+    (matrixInput_bounds i j).1 (matrixInput_bounds i j).2
+
+def beta (i : Fin 28) : ℝ := ∑ j : Fin 28, (matrix i j : ℝ)*Q.coeff j
+def betaInput (i : Fin 28) : Bounds := FixedInterval.sum ((List.finRange 28).map
+  (fun j => mul unitScale (matrixInput i j) ((QuotientCoefficients.fixedQ[j.val]?).getD zero)))
+
+theorem beta_mem (i : Fin 28) : Mem unitScale (betaInput i) (beta i) := by
+  unfold betaInput
+  have h := FixedInterval.sum_mem (l := List.finRange 28)
+    (C := fun j => mul unitScale (matrixInput i j) ((QuotientCoefficients.fixedQ[j.val]?).getD zero))
+    (c := fun j => (matrix i j : ℝ)*Q.coeff j)
+    (fun j _ => mem_mul unitScale_pos (matrixInput_mem i j) (QuotientCoefficients.fixed_coefficient_mem j))
+  have hs := List.sum_toFinset (fun j : Fin 28 => (matrix i j : ℝ)*Q.coeff j)
+    (show (List.finRange 28).Nodup by decide +kernel)
+  have heq : (List.finRange 28).toFinset = (Finset.univ : Finset (Fin 28)) := by ext j; simp
+  rw [← hs,heq] at h
+  exact h
+
+theorem betaInput_positive : ∀ i : Fin 28, 0<(betaInput i).lo := by decide +kernel
+
+theorem beta_positive (i : Fin 28) : 0<beta i := by
+  have h := (beta_mem i).1
+  have hp : (0 : ℝ)<(betaInput i).lo := by exact_mod_cast betaInput_positive i
+  have hs : (0 : ℝ)<unitScale := by exact_mod_cast unitScale_pos
+  have : (0 : ℝ)<(unitScale : ℝ)*beta i := hp.trans_le h
+  exact (mul_pos_iff_of_pos_left hs).mp this
+end ThomsonNine.ActualHermite.QuotientBernstein

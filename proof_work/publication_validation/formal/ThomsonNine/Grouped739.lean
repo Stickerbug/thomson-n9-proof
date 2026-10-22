@@ -51,49 +51,37 @@ theorem t739_sum (c0 c1 c2 c3 c4 c5 c6 c7 : ℝ) (a : Fin 3 → ℝ)
   Q_t739.mem (c0 + ((c5) * (10 * a 0)) + ((c3) * (1 * a 1)) + ((c1 + ((c6) * (10 * a 0)) + ((c4) * (1 * a 1))) * (9 * a 2) + ((c2 + ((c7) * (10 * a 0))) * ((45 * a 2 * a 2))))) := by
   have hSb0_10_t739 : Sb0_10_t739.mem (10 : ℝ) := by constructor <;> simp [Sb0_10_t739]
   have hS0_10_1_t739 : S0_10_1_t739.mem (10 * a 0) := by
-    refine mem_mul_of_bounds hSb0_10_t739 ha0 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S0_10_1_t739, Sb0_10_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb0_10_t739 ha0
   have hSb1_1_t739 : Sb1_1_t739.mem (1 : ℝ) := by constructor <;> simp [Sb1_1_t739]
   have hS1_1_1_t739 : S1_1_1_t739.mem (1 * a 1) := by
-    refine mem_mul_of_bounds hSb1_1_t739 ha1 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S1_1_1_t739, Sb1_1_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb1_1_t739 ha1
   have hSb2_9_t739 : Sb2_9_t739.mem (9 : ℝ) := by constructor <;> simp [Sb2_9_t739]
   have hS2_9_1_t739 : S2_9_1_t739.mem (9 * a 2) := by
-    refine mem_mul_of_bounds hSb2_9_t739 ha2 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S2_9_1_t739, Sb2_9_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb2_9_t739 ha2
   have hSb2_10_t739 : Sb2_10_t739.mem (45 : ℝ) := by constructor <;> simp [Sb2_10_t739]
   have hS2_10_1_t739 : S2_10_1_t739.mem (45 * a 2) := by
-    refine mem_mul_of_bounds hSb2_10_t739 ha2 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S2_10_1_t739, Sb2_10_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hSb2_10_t739 ha2
   have hS2_10_2_t739 : S2_10_2_t739.mem ((45 * a 2) * a 2) := by
-    refine mem_mul_of_bounds hS2_10_1_t739 ha2 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [S2_10_2_t739, S2_10_1_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hS2_10_1_t739 ha2
   have hT0_5_t739 : T0_5_t739.mem ((c5) * (10 * a 0)) := by
-    refine mem_mul_of_bounds h5 hS0_10_1_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_5_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h5 hS0_10_1_t739
   have hT0_6_t739 : T0_6_t739.mem ((c6) * (10 * a 0)) := by
-    refine mem_mul_of_bounds h6 hS0_10_1_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_6_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h6 hS0_10_1_t739
   have hT0_7_t739 : T0_7_t739.mem ((c7) * (10 * a 0)) := by
-    refine mem_mul_of_bounds h7 hS0_10_1_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T0_7_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h7 hS0_10_1_t739
   have hG0_0_t739 : G0_0_t739.mem (c0 + ((c5) * (10 * a 0))) := by simpa [G0_0_t739, add_assoc] using mem_add h0 (hT0_5_t739)
   have hG0_1_t739 : G0_1_t739.mem (c1 + ((c6) * (10 * a 0))) := by simpa [G0_1_t739, add_assoc] using mem_add h1 (hT0_6_t739)
   have hG0_2_t739 : G0_2_t739.mem (c2 + ((c7) * (10 * a 0))) := by simpa [G0_2_t739, add_assoc] using mem_add h2 (hT0_7_t739)
   have hT1_3_t739 : T1_3_t739.mem ((c3) * (1 * a 1)) := by
-    refine mem_mul_of_bounds h3 hS1_1_1_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T1_3_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h3 hS1_1_1_t739
   have hT1_4_t739 : T1_4_t739.mem ((c4) * (1 * a 1)) := by
-    refine mem_mul_of_bounds h4 hS1_1_1_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T1_4_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul h4 hS1_1_1_t739
   have hG1_0_t739 : G1_0_t739.mem (c0 + ((c5) * (10 * a 0)) + ((c3) * (1 * a 1))) := by simpa [G1_0_t739, add_assoc] using mem_add hG0_0_t739 (hT1_3_t739)
   have hG1_1_t739 : G1_1_t739.mem (c1 + ((c6) * (10 * a 0)) + ((c4) * (1 * a 1))) := by simpa [G1_1_t739, add_assoc] using mem_add hG0_1_t739 (hT1_4_t739)
   have hT2_1_t739 : T2_1_t739.mem ((c1 + ((c6) * (10 * a 0)) + ((c4) * (1 * a 1))) * (9 * a 2)) := by
-    refine mem_mul_of_bounds hG1_1_t739 hS2_9_1_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T2_1_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hG1_1_t739 hS2_9_1_t739
   have hT2_2_t739 : T2_2_t739.mem ((c2 + ((c7) * (10 * a 0))) * ((45 * a 2 * a 2))) := by
-    refine mem_mul_of_bounds hG0_2_t739 hS2_10_2_t739 ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
-      (simp only [T2_2_t739, A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]; rw [Rat.le_iff]; norm_num [RatInterval.add, RatInterval.mul])
+    exact ThomsonNine.Interval.RatInterval.mem_mul hG0_2_t739 hS2_10_2_t739
   have hG2_0_t739 : G2_0_t739.mem (c0 + ((c5) * (10 * a 0)) + ((c3) * (1 * a 1)) + ((c1 + ((c6) * (10 * a 0)) + ((c4) * (1 * a 1))) * (9 * a 2) + ((c2 + ((c7) * (10 * a 0))) * ((45 * a 2 * a 2))))) := by simpa [G2_0_t739, add_assoc] using mem_add hG1_0_t739 (mem_add hT2_1_t739 (hT2_2_t739))
   refine mem_subset hG2_0_t739 ?_ ?_
   · simp only [A0, A1, A2, Q_t739, R0_t739, R1_t739, R2_t739, R3_t739, R4_t739, R5_t739, R6_t739, R7_t739, Sb0_10_t739, S0_10_1_t739, Sb1_1_t739, S1_1_1_t739, Sb2_9_t739, S2_9_1_t739, Sb2_10_t739, S2_10_1_t739, S2_10_2_t739, T0_5_t739, T0_6_t739, T0_7_t739, G0_0_t739, G0_1_t739, G0_2_t739, T1_3_t739, T1_4_t739, G1_0_t739, G1_1_t739, T2_1_t739, T2_2_t739, G2_0_t739, RatInterval.const]
@@ -110,7 +98,8 @@ theorem t739_gathered (c : TermIndex → ℝ) (a : Fin 3 → ℝ)
   have hQ : coefficientInterval .t739 = Q_t739 := by rfl
   rw [hQ]
   have heq : (expandedCoefficient (exponents .t739) (exponents .t739) (c .t739) a + (expandedCoefficient (exponents .t740) (exponents .t739) (c .t740) a + (expandedCoefficient (exponents .t741) (exponents .t739) (c .t741) a + (expandedCoefficient (exponents .t750) (exponents .t739) (c .t750) a + (expandedCoefficient (exponents .t751) (exponents .t739) (c .t751) a + (expandedCoefficient (exponents .t777) (exponents .t739) (c .t777) a + (expandedCoefficient (exponents .t778) (exponents .t739) (c .t778) a + (expandedCoefficient (exponents .t779) (exponents .t739) (c .t779) a)))))))) = (c .t739) + (((c .t777)) * (10 * a 0)) + (((c .t750)) * (1 * a 1)) + (((c .t740) + (((c .t778)) * (10 * a 0)) + (((c .t751)) * (1 * a 1))) * (9 * a 2) + (((c .t741) + (((c .t779)) * (10 * a 0))) * ((45 * a 2 * a 2)))) := by
-    simp [expandedCoefficient, shiftFactor, Nat.choose, exponents]
+    change (((((c .t739) * ((Nat.choose 9 9 : ℝ) * a 0 ^ 0)) * ((Nat.choose 0 0 : ℝ) * a 1 ^ 0)) * ((Nat.choose 8 8 : ℝ) * a 2 ^ 0)) + (((((c .t740) * ((Nat.choose 9 9 : ℝ) * a 0 ^ 0)) * ((Nat.choose 0 0 : ℝ) * a 1 ^ 0)) * ((Nat.choose 9 8 : ℝ) * a 2 ^ 1)) + (((((c .t741) * ((Nat.choose 9 9 : ℝ) * a 0 ^ 0)) * ((Nat.choose 0 0 : ℝ) * a 1 ^ 0)) * ((Nat.choose 10 8 : ℝ) * a 2 ^ 2)) + (((((c .t750) * ((Nat.choose 9 9 : ℝ) * a 0 ^ 0)) * ((Nat.choose 1 0 : ℝ) * a 1 ^ 1)) * ((Nat.choose 8 8 : ℝ) * a 2 ^ 0)) + (((((c .t751) * ((Nat.choose 9 9 : ℝ) * a 0 ^ 0)) * ((Nat.choose 1 0 : ℝ) * a 1 ^ 1)) * ((Nat.choose 9 8 : ℝ) * a 2 ^ 1)) + (((((c .t777) * ((Nat.choose 10 9 : ℝ) * a 0 ^ 1)) * ((Nat.choose 0 0 : ℝ) * a 1 ^ 0)) * ((Nat.choose 8 8 : ℝ) * a 2 ^ 0)) + (((((c .t778) * ((Nat.choose 10 9 : ℝ) * a 0 ^ 1)) * ((Nat.choose 0 0 : ℝ) * a 1 ^ 0)) * ((Nat.choose 9 8 : ℝ) * a 2 ^ 1)) + (((((c .t779) * ((Nat.choose 10 9 : ℝ) * a 0 ^ 1)) * ((Nat.choose 0 0 : ℝ) * a 1 ^ 0)) * ((Nat.choose 10 8 : ℝ) * a 2 ^ 2)))))))))) = _
+    norm_num only [Nat.choose, Nat.cast_add, Nat.cast_mul, Nat.cast_ofNat, Nat.cast_one, Nat.cast_zero]
     ring
   rw [heq]
   exact t739_sum (c .t739) (c .t740) (c .t741) (c .t750) (c .t751) (c .t777) (c .t778) (c .t779) a h0 h1 h2 h3 h4 h5 h6 h7 ha0 ha1 ha2

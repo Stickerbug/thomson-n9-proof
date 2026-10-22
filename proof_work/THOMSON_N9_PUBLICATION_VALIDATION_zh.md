@@ -1,5 +1,8 @@
 # Thomson n=9 投稿前验证评估
 
+> **当前状态（2026-10-22）**：原样冻结的 `ThomsonNineClaim` 已由
+> `ThomsonNine.thomsonNineClaim_proved` 证明；2390 个模块、1507 项公理审计和一次完整 fresh Lean 内核重放全部通过，807/807 个不同系数目标已接入。独立 Python 覆盖检查已通过，但仍明确以原始模型、局部证书、PSD、pair reduction 和物理域归约为前提；第二证明内核和同行评审尚未完成。本文下面的差距表和“最终定理未证明”文字描述的是本文件形成时的历史阶段，不能覆盖当前最终验证记录。当前投稿对照和行动建议见 [README_PUBLICATION_READINESS_2026-10-22_zh.md](publication_validation/README_PUBLICATION_READINESS_2026-10-22_zh.md)。
+
 本文评估的是已有九点证明候选的可信度与发表准备度，不新增九点最优性证明。当前材料仍属于会话内复算通过、尚无外部独立验证的证明稿。以下外部项目情况依据实际读取的仓库材料；本次没有安装、编译或运行其 Lean 证明。
 
 ## 1. 结论

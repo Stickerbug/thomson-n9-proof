@@ -1,0 +1,31 @@
+import ThomsonNine.AAAGroupedData
+import ThomsonNine.FixedInterval
+set_option maxRecDepth 100000
+set_option maxHeartbeats 100000000
+noncomputable section
+namespace ThomsonNine.AAAFixedData
+open ThomsonNine.Interval ThomsonNine.Interval.RatInterval
+open ThomsonNine.Interval.SparsePolynomial
+open ThomsonNine.LocalSparseHessianAAA ThomsonNine.GatheredBinding
+open ThomsonNine.AAAGroupedData ThomsonNine.FixedInterval
+
+def precision : ℤ := 2^768
+ theorem precision_pos : 0 < precision := by decide +kernel
+
+def source : TermIndex → Bounds
+@@SOURCE@@
+
+def center : Fin 3 → Bounds := @@CENTER@@
+
+def powers (i : Fin 3) (n : ℕ) : Bounds := power precision (center i) n
+
+ theorem source_bounds : ∀ t ∈ allTerms,
+    ((source t).lo : ℚ) ≤ (precision : ℚ)*(sourceInterval t).lo ∧
+    (precision : ℚ)*(sourceInterval t).hi ≤ ((source t).hi : ℚ) := by
+  decide +kernel
+ theorem center_bounds : ∀ i : Fin 3,
+    ((center i).lo : ℚ) ≤ (precision : ℚ)*(centerInterval i).lo ∧
+    (precision : ℚ)*(centerInterval i).hi ≤ ((center i).hi : ℚ) := by
+  decide +kernel
+
+end ThomsonNine.AAAFixedData

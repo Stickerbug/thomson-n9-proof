@@ -1,0 +1,57 @@
+import PairAddition.Metadata
+set_option maxRecDepth 100000
+set_option maxHeartbeats 1000000000
+noncomputable section
+namespace ThomsonNine.PairAddition
+namespace C27
+def contributions : List Contribution := [⟨99,0,2397811664669543076681982278480429056,[1]⟩,
+⟨127,0,9477261774714034282551939432448,[(-63),0,20475,0,(-914550),0,12620790,0,(-64005435),0,103831039]⟩,
+⟨129,1,(-974434824291052070324203954372608),[35,0,(-9415),0,332990,0,(-3387118),0,11050511,0,(-7987003)]⟩,
+⟨131,2,804634120669965455197608187004977152,[(-5),0,1045,0,(-26570),0,169234,0,(-262913),0,119209]⟩,
+⟨133,3,(-27205532457859615413755074967997775872),[3,0,(-435),0,6470,0,(-16830),0,15975,0,(-5183)]⟩,
+⟨135,4,2560823793855346375120506109677063372800,[(-1),0,77,0,(-298),0,442,0,(-293),0,73]⟩,
+⟨137,5,(-33115109974255136267986887578281110929408),[1,0,(-5),0,10,0,(-10),0,5,0,(-1)]⟩]
+def diagonal : Fin 38 → ℤ := ![(-30777778375246880450917634657558921740288),
+0,
+10003557260746253748048152907947155705036800,
+0,
+(-446825557646666000746150829888306288158310400),
+0,
+6166192695523990810296881452458626776584683520,
+0,
+(-31271405813014524823648470223183035795536609280),
+0,
+50729169430001340269474185028719146957203832832,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0]
+theorem contributions_valid : contributions.all (fun c => decide (Valid 27 c))=true := by decide +kernel
+theorem features_complete : contributions.map Contribution.feature=
+    (List.finRange 138).filter (fun f => decide (27≤(features f).order.val ∧ ((features f).order.val-27)%2=0)) := by decide +kernel
+theorem matrix_identity : ∀ i j : Fin 38, matrixEntry contributions i j=if i=j then diagonal i else 0 := by decide +kernel
+end C27
+end ThomsonNine.PairAddition

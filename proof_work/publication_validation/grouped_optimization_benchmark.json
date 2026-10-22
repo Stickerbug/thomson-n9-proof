@@ -1,0 +1,103 @@
+{
+  "recorded_utc": "2026-10-21T16:03:42.071581+00:00",
+  "status": "TWO_ISOLATED_COMPACT_SAMPLES_COMPILER_AXIOMS_AND_MODULE_REPLAY_PASS",
+  "formal_root_integrated": false,
+  "changes_official_coverage": false,
+  "kernel_scope": "Per-experiment module replay without --fresh; imported dependencies reused; not external independent verification.",
+  "environment": {
+    "cpu_quota": 4,
+    "memory_bytes": 17179869184,
+    "lean_version": "4.34.1",
+    "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "compiler_threads": 2,
+    "background": "One existing leanchecker --fresh ThomsonNine ran throughout; one experiment compiler at a time. Single samples, not a statistical benchmark."
+  },
+  "target286": {
+    "baseline": {
+      "prototype_compile_exit_code": 0,
+      "prototype_compile_seconds": 83.36549735069275,
+      "prototype_olean_bytes": 161287344,
+      "baseline_olean_bytes": 161287280,
+      "baseline_compile_seconds": 84.06906652450562,
+      "prototype_kernel_replay_exit_code": 0,
+      "prototype_kernel_replay_seconds": 10.344740152359009,
+      "source_relative_to_repo": "work/optimization/Optimization/PrototypeBaseline286.lean",
+      "source_sha256": "96e5e7ff42e66b2cdd48f84f95b9f3613bd0f1427c9bbb7b88d10277244b4df7",
+      "compile_log_sha256": "9c62c95819c7d2b6ae0f1904fe44c35ead3fe5d73da8dd0b8df06e7d7f687494",
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_lines": [
+        "'ThomsonNine.PrototypeBaseline286.t286_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ThomsonNine.PrototypeBaseline286.t286_gathered' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    "compact": {
+      "prototype_compile_exit_code": 0,
+      "prototype_compile_seconds": 7.83022403717041,
+      "prototype_olean_bytes": 1515824,
+      "baseline_olean_bytes": 161287280,
+      "baseline_compile_seconds": 84.06906652450562,
+      "prototype_kernel_replay_exit_code": 0,
+      "prototype_kernel_replay_seconds": 2.6210262775421143,
+      "source_relative_to_repo": "work/optimization/Optimization/PrototypeCompact286.lean",
+      "source_sha256": "80832a5eedac8f8ae35ede7693919ea9b00f6f09a7519d1b74e22671b6b25fde",
+      "compile_log_sha256": "bc8331d12efe061ed384d4d8d665f8f543130b98de6b7228387d10648f68a2d7",
+      "kernel_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_lines": [
+        "'ThomsonNine.PrototypeCompact286.t286_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ThomsonNine.PrototypeCompact286.t286_gathered' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    "compile_ratio": 10.64662989908758,
+    "artifact_size_ratio": 106.40242138929058
+  },
+  "target388_compact": {
+    "target": 388,
+    "variant": "compact",
+    "command": [
+      "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+      "-j2",
+      "-o",
+      "/workspace/thomson-n9-proof/work/optimization/repro/Optimization/Compact388.olean",
+      "-i",
+      "/workspace/thomson-n9-proof/work/optimization/repro/Optimization/Compact388.ilean",
+      "Optimization/Compact388.lean"
+    ],
+    "scope": "ISOLATED_EXPERIMENT_NOT_FORMAL_ROOT; module replay is not --fresh",
+    "source_sha256": "177e8e5248c87621ce09ea2bad81a5dcdc6693491fca1bf01ffa17a116f0ec44",
+    "compile_exit_code": 0,
+    "compile_seconds": 6.810278524000751,
+    "olean_bytes": 1441488,
+    "olean_sha256": "a23e81a72930b001dced2ae41fa662e693a50966a0daa478be5cb3f3ce659bdc",
+    "kernel_replay_exit_code": 0,
+    "kernel_replay_seconds": 2.478356382000129,
+    "audit_lines": [
+      "'ThomsonNine.OptimizationCompact388.t388_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'ThomsonNine.OptimizationCompact388.t388_gathered' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ]
+  },
+  "generator_sha256": {
+    "export_grouped_generic.py": "4031aee69531af1215de4a7bba68ab344cbc12b77d4746c3b15f8e72c95b4d7a",
+    "export_grouped_compact.py": "f0476a4177e0a5228ee87a8776664df0f6d1cd3a65897a71ef179810f78acc11",
+    "benchmark_grouped_compact.py": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
+  },
+  "closure_analysis": {
+    "root_modules": 133,
+    "local_verification_modules": 134,
+    "root_subset_local": true
+  },
+  "h00_structural_analysis": {
+    "total_coefficients": 807,
+    "potentially_active": 550,
+    "inactive": 257,
+    "registered_active_targets": 212,
+    "registered_active_remaining": 338,
+    "lean_interface_weakened": false
+  },
+  "failed_experiments": [
+    {
+      "method": "Direct ordinary decide on rational endpoint inequalities",
+      "result": "FAILED elaboration/reduction; excluded from successful prototypes and formal root."
+    }
+  ],
+  "next_priority": "Compact generation and bulk algorithm certificates; pause source-count-order accumulation."
+}

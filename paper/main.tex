@@ -1,0 +1,234 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A Lean-Verified Computer-Assisted Proof of the Nine-Point Thomson Minimum},
+  pdfauthor={Jingxing Huang}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Sphere}{\mathbb{S}^2}
+\newcommand{\Lean}{\textsc{Lean}}
+\newcommand{\code}[1]{\texttt{\small\detokenize{#1}}}
+
+\title{A Lean-Verified Computer-Assisted Proof of the Nine-Point Thomson Minimum}
+\author{Jingxing Huang\\
+Qian Xuesen College, Xi'an Jiaotong University\\
+\texttt{adult-huang@outlook.com}\\
+ORCID: \href{https://orcid.org/0009-0002-9805-0331}{0009-0002-9805-0331}\\[2pt]
+\emph{Corresponding author}}
+\date{23 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove the global minimum of the Coulomb energy for nine distinct points on the unit sphere in $\R^3$.  The minimizing configuration is the explicit three-ring configuration described below, at the unique stationary radius of its one-parameter energy.  The proof combines an exact three-point positive-semidefinite decomposition, a finite contact system, local Hermite and Hessian certificates, and a complete Bernstein subdivision of the ordered Gram domain.  The numerical objects are rational or integer interval certificates.  The complete theorem is formalized in \Lean{} 4.34.1: the official import closure contains 2390 modules, 1507 ordered axiom audits, and all 807 distinct coefficient targets, and a fresh Lean-kernel replay passes.  We also report a separate pure-Python exact checker that recomputes the 136125-node subdivision tree.  Its scope is explicitly conditional on the model and local certificates; it is not presented as an independent complete proof.  The theorem proved here concerns global minimality and does not classify all equality cases up to congruence.
+\end{abstract}
+
+\section{Introduction}
+
+For a configuration $X=(x_1,\ldots,x_9)\in(\Sphere)^9$ of pairwise distinct points, write
+\[
+ E(X)=\sum_{1\leq i<j\leq 9}\frac{1}{\lVert x_i-x_j\rVert}.
+\]
+The nine-point case of the Thomson problem has resisted a short analytic proof.  The aim of this paper is a reproducible, kernel-checked proof of the exact global lower bound for the explicit candidate configuration.
+
+Our contribution has three parts.  First, we give the mathematical reduction from configurations on $\Sphere$ to a symmetric residual in three inner products.  Second, we provide exact finite certificates for the residual: the candidate contact equations, the local Hessian and boundary arguments, and the global subdivision tree.  Third, we connect every certificate to a formal theorem in \Lean{}, with a fresh replay of the complete proof import closure.
+
+The formal theorem is intentionally stated at the strength that is actually proved.  It asserts that the specified candidate attains the global minimum and that the radius in the candidate family is the unique stationary radius.  It does not assert that every minimizer is congruent to the candidate.  A congruence-classification theorem would be a separate result.
+
+\section{Statement of the theorem}
+
+For $0<r<1$, put $h=\sqrt{1-r^2}$ and, for $k=0,1,2$, define
+\[
+ x_k^{\pm}=\bigl(r\cos(2\pi k/3),r\sin(2\pi k/3),\pm h\bigr),\qquad
+ c_k=\bigl(\cos((2k+1)\pi/3),\sin((2k+1)\pi/3),0\bigr).
+\]
+The nine points $x_k^+$, $x_k^-$, and $c_k$ form the candidate family $C(r)$.  Its energy is
+\begin{align*}
+ E_C(r)={}&\sqrt3+\frac{2\sqrt3}{r}+\frac{3}{2\sqrt{1-r^2}}
+ +\frac{6}{\sqrt{4-r^2}}\\
+ &+\frac{12}{\sqrt{2-r}}+\frac{6}{\sqrt{2+2r}}.
+\end{align*}
+The exact interval certificate isolates the stationary radius at
+\[
+ r_*\approx0.71054833409295381132770417927279124376803,
+\]
+with
+\[
+ E_C(r_*)\approx25.75998653126983156407570227376049402864.
+\]
+
+\begin{theorem}[Nine-point Thomson minimum]
+There is a unique $r_*\in(0,1)$ with $E_C'(r_*)=0$.  The configuration $C(r_*)$ consists of nine distinct points of $\Sphere$, and for every configuration $X$ of nine distinct points of $\Sphere$,
+\[
+ E(X)\geq E_C(r_*).
+\]
+The formal proof is the declaration
+\[
+\code{ThomsonNine.thomsonNineClaim\_proved : ThomsonNine.ThomsonNineClaim}.
+\]
+\end{theorem}
+
+\begin{remark}
+The theorem does not state that equality implies congruence and relabelling of $C(r_*)$.  The present proof therefore makes no claim of uniqueness of all minimizing configurations.
+\end{remark}
+
+\section{Reduction to the physical Gram domain}
+
+Let $f(t)=(2-2t)^{-1/2}$.  A positive-definite three-point bound first gives a rational cutoff: every configuration with energy at most
+\[
+ U=25.75998653126983156407570227376049402866
+\]
+has all pairwise inner products below $14/25$.  For a triple of unit vectors, let $u,v,t$ be the three pairwise inner products.  After sorting, the physical domain is
+\[
+ D=\{(u,v,t):-1\leq u\leq v\leq t\leq14/25,\quad
+ g(u,v,t)\geq0\},
+\]
+where
+\[
+ g(u,v,t)=1+2uvt-u^2-v^2-t^2
+\]
+is the Gram determinant.
+
+The certificate constructs a symmetric rational kernel $F(u,v,t)$ and diagonal term $d(t)=F(1,t,t)$.  With the appropriate constant $c$, define
+\[
+ R_f(u,v,t)=f(u)+f(v)+f(t)-7F(u,v,t)-d(u)-d(v)-d(t)-c.
+\]
+The central analytic statement is $R_f\geq0$ on $D$.
+
+\section{The global energy identity}
+
+The kernel is expressed in the standard three-point basis
+\[
+ Q_0=1,\qquad Q_1=t-uv,\qquad
+ Q_{k+1}=2(t-uv)Q_k-(1-u^2)(1-v^2)Q_{k-1}.
+\]
+For each $k$, the coefficient matrix is positive semidefinite and is represented exactly as $A_k=N_kB_kN_k^{\mathsf T}$.  The nonempty blocks $B_k$ have strictly positive rational interval LDL pivots.
+
+Summing the kernel over ordered triples produces a nonnegative quantity $S_{729}(X)$.  If $T$ is the sum over the 84 unordered triples and $D_X$ is the diagonal contribution, exact index enumeration gives
+\[
+ S_{729}=6T+6D_X+9F_{111}.
+\]
+The residual identity then simplifies to
+\[
+ E(X)-E_C(r_*)=\frac17\sum_{\text{84 triples}}R_f
+                 +\frac16 S_{729}(X).
+\]
+Thus the physical-domain residual bound and positive semidefiniteness imply the global energy inequality.
+
+The index identities are checked coefficient by coefficient over all 729 ordered triples.  They are formalized separately from the numerical certificate data, so the combinatorial part does not depend on floating-point evaluation.
+
+\section{Contact equations and local certificates}
+
+At the candidate, the six relevant inner products are
+\[
+ A=1-\tfrac32r^2,\quad B=2r^2-1,\quad C=\tfrac12r^2-1,
+ \quad D=-\tfrac12,\quad F=\tfrac r2,\quad G=-r.
+\]
+The twelve triangle classes give 45 exact contact and stationarity equations.  An exact nullspace computation leaves 190 reduced coefficient variables.  Twelve left relations and the rank-33 compatibility matrix reduce the system to 33 selected equations.  Its nonzero minor is $-36r$; interval Gaussian elimination certifies that all selected pivots stay away from zero on the root enclosure.  The remaining equations follow from the exact relations.
+
+The Coulomb term is bounded below by a degree-27 Hermite interpolant.  The remainder has the sign of the 28th derivative multiplied by fourteen squared factors.  Nine interior boxes are handled by positive-definite interval Hessians.  Three Gram-boundary boxes use the graph
+\[
+ u=vt-\sqrt{(1-v^2)(1-t^2)}
+\]
+and a monotonicity argument in the $u$ direction.  All twelve local certificates are linked to the actual residual coefficients in the final formal closure.
+
+\section{Global finite certificate}
+
+The remaining domain is closed by Bernstein subdivision.  Each node stores its dyadic box, split axis, and a finite terminal reason.  The reasons are direct positivity, Gram exclusion, ordering exclusion, local-box containment, or a nonnegative boundary multiplier certificate.  The accepted tree has:
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+visited nodes & 136125\\
+split nodes & 68062\\
+terminal leaves & 68063\\
+direct positive leaves & 27392\\
+Gram-excluded leaves & 26797\\
+ordering-excluded leaves & 3278\\
+local-box leaves & 78\\
+boundary-multiplier leaves & 10518\\
+maximum depth & 75\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All interval operations use exact integer endpoints with fixed outward rounding.  The formal development proves the generic soundness of the interval and Bernstein operations, the tree induction, the Gram-domain restriction, and the final assembly.  The concrete data are then checked by 498 certified frontier modules and connected to \code{claim_from_certified_frontier} and the final theorem.
+
+\section{Formal verification and independent checks}
+
+The project is pinned to \Lean{} 4.34.1 and Mathlib commit
+\begin{center}\code{d13f23b723b8a846827a245b89c10fc7d3f11612}\end{center}
+The official validation performs dependency-ordered compilation, 1507 ordered axiom audits, source and artifact hash checks, and one complete
+\[
+\code{leanchecker --fresh ThomsonNine.LocalVerification}
+\]
+replay.  The replay covers the formal root and final theorem and took 13228.2 seconds in the recorded environment.  The audited conclusions use only \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; no \code{sorryAx} occurs.
+
+A separate pure-Python checker uses only the standard library, arbitrary-precision integers, and exact \code{Fraction} arithmetic.  It freshly recomputes all 154 tree shards and passes 50 directed tests, including malformed-tree and failure-propagation tests.  Its recorded status is \code{PASS_INDEPENDENT_CONDITIONAL_COVERAGE}: the tree and residual arithmetic are independently reconstructed, while the original coefficient model, local nonnegativity, PSD, pair reduction, and physical-domain reduction remain explicit premises.  This distinction is part of the result and is not hidden by the Lean certificate.
+
+\section{Reproducibility and data availability}
+
+All source files, certificate inputs, export templates, reports, and hashes are released in the
+companion repository at \url{https://github.com/Stickerbug/thomson-n9-proof}; the archived
+release tag is \code{data-2026-10-21}.  The main reproduction command is:
+\begin{verbatim}
+export LEAN_BIN_DIR=/path/to/lean-4.34.1/bin
+python3 -B proof_work/publication_validation/verify_local_lean.py
+\end{verbatim}
+The review bundle is \code{proof_work/THOMSON_N9_REVIEW_BUNDLE.zip}; its current SHA-256 is recorded in \code{HANDOFF_STATE.json}.  The repository preserves the dependency cache, but the archive intentionally excludes compiled caches and toolchain binaries.  A matching prior build may be reused only after the verifier checks all source and artifact hashes.
+
+The independent checker can be run from a fresh output directory using the command documented in \code{README_independent_checker.md}.  The supplied reports are evidence records; an external reviewer should execute the checker afresh rather than trust a downloaded PASS JSON.
+
+\section{Scope, limitations, and publication status}
+
+The Lean theorem is a complete proof of the frozen global-minimum claim stated in Theorem 1.  It is not an external independent verification: \code{leanchecker} is Lean's own kernel replay.  The independent Python checker is conditional in the precise sense described above.  The paper does not claim a congruence-classification theorem for all minimizers.
+
+The work is suitable for a technical preprint with the exact scope stated here.  A stronger submission standard would add a second proof kernel, close the remaining independent premises, and obtain separate mathematical and formal-methods review.  Those are validation improvements, not hidden assumptions in the theorem proved here.
+
+\section*{Acknowledgements and disclosure}
+
+The author received no external funding and declares no competing interests.  Language-model
+assistance was used for proof discovery, formal-code engineering, validation-script engineering,
+and manuscript editing.  The models used were DeepSeek-V4.1-Flash-1017, ChatGPT-6.1 Sol, and
+ChatGPT-6 Astra.  Jingxing Huang is responsible for the mathematical statement, formal code,
+validation records, and release artifacts; the language models are not authors.
+
+\begin{thebibliography}{9}
+\bibitem{CohnKumar2007}
+H. Cohn and A. Kumar, Universally optimal distribution of points on spheres, \emph{J. Amer. Math. Soc.} 20 (2007), 99--148.
+
+\bibitem{CohnWoo2012}
+H. Cohn and J. Woo, Three-point bounds for energy minimization, \emph{J. Amer. Math. Soc.} 25 (2012), 939--958.
+
+\bibitem{Schwartz2013}
+R. E. Schwartz, The five-electron case of Thomson's problem, \emph{Experimental Mathematics} 22 (2013), 157--186.
+
+\bibitem{KryvonosLiehrTaylor2026}
+L. Kryvonos, L. Liehr, and M. A. Taylor, Energy minimization for eight points on the sphere, arXiv:2609.22077 (2026), and companion repository.
+
+\bibitem{Lean}
+L. de Moura and S. Ullrich, The Lean 4 theorem prover and programming language, in \emph{CADE 28}, LNCS 12699, Springer, 2021, 625--635.
+
+\bibitem{Mathlib}
+The mathlib Community, The Lean mathematical library, in \emph{CPP 2020}, ACM, 2020.
+
+\bibitem{Tran}
+H.-W. Tran, A Lean formalization of the N=7 Thomson problem, GitHub repository, commit 25f2fa5 (2026).
+\end{thebibliography}
+
+\end{document}

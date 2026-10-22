@@ -1,0 +1,1012 @@
+{
+  "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
+  "finished_utc8": "2026-10-22T00:24:25+08:00",
+  "scope": "Formal proof-body compaction; exact prior conditional coverage and audited names preserved.",
+  "formal_compact_modules": 45,
+  "audits": 664,
+  "module_closure": 135,
+  "distinct_targets": 292,
+  "total_targets": 807,
+  "gathered_audit_declarations": 299,
+  "old_grouped_olean_bytes": 7255420392,
+  "new_grouped_olean_bytes": 50256824,
+  "grouped_artifact_size_ratio": 144.36687029805145,
+  "product_lemmas_reused": 918,
+  "legacy_explicit_scalar_bounds_preserved": 3,
+  "public_signatures_and_interval_definitions_unchanged": true,
+  "summed_successful_compile_seconds": 281.78051233291626,
+  "fresh_replay": {
+    "before_local_seconds": 993.4963047504425,
+    "before_root_seconds": 996.3115057945251,
+    "before_two_replays_seconds": 1989.8078105449677,
+    "after_one_complete_replay_seconds": 551.7660160064697,
+    "same_local_entry_time_ratio": 1.800575381465308,
+    "policy": {
+      "policy": "single_fresh_local_closure_v1",
+      "fresh_roots": [
+        "ThomsonNine.LocalVerification"
+      ],
+      "checked_local_modules": [
+        "ThomsonNine",
+        "ThomsonNine.Applications",
+        "ThomsonNine.CandidateMem",
+        "ThomsonNine.ChainBindings",
+        "ThomsonNine.ChainRestBindings",
+        "ThomsonNine.ContactInner",
+        "ThomsonNine.CoverageSoundness",
+        "ThomsonNine.Derivative",
+        "ThomsonNine.DistanceValues",
+        "ThomsonNine.DomainChamber",
+        "ThomsonNine.DomainCoverage",
+        "ThomsonNine.EightSourceBindings",
+        "ThomsonNine.ElevenSourceBindings",
+        "ThomsonNine.EnergyBounds",
+        "ThomsonNine.EnergyContinuity",
+        "ThomsonNine.EnergyForms",
+        "ThomsonNine.EnergyGradient",
+        "ThomsonNine.EnergyOptimality",
+        "ThomsonNine.EnergyPath",
+        "ThomsonNine.EnergySymmetry",
+        "ThomsonNine.EnergyValue",
+        "ThomsonNine.Family",
+        "ThomsonNine.FifteenSourceBindings",
+        "ThomsonNine.FinalAssembly",
+        "ThomsonNine.FiveSourceBindings",
+        "ThomsonNine.FourteenSourceBindings",
+        "ThomsonNine.GatheredBinding",
+        "ThomsonNine.GatheredChain",
+        "ThomsonNine.GatheredTwoSource",
+        "ThomsonNine.GradientZero",
+        "ThomsonNine.GramBound",
+        "ThomsonNine.GramBoundary",
+        "ThomsonNine.Grouped103",
+        "ThomsonNine.Grouped123",
+        "ThomsonNine.Grouped124",
+        "ThomsonNine.Grouped224",
+        "ThomsonNine.Grouped242",
+        "ThomsonNine.Grouped286",
+        "ThomsonNine.Grouped312",
+        "ThomsonNine.Grouped321",
+        "ThomsonNine.Grouped328",
+        "ThomsonNine.Grouped329",
+        "ThomsonNine.Grouped334",
+        "ThomsonNine.Grouped381",
+        "ThomsonNine.Grouped388",
+        "ThomsonNine.Grouped396",
+        "ThomsonNine.Grouped402",
+        "ThomsonNine.Grouped403",
+        "ThomsonNine.Grouped409",
+        "ThomsonNine.Grouped456",
+        "ThomsonNine.Grouped463",
+        "ThomsonNine.Grouped469",
+        "ThomsonNine.Grouped475",
+        "ThomsonNine.Grouped517",
+        "ThomsonNine.Grouped531",
+        "ThomsonNine.Grouped547",
+        "ThomsonNine.Grouped574",
+        "ThomsonNine.Grouped583",
+        "ThomsonNine.Grouped589",
+        "ThomsonNine.Grouped590",
+        "ThomsonNine.Grouped596",
+        "ThomsonNine.Grouped597",
+        "ThomsonNine.Grouped612",
+        "ThomsonNine.Grouped615",
+        "ThomsonNine.Grouped629",
+        "ThomsonNine.Grouped646",
+        "ThomsonNine.Grouped647",
+        "ThomsonNine.Grouped653",
+        "ThomsonNine.Grouped664",
+        "ThomsonNine.Grouped677",
+        "ThomsonNine.Grouped697",
+        "ThomsonNine.Grouped703",
+        "ThomsonNine.Grouped720",
+        "ThomsonNine.Grouped738",
+        "ThomsonNine.Grouped739",
+        "ThomsonNine.Grouped762",
+        "ThomsonNine.GroupedT114",
+        "ThomsonNine.Interval",
+        "ThomsonNine.IntervalEval",
+        "ThomsonNine.IntervalLinear",
+        "ThomsonNine.IntervalLocalOps",
+        "ThomsonNine.IntervalMul",
+        "ThomsonNine.IntervalPowerReplay",
+        "ThomsonNine.IntervalSparseDerivative",
+        "ThomsonNine.IntervalSparsePolynomial",
+        "ThomsonNine.IntervalSum",
+        "ThomsonNine.IntervalTensor",
+        "ThomsonNine.IntervalTensorEval",
+        "ThomsonNine.LeafCert",
+        "ThomsonNine.LeafSemantics",
+        "ThomsonNine.LocalHessianBridge",
+        "ThomsonNine.LocalLDLData",
+        "ThomsonNine.LocalLDLFactorization",
+        "ThomsonNine.LocalLDLReplay",
+        "ThomsonNine.LocalLDLSemantics",
+        "ThomsonNine.LocalNonneg",
+        "ThomsonNine.LocalSparseHessianAAA",
+        "ThomsonNine.LocalSparseHessianAAABase",
+        "ThomsonNine.LocalSparseHessianAAAChunk00",
+        "ThomsonNine.LocalSparseHessianAAAChunk01",
+        "ThomsonNine.LocalSparseHessianAAAChunk02",
+        "ThomsonNine.LocalSparseHessianAAAChunk03",
+        "ThomsonNine.LocalSparseHessianAAAChunk04",
+        "ThomsonNine.LocalSparseHessianAAAChunk05",
+        "ThomsonNine.LocalSparseHessianAAAChunk06",
+        "ThomsonNine.LocalSparseHessianAAAChunk07",
+        "ThomsonNine.LocalVerification",
+        "ThomsonNine.Minimizer",
+        "ThomsonNine.Minimum",
+        "ThomsonNine.MultiCornerBindings",
+        "ThomsonNine.MultiCornerPBindings",
+        "ThomsonNine.MultiCornerPowBindings",
+        "ThomsonNine.NineSourceBindings",
+        "ThomsonNine.PSDSemantics",
+        "ThomsonNine.PairDeriv",
+        "ThomsonNine.ReducedPSD",
+        "ThomsonNine.SecondDerivative",
+        "ThomsonNine.SevenSourceBindings",
+        "ThomsonNine.SeventeenSourceBindings",
+        "ThomsonNine.SingleSourceBindings",
+        "ThomsonNine.SixteenSourceBindings",
+        "ThomsonNine.SparseTranslation",
+        "ThomsonNine.Statement",
+        "ThomsonNine.Stationary",
+        "ThomsonNine.StrictConvex",
+        "ThomsonNine.TargetBinding",
+        "ThomsonNine.TaylorTen",
+        "ThomsonNine.TenSourceBindings",
+        "ThomsonNine.ThirteenSourceBindings",
+        "ThomsonNine.ThreePoint",
+        "ThomsonNine.ThreePointBound",
+        "ThomsonNine.TreeSemantics",
+        "ThomsonNine.TwelveSourceBindings",
+        "ThomsonNine.TwoSourceBindings"
+      ],
+      "covered_integration_roots": [
+        "ThomsonNine.LocalVerification",
+        "ThomsonNine"
+      ],
+      "audit_only_module": "ThomsonNine.Axioms"
+    },
+    "external_independent_verification": false
+  },
+  "negative_bundle_tests": {
+    "status": "ALL_4_NEGATIVE_TESTS_PASS",
+    "canonical_bundle_unchanged": true,
+    "original_pass_restored": true,
+    "cases": [
+      {
+        "case": "running_report",
+        "rejected": true,
+        "reason": "verification report is not PASS: 'RUNNING' / None"
+      },
+      {
+        "case": "missing_kernel_covered_module",
+        "rejected": true,
+        "reason": "fresh replay does not cover every proof-bearing module"
+      },
+      {
+        "case": "nonfresh_command",
+        "rejected": true,
+        "reason": "fresh replay command mismatch: kernel_local_fresh"
+      },
+      {
+        "case": "wrong_artifact_hash",
+        "rejected": true,
+        "reason": "verification artifact hash mismatch: formal/.lake/build/lib/lean/ThomsonNine/Grouped286.olean"
+      }
+    ]
+  },
+  "cache": {
+    "formal_lake_preserved": true,
+    "mathlib_dependencies_recompiled": false,
+    "old_task_created_backup_bytes_removed_after_pass": 7255420392
+  },
+  "compilation": [
+    {
+      "module": "ThomsonNine.Grouped123",
+      "exit_code": 0,
+      "seconds": 7.473092794418335,
+      "source_sha256": "6288c7cf909b9efeed884121f2ed2180a201196b3181051f7d1e1b7386499c0e",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped123.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped123.ilean",
+        "ThomsonNine/Grouped123.lean"
+      ],
+      "artifact_bytes": 1214688,
+      "artifact_sha256": "2f3f59eb486cede70caec246956ef7ba1ef7ee4caff99f0b44591209385b75b5"
+    },
+    {
+      "module": "ThomsonNine.Grouped103",
+      "exit_code": 0,
+      "seconds": 7.692193508148193,
+      "source_sha256": "88f3bfb403162c60738561c1320933c7daaf8450df69eb4048bf85adfddeaa9d",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped103.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped103.ilean",
+        "ThomsonNine/Grouped103.lean"
+      ],
+      "artifact_bytes": 1227776,
+      "artifact_sha256": "5804b2fa3a9dbb594af89155f4cc8e1d49089faa4cc8f22caeef92e3cac0e260"
+    },
+    {
+      "module": "ThomsonNine.Grouped124",
+      "exit_code": 0,
+      "seconds": 7.171881675720215,
+      "source_sha256": "10b499d1528b08b463e60f91a2830e98dd6260b23d0c141c9b7a0fabb3ffc9cc",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped124.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped124.ilean",
+        "ThomsonNine/Grouped124.lean"
+      ],
+      "artifact_bytes": 896832,
+      "artifact_sha256": "67f0a760f9ae6c038b1d23e6b941f4e04bd37d918e3c41305392c8ccf4a925ec"
+    },
+    {
+      "module": "ThomsonNine.Grouped224",
+      "exit_code": 0,
+      "seconds": 7.269442558288574,
+      "source_sha256": "9332a2fee51607d71c88cdafab1b37e3cc177d48033438e8cd25bd02d82b587b",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped224.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped224.ilean",
+        "ThomsonNine/Grouped224.lean"
+      ],
+      "artifact_bytes": 1152400,
+      "artifact_sha256": "ecfe1432ae46e5fae47268f3761ec750ed4a406b025de69138c637b6e7a11fe2"
+    },
+    {
+      "module": "ThomsonNine.Grouped242",
+      "exit_code": 0,
+      "seconds": 6.708560466766357,
+      "source_sha256": "3585d68b23a8019a39e56757d13e05349d7ed10cb6bff9393e794150a32d2d4d",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped242.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped242.ilean",
+        "ThomsonNine/Grouped242.lean"
+      ],
+      "artifact_bytes": 1148808,
+      "artifact_sha256": "c6a0580ebb83e197ffe29542ba7b2c10590ef10309c28d5283221e68ea37ea6e"
+    },
+    {
+      "module": "ThomsonNine.Grouped286",
+      "exit_code": 0,
+      "seconds": 7.646765232086182,
+      "source_sha256": "eea7918cbb3aa102441d1e4ba353e35df67854e2e7f22994832f65f4aba076cc",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped286.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped286.ilean",
+        "ThomsonNine/Grouped286.lean"
+      ],
+      "artifact_bytes": 1515760,
+      "artifact_sha256": "ea71c2f0e9fb3209507de6669bee3c6c13cb7c26d3e34e665f585e3d61583a48"
+    },
+    {
+      "module": "ThomsonNine.Grouped312",
+      "exit_code": 0,
+      "seconds": 6.83880352973938,
+      "source_sha256": "75cfb164cf1f985ad6e82995a4e016396936ed46fc3ba5df7ca59d02a6f436ef",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped312.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped312.ilean",
+        "ThomsonNine/Grouped312.lean"
+      ],
+      "artifact_bytes": 1180264,
+      "artifact_sha256": "20f73651bd37fea1eb85909a61745956cc7e020e28dc88ea09f0d30a6f5905d7"
+    },
+    {
+      "module": "ThomsonNine.Grouped321",
+      "exit_code": 0,
+      "seconds": 6.401184558868408,
+      "source_sha256": "8e603cc9ba51c6545d382d6281952b62eeb1f1b6f753948c1367c632570053a5",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped321.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped321.ilean",
+        "ThomsonNine/Grouped321.lean"
+      ],
+      "artifact_bytes": 854224,
+      "artifact_sha256": "123af171e0c7d2619c05122fb699cf4bcdb943f3d7f7ba02dc216bb0cc1aee8e"
+    },
+    {
+      "module": "ThomsonNine.Grouped328",
+      "exit_code": 0,
+      "seconds": 6.721978425979614,
+      "source_sha256": "e673820176c3e1be8813e650a582f8871f11b465e3a34394094e29f97adf543a",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped328.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped328.ilean",
+        "ThomsonNine/Grouped328.lean"
+      ],
+      "artifact_bytes": 1171336,
+      "artifact_sha256": "b5f7403a4dcfd5c52d928bb541152d5c49f837f45d9c54e321175e2483fcb21a"
+    },
+    {
+      "module": "ThomsonNine.Grouped329",
+      "exit_code": 0,
+      "seconds": 6.457391262054443,
+      "source_sha256": "2dff391ae012cf7b987298f96d17d015fe48bb2d647e0148b49d4700c9d9119c",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped329.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped329.ilean",
+        "ThomsonNine/Grouped329.lean"
+      ],
+      "artifact_bytes": 858160,
+      "artifact_sha256": "2d15b55bcf60fa4eab3025bcd54305aa2cc91b079797225390e0565d6880ea50"
+    },
+    {
+      "module": "ThomsonNine.Grouped334",
+      "exit_code": 0,
+      "seconds": 6.970021486282349,
+      "source_sha256": "675f8ccece4c9de40afe9b096045117a0afef801a87c8afd9c2714464f7a3699",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped334.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped334.ilean",
+        "ThomsonNine/Grouped334.lean"
+      ],
+      "artifact_bytes": 1510384,
+      "artifact_sha256": "44fd03530c3d55e4189f343d62b629aadadd7706fe577a7e61a530c1c3c57497"
+    },
+    {
+      "module": "ThomsonNine.Grouped381",
+      "exit_code": 0,
+      "seconds": 6.706760406494141,
+      "source_sha256": "c8e4d0b3efbf16498fafabbbd742499afe6ffd0876eb538c5813dbb2378fa4fa",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped381.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped381.ilean",
+        "ThomsonNine/Grouped381.lean"
+      ],
+      "artifact_bytes": 974576,
+      "artifact_sha256": "cd1c0474d7c3d21b835eb2826c39f0baba27807d0b50532d28e51b072e47b38f"
+    },
+    {
+      "module": "ThomsonNine.Grouped396",
+      "exit_code": 0,
+      "seconds": 6.2513344287872314,
+      "source_sha256": "9240a2f74ccf64c3fa0234b1deaf42ed5b60cd562f59d957f84d8a4d7d9bac25",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped396.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped396.ilean",
+        "ThomsonNine/Grouped396.lean"
+      ],
+      "artifact_bytes": 878656,
+      "artifact_sha256": "db8b9c5413087457c96cfa61ede6ee8b656404cb2d0b0c3fbe803dade6102cfb"
+    },
+    {
+      "module": "ThomsonNine.Grouped388",
+      "exit_code": 0,
+      "seconds": 6.834861755371094,
+      "source_sha256": "7a5c997142072269b9c7c0c8402da160eb54d706dcd1f7e3c49528e4a274665c",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped388.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped388.ilean",
+        "ThomsonNine/Grouped388.lean"
+      ],
+      "artifact_bytes": 1441384,
+      "artifact_sha256": "354c6b681ff2f0c2d48d07261499a1ea2a59ffa4d4dfb3c8a2b5e5da529ceaea"
+    },
+    {
+      "module": "ThomsonNine.Grouped403",
+      "exit_code": 0,
+      "seconds": 6.136606931686401,
+      "source_sha256": "66e5b3e8d285cbbd92ccbf8e2bb288a8c769d1bda12e3cd0c1b095e2a8bf80ed",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped403.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped403.ilean",
+        "ThomsonNine/Grouped403.lean"
+      ],
+      "artifact_bytes": 875216,
+      "artifact_sha256": "0583e591413bda55051f4a9a2198d887ee560c4776c5724de20208b0f25a2e36"
+    },
+    {
+      "module": "ThomsonNine.Grouped402",
+      "exit_code": 0,
+      "seconds": 6.7607293128967285,
+      "source_sha256": "c97f57617016a178e7b93f1230061b24a72e2d48d9923bed0963a1213192a02d",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped402.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped402.ilean",
+        "ThomsonNine/Grouped402.lean"
+      ],
+      "artifact_bytes": 1438480,
+      "artifact_sha256": "cc756362941fdb98705e296d6665347cff32c15a085aa4c9acee500ab8e02c55"
+    },
+    {
+      "module": "ThomsonNine.Grouped409",
+      "exit_code": 0,
+      "seconds": 6.197807550430298,
+      "source_sha256": "9400462a3cd95b7d6bd962be84a3cc128126563578c66e814c864470de46dc52",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped409.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped409.ilean",
+        "ThomsonNine/Grouped409.lean"
+      ],
+      "artifact_bytes": 970968,
+      "artifact_sha256": "3ed5335be1d3065494a4afbf20112f8f7baf9beceb6c7c94a9b660c14922a9c0"
+    },
+    {
+      "module": "ThomsonNine.Grouped456",
+      "exit_code": 0,
+      "seconds": 6.695172548294067,
+      "source_sha256": "de33707fbf58d88d8acba82e08e521261a03151bc8f610c931f830d5b27218d4",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped456.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped456.ilean",
+        "ThomsonNine/Grouped456.lean"
+      ],
+      "artifact_bytes": 1435856,
+      "artifact_sha256": "f88a52ca60346853351fc3f1482d3c6171dd592ba351ecde14a3902daad4b2c9"
+    },
+    {
+      "module": "ThomsonNine.Grouped463",
+      "exit_code": 0,
+      "seconds": 6.152205467224121,
+      "source_sha256": "de27cbcc2f815d0a4f96ecea7a62137f4944435c785ff06104fa05afca14166b",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped463.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped463.ilean",
+        "ThomsonNine/Grouped463.lean"
+      ],
+      "artifact_bytes": 873928,
+      "artifact_sha256": "0fe6c6b773bb27712ac2114d2dcc85384f9bbb0529b2c2d4be065bb90c89da21"
+    },
+    {
+      "module": "ThomsonNine.Grouped469",
+      "exit_code": 0,
+      "seconds": 6.203611850738525,
+      "source_sha256": "a39494fdf9f94aead7afa70cb042b90bcee32fbe35859af6dea9db330e7ff5f3",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped469.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped469.ilean",
+        "ThomsonNine/Grouped469.lean"
+      ],
+      "artifact_bytes": 949608,
+      "artifact_sha256": "ad1f16687dd78bfb8973d68fe8233a593879837b1b0a36addd055551d34ea039"
+    },
+    {
+      "module": "ThomsonNine.Grouped475",
+      "exit_code": 0,
+      "seconds": 6.733325481414795,
+      "source_sha256": "39df77379e761a93b778f7cfc2d86d56ef6772259e158d4b156c2b2a991825ff",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped475.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped475.ilean",
+        "ThomsonNine/Grouped475.lean"
+      ],
+      "artifact_bytes": 1435200,
+      "artifact_sha256": "d8a622e45ff79fe26099fe3a84be26a74f8b96f9649efb0b9c3f8cfef09fd4d7"
+    },
+    {
+      "module": "ThomsonNine.Grouped517",
+      "exit_code": 0,
+      "seconds": 6.500119924545288,
+      "source_sha256": "80aa3537834311f9cde771ab5cc1ad2376c52f14ac0edd5e4c544586b1deffdb",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped517.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped517.ilean",
+        "ThomsonNine/Grouped517.lean"
+      ],
+      "artifact_bytes": 1168384,
+      "artifact_sha256": "a6b2cb763cfebfa98c78fc36b63cb50cc654a4e1a6ce48a896bc2d240edcabae"
+    },
+    {
+      "module": "ThomsonNine.Grouped531",
+      "exit_code": 0,
+      "seconds": 6.114659309387207,
+      "source_sha256": "4e2892a0d449fa1aefc0e0509d632c4cc65f3f3ba5e9ac85bb66d2b9b02edd17",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped531.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped531.ilean",
+        "ThomsonNine/Grouped531.lean"
+      ],
+      "artifact_bytes": 867296,
+      "artifact_sha256": "2dcbf65309777a2c39b322ee6c18d5b129d5608f76d85ef9c1e17c92330fee77"
+    },
+    {
+      "module": "ThomsonNine.Grouped547",
+      "exit_code": 0,
+      "seconds": 6.053842067718506,
+      "source_sha256": "d79274b12cb45ed0d919508c32e9abd2c7ab1b83bfd97e170d9295639fdd6311",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped547.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped547.ilean",
+        "ThomsonNine/Grouped547.lean"
+      ],
+      "artifact_bytes": 1169536,
+      "artifact_sha256": "d050a503fee566df3691d36c84233241455502fe69e6ff7aa1ba05e2e2de9c7e"
+    },
+    {
+      "module": "ThomsonNine.Grouped583",
+      "exit_code": 0,
+      "seconds": 5.539215803146362,
+      "source_sha256": "747b0dfde5bc270a01323e879f827d5401f23b71e88a20746551cb50c052efd9",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped583.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped583.ilean",
+        "ThomsonNine/Grouped583.lean"
+      ],
+      "artifact_bytes": 850848,
+      "artifact_sha256": "af17f3b74d6ea75a549d6a962dd2d274c45f01f12187c8b5469367594034e92f"
+    },
+    {
+      "module": "ThomsonNine.Grouped574",
+      "exit_code": 0,
+      "seconds": 6.214600563049316,
+      "source_sha256": "e44ef9cdf8c8a808f2440c793ddb5c848669afa2f73b1df301d3f8702e8c64c4",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped574.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped574.ilean",
+        "ThomsonNine/Grouped574.lean"
+      ],
+      "artifact_bytes": 1154248,
+      "artifact_sha256": "cd719dcd339e5adb209784a97f2145fb464541693fb82a2f442a33926cb9bbc6"
+    },
+    {
+      "module": "ThomsonNine.Grouped590",
+      "exit_code": 0,
+      "seconds": 5.562533140182495,
+      "source_sha256": "45048a912f2e296612f499797620e382d057700274bfa3312ad1d8e01368d2e7",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped590.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped590.ilean",
+        "ThomsonNine/Grouped590.lean"
+      ],
+      "artifact_bytes": 874920,
+      "artifact_sha256": "ce0d9e75dae1703fadafdb0d4c264c600beca5464d652caaf0686ccc7d108eaa"
+    },
+    {
+      "module": "ThomsonNine.Grouped589",
+      "exit_code": 0,
+      "seconds": 6.234083890914917,
+      "source_sha256": "143a1f0061511cb3de672476aae209f7be8db3adf2f61b0da61091542e1564d0",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped589.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped589.ilean",
+        "ThomsonNine/Grouped589.lean"
+      ],
+      "artifact_bytes": 1433512,
+      "artifact_sha256": "52fad97cf3f3ac82cbb074511c021be6b29feea5703aeb5958ad2a1cbbf0c211"
+    },
+    {
+      "module": "ThomsonNine.Grouped597",
+      "exit_code": 0,
+      "seconds": 5.314653158187866,
+      "source_sha256": "ce321c72a0be23431544b2fa44efd42e252667b95dfe10b1bf901c5e14ee3b29",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped597.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped597.ilean",
+        "ThomsonNine/Grouped597.lean"
+      ],
+      "artifact_bytes": 482472,
+      "artifact_sha256": "6085cdd6fe986fc382ea88d492c9f517a824e27477a725b8b4a8edfb0446c0c0"
+    },
+    {
+      "module": "ThomsonNine.Grouped596",
+      "exit_code": 0,
+      "seconds": 6.039393901824951,
+      "source_sha256": "71632a26934780848e6d261a9fcd5e702920c55588526769913af6d6000cbb18",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped596.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped596.ilean",
+        "ThomsonNine/Grouped596.lean"
+      ],
+      "artifact_bytes": 1433304,
+      "artifact_sha256": "1cbf689f312ffecee12b3df95357aac312db885eec7e79268394979df7422b68"
+    },
+    {
+      "module": "ThomsonNine.Grouped612",
+      "exit_code": 0,
+      "seconds": 5.385447263717651,
+      "source_sha256": "0f34ccb2f4bbc2b488ef4442e9c6dbe3455fb4f36e8a15abf3060b014c2fb051",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped612.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped612.ilean",
+        "ThomsonNine/Grouped612.lean"
+      ],
+      "artifact_bytes": 849104,
+      "artifact_sha256": "43f419391402befa52af018548737595cdba33d4da5b7764705bb31559e8c448"
+    },
+    {
+      "module": "ThomsonNine.Grouped615",
+      "exit_code": 0,
+      "seconds": 5.876095294952393,
+      "source_sha256": "1902004cff229c4f3466d52d4defa8cd67dbdf6b223a6c0655ae28581c95cc9d",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped615.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped615.ilean",
+        "ThomsonNine/Grouped615.lean"
+      ],
+      "artifact_bytes": 1156600,
+      "artifact_sha256": "18825d6f4018e4bcef9c48c4fba83f42c330313282a936742ea45fad8e26c744"
+    },
+    {
+      "module": "ThomsonNine.Grouped629",
+      "exit_code": 0,
+      "seconds": 6.402219772338867,
+      "source_sha256": "b46336c3f3c55743906b185500260662a01fee7ba7d5ac65b6b8be1df99254aa",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped629.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped629.ilean",
+        "ThomsonNine/Grouped629.lean"
+      ],
+      "artifact_bytes": 1219208,
+      "artifact_sha256": "aced1f2fed056abc4361e7f6ae6ea2b06300459798d9ec3705fdbb8eb9995eb9"
+    },
+    {
+      "module": "ThomsonNine.Grouped646",
+      "exit_code": 0,
+      "seconds": 6.158181667327881,
+      "source_sha256": "a9193b26ea24b3d054f3b414f95fe7c61f2e0da7be33cf7baa30a6cfd6e0fa5e",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped646.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped646.ilean",
+        "ThomsonNine/Grouped646.lean"
+      ],
+      "artifact_bytes": 1172096,
+      "artifact_sha256": "9619343a3980a42676b8eb78b81dc59fdcfbb11ff159691d5aa799d10de3ef3b"
+    },
+    {
+      "module": "ThomsonNine.Grouped647",
+      "exit_code": 0,
+      "seconds": 5.826101541519165,
+      "source_sha256": "e0f0775a19e8144535a50bd69aa80bbcfbd3550d3098a20ec50648cffb258a74",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped647.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped647.ilean",
+        "ThomsonNine/Grouped647.lean"
+      ],
+      "artifact_bytes": 858080,
+      "artifact_sha256": "b59d1707c00f18189778f5e59e5e5fb73e1a20e5a68fd8d33b19858246ce67c6"
+    },
+    {
+      "module": "ThomsonNine.Grouped653",
+      "exit_code": 0,
+      "seconds": 5.5670692920684814,
+      "source_sha256": "c8c0bada1aeb61a091cb4b0127effab159f1cdb262011c6553a0e8f73602b275",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped653.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped653.ilean",
+        "ThomsonNine/Grouped653.lean"
+      ],
+      "artifact_bytes": 975128,
+      "artifact_sha256": "6c2723065494f2869916fcb255d379553fce2a9358cc050d3d22ac973928dd12"
+    },
+    {
+      "module": "ThomsonNine.Grouped677",
+      "exit_code": 0,
+      "seconds": 5.472751617431641,
+      "source_sha256": "8b39e29b906da51e35490d37153e8ef2fb5cc26985e3d180723bfb870a834da9",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped677.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped677.ilean",
+        "ThomsonNine/Grouped677.lean"
+      ],
+      "artifact_bytes": 1221048,
+      "artifact_sha256": "29d19f27e74d7a466bb1a5d9f59d6ab74ba867880b9764e55c9a3d4c573b7a4b"
+    },
+    {
+      "module": "ThomsonNine.Grouped664",
+      "exit_code": 0,
+      "seconds": 5.631007671356201,
+      "source_sha256": "895e209d3e2bcd00681451caa4ab2d30d13985f6a571073a8778fb7b99685e34",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped664.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped664.ilean",
+        "ThomsonNine/Grouped664.lean"
+      ],
+      "artifact_bytes": 1171344,
+      "artifact_sha256": "a71647df724dafc3358781d22d94f17e0409db522c23543a08837e05067ac34d"
+    },
+    {
+      "module": "ThomsonNine.Grouped697",
+      "exit_code": 0,
+      "seconds": 5.583980560302734,
+      "source_sha256": "7f1ccce27f5e48ec024faf263a235bb573a00e4c2677b1e08e17c11728f83afe",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped697.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped697.ilean",
+        "ThomsonNine/Grouped697.lean"
+      ],
+      "artifact_bytes": 1148992,
+      "artifact_sha256": "5c7acf0425608231e102beb84f21720c448e79910b9cae6b1e52d93a9af54a23"
+    },
+    {
+      "module": "ThomsonNine.Grouped703",
+      "exit_code": 0,
+      "seconds": 5.866896629333496,
+      "source_sha256": "3c26a70b8cf5fc090b0bd58864b003ac120d9a3f533bafbaecc919732eef1fa2",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped703.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped703.ilean",
+        "ThomsonNine/Grouped703.lean"
+      ],
+      "artifact_bytes": 1514416,
+      "artifact_sha256": "a504817f6f93fabee5b4730f73aeddfce46166f70389742c285cb9576b92c1ad"
+    },
+    {
+      "module": "ThomsonNine.Grouped720",
+      "exit_code": 0,
+      "seconds": 5.425999641418457,
+      "source_sha256": "fe5fdf8d0d09ef9ad7e96adb5a65d033f343401db72f43dabf52d88b4f17be7b",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped720.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped720.ilean",
+        "ThomsonNine/Grouped720.lean"
+      ],
+      "artifact_bytes": 1155440,
+      "artifact_sha256": "99b290210ae1b6b6bdac3bf1bc1fd8b0fe9791c39156802cdf47ca86b5dba357"
+    },
+    {
+      "module": "ThomsonNine.Grouped738",
+      "exit_code": 0,
+      "seconds": 5.3440306186676025,
+      "source_sha256": "8eaf48f118ff7a05f536df84d1d16e4fd1978277efbccd8e0f330b0b0d124078",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped738.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped738.ilean",
+        "ThomsonNine/Grouped738.lean"
+      ],
+      "artifact_bytes": 1210136,
+      "artifact_sha256": "e3c99ae7a8c5874757b9ab1b096199ef8f4720c0fd7c95bf6f4b04f1bec22587"
+    },
+    {
+      "module": "ThomsonNine.Grouped739",
+      "exit_code": 0,
+      "seconds": 5.112573623657227,
+      "source_sha256": "07cb4ac71d380dfe6e1b51048ff73f8c4a701ebe92c21bb25557cc1e57b8047c",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped739.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped739.ilean",
+        "ThomsonNine/Grouped739.lean"
+      ],
+      "artifact_bytes": 893816,
+      "artifact_sha256": "fe966c8fb1cb726d204a906672df3d8b39256d39a419dfbc9dc7101e5e9912cb"
+    },
+    {
+      "module": "ThomsonNine.Grouped762",
+      "exit_code": 0,
+      "seconds": 5.221108675003052,
+      "source_sha256": "f4d858251b84c0faef01d0ca5b8a74f7a25bb6557fb05b79e7d6b45e06ac6f37",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped762.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/Grouped762.ilean",
+        "ThomsonNine/Grouped762.lean"
+      ],
+      "artifact_bytes": 1220208,
+      "artifact_sha256": "38f24f8d0058e2d375c421e426577805d4118562d766d4681bcf2c1f6fe28c33"
+    },
+    {
+      "module": "ThomsonNine.GroupedT114",
+      "exit_code": 0,
+      "seconds": 7.310215473175049,
+      "source_sha256": "fc00bd490fa678ff99638a3c4f0e40aa6568f6bd6cd0019970688bee6cd14c20",
+      "command": [
+        "/workspace/cloud-setup/lean-4.34.1-linux/bin/lean",
+        "-j2",
+        "-o",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/GroupedT114.olean",
+        "-i",
+        "/workspace/thomson-n9-proof/work/compact20261022/artifacts/ThomsonNine/GroupedT114.ilean",
+        "ThomsonNine/GroupedT114.lean"
+      ],
+      "artifact_bytes": 1052184,
+      "artifact_sha256": "84d5c08c56b4cbff140ea82dbf17d5cdc02efc8219e7516134f20d6ea8f647b0",
+      "retry": true
+    }
+  ],
+  "formal_verification_source_hashes": {
+    "verify_local_lean.py": "9e61e2da7227edbdef0671471e3bfc50e810b1f8a697166ea9b0f6fe90bb67c3",
+    "export_grouped_compact.py": "81c5d78f721e2b84df67562b18fc8b0aef7552940891eb9872ce92cf4ccf8735",
+    "compact_grouped_manifest.json": "d61724b4f826dc8f63a52778fe8124bfe2edb6a5256be3050f787080c65409fb",
+    "test_compact_validation.py": "562fcea0e9215566930dcda512ee9a776d6991c09071a985cb7d30d4af7a4d6e",
+    "compact_inputs/GroupedT114.lean": "296b2d730048d30f07a010a6a29fb4661fee3d370ac6a7f590121ca2b21cac7c"
+  },
+  "final_global_theorem_proved": false,
+  "bulk_numeric_feasibility": {
+    "exit_code": 0,
+    "seconds": 3.8124832960002095,
+    "scope": "Exact Python Fraction feasibility check, NOT a Lean proof; does not increase formal coverage or bind actual residual.",
+    "stages": [
+      {
+        "axis": 0,
+        "input_terms": 807,
+        "output_terms": 807,
+        "seconds": 0.6662472850002814
+      },
+      {
+        "axis": 1,
+        "input_terms": 807,
+        "output_terms": 807,
+        "seconds": 1.3040498009995645
+      },
+      {
+        "axis": 2,
+        "input_terms": 807,
+        "output_terms": 807,
+        "seconds": 1.6312036720009928
+      }
+    ],
+    "output": "AAA_SHIFT_BINDING_TARGETS 807\nAAA_SHIFT_BINDING_MISSING 0\nAAA_SHIFT_BINDING_EXTRA 0\nAAA_SHIFT_BINDING_NOT_CONTAINED 0\nAAA_SHIFT_BINDING_PASS: 807 targets, 807 contained\n",
+    "source_sha256": "a344dc1b4e57d2b1a3baf129210613053f4f54c56a7d45d3e7a5b7591a4d56c2",
+    "input_sha256": {
+      "independent_hermite_RH_result.json": "65e59816c8ac4f80d0e725e38e1cf9d27d8b89b107ddc7723a186ee11e71feff",
+      "independent_local_00_AAA.json": "48d04d6bb8e89c3c960181569d2e920a12bf128bc9cde62507142aa4a4eeb8c5"
+    }
+  }
+}
