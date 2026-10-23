@@ -111,6 +111,7 @@ PV_EXPLICIT_REQUIRED = (
     "local_lean_verification.json", "local_lean_build_stamp.json",
     "GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
+    "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
 )
 PV_EXPLICIT_OPTIONAL = (
     "README_local_lean.md",
