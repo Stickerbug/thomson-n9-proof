@@ -12,6 +12,8 @@ n=9 项目已经包含几层可以复用的形式化语义：
 
 这些层证明了“证书有效性”，不证明任意 `n` 都存在可找到的证书。
 
+目前已新增并编译通过 `ThomsonCertificate.GenericBernstein`（任意有限维 Bernstein 张量）和 `ThomsonCertificate.GenericCoverage`（任意盒类型、点类型和可行域的有限覆盖树）。它们是通用内核原型，不改变 n=9 定理。
+
 ## 仍然绑定 n=9 的部分
 
 下面的内容目前不能直接宣称为任意 `n` 的算法：
