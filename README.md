@@ -6,7 +6,7 @@ Compiler, axiom audit and one complete fresh Lean-kernel replay pass: **2390 mod
 
 See the [complete proof and validation record](proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md), [frozen statement](proof_work/publication_validation/formal/ThomsonNine/Statement.lean), [final theorem](proof_work/publication_validation/formal/MainCoverage/Final.lean), and [verification report](proof_work/publication_validation/local_lean_verification.json).
 
-For the n=7/n=8 comparison and publication checklist, see [publication readiness](proof_work/publication_validation/README_PUBLICATION_READINESS_2026-10-22_zh.md).
+For the n=7/n=8 comparison and publication checklist, see [publication readiness](proof_work/publication_validation/README_PUBLICATION_READINESS_2026-10-22_zh.md). The planned reusable-certificate direction is recorded in [the generic framework roadmap](proof_work/publication_validation/GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md).
 
 The current manuscript draft is available as [PDF](paper/main.pdf), with its [LaTeX source](paper/main.tex), [compact submission package](paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip), [build notes](paper/README.md), [Chinese submission guide](paper/SUBMISSION_GUIDE_zh.md), and [cover-letter template](paper/COVER_LETTER_TEMPLATE.md). The archived release is [GitHub n9-proof-2026-10-23](https://github.com/Stickerbug/thomson-n9-proof/releases/tag/n9-proof-2026-10-23), DOI [10.5281/zenodo.23573472](https://doi.org/10.5281/zenodo.23573472).
 
