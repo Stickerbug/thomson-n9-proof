@@ -109,6 +109,7 @@ PV_EXPLICIT_REQUIRED = (
     "export_local_hessian_bridge.py", "local_hessian_bridge_manifest.json",
     "export_local_sparse_hessian.py", "local_sparse_hessian_manifest.json",
     "local_lean_verification.json", "local_lean_build_stamp.json",
+    "GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md",
 )
 PV_EXPLICIT_OPTIONAL = (
     "README_local_lean.md",
@@ -330,7 +331,8 @@ for n in ("aggregate.json", "manifest.json",
 for relative in LEAN_SOURCES:
     add_file(os.path.join("proof_work", "publication_validation", "formal", relative), required=True)
 for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain",
-          "lake-manifest.json", "lake-manifest.original_git.json", "ThomsonNine.lean"):
+          "lake-manifest.json", "lake-manifest.original_git.json", "ThomsonNine.lean",
+          "ThomsonCertificate/GenericBernstein.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 
