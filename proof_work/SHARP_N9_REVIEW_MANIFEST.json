@@ -1,5 +1,5 @@
 {
-  "file_count": 5642,
+  "file_count": 5643,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -254,8 +254,8 @@
       "sha256": "eb297c1912ec0614666e36b941f45a59968b6b6ec03429ea7186537e857ca5c5"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md": {
-      "bytes": 4243,
-      "sha256": "a640d4aa8526889b6b1c7619bea687a1f2de61db7d66df3dde894517190df2d0"
+      "bytes": 4348,
+      "sha256": "7897e783aea436e83864d0d24fc4629bd82d19b482417231a96aea0d905cf424"
     },
     "proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md": {
       "bytes": 4480,
@@ -374,8 +374,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 30087,
-      "sha256": "379ba6e0de45e52799eb204ee8e5ef9ef7010fd5d4e868655614c42f8c4778c9"
+      "bytes": 30141,
+      "sha256": "af4f99125480f257c165afae9f9667ef2837dbc278701d13fd7d7a1fea1695a0"
     },
     "proof_work/publication_validation/check_cached_grouped_numeric.py": {
       "bytes": 3316,
@@ -10908,6 +10908,10 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericCoverage.lean": {
       "bytes": 1743,
       "sha256": "209cb644b98e455fcbabdd6d1a340e94d9817fcd966e8937827180991a613199"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/GenericFramework.lean": {
+      "bytes": 1210,
+      "sha256": "f220872b702fb84248aa489d0f4791b8ffa128171e7218b126a2851e4dff7431"
     },
     "proof_work/publication_validation/formal/ThomsonNine.lean": {
       "bytes": 4395,
@@ -22562,7 +22566,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-23T00:42:24.814298+00:00",
+  "generated_utc": "2026-10-23T01:23:36.523424+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
