@@ -333,7 +333,8 @@ for relative in LEAN_SOURCES:
 for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain",
           "lake-manifest.json", "lake-manifest.original_git.json", "ThomsonNine.lean",
           "ThomsonCertificate/GenericBernstein.lean",
-          "ThomsonCertificate/GenericCoverage.lean"):
+          "ThomsonCertificate/GenericCoverage.lean",
+          "ThomsonCertificate/GenericFramework.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 

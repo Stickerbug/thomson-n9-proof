@@ -12,7 +12,7 @@ n=9 项目已经包含几层可以复用的形式化语义：
 
 这些层证明了“证书有效性”，不证明任意 `n` 都存在可找到的证书。
 
-目前已新增并编译通过 `ThomsonCertificate.GenericBernstein`（任意有限维 Bernstein 张量）和 `ThomsonCertificate.GenericCoverage`（任意盒类型、点类型和可行域的有限覆盖树）。它们是通用内核原型，不改变 n=9 定理。
+目前已新增并编译通过 `ThomsonCertificate.GenericBernstein`（任意有限维 Bernstein 张量）和 `ThomsonCertificate.GenericCoverage`（任意盒类型、点类型和可行域的有限覆盖树）。它们是通用内核原型，不改变 n=9 定理。 `ThomsonCertificate.GenericFramework` 进一步用单叶玩具实例组合两层接口并编译通过。
 
 ## 仍然绑定 n=9 的部分
 
