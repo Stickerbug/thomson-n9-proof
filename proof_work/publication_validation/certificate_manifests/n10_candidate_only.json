@@ -1,0 +1,12 @@
+{
+  "schema": "thomson-certificate-v1",
+  "instance_n": 10,
+  "mode": "candidate_only",
+  "root_theorem": "pending: no Lean n=10 certificate adapter",
+  "evidence_refs": [
+    "proof_work/analytic10_2026_audit_kernel.json",
+    "proof_work/analytic10_2026_audit_rootinputs.json",
+    "proof_work/analytic10_2026_bound_parent.json"
+  ],
+  "status": "candidate_and_conditional_numeric_bound_only"
+}

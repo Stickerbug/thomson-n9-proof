@@ -34,6 +34,14 @@ def load_manifest(path: str) -> dict:
     n = data.get("instance_n")
     if not isinstance(n, int) or n < 0:
         raise ValueError("instance_n must be a nonnegative integer")
+    if data.get("mode") == "candidate_only":
+        refs = data.get("evidence_refs", [])
+        if not isinstance(refs, list) or not all(isinstance(x, str) and safe_relative(x) for x in refs):
+            raise ValueError("candidate_only evidence_refs must be safe relative paths")
+        missing = [x for x in refs if not os.path.isfile(os.path.join(ROOT, x))]
+        if missing:
+            raise ValueError("missing candidate evidence: " + ", ".join(missing))
+        return data
     lean_file = data.get("lean_file")
     if not isinstance(lean_file, str) or not safe_relative(lean_file):
         raise ValueError("lean_file must be a safe relative path")
@@ -57,8 +65,19 @@ def main() -> int:
     try:
         manifest_path = os.path.abspath(args.manifest)
         data = load_manifest(manifest_path)
-        report.update({"instance_n": data["instance_n"], "lean_file": data["lean_file"],
+        report.update({"instance_n": data["instance_n"],
                        "root_theorem": data["root_theorem"]})
+        if "lean_file" in data:
+            report["lean_file"] = data["lean_file"]
+        if data.get("mode") == "candidate_only":
+            report.update({"status": "UNKNOWN", "reason": "candidate data supplied without a Lean certificate adapter",
+                           "evidence_refs": data["evidence_refs"], "exit_code": None})
+            if args.report:
+                with open(args.report, "w", encoding="utf-8") as f:
+                    json.dump(report, f, ensure_ascii=False, indent=2)
+                    f.write("\n")
+            print(json.dumps({k: v for k, v in report.items() if k != "output"}, ensure_ascii=False))
+            return 1
         source = data["lean_file"]
         output = os.path.join(FORMAL, ".lake", "build", "lib", "lean",
                               os.path.splitext(source)[0] + ".olean")

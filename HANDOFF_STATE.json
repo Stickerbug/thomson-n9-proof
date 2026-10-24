@@ -866,6 +866,16 @@
       "malformed_path_status": "UNKNOWN",
       "full_n9_fresh_replay_rerun": false,
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "n10_candidate_dispatch",
+      "result": "UNKNOWN_BY_DESIGN",
+      "instance_n": 10,
+      "manifest": "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json",
+      "status": "candidate_only",
+      "reason": "no Lean n=10 certificate adapter; existing analytic10 records are conditional/nonsharp",
+      "full_n10_formal_replay": false,
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {

@@ -1,0 +1,14 @@
+{
+  "schema": "thomson-certificate-run-v1",
+  "started_utc": "2026-10-24T06:41:46.157181+00:00",
+  "instance_n": 10,
+  "root_theorem": "pending: no Lean n=10 certificate adapter",
+  "status": "UNKNOWN",
+  "reason": "candidate data supplied without a Lean certificate adapter",
+  "evidence_refs": [
+    "proof_work/analytic10_2026_audit_kernel.json",
+    "proof_work/analytic10_2026_audit_rootinputs.json",
+    "proof_work/analytic10_2026_bound_parent.json"
+  ],
+  "exit_code": null
+}
