@@ -1,6 +1,6 @@
 {
   "schema": "thomson-certificate-run-v1",
-  "started_utc": "2026-10-24T17:03:26.890903+00:00",
+  "started_utc": "2026-10-24T17:12:55.958459+00:00",
   "instance_n": 10,
   "root_theorem": "pending: no accepted n=10 global candidate or Lean certificate adapter",
   "status": "UNKNOWN",
@@ -19,7 +19,8 @@
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md",
     "proof_work/analytic10_2026_audit_kernel.json",
     "proof_work/analytic10_2026_audit_rootinputs.json",
-    "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateInterval.lean"
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateInterval.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10D4dGeometry.lean"
   ],
   "exit_code": null
 }

@@ -17,7 +17,8 @@
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md",
     "proof_work/analytic10_2026_audit_kernel.json",
     "proof_work/analytic10_2026_audit_rootinputs.json",
-    "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateInterval.lean"
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateInterval.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10D4dGeometry.lean"
   ],
   "status": "DISCOVERY_PENDING",
   "scope_note": "the Lean interval layer proves only the rational t-to-h enclosure; analytic10 and d10 artifacts are degree-10 n=9 experiments, not a ten-particle global certificate"

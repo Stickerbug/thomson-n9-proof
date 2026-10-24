@@ -371,7 +371,8 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/ThomsonNineAdapter.lean",
           "ThomsonCertificate/ThomsonNineMinimumAdapter.lean",
           "ThomsonCertificate/ThomsonNineStructuredAdapter.lean",
-          "ThomsonCertificate/N10CandidateInterval.lean"):
+          "ThomsonCertificate/N10CandidateInterval.lean",
+          "ThomsonCertificate/N10D4dGeometry.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 
