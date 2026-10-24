@@ -786,6 +786,21 @@
       "imports_thomson_nine": false,
       "full_n9_fresh_replay_rerun": false,
       "record": "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md"
+    },
+    {
+      "batch": "generic_certificate_indexed_interface",
+      "result": "LIGHTWEIGHT_PASS",
+      "modules": [
+        "ThomsonCertificate.GenericCertificate",
+        "ThomsonCertificate.GenericFramework"
+      ],
+      "theorem": "ThomsonCertificate.Certificate.sound",
+      "compile_exit_codes": [
+        0,
+        0
+      ],
+      "full_n9_fresh_replay_rerun": false,
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {
