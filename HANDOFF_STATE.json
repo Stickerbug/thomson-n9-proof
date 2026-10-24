@@ -921,7 +921,7 @@
     "latex_build": "PASS",
     "pages": 5,
     "route": "arXiv preprint followed by journal submission",
-    "pre_submission_action": "DOI and release metadata integrated; arXiv endorsement or alternate preprint submission remains optional",
+    "pre_submission_action": "Correct the Zenodo creator metadata to Jingxing Huang / Qian Xuesen College / ORCID 0009-0002-9805-0331; arXiv endorsement or alternate preprint submission remains optional",
     "scope_disclosure": "Lean fresh-kernel replay is not external independent verification; no congruence-uniqueness theorem is claimed.",
     "preprint_alternatives": [
       "GitHub release + Zenodo DOI",
@@ -934,7 +934,7 @@
     "github_release": "https://github.com/Stickerbug/thomson-n9-proof/releases/tag/n9-proof-2026-10-23",
     "github_tag": "n9-proof-2026-10-23",
     "github_commit": "667a6297dc203232b9f0f796acc825dc3179fb12",
-    "release_status": "GitHub release created; Zenodo archival DOI assigned",
+    "release_status": "GitHub release created and review bundle refreshed; Zenodo archival DOI assigned, creator metadata correction pending",
     "related_work": {
       "repository": "https://github.com/aravindkarthigeyan/thomson-n9-lean",
       "author": "Aravind Karthigeyan",
