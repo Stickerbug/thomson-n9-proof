@@ -10,8 +10,8 @@
       "sha256": "1fd887b3c81f3173a25b8d638c17d7222de4e9bf4181f89fa50b6fedd2042ac5"
     },
     "paper/SUBMISSION_GUIDE_zh.md": {
-      "bytes": 8587,
-      "sha256": "4f52172714337ebff09d2365103ee1e74b62b1e3899dda9a071ac92d40c6b5e4"
+      "bytes": 9773,
+      "sha256": "2d4473b52845b3facf511d87aea193df89a29e9b3ae165f4db134b234314ef26"
     },
     "paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip": {
       "bytes": 250322,
@@ -22582,7 +22582,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T02:55:37.013568+00:00",
+  "generated_utc": "2026-10-24T03:02:00.823105+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
