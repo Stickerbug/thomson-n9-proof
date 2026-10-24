@@ -74,7 +74,7 @@ def main() -> int:
                       if data.get("mode") == "candidate_only" else
                       "external theorem contract recorded without local source import or replay"
                       if data.get("mode") == "external_claim_only" else
-                      "discovery intake has no accepted n=10 global candidate, exact energy model, or Lean adapter")
+                      "discovery intake has no accepted n=10 global lower-bound certificate")
             report.update({"status": "UNKNOWN", "phase": data.get("phase", "intake"), "reason": reason,
                            "evidence_refs": data["evidence_refs"], "exit_code": None})
             if args.report:
