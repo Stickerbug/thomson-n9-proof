@@ -1,5 +1,5 @@
 {
-  "file_count": 5674,
+  "file_count": 5676,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -193,6 +193,14 @@
       "bytes": 3629,
       "sha256": "8262dbc775daeaed961a4206b372dea5130533c9331bb296b1b2e7b0de456c84"
     },
+    "proof_work/n10_stationarity_elimination_2026-10-24.json": {
+      "bytes": 10053,
+      "sha256": "8c3213cbcb711018f00e91bff32d99c48abac44ac34ed924869160c6b9e1fbaf"
+    },
+    "proof_work/n10_stationarity_elimination_2026-10-24.py": {
+      "bytes": 3247,
+      "sha256": "5b6d080ec5b69aee5cc05678f23633b4b1a1759b1b4f822f418acbaf8b0ef552"
+    },
     "proof_work/narrowroot2026_certificate.json": {
       "bytes": 158036,
       "sha256": "ef5780213cf84511456b5fd51222054cd006ee310412b81bb20b107f64e1cc47"
@@ -278,8 +286,8 @@
       "sha256": "e3176d864573fb0c584f14d7ecc2c25d92d846e22bb1ab4060acdfa7aa04b4f1"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 5315,
-      "sha256": "e597e97c15d5147468f516a37a0a71ce7d7a06a7cc03b0c2598985f305392ed1"
+      "bytes": 5431,
+      "sha256": "f30bfa61e3a1514e2bde9ea880a540f7ea43acb8b71630fe4ed8dbf13945badb"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
       "bytes": 3228,
@@ -294,8 +302,8 @@
       "sha256": "350772cd9f724ef769d2bc6901a4ddaab0ac65036e81c76c3fe3025226ae2379"
     },
     "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md": {
-      "bytes": 3271,
-      "sha256": "2dc578313c706620a6adecf07f2eb67ee61434461a7dc432987ac32f5394183d"
+      "bytes": 3466,
+      "sha256": "3f90bee03ad9f27ad3be6b24e9ef49f426cb263d85909db21228a9cc949cb996"
     },
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md": {
       "bytes": 2608,
@@ -414,8 +422,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 31763,
-      "sha256": "3060d42e44757f77c24626d742fd4571d25564661f97d4880457ad3cf176dca4"
+      "bytes": 31865,
+      "sha256": "013efd501ae00313b37a514ccde2c53faf3e4dbea796fe4b98663b3d6fdfdb6b"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 412,
@@ -426,12 +434,12 @@
       "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery.json": {
-      "bytes": 880,
-      "sha256": "fdbaedc29245a00a1c31b60d8919a76ac23ac7774c51df4c5fb03dbceea71a50"
+      "bytes": 1004,
+      "sha256": "6d181e59e3174ef4c4a6b91df059a5d7ed66465bceb8672b718b576a872394c2"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery_run.json": {
-      "bytes": 917,
-      "sha256": "9e56187bab1b2f7c833e3a5ef8868fe26354c0ca7acb68be4c80c3d5a19ee1d9"
+      "bytes": 1041,
+      "sha256": "6e87fb40d4a3205c58a829e69add81057ba7479b600a2a9dede9175ed3dfcdbd"
     },
     "proof_work/publication_validation/certificate_manifests/n7_external_claim.json": {
       "bytes": 562,
@@ -22690,7 +22698,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T10:57:31.114094+00:00",
+  "generated_utc": "2026-10-24T11:05:18.379138+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
