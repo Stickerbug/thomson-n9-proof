@@ -104,6 +104,23 @@ def radical_stationarity_interval(t_value):
     return expression
 
 
+def d4d_energy_interval(h_interval):
+    """Evaluate the D4d-family energy with rational interval arithmetic."""
+    one = RationalInterval(1)
+    half = RationalInterval(Fraction(1, 2))
+    s = interval_sqrt(RationalInterval(2))
+    h2 = h_interval * h_interval
+    return (
+        half
+        + 8 / interval_sqrt(2 - 2 * h_interval)
+        + 8 / interval_sqrt(2 + 2 * h_interval)
+        + 8 / interval_sqrt(2 - 2 * h2)
+        + 2 / interval_sqrt(one - h2)
+        + 8 / interval_sqrt(2 + 2 * h2 - s * (one - h2))
+        + 8 / interval_sqrt(2 + 2 * h2 + s * (one - h2))
+    )
+
+
 def interval_decimal(interval, digits=45):
     mp.mp.dps = digits + 10
     return [
@@ -134,6 +151,11 @@ def main() -> None:
     left_radical_interval = radical_stationarity_interval(left)
     right_radical_interval = radical_stationarity_interval(right)
     assert left_radical_interval.hi < 0 and right_radical_interval.lo > 0
+    h_interval = RationalInterval(
+        (1 - right * right) / (1 + right * right),
+        (1 - left * left) / (1 + left * left),
+    )
+    energy_interval = d4d_energy_interval(h_interval)
 
     # Check that the selected radical branch agrees numerically with the root.
     mp.mp.dps = 90
@@ -176,6 +198,10 @@ def main() -> None:
             "right": interval_decimal(right_radical_interval),
         },
         "original_radical_endpoint_signs_exact_interval": [-1, 1],
+        "d4d_h_interval_exact": [str(h_interval.lo), str(h_interval.hi)],
+        "d4d_energy_interval_exact": [str(energy_interval.lo), str(energy_interval.hi)],
+        "d4d_energy_interval_decimal": interval_decimal(energy_interval),
+        "d4d_energy_interval_scope": "D4d one-parameter family candidate only; not a global n=10 lower bound",
         "candidate_t_decimal": mp.nstr(candidate_t, 80),
         "candidate_h_decimal": mp.nstr(h, 80),
         "original_radical_branch_residual_at_decimal": mp.nstr(radical_residual, 50),
