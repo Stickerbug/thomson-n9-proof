@@ -761,6 +761,31 @@
       ],
       "audits_added": 83,
       "targets_added": []
+    },
+    {
+      "batch": "generic_certificate_stage_a",
+      "result": "LIGHTWEIGHT_PASS",
+      "modules": [
+        "ThomsonCertificate.GenericBernstein",
+        "ThomsonCertificate.GenericCoverage",
+        "ThomsonCertificate.GenericPSD",
+        "ThomsonCertificate.GenericFramework"
+      ],
+      "compile_exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "compile_seconds": [
+        5.53,
+        1.05,
+        1.63,
+        1.51
+      ],
+      "imports_thomson_nine": false,
+      "full_n9_fresh_replay_rerun": false,
+      "record": "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md"
     }
   ],
   "support_frontier": {
