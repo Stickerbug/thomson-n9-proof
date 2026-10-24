@@ -1070,5 +1070,9 @@
       "provenance_comparison": "not line-by-line audited"
     },
     "generic_pipeline": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+  },
+  "artifacts": {
+    "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
+    "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json"
   }
 }

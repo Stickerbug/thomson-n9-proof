@@ -1,5 +1,5 @@
 {
-  "file_count": 5667,
+  "file_count": 5672,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -177,6 +177,14 @@
       "bytes": 1227,
       "sha256": "381285a027574294dbb07b5ffe8b3a154866b5b7380f87c1db9ff950866b44ae"
     },
+    "proof_work/n10_numerical_candidate_proposal_2026-10-24.json": {
+      "bytes": 7842,
+      "sha256": "c553639850662786f921f94871c4269d99b47072c04b24cde327e1d861da8def"
+    },
+    "proof_work/n10_numerical_candidate_proposal_2026-10-24.py": {
+      "bytes": 3629,
+      "sha256": "8262dbc775daeaed961a4206b372dea5130533c9331bb296b1b2e7b0de456c84"
+    },
     "proof_work/narrowroot2026_certificate.json": {
       "bytes": 158036,
       "sha256": "ef5780213cf84511456b5fd51222054cd006ee310412b81bb20b107f64e1cc47"
@@ -262,8 +270,8 @@
       "sha256": "e3176d864573fb0c584f14d7ecc2c25d92d846e22bb1ab4060acdfa7aa04b4f1"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 4754,
-      "sha256": "22de4c100743019c4f560aaab345bad8fe72570288ea6b5243c5def671993c65"
+      "bytes": 5195,
+      "sha256": "0af18282bd3defea361c642a12c6448979420aa2ffcdb35a498d6846a3b26484"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
       "bytes": 3228,
@@ -277,9 +285,13 @@
       "bytes": 5691,
       "sha256": "350772cd9f724ef769d2bc6901a4ddaab0ac65036e81c76c3fe3025226ae2379"
     },
+    "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md": {
+      "bytes": 3060,
+      "sha256": "697d61adc8b7c9a4971e2cae111147c2d2f8c241f087339a6543f03a5304dea5"
+    },
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md": {
-      "bytes": 2311,
-      "sha256": "afe3d99ee2f7d4de86520c4326ce7bee25938815ab772c5c8d7f5637dc9503b2"
+      "bytes": 2608,
+      "sha256": "bf301c6e268280b16323292023dd299f2acc3b3fc5af7bb3bab3d3ef6e648b73"
     },
     "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md": {
       "bytes": 1639,
@@ -394,8 +406,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 31414,
-      "sha256": "466d68e5360c05991191e6bec3d98b5a31bb5770df534ed431f2bbd235cbbbb0"
+      "bytes": 31669,
+      "sha256": "e051857bf6192fe296ae7adef52ecd1f2390f0965d1f8c8190fae6f1beaa5dc1"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 412,
@@ -404,6 +416,14 @@
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only_run.json": {
       "bytes": 484,
       "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
+    },
+    "proof_work/publication_validation/certificate_manifests/n10_discovery.json": {
+      "bytes": 764,
+      "sha256": "db8324ba25e265015c145fe61ea6436fe3add19beaa357d9546404b15de4f656"
+    },
+    "proof_work/publication_validation/certificate_manifests/n10_discovery_run.json": {
+      "bytes": 801,
+      "sha256": "9a68ffa206c8aa7d9e70c2d15af02c3ea534ca790c9b2849fddd2e24aa348c56"
     },
     "proof_work/publication_validation/certificate_manifests/n7_external_claim.json": {
       "bytes": 562,
@@ -22498,8 +22518,8 @@
       "sha256": "a9e0cd60652387c1f37d1df8aea6195b817fda17d382a7bbcdc3d1275872b04a"
     },
     "proof_work/publication_validation/run_certificate_pipeline.py": {
-      "bytes": 5136,
-      "sha256": "500cacb8beadcb93a1bf5c3301204316bf0828d510293c374f793023a628bfa0"
+      "bytes": 5381,
+      "sha256": "1e0d5d79f7cadd28403732ea5997975cef1cf96ae2a5e13411606dc394531eac"
     },
     "proof_work/publication_validation/run_sharded_subprocess.py": {
       "bytes": 4221,
@@ -22662,7 +22682,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T07:57:36.463444+00:00",
+  "generated_utc": "2026-10-24T09:40:12.695378+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,

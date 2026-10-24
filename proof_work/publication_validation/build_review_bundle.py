@@ -27,6 +27,8 @@ MANIFEST = os.path.join(PROOF, "SHARP_N9_REVIEW_MANIFEST.json")
 # archive is unavailable.  Compiled shared objects are deliberately excluded.
 BASELINE_ROOT_FILES = [
     "THOMSON_N9_CURRENT_zh.md", "THOMSON_N9_PROOF_CANDIDATE_zh.md",
+    "n10_numerical_candidate_proposal_2026-10-24.py",
+    "n10_numerical_candidate_proposal_2026-10-24.json",
     "analytic10_2026_sum.c", "analytic10_sharp2026_engine.py",
     "analytic10_sharp2026_run1.json", "analytic10_sharp2026_run1_inputs.json",
     "candidate_low_rank.py", "candidate_triple_types_v1.json",
@@ -127,6 +129,9 @@ PV_EXPLICIT_REQUIRED = (
     "certificate_manifests/n8_external_claim_run.json",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
+    "N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
+    "certificate_manifests/n10_discovery.json",
+    "certificate_manifests/n10_discovery_run.json",
 )
 PV_EXPLICIT_OPTIONAL = (
     "README_local_lean.md",

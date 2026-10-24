@@ -1,0 +1,17 @@
+{
+  "schema": "thomson-certificate-v1",
+  "instance_n": 10,
+  "mode": "discovery",
+  "phase": "DISCOVERY_PENDING",
+  "root_theorem": "pending: no accepted n=10 candidate or Lean certificate adapter",
+  "evidence_refs": [
+    "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
+    "proof_work/n10_numerical_candidate_proposal_2026-10-24.py",
+    "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
+    "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md",
+    "proof_work/analytic10_2026_audit_kernel.json",
+    "proof_work/analytic10_2026_audit_rootinputs.json"
+  ],
+  "status": "DISCOVERY_PENDING",
+  "scope_note": "analytic10 and d10 artifacts are degree-10 n=9 experiments, not a ten-particle candidate"
+}

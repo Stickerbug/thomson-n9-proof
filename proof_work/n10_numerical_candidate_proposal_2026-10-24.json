@@ -1,0 +1,303 @@
+{
+  "status": "NUMERICAL_CANDIDATE_PROPOSAL_ONLY",
+  "scope": "ten-point Thomson candidate discovery; no exactification, no global-minimum claim, no Lean theorem",
+  "instance_n": 10,
+  "energy_convention": "sum over unordered pairs 1/||x_i-x_j||",
+  "candidate_energy_float64": 32.71694946014815,
+  "candidate_points_float64": [
+    [
+      0.22859999791712657,
+      -0.5151841023816165,
+      0.8260311020812339
+    ],
+    [
+      0.9474933975672614,
+      -0.24868741835472316,
+      -0.20102445005150613
+    ],
+    [
+      -0.09366592197733926,
+      -0.31070250710488767,
+      -0.945880884223205
+    ],
+    [
+      -0.8125598273689713,
+      -0.5771977788522442,
+      0.08117420177706433
+    ],
+    [
+      -0.8036775439142716,
+      0.3690925692610171,
+      -0.4667687657976113
+    ],
+    [
+      -0.5758013170378438,
+      0.2245015322416603,
+      0.7861627727885818
+    ],
+    [
+      0.4408671764096683,
+      0.6013844412365167,
+      -0.6663129044249474
+    ],
+    [
+      0.6687439976386028,
+      0.4567934658887353,
+      0.5866184408486466
+    ],
+    [
+      -0.15961425543379648,
+      0.9769463185353022,
+      0.14177157741463736
+    ],
+    [
+      0.15961402312453382,
+      -0.9769464573687585,
+      -0.1417708822594864
+    ]
+  ],
+  "min_pair_distance": 1.074534419223131,
+  "max_pair_distance": 1.9999999999998608,
+  "closest_antipodal_pair_error": 2.7833291227352674e-13,
+  "optimizer": {
+    "method": "L-BFGS-B",
+    "seed": 20261024,
+    "starts": 32,
+    "maxiter": 1500,
+    "scipy": "1.17.0",
+    "numpy": "2.3.5"
+  },
+  "reproducibility": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "source_sha256": "8262dbc775daeaed961a4206b372dea5130533c9331bb296b1b2e7b0de456c84"
+  },
+  "runs": [
+    {
+      "start": 0,
+      "energy": 32.71694946014815,
+      "success": true,
+      "iterations": 42,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 1,
+      "energy": 32.71694946015725,
+      "success": true,
+      "iterations": 40,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 2,
+      "energy": 32.716949460150005,
+      "success": true,
+      "iterations": 42,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 3,
+      "energy": 32.71694946014859,
+      "success": true,
+      "iterations": 71,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 4,
+      "energy": 32.7169494601495,
+      "success": true,
+      "iterations": 46,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 5,
+      "energy": 32.71694946015767,
+      "success": true,
+      "iterations": 41,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 6,
+      "energy": 32.71694946014913,
+      "success": true,
+      "iterations": 60,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 7,
+      "energy": 32.71694946018967,
+      "success": true,
+      "iterations": 40,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 8,
+      "energy": 32.716949460154865,
+      "success": true,
+      "iterations": 45,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 9,
+      "energy": 32.7169494601505,
+      "success": true,
+      "iterations": 44,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 10,
+      "energy": 32.7169494601515,
+      "success": true,
+      "iterations": 45,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 11,
+      "energy": 32.7169494601537,
+      "success": true,
+      "iterations": 44,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 12,
+      "energy": 32.71694946014832,
+      "success": true,
+      "iterations": 40,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 13,
+      "energy": 32.716949460149635,
+      "success": true,
+      "iterations": 50,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 14,
+      "energy": 32.71694946014984,
+      "success": true,
+      "iterations": 57,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 15,
+      "energy": 32.7169494601604,
+      "success": true,
+      "iterations": 35,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 16,
+      "energy": 32.71694946015971,
+      "success": true,
+      "iterations": 47,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 17,
+      "energy": 32.7169494601507,
+      "success": true,
+      "iterations": 47,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 18,
+      "energy": 32.71694946015375,
+      "success": true,
+      "iterations": 43,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 19,
+      "energy": 32.7169494601488,
+      "success": true,
+      "iterations": 48,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 20,
+      "energy": 32.71694946016409,
+      "success": true,
+      "iterations": 44,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 21,
+      "energy": 32.716949460154694,
+      "success": true,
+      "iterations": 42,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 22,
+      "energy": 32.71694946014916,
+      "success": true,
+      "iterations": 41,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 23,
+      "energy": 32.7169494601521,
+      "success": true,
+      "iterations": 48,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 24,
+      "energy": 32.71694946015,
+      "success": true,
+      "iterations": 55,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 25,
+      "energy": 32.716949460150744,
+      "success": true,
+      "iterations": 47,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 26,
+      "energy": 32.71694946014903,
+      "success": true,
+      "iterations": 49,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 27,
+      "energy": 32.71694946014833,
+      "success": true,
+      "iterations": 44,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 28,
+      "energy": 32.716949460152634,
+      "success": true,
+      "iterations": 38,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 29,
+      "energy": 32.71694946014842,
+      "success": true,
+      "iterations": 60,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 30,
+      "energy": 32.71694946015387,
+      "success": true,
+      "iterations": 49,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+      "start": 31,
+      "energy": 32.71694946015087,
+      "success": true,
+      "iterations": 44,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    }
+  ],
+  "elapsed_seconds": 1.178356412998255,
+  "next_gate": "exact candidate/model/contact certificate before n10_discovery can leave UNKNOWN"
+}
