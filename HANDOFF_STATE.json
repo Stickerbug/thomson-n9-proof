@@ -812,6 +812,16 @@
       "full_n9_fresh_replay_rerun": false,
       "scope": "semantic wrapper around ordered_residual_from_frontier; structural CutTree mapping pending",
       "record": "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md"
+    },
+    {
+      "batch": "generic_certificate_family",
+      "result": "LIGHTWEIGHT_PASS",
+      "module": "ThomsonCertificate.GenericCertificate",
+      "theorem": "ThomsonCertificate.CertificateFamily.sound",
+      "compile_exit_code": 0,
+      "compile_seconds": 1.5,
+      "full_n9_fresh_replay_rerun": false,
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {
