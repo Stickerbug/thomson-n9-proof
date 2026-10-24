@@ -1,0 +1,85 @@
+{
+  "status": "SYMMETRIC_NUMERICAL_FAMILY_PROPOSAL_ONLY",
+  "scope": "D4d one-parameter fit for n=10 discovery; no global-minimum or Lean claim",
+  "parameter": "h",
+  "parameter_interval": [
+    0,
+    1
+  ],
+  "h_float64": 0.42268742404398607,
+  "h_high_precision_decimal": "0.4226874240439860661684023637516817145175598926858208642717306277804292",
+  "energy_float64": 32.71694946014759,
+  "family_definition": {
+    "poles": "(0,0,1), (0,0,-1)",
+    "lower_ring": "sqrt(1-h^2)*(cos(k*pi/2),sin(k*pi/2),0)+(0,0,-h), k=0..3",
+    "upper_ring": "sqrt(1-h^2)*(cos(pi/4+k*pi/2),sin(pi/4+k*pi/2),0)+(0,0,h), k=0..3"
+  },
+  "energy_formula": "1/2 + 8/sqrt(2-2h) + 8/sqrt(2+2h) + 8/sqrt(2-2h^2) + 2/sqrt(1-h^2) + 8/sqrt(2+2h^2-sqrt(2)(1-h^2)) + 8/sqrt(2+2h^2+sqrt(2)(1-h^2))",
+  "minimum_pair_distance": 1.074534853744646,
+  "optimizer": {
+    "method": "scipy.optimize.minimize_scalar",
+    "bounds": [
+      0.2,
+      0.7
+    ],
+    "scipy": "1.17.0"
+  },
+  "candidate_points_float64": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      0.9062755329120716,
+      0.0,
+      -0.42268742404398607
+    ],
+    [
+      5.5493371526316515e-17,
+      0.9062755329120716,
+      -0.42268742404398607
+    ],
+    [
+      -0.9062755329120716,
+      1.1098674305263303e-16,
+      -0.42268742404398607
+    ],
+    [
+      -1.6648011457894953e-16,
+      -0.9062755329120716,
+      -0.42268742404398607
+    ],
+    [
+      0.640833574945578,
+      0.6408335749455779,
+      0.42268742404398607
+    ],
+    [
+      -0.6408335749455779,
+      0.640833574945578,
+      0.42268742404398607
+    ],
+    [
+      -0.6408335749455781,
+      -0.6408335749455779,
+      0.42268742404398607
+    ],
+    [
+      0.6408335749455778,
+      -0.6408335749455781,
+      0.42268742404398607
+    ]
+  ],
+  "reproducibility": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  },
+  "elapsed_seconds": 0.004269008997653145,
+  "next_gate": "derive an exact algebraic stationarity certificate and prove the full ten-point global bound"
+}

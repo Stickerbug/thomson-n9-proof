@@ -29,6 +29,8 @@ BASELINE_ROOT_FILES = [
     "THOMSON_N9_CURRENT_zh.md", "THOMSON_N9_PROOF_CANDIDATE_zh.md",
     "n10_numerical_candidate_proposal_2026-10-24.py",
     "n10_numerical_candidate_proposal_2026-10-24.json",
+    "n10_d4d_symmetric_family_2026-10-24.py",
+    "n10_d4d_symmetric_family_2026-10-24.json",
     "analytic10_2026_sum.c", "analytic10_sharp2026_engine.py",
     "analytic10_sharp2026_run1.json", "analytic10_sharp2026_run1_inputs.json",
     "candidate_low_rank.py", "candidate_triple_types_v1.json",
