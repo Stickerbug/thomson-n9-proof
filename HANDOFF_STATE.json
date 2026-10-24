@@ -833,6 +833,18 @@
       "full_n9_fresh_replay_rerun": false,
       "scope": "CutTree to generic Tree mapping with per-leaf check_sound and dyadic box transport",
       "record": "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md"
+    },
+    {
+      "batch": "cross_instance_readonly_audit",
+      "result": "AUDIT_RECORDED",
+      "instances": [
+        "n7",
+        "n8"
+      ],
+      "source_reuse": "none",
+      "license_confirmation_required": true,
+      "full_n7_n8_build_rerun": false,
+      "record": "proof_work/publication_validation/CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md"
     }
   ],
   "support_frontier": {
