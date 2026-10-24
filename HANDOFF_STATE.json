@@ -1074,10 +1074,11 @@
   "artifacts": {
     "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
     "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
-    "review_bundle_sha256": "d9652237500404e81ea7a3b67d2472e0312d708eb3c47e6f40cc446c3b4ed696",
-    "review_bundle_entries": 5676,
-    "review_bundle_bytes": 80862028,
+    "review_bundle_sha256": "702873a875611139c43a68d130f642a143eedce4201a6cd0c6edc55c1457380f",
+    "review_bundle_entries": 5678,
+    "review_bundle_bytes": 81246044,
     "n10_symmetric_family": "proof_work/n10_d4d_symmetric_family_2026-10-24.json",
-    "n10_stationarity_elimination": "proof_work/n10_stationarity_elimination_2026-10-24.json"
+    "n10_stationarity_elimination": "proof_work/n10_stationarity_elimination_2026-10-24.json",
+    "n10_root_isolation": "proof_work/n10_root_isolation_2026-10-24.json"
   }
 }
