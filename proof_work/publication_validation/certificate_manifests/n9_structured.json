@@ -1,0 +1,8 @@
+{
+  "schema": "thomson-certificate-v1",
+  "instance_n": 9,
+  "lean_file": "ThomsonCertificate/ThomsonNineStructuredAdapter.lean",
+  "root_theorem": "ThomsonNine.n9_structured_certificate_sound",
+  "mode": "verified_adapter",
+  "search_status": "external_candidate_and_certificate_data_already_supplied"
+}

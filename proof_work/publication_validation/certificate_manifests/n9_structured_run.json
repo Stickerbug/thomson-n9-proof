@@ -1,0 +1,18 @@
+{
+  "schema": "thomson-certificate-run-v1",
+  "started_utc": "2026-10-24T06:13:25.746731+00:00",
+  "instance_n": 9,
+  "lean_file": "ThomsonCertificate/ThomsonNineStructuredAdapter.lean",
+  "root_theorem": "ThomsonNine.n9_structured_certificate_sound",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    ".lake/build/lib/lean/ThomsonCertificate/ThomsonNineStructuredAdapter.olean",
+    "/workspace/thomson-n9-proof/proof_work/publication_validation/formal/.lake/build/lib/lean/ThomsonCertificate/ThomsonNineStructuredAdapter.olean",
+    "ThomsonCertificate/ThomsonNineStructuredAdapter.lean"
+  ],
+  "exit_code": 0,
+  "output": "",
+  "status": "PASS"
+}

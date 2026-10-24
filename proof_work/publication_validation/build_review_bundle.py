@@ -114,6 +114,9 @@ PV_EXPLICIT_REQUIRED = (
     "GENERIC_CERTIFICATE_PIPELINE_zh.md",
     "N9_ADAPTER_VALIDATION_2026-10-24_zh.md",
     "CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md",
+    "run_certificate_pipeline.py",
+    "certificate_manifests/n9_structured.json",
+    "certificate_manifests/n9_structured_run.json",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
 )

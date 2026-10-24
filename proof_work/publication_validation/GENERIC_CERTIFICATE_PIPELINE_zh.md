@@ -41,6 +41,10 @@ ThomsonCertificate.Certificate.sound
 
 搜索、数值优化和证书生成器属于不可信输入；它们可以出错，但错误必须在 Lean 检查阶段被拒绝。外部生成器不应把浮点结果直接当成定理前提。
 
+## 可执行调度器
+
+`run_certificate_pipeline.py` 读取 `schema = thomson-certificate-v1` 的清单，拒绝路径穿越和缺失源文件，然后调用 `lake env lean` 编译指定 adapter。n=9 清单 `certificate_manifests/n9_structured.json` 已运行通过，记录为 `status = PASS`；一个含 `../` 路径的负向清单返回 `UNKNOWN`。该脚本只负责证书验证调度，尚未实现候选构型搜索。
+
 ## 建议的证书数据分层
 
 ```text

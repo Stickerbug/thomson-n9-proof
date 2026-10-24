@@ -855,6 +855,17 @@
       "compile_seconds": 10.5,
       "full_n9_fresh_replay_rerun": false,
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "certificate_pipeline_dispatcher",
+      "result": "PASS_WITH_NEGATIVE_TEST",
+      "script": "proof_work/publication_validation/run_certificate_pipeline.py",
+      "manifest": "proof_work/publication_validation/certificate_manifests/n9_structured.json",
+      "instance_n": 9,
+      "lean_exit_code": 0,
+      "malformed_path_status": "UNKNOWN",
+      "full_n9_fresh_replay_rerun": false,
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {
