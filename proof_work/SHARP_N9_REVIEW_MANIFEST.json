@@ -1,5 +1,5 @@
 {
-  "file_count": 5648,
+  "file_count": 5650,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -258,8 +258,8 @@
       "sha256": "d22a3432f4316e7d8fbdbacbe63713169677de45817cc8cada5346c19688b7c5"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 3130,
-      "sha256": "f72a2bb20fea6b523a2273a2ac123e616824b0ef8aec5253aa959cbd3eaef232"
+      "bytes": 3201,
+      "sha256": "274775efeb1d258ab6c30251666b7a7eb7a3e88b66ee7cf9d9d0f3e5c2d31138"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
       "bytes": 2421,
@@ -276,6 +276,10 @@
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md": {
       "bytes": 1822,
       "sha256": "ae654578b88f88fbd01e9117f3505b0e2859293359379da0832ffcd70ceaf5d6"
+    },
+    "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md": {
+      "bytes": 1100,
+      "sha256": "e42a4be7d3f1da218779ca76f78db1b2850f53aacead86f321d952b20b54d290"
     },
     "proof_work/publication_validation/NEXT13_INTEGRATION_zh.md": {
       "bytes": 4336,
@@ -386,8 +390,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 30403,
-      "sha256": "ceedd6c39754593ce8b381b9de84b5a4077c9501f5eaaa9ff412823141ddb9b3"
+      "bytes": 30505,
+      "sha256": "c26bb8b6bfacae1fea6c0a30ac854e51283c601ec402deab4529184b517b5d0d"
     },
     "proof_work/publication_validation/check_cached_grouped_numeric.py": {
       "bytes": 3316,
@@ -10932,6 +10936,10 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericPSD.lean": {
       "bytes": 1580,
       "sha256": "575bc6526a7f794926e04c764a8d5c12a38f619332a4694a4dc20bf1a48fed8e"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/ThomsonNineAdapter.lean": {
+      "bytes": 1400,
+      "sha256": "b14c7470563fdda5f4dc0e0d5c2f407a9f1bd4d2a07566986dc16cfdb94ed1bd"
     },
     "proof_work/publication_validation/formal/ThomsonNine.lean": {
       "bytes": 4395,
@@ -22586,7 +22594,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T03:58:44.835366+00:00",
+  "generated_utc": "2026-10-24T04:22:12.721279+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
