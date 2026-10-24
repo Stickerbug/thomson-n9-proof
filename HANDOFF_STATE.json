@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5647,
-    "bytes": 80828995,
-    "sha256": "946313851831a3ef086312bf6b3f43071e23ca44ff57ed29cf34a972a4c1ae91"
+    "entries": 5648,
+    "bytes": 80827023,
+    "sha256": "f30d0204d061b9da8e1af86e5dac8b69458249fdd19f8781d2678f48226cfd91"
   },
   "pending_11_source": {
     "verified": [

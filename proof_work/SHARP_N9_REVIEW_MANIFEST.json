@@ -1,17 +1,13 @@
 {
-  "file_count": 5647,
+  "file_count": 5648,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
       "sha256": "405f439b9891f12d609f3b831b4ac0e51bd82b2f2f360b47924416821ede553c"
     },
     "paper/README.md": {
-      "bytes": 1829,
-      "sha256": "1fd887b3c81f3173a25b8d638c17d7222de4e9bf4181f89fa50b6fedd2042ac5"
-    },
-    "paper/SUBMISSION_GUIDE_zh.md": {
-      "bytes": 9773,
-      "sha256": "2d4473b52845b3facf511d87aea193df89a29e9b3ae165f4db134b234314ef26"
+      "bytes": 1836,
+      "sha256": "12e69179163dad54e2c1269610e0cac20009169da6a381797709e38b381b8698"
     },
     "paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip": {
       "bytes": 250322,
@@ -258,12 +254,16 @@
       "sha256": "eb297c1912ec0614666e36b941f45a59968b6b6ec03429ea7186537e857ca5c5"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md": {
-      "bytes": 4901,
-      "sha256": "0ea4c4710b48e12519733af7d1a2aa29dc16d6454046725535ec9ba6ae344d0a"
+      "bytes": 4998,
+      "sha256": "d22a3432f4316e7d8fbdbacbe63713169677de45817cc8cada5346c19688b7c5"
+    },
+    "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
+      "bytes": 2989,
+      "sha256": "fa607a1669e6a1406843db8a7cd7c19b1b9d570c0f6275af6334bafe60d2de84"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
-      "bytes": 2047,
-      "sha256": "a988a4b06fb933de61f0fa2399dd1c58b94c9d8fa0f10213c0acbe8aee6f9d08"
+      "bytes": 2421,
+      "sha256": "206c63d4eb26d9c6eda702d03fb1ca34cffa0bccda7eda065483876c71ac70eb"
     },
     "proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md": {
       "bytes": 4480,
@@ -386,8 +386,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 30337,
-      "sha256": "544fd994c3fa92613df512da019ca1735cf36d728fc138daab076a8f70073f20"
+      "bytes": 30403,
+      "sha256": "ceedd6c39754593ce8b381b9de84b5a4077c9501f5eaaa9ff412823141ddb9b3"
     },
     "proof_work/publication_validation/check_cached_grouped_numeric.py": {
       "bytes": 3316,
@@ -10917,13 +10917,17 @@
       "bytes": 1778,
       "sha256": "db6abcc44c9b3b7f751ceacb61e101837a71eb774e90b539faa17dd0bb466965"
     },
+    "proof_work/publication_validation/formal/ThomsonCertificate/GenericCertificate.lean": {
+      "bytes": 1088,
+      "sha256": "1d625e7c5ec62ea7e577a59ba158e0d5974869caadae4c4cee8f9a92f8645802"
+    },
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericCoverage.lean": {
       "bytes": 1743,
       "sha256": "209cb644b98e455fcbabdd6d1a340e94d9817fcd966e8937827180991a613199"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericFramework.lean": {
-      "bytes": 2052,
-      "sha256": "d9d2b8bde3cfeebe8547b77b36bcebd5b708ea2e888bca1a29c4685c96d1cfd1"
+      "bytes": 2748,
+      "sha256": "00d610972bc41cc3cad9e028329ddb9e18ebd890c752d9edc89b20cb5904a09f"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericPSD.lean": {
       "bytes": 1580,
@@ -22582,7 +22586,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T03:02:00.823105+00:00",
+  "generated_utc": "2026-10-24T03:51:38.527173+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
