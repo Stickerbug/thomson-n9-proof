@@ -112,6 +112,7 @@ PV_EXPLICIT_REQUIRED = (
     "GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md",
     "GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md",
     "GENERIC_CERTIFICATE_PIPELINE_zh.md",
+    "N9_ADAPTER_VALIDATION_2026-10-24_zh.md",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
 )
@@ -340,7 +341,8 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/GenericCoverage.lean",
           "ThomsonCertificate/GenericFramework.lean",
           "ThomsonCertificate/GenericCertificate.lean",
-          "ThomsonCertificate/GenericPSD.lean"):
+          "ThomsonCertificate/GenericPSD.lean",
+          "ThomsonCertificate/ThomsonNineAdapter.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 

@@ -801,6 +801,17 @@
       ],
       "full_n9_fresh_replay_rerun": false,
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "n9_certificate_semantic_adapter",
+      "result": "LIGHTWEIGHT_PASS",
+      "module": "ThomsonCertificate.ThomsonNineAdapter",
+      "theorem": "ThomsonNine.n9_certificate_sound",
+      "compile_exit_code": 0,
+      "compile_seconds": 3.4,
+      "full_n9_fresh_replay_rerun": false,
+      "scope": "semantic wrapper around ordered_residual_from_frontier; structural CutTree mapping pending",
+      "record": "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md"
     }
   ],
   "support_frontier": {
