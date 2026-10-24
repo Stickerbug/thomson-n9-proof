@@ -8,8 +8,10 @@
 
 ## Lean 内核接口
 
-`ThomsonCertificate.Certificate n` 位于
+`ThomsonCertificate.Certificate n` 和 `ThomsonCertificate.CertificateFamily` 位于
 `formal/ThomsonCertificate/GenericCertificate.lean`，包含：
+
+`CertificateFamily` 则按 `n` 提供一族这样的对象，并有 `CertificateFamily.sound`。
 
 - 实例专用的盒类型和点类型；
 - `Spec`：域、目标、叶证书和分裂关系；

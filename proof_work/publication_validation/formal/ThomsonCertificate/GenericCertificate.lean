@@ -33,4 +33,31 @@ theorem sound {n : ℕ} (C : Certificate n) :
 
 end Certificate
 
+/-- A family of checked certificates indexed by the problem size. -/
+structure CertificateFamily where
+  Box : ℕ → Type u
+  Point : ℕ → Type v
+  spec : ∀ n, Spec (Box n) (Point n)
+  tree : ∀ n, Tree (Box n)
+  checked : ∀ n, Checked (spec n) (tree n)
+
+namespace CertificateFamily
+
+/-- Select the certificate for one concrete instance size. -/
+def select (F : CertificateFamily) (n : ℕ) : Certificate n :=
+  { Box := F.Box n
+    Point := F.Point n
+    spec := F.spec n
+    tree := F.tree n
+    checked := F.checked n }
+
+/-- Every member of a checked family proves its indexed goal. -/
+theorem sound (F : CertificateFamily) (n : ℕ) :
+    ∀ x, (F.spec n).domain x →
+      (F.spec n).inside (Tree.root (F.tree n)) x →
+      (F.spec n).goal x := by
+  exact (F.select n).sound
+
+end CertificateFamily
+
 end ThomsonCertificate

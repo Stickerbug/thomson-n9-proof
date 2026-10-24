@@ -30,7 +30,7 @@ PATH=/workspace/cloud-setup/lean-4.34.1-linux/bin:$PATH \
 | `formal/ThomsonCertificate/GenericCoverage.lean` | `209cb644b98e455fcbabdd6d1a340e94d9817fcd966e8937827180991a613199` |
 | `formal/ThomsonCertificate/GenericPSD.lean` | `575bc6526a7f794926e04c764a8d5c12a38f619332a4694a4dc20bf1a48fed8e` |
 | `formal/ThomsonCertificate/GenericFramework.lean` | `d9d2b8bde3cfeebe8547b77b36bcebd5b708ea2e888bca1a29c4685c96d1cfd1` |
-| `formal/ThomsonCertificate/GenericCertificate.lean` | `1d625e7c5ec62ea7e577a59ba158e0d5974869caadae4c4cee8f9a92f8645802` |
+| `formal/ThomsonCertificate/GenericCertificate.lean` | `94b40064bbb90009625e874b69af02d97a3a4891cfa9ae1b31ec80e6e7db7ce9` |
 
 ## 解释和边界
 
