@@ -876,6 +876,17 @@
       "reason": "no Lean n=10 certificate adapter; existing analytic10 records are conditional/nonsharp",
       "full_n10_formal_replay": false,
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "n9_global_minimum_contract",
+      "result": "PASS",
+      "module": "ThomsonCertificate.ThomsonNineMinimumAdapter",
+      "theorem": "ThomsonNine.n9_global_minimum_lower_bound",
+      "pipeline_manifest": "proof_work/publication_validation/certificate_manifests/n9_global_claim.json",
+      "lean_exit_code": 0,
+      "full_n9_fresh_replay_rerun": false,
+      "scope": "statement-level candidate/feasibility/energy/lower-bound contract over existing frozen theorem",
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {

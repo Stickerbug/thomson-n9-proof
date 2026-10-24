@@ -1,0 +1,18 @@
+{
+  "schema": "thomson-certificate-run-v1",
+  "started_utc": "2026-10-24T06:52:14.241873+00:00",
+  "instance_n": 9,
+  "root_theorem": "ThomsonNine.n9_global_minimum_lower_bound",
+  "lean_file": "ThomsonCertificate/ThomsonNineMinimumAdapter.lean",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    ".lake/build/lib/lean/ThomsonCertificate/ThomsonNineMinimumAdapter.olean",
+    "/workspace/thomson-n9-proof/proof_work/publication_validation/formal/.lake/build/lib/lean/ThomsonCertificate/ThomsonNineMinimumAdapter.olean",
+    "ThomsonCertificate/ThomsonNineMinimumAdapter.lean"
+  ],
+  "exit_code": 0,
+  "output": "",
+  "status": "PASS"
+}

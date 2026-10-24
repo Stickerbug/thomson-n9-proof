@@ -1,0 +1,7 @@
+{
+  "schema": "thomson-certificate-v1",
+  "instance_n": 9,
+  "lean_file": "ThomsonCertificate/ThomsonNineMinimumAdapter.lean",
+  "root_theorem": "ThomsonNine.n9_global_minimum_lower_bound",
+  "mode": "verified_global_contract"
+}

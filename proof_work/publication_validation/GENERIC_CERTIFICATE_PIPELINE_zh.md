@@ -47,6 +47,8 @@ ThomsonCertificate.Certificate.sound
 
 n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candidate_only` 模式，引用现有数值/条件性审计并返回 `UNKNOWN`，因为当前没有 n=10 Lean certificate adapter。它不会把 `analytic10` 的非形式化或非尖锐下界记录误报为证明。
 
+n=9 清单 `certificate_manifests/n9_global_claim.json` 进一步编译 `GlobalMinimumContract` 适配器，统一暴露候选可行性、候选能量恒等式和全局下界；它运行结果为 `PASS`，但仍复用现有冻结 n=9 定理，不改变根入口。
+
 ## 建议的证书数据分层
 
 ```text

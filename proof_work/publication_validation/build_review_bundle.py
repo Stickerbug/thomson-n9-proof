@@ -118,6 +118,8 @@ PV_EXPLICIT_REQUIRED = (
     "certificate_manifests/n9_structured.json",
     "certificate_manifests/n9_structured_run.json",
     "certificate_manifests/n10_candidate_only.json",
+    "certificate_manifests/n9_global_claim.json",
+    "certificate_manifests/n9_global_claim_run.json",
     "certificate_manifests/n10_candidate_only_run.json",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
@@ -348,8 +350,10 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/GenericFramework.lean",
           "ThomsonCertificate/GenericCertificate.lean",
           "ThomsonCertificate/GenericLowerBound.lean",
+          "ThomsonCertificate/GenericMinimum.lean",
           "ThomsonCertificate/GenericPSD.lean",
           "ThomsonCertificate/ThomsonNineAdapter.lean",
+          "ThomsonCertificate/ThomsonNineMinimumAdapter.lean",
           "ThomsonCertificate/ThomsonNineStructuredAdapter.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
