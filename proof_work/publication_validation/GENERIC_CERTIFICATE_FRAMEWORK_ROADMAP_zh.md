@@ -16,6 +16,8 @@ n=9 项目已经包含几层可以复用的形式化语义：
 
 目前已新增并编译通过 `ThomsonCertificate.GenericBernstein`（任意有限维 Bernstein 张量）、`ThomsonCertificate.GenericCoverage`（任意盒类型、点类型和可行域的有限覆盖树）以及 `ThomsonCertificate.GenericPSD`（任意有限维 PSD 二次型、合同约化和有限求和）。它们是通用内核原型，不改变 n=9 定理。 `ThomsonCertificate.GenericFramework` 进一步用单叶玩具实例组合覆盖和 Bernstein 两层接口并编译通过。
 
+2026-10-24 的阶段验收重新编译了这四个模块，并记录在 `GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md`；四个模块均退出码为 0，且源文件没有 `ThomsonNine` 导入或名称引用。
+
 ## 仍然绑定 n=9 的部分
 
 下面的内容目前不能直接宣称为任意 `n` 的算法：
