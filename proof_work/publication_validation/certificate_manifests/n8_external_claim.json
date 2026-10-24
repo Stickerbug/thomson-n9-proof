@@ -1,0 +1,14 @@
+{
+  "schema": "thomson-certificate-v1",
+  "instance_n": 8,
+  "mode": "external_claim_only",
+  "root_theorem": "thomson_eight_lower",
+  "equality_theorem": "thomson_eight_unique",
+  "source_repository": "https://github.com/jstoobysmith/Thomson-N-8-Warrant",
+  "source_commit": "2c35d62e07d72686931da4bc3e062d668e858eda",
+  "license_status": "README states Apache 2.0; LICENSE file not detected by API; confirmation pending",
+  "evidence_refs": [
+    "proof_work/publication_validation/CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md"
+  ],
+  "status": "external_claim_not_locally_replayed"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "thomson-certificate-run-v1",
+  "started_utc": "2026-10-24T07:05:07.546991+00:00",
+  "instance_n": 7,
+  "root_theorem": "ThomsonN7.thomson_seven",
+  "status": "UNKNOWN",
+  "reason": "external theorem contract recorded without local source import or replay",
+  "evidence_refs": [
+    "proof_work/publication_validation/CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md"
+  ],
+  "exit_code": null
+}

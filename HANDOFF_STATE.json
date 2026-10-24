@@ -897,6 +897,20 @@
       "full_n9_fresh_replay_rerun": false,
       "scope": "optional equality classification interface; no n9 uniqueness claim added",
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "n7_n8_external_contract_dispatch",
+      "result": "UNKNOWN_BY_DESIGN",
+      "instances": [
+        7,
+        8
+      ],
+      "modes": [
+        "external_claim_only"
+      ],
+      "source_replay": false,
+      "license_confirmation_required": true,
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {

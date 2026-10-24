@@ -34,7 +34,7 @@ def load_manifest(path: str) -> dict:
     n = data.get("instance_n")
     if not isinstance(n, int) or n < 0:
         raise ValueError("instance_n must be a nonnegative integer")
-    if data.get("mode") == "candidate_only":
+    if data.get("mode") in {"candidate_only", "external_claim_only"}:
         refs = data.get("evidence_refs", [])
         if not isinstance(refs, list) or not all(isinstance(x, str) and safe_relative(x) for x in refs):
             raise ValueError("candidate_only evidence_refs must be safe relative paths")
@@ -69,8 +69,11 @@ def main() -> int:
                        "root_theorem": data["root_theorem"]})
         if "lean_file" in data:
             report["lean_file"] = data["lean_file"]
-        if data.get("mode") == "candidate_only":
-            report.update({"status": "UNKNOWN", "reason": "candidate data supplied without a Lean certificate adapter",
+        if data.get("mode") in {"candidate_only", "external_claim_only"}:
+            reason = ("candidate data supplied without a Lean certificate adapter"
+                      if data.get("mode") == "candidate_only" else
+                      "external theorem contract recorded without local source import or replay")
+            report.update({"status": "UNKNOWN", "reason": reason,
                            "evidence_refs": data["evidence_refs"], "exit_code": None})
             if args.report:
                 with open(args.report, "w", encoding="utf-8") as f:

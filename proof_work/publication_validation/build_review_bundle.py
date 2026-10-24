@@ -121,6 +121,10 @@ PV_EXPLICIT_REQUIRED = (
     "certificate_manifests/n9_global_claim.json",
     "certificate_manifests/n9_global_claim_run.json",
     "certificate_manifests/n10_candidate_only_run.json",
+    "certificate_manifests/n7_external_claim.json",
+    "certificate_manifests/n8_external_claim.json",
+    "certificate_manifests/n7_external_claim_run.json",
+    "certificate_manifests/n8_external_claim_run.json",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
 )

@@ -51,6 +51,8 @@ n=9 清单 `certificate_manifests/n9_global_claim.json` 进一步编译 `GlobalM
 
 `GenericUniqueness.lean` 提供可选的 `EqualityClassification` 层。n=7/n=8 的等号唯一性可以填充该层；n=9 当前合同不填充它，因此不会产生未经证明的唯一性声明。
 
+n=7 和 n=8 的 `external_claim_only` 清单只记录外部仓库的声明、提交和许可证状态，调度器返回 `UNKNOWN`，直到源代码获准并在本项目中完成 adapter 和重放。
+
 ## 建议的证书数据分层
 
 ```text

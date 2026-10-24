@@ -1,0 +1,14 @@
+{
+  "schema": "thomson-certificate-v1",
+  "instance_n": 7,
+  "mode": "external_claim_only",
+  "root_theorem": "ThomsonN7.thomson_seven",
+  "equality_theorem": "ThomsonN7.thomson_seven_unique",
+  "source_repository": "https://github.com/huwngtran/thomson-n7-lean",
+  "source_commit": "25f2fa53119273458cfbb3c4230904bffdd61e53",
+  "license_status": "no LICENSE file found; reuse permission pending",
+  "evidence_refs": [
+    "proof_work/publication_validation/CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md"
+  ],
+  "status": "external_claim_not_locally_replayed"
+}
