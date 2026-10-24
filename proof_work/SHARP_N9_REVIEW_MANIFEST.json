@@ -1,5 +1,5 @@
 {
-  "file_count": 5652,
+  "file_count": 5653,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -262,12 +262,12 @@
       "sha256": "e3176d864573fb0c584f14d7ecc2c25d92d846e22bb1ab4060acdfa7aa04b4f1"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 3186,
-      "sha256": "268446c73e03f2f88ddf54709fc1cb1668fad0ad0d807cce29a6a1309d865244"
+      "bytes": 3380,
+      "sha256": "da03f34c7934940d34284076a7895f13ef8fba05957566586ceeba4b28bb3450"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
-      "bytes": 2421,
-      "sha256": "4c65fc14957aed8fc391331d4c78fed75e42e5124f80e96298d120e5a18fad62"
+      "bytes": 2704,
+      "sha256": "fe1e8959f564011229e11022317f3575847dc980286bc6b43a99a7ac155876ba"
     },
     "proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md": {
       "bytes": 4480,
@@ -394,8 +394,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 30624,
-      "sha256": "404c53fcedaaf59245d89c574bdba681bbed67c7aee8a0c69ccc3c3f92961da3"
+      "bytes": 30679,
+      "sha256": "dca7954a9e37ac36a0cfc71ddafecc626ca298021a6d3743aa5b39817506a674"
     },
     "proof_work/publication_validation/check_cached_grouped_numeric.py": {
       "bytes": 3316,
@@ -10936,6 +10936,10 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericFramework.lean": {
       "bytes": 2748,
       "sha256": "00d610972bc41cc3cad9e028329ddb9e18ebd890c752d9edc89b20cb5904a09f"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/GenericLowerBound.lean": {
+      "bytes": 1431,
+      "sha256": "8b206b1979790a6c74ac9b955f1bbf74e80e8a7f6cc596b98d28872c9a54f94e"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericPSD.lean": {
       "bytes": 1580,
@@ -22602,7 +22606,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T05:02:35.986488+00:00",
+  "generated_utc": "2026-10-24T05:31:56.886564+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
