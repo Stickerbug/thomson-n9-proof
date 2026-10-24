@@ -1,6 +1,7 @@
 import ThomsonCertificate.GenericBernstein
 import ThomsonCertificate.GenericCoverage
 import ThomsonCertificate.GenericPSD
+import ThomsonCertificate.GenericCertificate
 
 open scoped Matrix
 
@@ -23,6 +24,24 @@ def unitCubeSpec {d n : ℕ}
     split_sound := by
       intro b l r hsplit
       exact False.elim hsplit }
+
+/-- The same toy instance packaged as an indexed certificate object. -/
+def unitCubeCertificate {d n : ℕ}
+    (coeff : (Fin d → Fin (n + 1)) → ℝ)
+    (hcoeff : ∀ idx, 0 ≤ coeff idx) : Certificate 0 :=
+  { Box := Unit
+    Point := Fin d → ℝ
+    spec := unitCubeSpec coeff hcoeff
+    tree := Tree.leaf ()
+    checked := by trivial }
+
+theorem unit_cube_certificate_object_sound {d n : ℕ}
+    (coeff : (Fin d → Fin (n + 1)) → ℝ)
+    (hcoeff : ∀ idx, 0 ≤ coeff idx)
+    (x : Fin d → ℝ)
+    (hx : ∀ j, 0 ≤ x j ∧ x j ≤ 1) :
+    0 ≤ tensor coeff x := by
+  exact (unitCubeCertificate coeff hcoeff).sound x trivial hx
 
 theorem unit_cube_certificate_sound {d n : ℕ}
     (coeff : (Fin d → Fin (n + 1)) → ℝ)
