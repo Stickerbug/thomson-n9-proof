@@ -887,6 +887,16 @@
       "full_n9_fresh_replay_rerun": false,
       "scope": "statement-level candidate/feasibility/energy/lower-bound contract over existing frozen theorem",
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "generic_equality_classification_contract",
+      "result": "LIGHTWEIGHT_PASS",
+      "module": "ThomsonCertificate.GenericUniqueness",
+      "theorem": "ThomsonCertificate.EqualityClassification.iff",
+      "compile_exit_code": 0,
+      "full_n9_fresh_replay_rerun": false,
+      "scope": "optional equality classification interface; no n9 uniqueness claim added",
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {

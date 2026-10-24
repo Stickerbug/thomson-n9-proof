@@ -351,6 +351,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/GenericCertificate.lean",
           "ThomsonCertificate/GenericLowerBound.lean",
           "ThomsonCertificate/GenericMinimum.lean",
+          "ThomsonCertificate/GenericUniqueness.lean",
           "ThomsonCertificate/GenericPSD.lean",
           "ThomsonCertificate/ThomsonNineAdapter.lean",
           "ThomsonCertificate/ThomsonNineMinimumAdapter.lean",
