@@ -822,6 +822,17 @@
       "compile_seconds": 1.5,
       "full_n9_fresh_replay_rerun": false,
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
+    },
+    {
+      "batch": "n9_certificate_structural_adapter",
+      "result": "LIGHTWEIGHT_PASS",
+      "module": "ThomsonCertificate.ThomsonNineStructuredAdapter",
+      "theorem": "ThomsonNine.n9_structured_certificate_sound",
+      "compile_exit_code": 0,
+      "compile_seconds": 2.5,
+      "full_n9_fresh_replay_rerun": false,
+      "scope": "CutTree to generic Tree mapping with per-leaf check_sound and dyadic box transport",
+      "record": "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md"
     }
   ],
   "support_frontier": {
