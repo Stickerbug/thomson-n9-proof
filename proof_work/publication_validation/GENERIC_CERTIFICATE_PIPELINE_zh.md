@@ -45,7 +45,7 @@ ThomsonCertificate.Certificate.sound
 
 `run_certificate_pipeline.py` 读取 `schema = thomson-certificate-v1` 的清单，拒绝路径穿越和缺失源文件，然后调用 `lake env lean` 编译指定 adapter。n=9 清单 `certificate_manifests/n9_structured.json` 已运行通过，记录为 `status = PASS`；一个含 `../` 路径的负向清单返回 `UNKNOWN`。该脚本只负责证书验证调度，尚未实现候选构型搜索。
 
-n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candidate_only` 模式，引用现有数值/条件性审计并返回 `UNKNOWN`，因为当前没有 n=10 Lean certificate adapter。它不会把 `analytic10` 的非形式化或非尖锐下界记录误报为证明。
+n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candidate_only` 模式并返回 `UNKNOWN`。其中的 `analytic10` 证据是 n=9 的十阶多项式实验，不是十粒子候选；当前没有真正的 n=10 能量模型或 Lean certificate adapter。
 
 n=9 清单 `certificate_manifests/n9_global_claim.json` 进一步编译 `GlobalMinimumContract` 适配器，统一暴露候选可行性、候选能量恒等式和全局下界；它运行结果为 `PASS`，但仍复用现有冻结 n=9 定理，不改变根入口。
 

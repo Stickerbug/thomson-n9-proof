@@ -873,7 +873,7 @@
       "instance_n": 10,
       "manifest": "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json",
       "status": "candidate_only",
-      "reason": "no Lean n=10 certificate adapter; existing analytic10 records are conditional/nonsharp",
+      "reason": "No true n=10 candidate or energy model found; analytic10/d10 artifacts are degree-10 n=9 experiments and conditional/nonsharp audits",
       "full_n10_formal_replay": false,
       "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     },
