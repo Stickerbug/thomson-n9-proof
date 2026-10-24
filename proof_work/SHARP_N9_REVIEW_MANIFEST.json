@@ -1,5 +1,5 @@
 {
-  "file_count": 5663,
+  "file_count": 5667,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -262,8 +262,8 @@
       "sha256": "e3176d864573fb0c584f14d7ecc2c25d92d846e22bb1ab4060acdfa7aa04b4f1"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 4567,
-      "sha256": "6b285a45f2a7a4817732fc00f047165e62af846916508804209f91bb7baa9276"
+      "bytes": 4767,
+      "sha256": "40acbd128898063e7adde15c346936f37a6217d5823202f76ddcea2fa9c5d39d"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
       "bytes": 3228,
@@ -394,8 +394,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 31198,
-      "sha256": "67e1d13a58e5f34fb3e91c779e7534729466c270362397b92872fa47c3a34eee"
+      "bytes": 31414,
+      "sha256": "466d68e5360c05991191e6bec3d98b5a31bb5770df534ed431f2bbd235cbbbb0"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 397,
@@ -404,6 +404,22 @@
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only_run.json": {
       "bytes": 484,
       "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
+    },
+    "proof_work/publication_validation/certificate_manifests/n7_external_claim.json": {
+      "bytes": 562,
+      "sha256": "0c4ae6d7ae644900a01c71d1af446f252e0e335a338a0cf2a4a137b2f03a6390"
+    },
+    "proof_work/publication_validation/certificate_manifests/n7_external_claim_run.json": {
+      "bytes": 406,
+      "sha256": "dba2b226c7c2635f93190cc0bb1fce95698c212795df8602de8346341168b443"
+    },
+    "proof_work/publication_validation/certificate_manifests/n8_external_claim.json": {
+      "bytes": 588,
+      "sha256": "9aab794d700ed378898530b185d4eeb25b6bd0038544f199a57613b967a50aa6"
+    },
+    "proof_work/publication_validation/certificate_manifests/n8_external_claim_run.json": {
+      "bytes": 402,
+      "sha256": "ccf74512b13868f66f5d2f16a747f60eec242db098c7cb06e8b09862261b6a8c"
     },
     "proof_work/publication_validation/certificate_manifests/n9_global_claim.json": {
       "bytes": 229,
@@ -22482,8 +22498,8 @@
       "sha256": "a9e0cd60652387c1f37d1df8aea6195b817fda17d382a7bbcdc3d1275872b04a"
     },
     "proof_work/publication_validation/run_certificate_pipeline.py": {
-      "bytes": 4892,
-      "sha256": "b8237affff67d4d249306536e51996ded14e4293eb847f87e5b5f0cd14202850"
+      "bytes": 5136,
+      "sha256": "500cacb8beadcb93a1bf5c3301204316bf0828d510293c374f793023a628bfa0"
     },
     "proof_work/publication_validation/run_sharded_subprocess.py": {
       "bytes": 4221,
@@ -22646,7 +22662,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T06:58:27.232082+00:00",
+  "generated_utc": "2026-10-24T07:06:18.537219+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
