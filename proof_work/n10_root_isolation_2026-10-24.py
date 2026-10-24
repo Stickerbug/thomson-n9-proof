@@ -11,6 +11,8 @@ import json
 import platform
 import sys
 import time
+from fractions import Fraction
+from math import isqrt
 from pathlib import Path
 
 import mpmath as mp
@@ -19,6 +21,95 @@ import sympy as sp
 ROOT = Path(__file__).resolve().parent
 ELIM = ROOT / "n10_stationarity_elimination_2026-10-24.json"
 OUT = ROOT / "n10_root_isolation_2026-10-24.json"
+
+
+class RationalInterval:
+    """Closed rational interval with outward-rounded elementary operations."""
+
+    def __init__(self, lo, hi=None):
+        self.lo = Fraction(lo)
+        self.hi = self.lo if hi is None else Fraction(hi)
+        if self.lo > self.hi:
+            raise ValueError("invalid interval")
+
+    def __add__(self, other):
+        other = other if isinstance(other, RationalInterval) else RationalInterval(other)
+        return RationalInterval(self.lo + other.lo, self.hi + other.hi)
+
+    __radd__ = __add__
+
+    def __neg__(self):
+        return RationalInterval(-self.hi, -self.lo)
+
+    def __sub__(self, other):
+        return self + (-other if isinstance(other, RationalInterval) else -RationalInterval(other))
+
+    def __rsub__(self, other):
+        return RationalInterval(other) - self
+
+    def __mul__(self, other):
+        other = other if isinstance(other, RationalInterval) else RationalInterval(other)
+        values = (self.lo * other.lo, self.lo * other.hi,
+                  self.hi * other.lo, self.hi * other.hi)
+        return RationalInterval(min(values), max(values))
+
+    __rmul__ = __mul__
+
+    def inverse(self):
+        if self.lo <= 0 <= self.hi:
+            raise ZeroDivisionError("interval contains zero")
+        return RationalInterval(1 / self.hi, 1 / self.lo)
+
+    def __truediv__(self, other):
+        other = other if isinstance(other, RationalInterval) else RationalInterval(other)
+        return self * other.inverse()
+
+    def __rtruediv__(self, other):
+        return RationalInterval(other) / self
+
+
+def sqrt_rational_bounds(value, scale=10**120):
+    """Return rational lower/upper bounds for sqrt(value)."""
+    if value < 0:
+        raise ValueError("sqrt of negative rational")
+    floor_root = isqrt(value.numerator * scale * scale // value.denominator)
+    return Fraction(floor_root, scale), Fraction(floor_root + 1, scale)
+
+
+def interval_sqrt(interval):
+    if interval.lo < 0:
+        raise ValueError("sqrt interval has negative lower endpoint")
+    lower = sqrt_rational_bounds(interval.lo)[0]
+    upper = sqrt_rational_bounds(interval.hi)[1]
+    return RationalInterval(lower, upper)
+
+
+def radical_stationarity_interval(t_value):
+    """Evaluate the D4d stationarity expression using rational intervals."""
+    t = RationalInterval(t_value)
+    s = interval_sqrt(RationalInterval(2))
+    c = interval_sqrt(RationalInterval(1) + t * t)
+    a = interval_sqrt(t * t * t * t + s * t * t + 1)
+    b = interval_sqrt(t * t * t * t - s * t * t + 1)
+    expression = (
+        4 * ((t + 1) / c - c / (t * t))
+        + (1 - 1 / (t * t)) * (1 + 2 * s)
+        + 4 * (
+            2 * t / a
+            - (1 + t * t) * t * (2 * t * t + s) / (a * a * a)
+            + 2 * t / b
+            - (1 + t * t) * t * (2 * t * t - s) / (b * b * b)
+        )
+    )
+    return expression
+
+
+def interval_decimal(interval, digits=45):
+    mp.mp.dps = digits + 10
+    return [
+        mp.nstr(mp.mpf(interval.lo.numerator) / interval.lo.denominator, digits),
+        mp.nstr(mp.mpf(interval.hi.numerator) / interval.hi.denominator, digits),
+    ]
 
 
 def main() -> None:
@@ -40,6 +131,9 @@ def main() -> None:
     left_value, right_value = poly.eval(left), poly.eval(right)
     assert sp.sign(left_value) == 1 and sp.sign(right_value) == -1
     assert all(x == -1 for x in signs)
+    left_radical_interval = radical_stationarity_interval(left)
+    right_radical_interval = radical_stationarity_interval(right)
+    assert left_radical_interval.hi < 0 and right_radical_interval.lo > 0
 
     # Check that the selected radical branch agrees numerically with the root.
     mp.mp.dps = 90
@@ -67,7 +161,7 @@ def main() -> None:
         "derivative_bernstein_degree": degree,
         "derivative_bernstein_signs": signs,
         "derivative_bernstein_coefficients": [str(x) for x in bernstein],
-        "exact_conclusion": "strictly decreasing on the interval and changing sign, hence exactly one resultant root",
+        "exact_conclusion": "strictly decreasing on the interval and changing sign, hence exactly one resultant root; rational interval evaluation gives opposite signs for the original radical stationarity expression at the same endpoints",
         "independent_recheck": {
             "sympy_count_roots": 1,
             "interval_horner_derivative_enclosure_decimal": [
@@ -75,12 +169,17 @@ def main() -> None:
             ],
             "original_radical_endpoint_signs_at_interval": [-1, 1],
             "physical_principal_branch_only": True,
-            "note": "independent exact-Horner and branch replay; endpoint radical signs and branch table are numerical checks",
+            "note": "independent exact-Horner and rational interval branch replay; sign intervals are exact rational enclosures, while the branch table and decimal residual remain numerical checks",
         },
+        "original_radical_endpoint_intervals_decimal": {
+            "left": interval_decimal(left_radical_interval),
+            "right": interval_decimal(right_radical_interval),
+        },
+        "original_radical_endpoint_signs_exact_interval": [-1, 1],
         "candidate_t_decimal": mp.nstr(candidate_t, 80),
         "candidate_h_decimal": mp.nstr(h, 80),
         "original_radical_branch_residual_at_decimal": mp.nstr(radical_residual, 50),
-        "branch_check": "NUMERICAL_ONLY",
+        "branch_check": "RATIONAL_INTERVAL_ENDPOINT_SIGNS_DECIMAL_ROOT_RESIDUAL",
         "generator": {"sympy": sp.__version__, "mpmath": mp.__version__,
                       "python": sys.version.split()[0], "platform": platform.platform()},
         "elapsed_seconds": time.monotonic() - started,
