@@ -278,8 +278,8 @@
       "sha256": "ae654578b88f88fbd01e9117f3505b0e2859293359379da0832ffcd70ceaf5d6"
     },
     "proof_work/publication_validation/N9_ADAPTER_VALIDATION_2026-10-24_zh.md": {
-      "bytes": 1685,
-      "sha256": "29dfb8f2003c647322711406ddedf6a592cbd3add8372bf275a99cdbd4c97001"
+      "bytes": 1639,
+      "sha256": "94f7f87d37ff79f94608563aa7f3c505516fada578ab28cc8b47bf8cfb9b15e2"
     },
     "proof_work/publication_validation/NEXT13_INTEGRATION_zh.md": {
       "bytes": 4336,
@@ -22598,7 +22598,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T04:55:19.468157+00:00",
+  "generated_utc": "2026-10-24T04:57:53.597471+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
