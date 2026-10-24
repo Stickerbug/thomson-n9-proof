@@ -60,6 +60,14 @@
 
    发布后核查发现该 Zenodo 记录的当前 creator 元数据仍显示为 `Stickerbug`，与论文作者不一致。请在 Zenodo 记录的 **Edit** 页面手动改为：`Jingxing Huang`，affiliation `Qian Xuesen College, Xi'an Jiaotong University`，ORCID `0009-0002-9805-0331`，并确认通讯作者邮箱为 `adult-huang@outlook.com`。本工作区没有 Zenodo 写入令牌，因此不能代替作者提交这一步；修改后重新打开 DOI 页面核对作者显示。
 
+   具体操作如下：
+   1. 登录创建该记录的 Zenodo 账户，打开 DOI 页面，或进入 **My dashboard → My uploads** 找到该记录。
+   2. 点击记录页的 **Edit**（不要选择 **New version**；这里只改元数据，DOI 可以保持不变）。
+   3. 在 **Creators** 中删除 `Stickerbug`，新增 `Jingxing Huang`；填写 affiliation `Qian Xuesen College, Xi'an Jiaotong University`，并在 ORCID 栏输入 `0009-0002-9805-0331`。若界面把姓名拆成两栏，First name 填 `Jingxing`，Last name 填 `Huang`。
+   4. 保留描述中的通讯邮箱 `adult-huang@outlook.com`；可同时把标题改为 `Thomson n=9 formal proof and manuscript`，去掉标题前的 `Stickerbug/`。
+   5. 点击页面底部绿色 **Publish changes**，确认发布。Zenodo 的说明见 [Manage records](https://help.zenodo.org/docs/deposit/manage-records/) 和 [Describe records](https://help.zenodo.org/docs/deposit/describe-records/)。
+   6. 重新打开 DOI 页面，确认作者、单位和 ORCID 已显示。若没有 **Edit** 按钮，说明登录账户不是该记录的拥有者，应切换到创建 release 的 Zenodo 账户；不要创建重复 DOI。
+
 ## 没有 arXiv endorsement 时的替代路线
 
 endorsement 只影响 arXiv 的提交权限，不影响其他预印本平台、代码归档或期刊投稿。短期内建议按下面的顺序发布：
