@@ -1,5 +1,5 @@
 {
-  "file_count": 5651,
+  "file_count": 5652,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -245,6 +245,10 @@
       "bytes": 5051,
       "sha256": "0ca964a8ef5c64b68ae9f0a190fb4d4322302087195b6cc1c00db11dd926d2a6"
     },
+    "proof_work/publication_validation/CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md": {
+      "bytes": 2430,
+      "sha256": "7f8993febae318eaa74bc7534ba745e2e65d2afe995e6b9193d3cef5e24db49c"
+    },
     "proof_work/publication_validation/CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md": {
       "bytes": 1920,
       "sha256": "a0ac5829bd33d5c12a0f77e91e7650b482604e9663312001ec6dcfde39a934dc"
@@ -390,8 +394,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 30571,
-      "sha256": "6382ad81fb1c6b82ccdea9ddd2387d07bdad58fa2001a500a7e28334c9427667"
+      "bytes": 30624,
+      "sha256": "404c53fcedaaf59245d89c574bdba681bbed67c7aee8a0c69ccc3c3f92961da3"
     },
     "proof_work/publication_validation/check_cached_grouped_numeric.py": {
       "bytes": 3316,
@@ -22598,7 +22602,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T04:57:53.597471+00:00",
+  "generated_utc": "2026-10-24T05:02:35.986488+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
