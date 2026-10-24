@@ -845,6 +845,16 @@
       "license_confirmation_required": true,
       "full_n7_n8_build_rerun": false,
       "record": "proof_work/publication_validation/CROSS_INSTANCE_ADAPTER_AUDIT_2026-10-24_zh.md"
+    },
+    {
+      "batch": "generic_lower_bound_bridge",
+      "result": "LIGHTWEIGHT_PASS",
+      "module": "ThomsonCertificate.GenericLowerBound",
+      "theorem": "ThomsonCertificate.LowerBoundBridge.sound",
+      "compile_exit_code": 0,
+      "compile_seconds": 10.5,
+      "full_n9_fresh_replay_rerun": false,
+      "record": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
     }
   ],
   "support_frontier": {

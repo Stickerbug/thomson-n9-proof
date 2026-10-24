@@ -342,6 +342,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/GenericCoverage.lean",
           "ThomsonCertificate/GenericFramework.lean",
           "ThomsonCertificate/GenericCertificate.lean",
+          "ThomsonCertificate/GenericLowerBound.lean",
           "ThomsonCertificate/GenericPSD.lean",
           "ThomsonCertificate/ThomsonNineAdapter.lean",
           "ThomsonCertificate/ThomsonNineStructuredAdapter.lean"):

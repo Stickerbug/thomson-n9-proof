@@ -13,6 +13,8 @@
 
 `CertificateFamily` 则按 `n` 提供一族这样的对象，并有 `CertificateFamily.sound`。
 
+`GenericLowerBound.lean` 的 `LowerBoundBridge.sound` 再把证书目标连接回原始配置的能量下界；配置空间、约化映射和能量恒等式仍由每个 n 的 adapter 提供。
+
 - 实例专用的盒类型和点类型；
 - `Spec`：域、目标、叶证书和分裂关系；
 - 有限覆盖树；
