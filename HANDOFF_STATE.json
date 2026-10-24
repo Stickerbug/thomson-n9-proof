@@ -915,7 +915,6 @@
     "manuscript_pdf": "paper/main.pdf",
     "manuscript_source": "paper/main.tex",
     "submission_source_zip": "paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip",
-    "submission_guide": "paper/SUBMISSION_GUIDE_zh.md",
     "cover_letter_template": "paper/COVER_LETTER_TEMPLATE.md",
     "build_notes": "paper/README.md",
     "latex_build": "PASS",
@@ -944,6 +943,7 @@
       "reported_scope": "global optimality and congruence/permutation uniqueness; separate Nanoda kernel check",
       "priority_claim": "none",
       "provenance_comparison": "not line-by-line audited"
-    }
+    },
+    "generic_pipeline": "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md"
   }
 }

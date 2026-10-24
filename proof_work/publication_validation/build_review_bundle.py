@@ -111,6 +111,7 @@ PV_EXPLICIT_REQUIRED = (
     "local_lean_verification.json", "local_lean_build_stamp.json",
     "GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md",
     "GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md",
+    "GENERIC_CERTIFICATE_PIPELINE_zh.md",
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
 )
@@ -338,6 +339,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/GenericBernstein.lean",
           "ThomsonCertificate/GenericCoverage.lean",
           "ThomsonCertificate/GenericFramework.lean",
+          "ThomsonCertificate/GenericCertificate.lean",
           "ThomsonCertificate/GenericPSD.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
@@ -347,7 +349,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
 # silently enter the canonical source archive.
 for name in ("paper/main.tex", "paper/README.md", "paper/main.pdf",
              "paper/THOMSON_N9_MANUSCRIPT_SOURCE.zip",
-             "paper/SUBMISSION_GUIDE_zh.md", "paper/COVER_LETTER_TEMPLATE.md"):
+             "paper/COVER_LETTER_TEMPLATE.md"):
     add_file(name, required=True)
 
 # Deduplicate and reject any inherited entry that was not source-safe.

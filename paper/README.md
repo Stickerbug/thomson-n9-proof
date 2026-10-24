@@ -28,5 +28,5 @@ a21e60c139b3bc0cac7460c70516adf7975e38c4d84536c3c744cc8c14ac8633  main.pdf
 
 The compact submission source package `THOMSON_N9_MANUSCRIPT_SOURCE.zip` contains the manuscript source and PDF and has SHA-256\n`25e333a6cee8e879e441c2bd0c8430e8b2f1648e3008489a27eea864aea4815e`.
 
-For the operational upload sequence, see `SUBMISSION_GUIDE_zh.md`; the journal
-letter template is `COVER_LETTER_TEMPLATE.md`.
+The journal letter template is `COVER_LETTER_TEMPLATE.md`; the release and DOI
+links above identify the current publication archive.
