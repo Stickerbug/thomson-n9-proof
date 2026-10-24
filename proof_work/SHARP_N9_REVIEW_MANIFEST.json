@@ -1,5 +1,5 @@
 {
-  "file_count": 5656,
+  "file_count": 5658,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -262,8 +262,8 @@
       "sha256": "e3176d864573fb0c584f14d7ecc2c25d92d846e22bb1ab4060acdfa7aa04b4f1"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 3807,
-      "sha256": "9a800689f16ac97a48c6c14be4e84b0026abb29235c25d88eb8bb17677a5266a"
+      "bytes": 4098,
+      "sha256": "70a3a8780326e14312b3e5feeb087d99b4239867945da85efa1c91d95191f4fd"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
       "bytes": 2704,
@@ -394,8 +394,16 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 30814,
-      "sha256": "f8553b309bfa832e73b78483845d51f5dfd71e6b3e4fc11c797aff74f79c69d7"
+      "bytes": 30924,
+      "sha256": "814eaef6fac488d4ad5e8667961d493a25f0eae57c88004f9f3bf8f00765eead"
+    },
+    "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
+      "bytes": 397,
+      "sha256": "127fc592fee5288c9eb0d5f8ab715296c74f913ef33f358d911ab710a0a8e285"
+    },
+    "proof_work/publication_validation/certificate_manifests/n10_candidate_only_run.json": {
+      "bytes": 484,
+      "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
     },
     "proof_work/publication_validation/certificate_manifests/n9_structured.json": {
       "bytes": 305,
@@ -22454,8 +22462,8 @@
       "sha256": "a9e0cd60652387c1f37d1df8aea6195b817fda17d382a7bbcdc3d1275872b04a"
     },
     "proof_work/publication_validation/run_certificate_pipeline.py": {
-      "bytes": 3773,
-      "sha256": "c2400248b0ef6084f35b6a3549f6b5178232cd95b7de988b41d1494de769a41d"
+      "bytes": 4892,
+      "sha256": "b8237affff67d4d249306536e51996ded14e4293eb847f87e5b5f0cd14202850"
     },
     "proof_work/publication_validation/run_sharded_subprocess.py": {
       "bytes": 4221,
@@ -22618,7 +22626,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T06:15:22.016279+00:00",
+  "generated_utc": "2026-10-24T06:42:57.867362+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
