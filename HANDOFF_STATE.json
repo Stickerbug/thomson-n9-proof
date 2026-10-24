@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5667,
-    "bytes": 80846290,
-    "sha256": "4b4f9c27417d65a3fa7a9fb9bd0f22507a1a3f108bd976cdb17e8586f158af0f"
+    "entries": 5672,
+    "bytes": 80853812,
+    "sha256": "167d83907561f206f425b76eca65bf65f2c92b90909e56f5d96ce5bad702f00c"
   },
   "pending_11_source": {
     "verified": [
@@ -1073,6 +1073,9 @@
   },
   "artifacts": {
     "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
-    "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json"
+    "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
+    "review_bundle_sha256": "167d83907561f206f425b76eca65bf65f2c92b90909e56f5d96ce5bad702f00c",
+    "review_bundle_entries": 5672,
+    "review_bundle_bytes": 80853812
   }
 }
