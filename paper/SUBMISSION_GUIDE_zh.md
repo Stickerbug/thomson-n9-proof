@@ -58,6 +58,8 @@
 2. 将 GitHub release 连接到 Zenodo，创建对应的 DOI。Zenodo 元数据填写作者、单位、ORCID、关键词（Thomson problem、sphere energy、Lean、formal verification、computer-assisted proof）和许可证。
 3. 当前归档 DOI 已生成：`10.5281/zenodo.23573472`（https://doi.org/10.5281/zenodo.23573472），对应 GitHub release `n9-proof-2026-10-23`。该 DOI、release tag 和文件哈希已经写入论文、`paper/README.md`、复核包和发布记录。若以后上传新版本，应为新版本生成新的 DOI 记录并重新编译。
 
+   发布后核查发现该 Zenodo 记录的当前 creator 元数据仍显示为 `Stickerbug`，与论文作者不一致。请在 Zenodo 记录的 **Edit** 页面手动改为：`Jingxing Huang`，affiliation `Qian Xuesen College, Xi'an Jiaotong University`，ORCID `0009-0002-9805-0331`，并确认通讯作者邮箱为 `adult-huang@outlook.com`。本工作区没有 Zenodo 写入令牌，因此不能代替作者提交这一步；修改后重新打开 DOI 页面核对作者显示。
+
 ## 没有 arXiv endorsement 时的替代路线
 
 endorsement 只影响 arXiv 的提交权限，不影响其他预印本平台、代码归档或期刊投稿。短期内建议按下面的顺序发布：
@@ -90,3 +92,4 @@ ResearchGate 等社交平台可以作为分享入口，但不应作为唯一的�
 - [ ] Funding、Conflict of interest、AI disclosure 与论文一致。
 - [ ] 没有把 Lean 内核重放写成外部独立验证，也没有写成所有最小构型唯一。
 - [ ] DOI 或 release version 写入论文后，重新编译并更新所有 SHA-256。
+- [ ] Zenodo DOI 页面已把 creator 从 `Stickerbug` 改为 `Jingxing Huang`，并核对单位与 ORCID。
