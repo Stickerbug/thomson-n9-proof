@@ -1,5 +1,5 @@
 {
-  "file_count": 5662,
+  "file_count": 5663,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -262,12 +262,12 @@
       "sha256": "e3176d864573fb0c584f14d7ecc2c25d92d846e22bb1ab4060acdfa7aa04b4f1"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_PIPELINE_zh.md": {
-      "bytes": 4364,
-      "sha256": "98b69b6115b6e46b8b657e4fd862ee2538bda2195b3541f9910bf7f13fb9522b"
+      "bytes": 4567,
+      "sha256": "6b285a45f2a7a4817732fc00f047165e62af846916508804209f91bb7baa9276"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
-      "bytes": 2978,
-      "sha256": "0f51c4972970d6ccc04fea8efd06e52903af301670772e1c19ade826f35e0712"
+      "bytes": 3228,
+      "sha256": "bbf65b56eaf1d4d13f08ec0c12f572b4c9fb514cb56b6406d540a804d3705f4d"
     },
     "proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md": {
       "bytes": 4480,
@@ -394,8 +394,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 31143,
-      "sha256": "f179a7351c5274c3b8c1d88cd867acbde95d3d333989c4062ffd6daf27131be6"
+      "bytes": 31198,
+      "sha256": "67e1d13a58e5f34fb3e91c779e7534729466c270362397b92872fa47c3a34eee"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 397,
@@ -10972,6 +10972,10 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericPSD.lean": {
       "bytes": 1580,
       "sha256": "575bc6526a7f794926e04c764a8d5c12a38f619332a4694a4dc20bf1a48fed8e"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/GenericUniqueness.lean": {
+      "bytes": 647,
+      "sha256": "0b8c50c047f462e9a412678bf2dd19fffb926eff81937ffdb0c10b471b2801a8"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/ThomsonNineAdapter.lean": {
       "bytes": 1400,
@@ -22642,7 +22646,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T06:53:48.218600+00:00",
+  "generated_utc": "2026-10-24T06:58:27.232082+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
