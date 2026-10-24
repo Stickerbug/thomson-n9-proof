@@ -258,12 +258,12 @@
       "sha256": "eb297c1912ec0614666e36b941f45a59968b6b6ec03429ea7186537e857ca5c5"
     },
     "proof_work/publication_validation/GENERIC_CERTIFICATE_FRAMEWORK_ROADMAP_zh.md": {
-      "bytes": 4894,
-      "sha256": "c09bc998d542afe2241e4f02fe643ca4db2566cc1e63ad31e081917d5ea0ea9e"
+      "bytes": 4901,
+      "sha256": "0ea4c4710b48e12519733af7d1a2aa29dc16d6454046725535ec9ba6ae344d0a"
     },
     "proof_work/publication_validation/GENERIC_FRAMEWORK_VALIDATION_2026-10-24_zh.md": {
-      "bytes": 2028,
-      "sha256": "141694ea9f23b7a67a634cad853e3806104c87501be1a53073416c82c6151476"
+      "bytes": 2047,
+      "sha256": "a988a4b06fb933de61f0fa2399dd1c58b94c9d8fa0f10213c0acbe8aee6f9d08"
     },
     "proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md": {
       "bytes": 4480,
@@ -10922,8 +10922,8 @@
       "sha256": "209cb644b98e455fcbabdd6d1a340e94d9817fcd966e8937827180991a613199"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericFramework.lean": {
-      "bytes": 1210,
-      "sha256": "f220872b702fb84248aa489d0f4791b8ffa128171e7218b126a2851e4dff7431"
+      "bytes": 2052,
+      "sha256": "d9d2b8bde3cfeebe8547b77b36bcebd5b708ea2e888bca1a29c4685c96d1cfd1"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericPSD.lean": {
       "bytes": 1580,
@@ -22582,7 +22582,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-24T02:47:15.630274+00:00",
+  "generated_utc": "2026-10-24T02:52:24.184200+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
