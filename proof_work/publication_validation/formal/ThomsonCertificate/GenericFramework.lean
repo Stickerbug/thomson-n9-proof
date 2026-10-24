@@ -1,5 +1,8 @@
 import ThomsonCertificate.GenericBernstein
 import ThomsonCertificate.GenericCoverage
+import ThomsonCertificate.GenericPSD
+
+open scoped Matrix
 
 /-! A tiny composition example for the generic certificate interfaces. -/
 namespace ThomsonCertificate
@@ -32,5 +35,23 @@ theorem unit_cube_certificate_sound {d n : ℕ}
     exact trivial
   have hs := sound S (Tree.leaf ()) hc x trivial hx
   exact hs
+
+/-- The three generic certificate ingredients compose into one nonnegative goal.
+
+This is deliberately a small interface test: the vectors in the PSD sum are
+supplied by the caller, while the Bernstein tensor is checked on the unit cube.
+-/
+theorem unit_cube_with_psd_certificate_sound {d n K : ℕ}
+    {m : Fin K → ℕ}
+    (coeff : (Fin d → Fin (n + 1)) → ℝ)
+    (hcoeff : ∀ idx, 0 ≤ coeff idx)
+    (A : (k : Fin K) → Matrix (Fin (m k)) (Fin (m k)) ℝ)
+    (hA : ∀ k, (A k).PosSemidef)
+    (x : Fin d → ℝ)
+    (hx : ∀ j, 0 ≤ x j ∧ x j ≤ 1)
+    (y : (k : Fin K) → Fin (m k) → ℝ) :
+    0 ≤ tensor coeff x + ∑ k : Fin K, y k ⬝ᵥ ((A k) *ᵥ (y k)) := by
+  exact add_nonneg (tensor_nonneg coeff hcoeff x hx)
+    (finite_psd_sum_nonneg A hA y)
 
 end ThomsonCertificate

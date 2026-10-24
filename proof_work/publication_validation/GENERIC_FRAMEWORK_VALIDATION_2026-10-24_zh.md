@@ -9,7 +9,7 @@
 - `ThomsonCertificate.GenericBernstein`：任意有限维 Bernstein 张量的非负性；
 - `ThomsonCertificate.GenericCoverage`：任意盒、点和域谓词的有限覆盖树归纳；
 - `ThomsonCertificate.GenericPSD`：PSD 二次型、矩形合同约化和有限 PSD 求和；
-- `ThomsonCertificate.GenericFramework`：覆盖树与 Bernstein 叶证书的组合玩具实例。
+- `ThomsonCertificate.GenericFramework`：覆盖树、Bernstein 叶证书和 PSD 求和接口的组合玩具实例。
 
 执行命令（Lean 4.34.1）：
 
@@ -19,7 +19,7 @@ PATH=/workspace/cloud-setup/lean-4.34.1-linux/bin:$PATH \
   lake env lean -o .lake/build/lib/lean/<module>.olean <module>.lean
 ```
 
-四个命令均退出码 0，实测耗时分别为 5.53 s、1.05 s、1.63 s、1.51 s。四个源文件中均没有 `ThomsonNine` 导入或名称引用（用 `rg` 检查）。
+四个命令均退出码 0，实测耗时分别为 5.53 s、1.05 s、1.63 s、1.80 s。四个源文件中均没有 `ThomsonNine` 导入或名称引用（用 `rg` 检查）。
 
 ## 当前源哈希
 
@@ -28,7 +28,7 @@ PATH=/workspace/cloud-setup/lean-4.34.1-linux/bin:$PATH \
 | `formal/ThomsonCertificate/GenericBernstein.lean` | `db6abcc44c9b3b7f751ceacb61e101837a71eb774e90b539faa17dd0bb466965` |
 | `formal/ThomsonCertificate/GenericCoverage.lean` | `209cb644b98e455fcbabdd6d1a340e94d9817fcd966e8937827180991a613199` |
 | `formal/ThomsonCertificate/GenericPSD.lean` | `575bc6526a7f794926e04c764a8d5c12a38f619332a4694a4dc20bf1a48fed8e` |
-| `formal/ThomsonCertificate/GenericFramework.lean` | `f220872b702fb84248aa489d0f4791b8ffa128171e7218b126a2851e4dff7431` |
+| `formal/ThomsonCertificate/GenericFramework.lean` | `d9d2b8bde3cfeebe8547b77b36bcebd5b708ea2e888bca1a29c4685c96d1cfd1` |
 
 ## 解释和边界
 
