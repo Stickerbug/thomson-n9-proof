@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T10:00:00+00:00",
+  "updated": "2026-10-25T12:00:00+00:00",
   "repo": "https://github.com/Stickerbug/thomson-n9-proof",
   "verified": {
     "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5711,
-    "bytes": 81316685,
-    "sha256": "914f5996a495d9da79e868e07718c97303c13060e7a33c3e9ca032979299cd10"
+    "entries": 5712,
+    "bytes": 81317566,
+    "sha256": "cccef86bf00d01998c85450e352356ec7a7124e6cd02c74f9baeeccc752a4696"
   },
   "pending_11_source": {
     "verified": [
@@ -1098,10 +1098,10 @@
     "n10_global_cover_reuse": "proof_work/N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md",
     "n10_triple_boundary_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",
     "n10_stationarity_left_term1": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm1.lean",
-    "n10_stationarity_left_term2": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm2.lean"
-    ,"n10_stationarity_left_term3_final": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm3Final.lean"
-    ,"n10_stationarity_right_term1": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm1.lean"
-    ,"n10_stationarity_right_term2": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm2.lean"
+    "n10_stationarity_left_term2": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm2.lean",
+    "n10_stationarity_left_term3_final": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm3Final.lean",
+    "n10_stationarity_right_term1": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm1.lean",
+    "n10_stationarity_right_term2": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm2.lean"
   },
   "pending_n10": {
     "status": "UNKNOWN",
@@ -1128,10 +1128,10 @@
     "triple_boundary_lean": "compiled exact Gram determinant lemmas for 3 boundary types and 1 interior type",
     "endpoint_left_term1_lean": true,
     "endpoint_left_term2_term3_final": false,
-    "endpoint_left_term2_lean": true
-    ,"endpoint_left_term3_final_lean": true
-    ,"endpoint_right_term1_lean": true
-    ,"endpoint_right_term2_lean": true
-    ,"endpoint_right_term3_final_lean": false
+    "endpoint_left_term2_lean": true,
+    "endpoint_left_term3_final_lean": true,
+    "endpoint_right_term1_lean": true,
+    "endpoint_right_term2_lean": true,
+    "endpoint_right_term3_final_lean": false
   }
 }

@@ -28,6 +28,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm3Final.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm1.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm2.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10BaselineData.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",

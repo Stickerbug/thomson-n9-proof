@@ -400,6 +400,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/N10StationarityLeftTerm3Final.lean",
           "ThomsonCertificate/N10StationarityRightTerm1.lean",
           "ThomsonCertificate/N10StationarityRightTerm2.lean",
+          "ThomsonCertificate/N10BaselineData.lean",
           "ThomsonCertificate/N10CandidateAdapter.lean",
           "ThomsonCertificate/DelsarteBridge.lean",
           "ThomsonCertificate/N10ThreePointAdapter.lean",
