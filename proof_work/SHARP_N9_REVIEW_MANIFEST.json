@@ -11142,8 +11142,8 @@
       "sha256": "9dad43d108ff265d272884df1b6a384f04f3eb040861e4635b2b56b1a6a6a96a"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean": {
-      "bytes": 853,
-      "sha256": "c119fc930abcc70e943b5e471246528faab04df1cf5f14c48bf1e61c804872e6"
+      "bytes": 1053,
+      "sha256": "a5f38450d560fd49e808e2d952874e9c7c6aabbb4eac048ff9fc8151a8fa8338"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/ThomsonNineAdapter.lean": {
       "bytes": 1400,
@@ -22814,7 +22814,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-25T06:39:23.849219+00:00",
+  "generated_utc": "2026-10-25T07:03:32.036020+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
