@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5704,
-    "bytes": 81307018,
-    "sha256": "6b924b7e43819b931fd3f6da932ea541a5330bf8763b0d69cb054efb496a334f"
+    "entries": 5705,
+    "bytes": 81307861,
+    "sha256": "49572473f41a0392aaf87e8d2acc00b637795bc73cbc7b86e114e286939defc8"
   },
   "pending_11_source": {
     "verified": [
@@ -1074,9 +1074,9 @@
   "artifacts": {
     "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
     "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
-    "review_bundle_sha256": "6b924b7e43819b931fd3f6da932ea541a5330bf8763b0d69cb054efb496a334f",
-    "review_bundle_entries": 5704,
-    "review_bundle_bytes": 81307018,
+    "review_bundle_sha256": "49572473f41a0392aaf87e8d2acc00b637795bc73cbc7b86e114e286939defc8",
+    "review_bundle_entries": 5705,
+    "review_bundle_bytes": 81307861,
     "n10_symmetric_family": "proof_work/n10_d4d_symmetric_family_2026-10-24.json",
     "n10_stationarity_elimination": "proof_work/n10_stationarity_elimination_2026-10-24.json",
     "n10_root_isolation": "proof_work/n10_root_isolation_2026-10-24.json",
@@ -1095,7 +1095,8 @@
     "n10_candidate_triple_types": "proof_work/n10_candidate_triple_types_2026-10-25.json",
     "n10_candidate_triple_types_report": "proof_work/N10_CANDIDATE_TRIPLE_TYPES_2026-10-25_zh.md",
     "n10_three_point_adapter": "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
-    "n10_global_cover_reuse": "proof_work/N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md"
+    "n10_global_cover_reuse": "proof_work/N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md",
+    "n10_triple_boundary_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean"
   },
   "pending_n10": {
     "status": "UNKNOWN",
@@ -1118,6 +1119,7 @@
     "sdp_solver_comparison": "Clarabel/SCS mismatch; numerical only",
     "reduced_kernel_sdp": "candidate-scale objective with positive reduced PSD eigmin, but negative DE residual; numerical only",
     "candidate_triple_types": "12 exact symbolic types among 120 triangles; 3 identically Gram-boundary types",
-    "three_point_generic_interface": "compiled conditional adapter; F/H and Gram coverage absent"
+    "three_point_generic_interface": "compiled conditional adapter; F/H and Gram coverage absent",
+    "triple_boundary_lean": "compiled exact Gram determinant lemmas for 3 boundary types and 1 interior type"
   }
 }

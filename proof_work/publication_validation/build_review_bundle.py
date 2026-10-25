@@ -396,7 +396,8 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/N10StationarityEndpoint.lean",
           "ThomsonCertificate/N10CandidateAdapter.lean",
           "ThomsonCertificate/DelsarteBridge.lean",
-          "ThomsonCertificate/N10ThreePointAdapter.lean"):
+          "ThomsonCertificate/N10ThreePointAdapter.lean",
+          "ThomsonCertificate/N10TripleBoundary.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 

@@ -40,3 +40,5 @@ endpoint Lean replay
 
 
 * `N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md` 和 `N10ThreePointAdapter.lean` 已确认 n=10 的三点恒等式可直接复用泛型定理；尚缺实例化的 `F/H` 数据和全域覆盖。
+
+* `N10TripleBoundary.lean` 已在 Lean 中证明三个恒 Gram 边界类型及一个内部类型的精确行列式公式。

@@ -61,3 +61,5 @@ Clarabel/SCS 对比记录在 `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md`，进�
 在第 3 步完成以前，任何 D4d 能量或一维驻点结果都只能作为候选发现，不能写成“n=10 已证明”。
 
 三点泛型恒等式的 n=10 接口和复用边界见 `N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md`；这一步只封装了条件式接口，未提供全局 `F/H` 证书。
+
+恒 Gram 边界类型的 Lean 代数引理已放入 `ThomsonCertificate/N10TripleBoundary.lean`，但尚未连接到全域非负覆盖。

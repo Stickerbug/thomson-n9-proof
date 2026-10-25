@@ -1,0 +1,33 @@
+import ThomsonCertificate.N10ThreePointAdapter
+
+/-!
+Exact algebraic boundary types for the D4d n=10 candidate.  The three
+identically singular Gram triples are kept as small Lean lemmas so later local
+boundary certificates can refer to a kernel-checked statement rather than a
+floating classification.
+-/
+
+namespace ThomsonTen
+
+def gramDet (u v t : ℝ) : ℝ := 1 + 2*u*v*t - u^2 - v^2 - t^2
+
+theorem gramDet_poles_ring (h : ℝ) : gramDet (-1) (-h) h = 0 := by
+  simp [gramDet]
+  ring
+
+theorem gramDet_pole_opposite_lower (h : ℝ) :
+    gramDet (-h) (-h) (2*h^2 - 1) = 0 := by
+  simp [gramDet]
+  ring
+
+theorem gramDet_pole_opposite_lower_bottom (h : ℝ) :
+    gramDet (2*h^2 - 1) h h = 0 := by
+  simp [gramDet]
+  ring
+
+theorem gramDet_lower_ring_type (h : ℝ) :
+    gramDet (-h) (-h) (h^2) = (1-h^2)^2 := by
+  simp [gramDet]
+  ring
+
+end ThomsonTen

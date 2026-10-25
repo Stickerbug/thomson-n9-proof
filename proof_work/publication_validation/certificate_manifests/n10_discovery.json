@@ -22,6 +22,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateAdapter.lean",
     "proof_work/n10_stationarity_endpoint_certificate_2026-10-25.py",
     "proof_work/n10_stationarity_endpoint_certificate_2026-10-25.json",
