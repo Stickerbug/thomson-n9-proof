@@ -1,5 +1,5 @@
 {
-  "file_count": 5712,
+  "file_count": 5714,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -510,8 +510,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 33824,
-      "sha256": "62c2fa97603599fbc2df28a76d324e20991563c9fef83f99f537acafcfd58844"
+      "bytes": 33931,
+      "sha256": "bb32c41e4f5909be55f4bfce5170be8f8cd2d5d81569f3c6259841c919b5051a"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 412,
@@ -522,12 +522,12 @@
       "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery.json": {
-      "bytes": 3810,
-      "sha256": "1545f48ba573a60c28a547fba81e93c22ae9c98077b94fb6559be10fb852e063"
+      "bytes": 3987,
+      "sha256": "65e055310408153674c862ae4157387e7943adc28891eb8c1affb4154987e8d5"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery_run.json": {
-      "bytes": 3755,
-      "sha256": "bae6fe7dbfe8fd0e8ddeaacff5cb9513f33ffddf09d49d3e7365ed4bc8144154"
+      "bytes": 3932,
+      "sha256": "d7f79bc52c5712bb019b7e28e514095b811e620ca98cf9326b159454f2fa26d0"
     },
     "proof_work/publication_validation/certificate_manifests/n7_external_claim.json": {
       "bytes": 562,
@@ -11136,6 +11136,14 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10D4dGeometry.lean": {
       "bytes": 35314,
       "sha256": "7323868791fc7967513f1bb546b8a765f49c0804e51b3d8302afbd4a48b34122"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10GramSymmetry.lean": {
+      "bytes": 1101,
+      "sha256": "46a80c17a47e582f31ac7a493b2b1a40edbd8b3866c8e56dc0a7a7a28b5fbc3b"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10RightSqrtTest.lean": {
+      "bytes": 2491,
+      "sha256": "5f47a2c6d767bc764e0d46becb2593dd7ca192b69807374e4c4dfa5cca56a3c8"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean": {
       "bytes": 3656,
@@ -22842,7 +22850,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-25T11:35:37.086748+00:00",
+  "generated_utc": "2026-10-25T12:41:27.263049+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
