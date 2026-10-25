@@ -205,7 +205,8 @@ def run(degree: int = 8, rounds: int = 4, initial_count: int = 4000,
         },
         'elapsed_seconds': time.time()-started,
     }
-    out = Path(__file__).with_suffix('.json')
+    out = (Path(__file__).with_suffix('.json') if degree == 8 else
+           Path(__file__).with_name(f'n10_three_point_sdp_discovery_degree{degree}_2026-10-25.json'))
     out.write_text(json.dumps(result, indent=2) + '\n')
     print('saved', out, flush=True)
     return result

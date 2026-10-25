@@ -11,6 +11,7 @@
 * `ThomsonCertificate/N10StationarityEndpoint.lean` 已通过 Lean 4.34.1 编译，提供无 `sorry` 的有理倒数/平方根区间原语、\(\sqrt2\) 有理包围和左右端点成员；最终驻点表达式的逐项符号仍未接入。
 * `n10_rational_lp_bound_2026-10-25.py/json` 以纯有理 Bernstein 细分给出无条件外部基线 \(E_{10}\ge 326807/10000=32.6807\)。它距候选约 `0.03624946015`，尚不足以证明候选最优；对应方法分析见 `N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md`。
 * `n10_three_point_sdp_discovery_2026-10-25.py/json` 用 n=10 的三点归一化（`8F+d`、目标 `15c-(5/3)F111`）进行了 degree-8 采样和差分进化搜索；数值目标约 `32.71694946`，但六轮运行的最新独立验证仍发现负残差（差分进化约 `-5.95e-5`），且 PSD 数值最小特征值受浮点误差影响。这是证书搜索线索，不是下界证明。
+* 同一搜索器的 degree-10 诊断记录在 `n10_three_point_sdp_discovery_degree10_2026-10-25.json`；有限采样下目标仍贴近候选，但最坏残差约 `-5.31e-4`，未形成可接受的改进证书。
 
 ## 仍未完成的证明层
 

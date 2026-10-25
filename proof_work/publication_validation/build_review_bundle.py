@@ -41,6 +41,7 @@ BASELINE_ROOT_FILES = [
     "n10_rational_lp_bound_2026-10-25.json",
     "n10_three_point_sdp_discovery_2026-10-25.py",
     "n10_three_point_sdp_discovery_2026-10-25.json",
+    "n10_three_point_sdp_discovery_degree10_2026-10-25.json",
     "N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
     "N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md",
     "analytic10_2026_sum.c", "analytic10_sharp2026_engine.py",
