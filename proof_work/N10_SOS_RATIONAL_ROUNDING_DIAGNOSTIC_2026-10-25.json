@@ -1,0 +1,106 @@
+{
+  "status": "RATIONAL_ROUNDING_DIAGNOSTIC_ONLY",
+  "source": "n10_three_point_sdp_discovery_2026-10-25.json",
+  "blocks": [
+    {
+      "block": 0,
+      "shape": [
+        9,
+        9
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": -4.3155399584452084e-11,
+      "max_rounding_error": 7.340366856012359e-11,
+      "psd_rounded": false
+    },
+    {
+      "block": 1,
+      "shape": [
+        8,
+        8
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": 1.009620427316551e-07,
+      "max_rounding_error": 1.7265744389760584e-11,
+      "psd_rounded": true
+    },
+    {
+      "block": 2,
+      "shape": [
+        7,
+        7
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": 2.451080221841891e-09,
+      "max_rounding_error": 4.206416465146745e-12,
+      "psd_rounded": true
+    },
+    {
+      "block": 3,
+      "shape": [
+        6,
+        6
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": 1.2203874516805884e-09,
+      "max_rounding_error": 2.487399175521432e-12,
+      "psd_rounded": true
+    },
+    {
+      "block": 4,
+      "shape": [
+        5,
+        5
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": 2.373189993787608e-11,
+      "max_rounding_error": 2.0652923815589475e-12,
+      "psd_rounded": true
+    },
+    {
+      "block": 5,
+      "shape": [
+        4,
+        4
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": -1.2099043719859968e-10,
+      "max_rounding_error": 9.937705281078124e-12,
+      "psd_rounded": false
+    },
+    {
+      "block": 6,
+      "shape": [
+        3,
+        3
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": -1.1713949676159374e-10,
+      "max_rounding_error": 3.702975683787628e-12,
+      "psd_rounded": false
+    },
+    {
+      "block": 7,
+      "shape": [
+        2,
+        2
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": -1.4923951447190798e-07,
+      "max_rounding_error": 1.5162218702601693e-07,
+      "psd_rounded": false
+    },
+    {
+      "block": 8,
+      "shape": [
+        1,
+        1
+      ],
+      "denominator": 1000000,
+      "min_eigenvalue_rounded": 0.0,
+      "max_rounding_error": 3.8055082163734405e-11,
+      "psd_rounded": true
+    }
+  ],
+  "conclusion": "Rounded matrices are not a proof: finite SDP residual and exact PSD/SOS identity remain absent."
+}
