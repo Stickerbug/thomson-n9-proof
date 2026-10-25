@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_SYMBOLIC_TRIPLE_BATCH_CHECKPOINT",
+  "source": "proof_work/n10_candidate_triple_types_2026-10-25.json",
+  "source_sha256": "7044fd0cc2f5b9a956f98ba60cf32b9bdb4e67ccde7f0575613a253fc7fe9d46",
+  "triangle_count": 120,
+  "type_count": 12,
+  "multiplicity_sum": 120,
+  "zero_determinant_types": 3,
+  "nonzero_determinant_types": 9,
+  "zero_types": [
+    [
+      "-1",
+      "-h",
+      "h"
+    ],
+    [
+      "-h",
+      "-h",
+      "2*h**2 - 1"
+    ],
+    [
+      "2*h**2 - 1",
+      "h",
+      "h"
+    ]
+  ],
+  "scope": "candidate D4d geometry only; not a global n=10 lower-bound certificate"
+}
