@@ -64,3 +64,4 @@ Clarabel/SCS 对比记录在 `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md`，进�
 
 恒 Gram 边界类型的 Lean 代数引理已放入 `ThomsonCertificate/N10TripleBoundary.lean`，但尚未连接到全域非负覆盖。
 左端点第一驻点项的 Lean 重放已在 `N10StationarityLeftTerm1.lean` 完成；完整端点符号仍需继续接入。
+第二驻点项已在 `N10StationarityLeftTerm2.lean` 完成，第三项和最终符号仍未完成。
