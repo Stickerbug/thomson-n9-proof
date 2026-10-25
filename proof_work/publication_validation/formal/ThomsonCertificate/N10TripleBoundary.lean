@@ -9,6 +9,8 @@ floating classification.
 
 namespace ThomsonTen
 
+open ThomsonNine.ThreePoint
+
 def gramDet (u v t : ℝ) : ℝ := 1 + 2*u*v*t - u^2 - v^2 - t^2
 
 theorem gramDet_poles_ring (h : ℝ) : gramDet (-1) (-h) h = 0 := by
@@ -29,5 +31,10 @@ theorem gramDet_lower_ring_type (h : ℝ) :
     gramDet (-h) (-h) (h^2) = (1-h^2)^2 := by
   simp [gramDet]
   ring
+
+theorem gramOK_uses_gramDet {u v t : ℝ} :
+    GramOK u v t ↔
+      u ^ 2 ≤ 1 ∧ v ^ 2 ≤ 1 ∧ t ^ 2 ≤ 1 ∧ 0 ≤ gramDet u v t := by
+  simp [GramOK, gramDet]
 
 end ThomsonTen
