@@ -44,3 +44,6 @@ endpoint Lean replay
 * `N10TripleBoundary.lean` 已在 Lean 中证明三个恒 Gram 边界类型及一个内部类型的精确行列式公式。
 * `N10StationarityLeftTerm1.lean` 已无 `sorry` 证明左端点第一驻点项的区间成员关系和严格负性；term2、term3 及最终端点符号仍待完成。
 * `N10StationarityLeftTerm2.lean` 也已无 `sorry` 编译通过，并证明左端点第二驻点项严格为负；term3 和最终端点符号仍待完成。
+* `N10StationarityLeftTerm3.lean` 已完成第三项的代数 numerator 区间层（pbase、a/b base、a_num、b_num）；逆三次幂和最终符号仍待完成。
+* `N10StationarityLeftTerm3Final.lean` 进一步完成左端第三项的平方根、倒数立方、乘法链和最终严格负号；右端第三项尚未闭合。
+* 右端点 term1、term2 的 Lean 区间成员和严格符号也已完成；两端的 term3 与最终符号仍待完成。

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T00:00:00+00:00",
+  "updated": "2026-10-25T10:00:00+00:00",
   "repo": "https://github.com/Stickerbug/thomson-n9-proof",
   "verified": {
     "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5707,
-    "bytes": 81310800,
-    "sha256": "2bddd365a736dcd981d3ada8a377fa9c585055979048f8174b199ad6ae5d247d"
+    "entries": 5711,
+    "bytes": 81316685,
+    "sha256": "914f5996a495d9da79e868e07718c97303c13060e7a33c3e9ca032979299cd10"
   },
   "pending_11_source": {
     "verified": [
