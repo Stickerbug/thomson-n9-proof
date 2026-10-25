@@ -1,5 +1,5 @@
 {
-  "file_count": 5696,
+  "file_count": 5699,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -28,6 +28,10 @@
     "proof_work/N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md": {
       "bytes": 1814,
       "sha256": "2511db9c30eb361645191d01b1197ad8602533ba3d65f45ff8184bab9533a3c1"
+    },
+    "proof_work/N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md": {
+      "bytes": 1088,
+      "sha256": "5ca462b78681c9784f08d88f5f4ecfcc65de5b606425ea18cf7a850dd15ee431"
     },
     "proof_work/N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md": {
       "bytes": 680,
@@ -213,6 +217,14 @@
       "bytes": 4559,
       "sha256": "72fc4ab9e2ebc3cf3fbc29a49d5ab0ff90416c038d4dd9b615ae2912bb7cc956"
     },
+    "proof_work/n10_reduced_three_point_sdp_discovery_2026-10-25.json": {
+      "bytes": 1258,
+      "sha256": "bcd58972cc89d4cdabbe731745179e93c5f290a3036857fcd334a9d999ce5704"
+    },
+    "proof_work/n10_reduced_three_point_sdp_discovery_2026-10-25.py": {
+      "bytes": 4166,
+      "sha256": "311f06f582e5084c80070b351e81461d6b9161a8ab2cdd97c28fbd45439c82d6"
+    },
     "proof_work/n10_root_isolation_2026-10-24.json": {
       "bytes": 1399459,
       "sha256": "b1a092ba530c58ddc95caab6acd1d17cf04f47d6f8ecb4e144ad83d4a4ae4391"
@@ -354,16 +366,16 @@
       "sha256": "350772cd9f724ef769d2bc6901a4ddaab0ac65036e81c76c3fe3025226ae2379"
     },
     "proof_work/publication_validation/N10_CONTINUATION_STATUS_2026-10-25_zh.md": {
-      "bytes": 3598,
-      "sha256": "48d40d9946f1aed1ce291609beadc4892739de0e06ce17ee4d961f44edbd8f6b"
+      "bytes": 3769,
+      "sha256": "d87f5a1dc9dbf26cdcab57b2a175dbfd08e9be8c30028f0960f4b2959cb18aee"
     },
     "proof_work/publication_validation/N10_DELSARTE_BRIDGE_2026-10-25_zh.md": {
       "bytes": 1087,
       "sha256": "c15b9b83f80be65865ea5a36682b35ef734257d318929adf9deb8edf9dba3e18"
     },
     "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md": {
-      "bytes": 6589,
-      "sha256": "71bcad3dc53b92fbd765db3b1e9242e11ae28b8852d7e4a5410109e0cdb84bd9"
+      "bytes": 6739,
+      "sha256": "55088f9591ee4bd0491fc96e2a47edf61c9306bca796faac6695277312e544de"
     },
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md": {
       "bytes": 2608,
@@ -482,8 +494,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 32902,
-      "sha256": "1424363da6e50086decf01ac76ff38001854713e48e6d3eca1ae29e3304ab6fc"
+      "bytes": 33074,
+      "sha256": "6b6334375135db399b742ce416ebf3a436a67d53680175d70344ffd9e5a8629a"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 412,
@@ -494,12 +506,12 @@
       "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery.json": {
-      "bytes": 2496,
-      "sha256": "3b86289ffd08123e08e14a853e538b233ab0adf89b9e0d585e13922b6d7d6f59"
+      "bytes": 2701,
+      "sha256": "f5d1f9a10744c2a485b91e8a83756fa647bcd07b11be9397863e33cbebffbbfd"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery_run.json": {
-      "bytes": 2441,
-      "sha256": "5f04af4475478be19e210634d6c7da5b882d5cedf4bd6591ff4e4fb2f602ce58"
+      "bytes": 2646,
+      "sha256": "b82ae0391391e5d7004036526694f06ae3cee7f4078360aad37d39adb7129b2f"
     },
     "proof_work/publication_validation/certificate_manifests/n7_external_claim.json": {
       "bytes": 562,
@@ -22778,7 +22790,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-25T01:19:00.132201+00:00",
+  "generated_utc": "2026-10-25T01:23:53.624899+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,

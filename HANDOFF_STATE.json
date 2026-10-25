@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5696,
-    "bytes": 81297340,
-    "sha256": "dbf31d46bf6e4818236c4ba95ff2e91bdcac4350d25c1289ebcc7629b4b42bbb"
+    "entries": 5699,
+    "bytes": 81301549,
+    "sha256": "e27b978a172b0955f6a2987fbae977b971ec5cb2bb3db4211154b65b05c605dd"
   },
   "pending_11_source": {
     "verified": [
@@ -1074,9 +1074,9 @@
   "artifacts": {
     "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
     "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
-    "review_bundle_sha256": "dbf31d46bf6e4818236c4ba95ff2e91bdcac4350d25c1289ebcc7629b4b42bbb",
-    "review_bundle_entries": 5696,
-    "review_bundle_bytes": 81297340,
+    "review_bundle_sha256": "e27b978a172b0955f6a2987fbae977b971ec5cb2bb3db4211154b65b05c605dd",
+    "review_bundle_entries": 5699,
+    "review_bundle_bytes": 81301549,
     "n10_symmetric_family": "proof_work/n10_d4d_symmetric_family_2026-10-24.json",
     "n10_stationarity_elimination": "proof_work/n10_stationarity_elimination_2026-10-24.json",
     "n10_root_isolation": "proof_work/n10_root_isolation_2026-10-24.json",
@@ -1089,7 +1089,9 @@
     "n10_three_point_sdp": "proof_work/n10_three_point_sdp_discovery_2026-10-25.json",
     "n10_three_point_sdp_degree10": "proof_work/n10_three_point_sdp_discovery_degree10_2026-10-25.json",
     "n10_sdp_solver_comparison": "proof_work/n10_sdp_solver_comparison_2026-10-25.json",
-    "n10_sdp_solver_comparison_report": "proof_work/N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md"
+    "n10_sdp_solver_comparison_report": "proof_work/N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md",
+    "n10_reduced_three_point_sdp": "proof_work/n10_reduced_three_point_sdp_discovery_2026-10-25.json",
+    "n10_reduced_three_point_sdp_report": "proof_work/N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md"
   },
   "pending_n10": {
     "status": "UNKNOWN",
@@ -1109,6 +1111,7 @@
     "three_point_sdp_search": "structured grid plus differential evolution",
     "three_point_sdp_rounds": 6,
     "three_point_sdp_degree10_validation_min_residual_approx": "-5.31e-4",
-    "sdp_solver_comparison": "Clarabel/SCS mismatch; numerical only"
+    "sdp_solver_comparison": "Clarabel/SCS mismatch; numerical only",
+    "reduced_kernel_sdp": "candidate-scale objective with positive reduced PSD eigmin, but negative DE residual; numerical only"
   }
 }

@@ -42,6 +42,7 @@ DISCOVERY_PENDING
 进一步的 `n10_three_point_sdp_discovery_2026-10-25.py/json` 在 degree 8 的有限采样和差分进化 SDP 中得到约 `32.71694946` 的候选目标，但六轮运行的最新验证仍有约 `-5.95e-5` 的负残差，故只能用于寻找三点核/局部覆盖数据，不能改写 `UNKNOWN` 状态。
 degree-10 的独立诊断记录在 `n10_three_point_sdp_discovery_degree10_2026-10-25.json`，最新最坏残差约 `-5.31e-4`，没有关闭缺口。
 Clarabel/SCS 对比记录在 `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md`，进一步确认浮点 SDP 只能作发现工具，不能用来改变 `UNKNOWN` 门禁。
+约化候选 Gram 零空间的后续诊断见 `N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md`；它提高了数值稳定性，但没有全局覆盖。
 
 ## 可执行入口
 
