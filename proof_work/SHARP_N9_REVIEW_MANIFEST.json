@@ -11138,12 +11138,12 @@
       "sha256": "c68fe468bafd714fb33b91ea46dd30e32f19485bfa1cbced59f35e66d670b4ca"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean": {
-      "bytes": 1222,
-      "sha256": "9dad43d108ff265d272884df1b6a384f04f3eb040861e4635b2b56b1a6a6a96a"
+      "bytes": 1744,
+      "sha256": "6e9474a002601c8b63f8b23897901fe916f0b7940a8cc7d182c3da6ddda5e08b"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean": {
-      "bytes": 1053,
-      "sha256": "a5f38450d560fd49e808e2d952874e9c7c6aabbb4eac048ff9fc8151a8fa8338"
+      "bytes": 1840,
+      "sha256": "65775aa07e7d2b3fefe9630b95e285e7627935be76997a9e875bce3121c99f1d"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/ThomsonNineAdapter.lean": {
       "bytes": 1400,
@@ -22814,7 +22814,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-25T07:03:32.036020+00:00",
+  "generated_utc": "2026-10-25T07:22:14.223903+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
