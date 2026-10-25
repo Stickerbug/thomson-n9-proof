@@ -45,10 +45,10 @@ ThomsonCertificate.Certificate.sound
 
 `run_certificate_pipeline.py` 读取 `schema = thomson-certificate-v1` 的清单，拒绝路径穿越和缺失源文件，然后调用 `lake env lean` 编译指定 adapter。n=9 清单 `certificate_manifests/n9_structured.json` 已运行通过，记录为 `status = PASS`；一个含 `../` 路径的负向清单返回 `UNKNOWN`。该脚本只负责证书验证调度，尚未实现候选构型搜索。
 
-n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candidate_only` 模式并返回 `UNKNOWN`。其中的 `analytic10` 证据是 n=9 的十阶多项式实验，不是十粒子候选；当前没有真正的 n=10 能量模型或 Lean certificate adapter。
+n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candidate_only` 模式并返回 `UNKNOWN`。其中的旧 `analytic10` 证据是 n=9 的十阶多项式实验，不是十粒子全局证书。当前已经有真正的 n=10 D4d 几何和能量模型，以及候选区间的 Lean 层；但尚无覆盖整个十点构型空间的 certificate adapter。
 
 `certificate_manifests/n10_discovery.json` 使用 `discovery` 模式记录真实十粒子候选的接入门槛，并返回 `UNKNOWN`。具体字段、阶段门和后续工作见 `N10_DISCOVERY_INTAKE_2026-10-24_zh.md`；旧的 `analytic10`/`d10` 文件仍只作为 n=9 十阶核实验保留。
-本轮另有固定种子的 32 次 L-BFGS-B 数值提案（能量约 `32.71694946014815`），仅用于候选发现，尚未进入证明管线。 其对称性拟合和一参数能量公式记录在 `n10_d4d_symmetric_family_2026-10-24.json`，仍属于 discovery。`ThomsonCertificate/N10D4dGeometry.lean` 已由 Lean 验证 D4d 十点构型的单位球面、两两不同和 45 项能量恒等式。 驻点消元记录在 `n10_stationarity_elimination_2026-10-24.json`，只提供必要的 224 次结果式因子。 之后的 `n10_root_isolation_2026-10-24.json` 用有理 Bernstein 导数系数证明该区间内结果式根唯一，并用纯有理区间算术确认原始含根号驻点表达式在区间端点变号，同时给出 D4d 族能量的严格区间包围；`ThomsonCertificate/N10CandidateInterval.lean` 由 Lean 验证 `t` 到 `h` 的有理区间映射、驻点表达式的区间连续性和 IVT 零点桥接。当前缺口是把端点符号证书重放进 Lean，以及建立整个十点构型空间的全局下界。
+本轮另有固定种子的 32 次 L-BFGS-B 数值提案（能量约 `32.71694946014815`），仅用于候选发现，尚未进入证明管线。 其对称性拟合和一参数能量公式记录在 `n10_d4d_symmetric_family_2026-10-24.json`，仍属于 discovery。`ThomsonCertificate/N10D4dGeometry.lean` 已由 Lean 验证 D4d 十点构型的单位球面、两两不同和 45 项能量恒等式。 驻点消元记录在 `n10_stationarity_elimination_2026-10-24.json`，只提供必要的 224 次结果式因子。 之后的 `n10_root_isolation_2026-10-24.json` 用有理 Bernstein 导数系数证明该区间内结果式根唯一，并用纯有理区间算术确认原始含根号驻点表达式在区间端点变号，同时给出 D4d 族能量的严格区间包围；`ThomsonCertificate/N10CandidateInterval.lean` 由 Lean 验证 `t` 到 `h` 的有理区间映射、驻点表达式的区间连续性和 IVT 零点桥接。当前缺口是把端点符号证书重放进 Lean，以及建立整个十点构型空间的全局下界；因此这些材料仍不能把 discovery 状态提升为 `proved`。
 
 独立文件 `n10_stationarity_endpoint_certificate_2026-10-25.json` 记录两个端点的完整有理区间运算链和严格符号，供后续 Lean 重放逐项对照。
 
@@ -75,7 +75,8 @@ generated/Instance.lean 由上述数据生成的 Lean 适配器
 1. 用 `Certificate 9` 包装现有 n=9 覆盖证明，不改变冻结定理（语义和结构化 `CutTree` 适配器均已通过）；
 2. 选取 n=7 或 n=8 建立第二个适配器，报告真正复用的模块和许可证；
 3. 将证书生成器从 n=9 的固定脚本抽象为参数化导出器；
-4. 用相同接口对 n=10 做候选搜索和小规模证书试验；
-5. 只有完成完整模型约化、覆盖和审计后，才报告 n=10 的正式证明。
+4. 用相同接口对 n=10 完成端点重放、候选适配器和小规模证书试验；
+5. 将 n=9 的 PSD/局部/覆盖结构参数化到十点实例，生成并审计全局下界证书；
+6. 只有完成完整模型约化、覆盖和审计后，才报告 n=10 的正式证明。
 
 当前 `GenericCertificate`、`GenericBernstein`、`GenericCoverage`、`GenericPSD` 和 `GenericFramework` 已构成阶段 A 的 Lean 原型；n=9 适配器和外部证书生成器仍是后续工作。
