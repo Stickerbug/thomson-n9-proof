@@ -394,6 +394,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/N10CandidateInterval.lean",
           "ThomsonCertificate/N10D4dGeometry.lean",
           "ThomsonCertificate/N10StationarityEndpoint.lean",
+          "ThomsonCertificate/N10StationarityLeftTerm1.lean",
           "ThomsonCertificate/N10CandidateAdapter.lean",
           "ThomsonCertificate/DelsarteBridge.lean",
           "ThomsonCertificate/N10ThreePointAdapter.lean",

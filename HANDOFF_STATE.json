@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5705,
-    "bytes": 81308346,
-    "sha256": "3d593e7d9de6b29495d28e986aedae7b53bf77f3148d0ac16ac6fde85063b6a9"
+    "entries": 5706,
+    "bytes": 81309786,
+    "sha256": "b51b39a7bd742006aecb582605243c668194710519b4aa358ea6f25b614df119"
   },
   "pending_11_source": {
     "verified": [
@@ -1096,7 +1096,8 @@
     "n10_candidate_triple_types_report": "proof_work/N10_CANDIDATE_TRIPLE_TYPES_2026-10-25_zh.md",
     "n10_three_point_adapter": "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
     "n10_global_cover_reuse": "proof_work/N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md",
-    "n10_triple_boundary_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean"
+    "n10_triple_boundary_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",
+    "n10_stationarity_left_term1": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm1.lean"
   },
   "pending_n10": {
     "status": "UNKNOWN",
@@ -1120,6 +1121,8 @@
     "reduced_kernel_sdp": "candidate-scale objective with positive reduced PSD eigmin, but negative DE residual; numerical only",
     "candidate_triple_types": "12 exact symbolic types among 120 triangles; 3 identically Gram-boundary types",
     "three_point_generic_interface": "compiled conditional adapter; F/H and Gram coverage absent",
-    "triple_boundary_lean": "compiled exact Gram determinant lemmas for 3 boundary types and 1 interior type"
+    "triple_boundary_lean": "compiled exact Gram determinant lemmas for 3 boundary types and 1 interior type",
+    "endpoint_left_term1_lean": true,
+    "endpoint_left_term2_term3_final": false
   }
 }

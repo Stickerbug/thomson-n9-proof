@@ -22,6 +22,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateInterval.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10D4dGeometry.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm1.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",
