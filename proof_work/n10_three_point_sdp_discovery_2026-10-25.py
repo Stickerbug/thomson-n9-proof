@@ -15,6 +15,7 @@ from pathlib import Path
 
 import cvxpy as cp
 import numpy as np
+from scipy.optimize import differential_evolution
 
 N = 10
 H = 0.422687424043986066
@@ -144,9 +145,29 @@ def run(degree: int = 8, rounds: int = 4, initial_count: int = 4000,
             raise RuntimeError(problem.status)
         test = sample(validation_count, rng)
         test_mats = design(test, degree)
-        residual = np.sum(minorant(test), axis=1)-float(c.value)
-        residual -= sum(np.einsum('nij,ij->n', m, a.value)
-                        for m, a in zip(test_mats, blocks))
+        values = [a.value for a in blocks]
+
+        def evaluate(points):
+            mats = design(np.asarray(points), degree)
+            out = np.sum(minorant(np.asarray(points)), axis=1)-float(c.value)
+            return out - sum(np.einsum('nij,ij->n', m, a)
+                             for m, a in zip(mats, values))
+
+        residual = evaluate(test)
+        def objective_angles(z):
+            u, v, theta = z
+            t = u*v + np.sqrt(max(0.0, (1-u*u)*(1-v*v)))*np.cos(theta)
+            return float(evaluate(np.asarray([[u, v, t]]))[0])
+
+        de = differential_evolution(objective_angles,
+                                    [(-1, 1), (-1, 1), (0, np.pi)],
+                                    seed=20261025+degree+iteration,
+                                    popsize=8, maxiter=55, polish=True,
+                                    workers=1, updating='immediate')
+        de_u, de_v, de_theta = de.x
+        de_t = de_u*de_v + np.sqrt(max(0.0, (1-de_u*de_u)*(1-de_v*de_v)))*np.cos(de_theta)
+        de_point = np.asarray([[de_u, de_v, de_t]])
+        de_residual = float(de.fun)
         min_eig = min(float(np.linalg.eigvalsh(a.value).min()) for a in blocks)
         row = {
             'iteration': iteration,
@@ -155,6 +176,8 @@ def run(degree: int = 8, rounds: int = 4, initial_count: int = 4000,
             'candidate_energy_reference': ENERGY,
             'candidate_gap_reference': ENERGY-float(problem.value),
             'validation_min_residual': float(residual.min()),
+            'differential_evolution_min_residual': de_residual,
+            'differential_evolution_point': de_point[0].tolist(),
             'training_count': len(points),
             'validation_count': validation_count,
             'min_psd_eigenvalue': min_eig,
@@ -162,9 +185,9 @@ def run(degree: int = 8, rounds: int = 4, initial_count: int = 4000,
         }
         history.append(row)
         print(json.dumps(row), flush=True)
-        if residual.min() >= -1e-7:
+        if min(float(residual.min()), de_residual) >= -1e-7:
             break
-        points = np.vstack([points, test[np.argsort(residual)[:500]]])
+        points = np.vstack([points, test[np.argsort(residual)[:500]], de_point])
     result = {
         'status': 'NUMERICAL_DISCOVERY_ONLY',
         'warning': 'CVXPY/Clarabel floating SDP with finite sampling; not a global certificate and not a Lean theorem.',

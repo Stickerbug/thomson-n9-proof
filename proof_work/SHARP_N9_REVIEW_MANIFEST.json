@@ -234,12 +234,12 @@
       "sha256": "dbfdccb09d261a71e4f23f851cf0f44bf394c163df418e17562abb916dedd22d"
     },
     "proof_work/n10_three_point_sdp_discovery_2026-10-25.json": {
-      "bytes": 12557,
-      "sha256": "d897879fce3552f728809373938c04f0fbf3673d488e9887575c0b657972087e"
+      "bytes": 13236,
+      "sha256": "ec80de4ae65b7c69a4dfe43168e7190b0b0b2ba0550d1609a0d18a0f045aedd7"
     },
     "proof_work/n10_three_point_sdp_discovery_2026-10-25.py": {
-      "bytes": 7273,
-      "sha256": "9dde743dfc85c6d76841af50f1fe45d58e205766ce97bc3ceef6dcea0340aa15"
+      "bytes": 8405,
+      "sha256": "48a34c87a9a6175c767fa59bd9934a6e39252edadbb0c9229e5df31e26af01de"
     },
     "proof_work/narrowroot2026_certificate.json": {
       "bytes": 158036,
@@ -342,16 +342,16 @@
       "sha256": "350772cd9f724ef769d2bc6901a4ddaab0ac65036e81c76c3fe3025226ae2379"
     },
     "proof_work/publication_validation/N10_CONTINUATION_STATUS_2026-10-25_zh.md": {
-      "bytes": 3146,
-      "sha256": "f2cbdd8c1667fe07e994bdfbc82afe587e7eca29637e8c85c6ba0ce7fc43d56c"
+      "bytes": 3164,
+      "sha256": "cbe89b1d7cc1c79271e3b8d0be34e412f0793e8655ea606bfab32f9d383aa746"
     },
     "proof_work/publication_validation/N10_DELSARTE_BRIDGE_2026-10-25_zh.md": {
       "bytes": 1087,
       "sha256": "c15b9b83f80be65865ea5a36682b35ef734257d318929adf9deb8edf9dba3e18"
     },
     "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md": {
-      "bytes": 6219,
-      "sha256": "adfd49675be962d050122c835eabfe454682ed820e0df930cc62c991355de5ca"
+      "bytes": 6257,
+      "sha256": "e63cb3de4e8b7c1b97055228e6881c1c3a0159e4c78eefcdd4646cf82923b334"
     },
     "proof_work/publication_validation/N10_PRIORITY_SCREEN_2026-10-23_zh.md": {
       "bytes": 2608,
@@ -22766,7 +22766,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-25T00:48:41.688245+00:00",
+  "generated_utc": "2026-10-25T00:53:42.674260+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
