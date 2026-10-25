@@ -14,6 +14,7 @@
 * 同一搜索器的 degree-10 诊断记录在 `n10_three_point_sdp_discovery_degree10_2026-10-25.json`；有限采样下目标仍贴近候选，但最坏残差约 `-5.31e-4`，未形成可接受的改进证书。
 * `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md` 对比 Clarabel/SCS，显示浮点 PSD 与有限采样误差会显著改变残差；因此这些数值残差既不能作为反例，也不能作为证明。
 * `N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md` 记录候选 Gram 零空间约化实验：PSD 数值稳定性改善且目标锁定候选，但全域残差仍未闭合。
+* `N10_CANDIDATE_TRIPLE_TYPES_2026-10-25_zh.md` 记录 120 个候选三角形的 12 类符号分类和 3 类恒 Gram 边界类型，为局部/边界证书提供精确几何输入。
 
 ## 仍未完成的证明层
 
@@ -37,3 +38,5 @@ endpoint Lean replay
 
 旧 n=9 fresh replay 不应因本记录重复执行；它的结果已经由发布版本和交接状态保存。任何新报告都应同时保留本文件、端点 JSON、Lean 源文件及其哈希，以便审稿人区分候选发现与全局定理。
 
+
+* `N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md` 和 `N10ThreePointAdapter.lean` 已确认 n=10 的三点恒等式可直接复用泛型定理；尚缺实例化的 `F/H` 数据和全域覆盖。

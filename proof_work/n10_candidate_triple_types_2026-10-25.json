@@ -1,0 +1,126 @@
+{
+  "status": "EXACT_SYMBOLIC_D4D_TRIPLE_CLASSIFICATION",
+  "instance_n": 10,
+  "triangle_count": 120,
+  "type_count": 12,
+  "pair_inner_products": [
+    "-1",
+    "-h",
+    "-h**2 + sqrt(2)*(h**2 - 1)/2",
+    "-h**2 - sqrt(2)*(h**2 - 1)/2",
+    "2*h**2 - 1",
+    "h",
+    "h**2"
+  ],
+  "types": [
+    {
+      "inner_products": [
+        "(-2*h**2 + sqrt(2)*h**2 - sqrt(2))/2",
+        "(-2*h**2 + sqrt(2)*h**2 - sqrt(2))/2",
+        "h**2"
+      ],
+      "multiplicity": 8,
+      "gram_determinant": "-h**2*(-3 + 2*sqrt(2))*(h - 1)**2*(h + 1)**2"
+    },
+    {
+      "inner_products": [
+        "(-2*h**2 + sqrt(2)*h**2 - sqrt(2))/2",
+        "-(sqrt(2)*h**2 + 2*h**2 - sqrt(2))/2",
+        "2*h**2 - 1"
+      ],
+      "multiplicity": 16,
+      "gram_determinant": "2*h**2*(h - 1)**2*(h + 1)**2"
+    },
+    {
+      "inner_products": [
+        "(-2*h**2 + sqrt(2)*h**2 - sqrt(2))/2",
+        "-(sqrt(2)*h**2 + 2*h**2 - sqrt(2))/2",
+        "h**2"
+      ],
+      "multiplicity": 16,
+      "gram_determinant": "h**2*(h - 1)**2*(h + 1)**2"
+    },
+    {
+      "inner_products": [
+        "-(sqrt(2)*h**2 + 2*h**2 - sqrt(2))/2",
+        "-(sqrt(2)*h**2 + 2*h**2 - sqrt(2))/2",
+        "h**2"
+      ],
+      "multiplicity": 8,
+      "gram_determinant": "h**2*(2*sqrt(2) + 3)*(h - 1)**2*(h + 1)**2"
+    },
+    {
+      "inner_products": [
+        "-1",
+        "-h",
+        "h"
+      ],
+      "multiplicity": 8,
+      "gram_determinant": "0"
+    },
+    {
+      "inner_products": [
+        "-h",
+        "(-2*h**2 + sqrt(2)*h**2 - sqrt(2))/2",
+        "h"
+      ],
+      "multiplicity": 16,
+      "gram_determinant": "(h - 1)**2*(h + 1)**2/2"
+    },
+    {
+      "inner_products": [
+        "-h",
+        "-(sqrt(2)*h**2 + 2*h**2 - sqrt(2))/2",
+        "h"
+      ],
+      "multiplicity": 16,
+      "gram_determinant": "(h - 1)**2*(h + 1)**2/2"
+    },
+    {
+      "inner_products": [
+        "-h",
+        "-h",
+        "2*h**2 - 1"
+      ],
+      "multiplicity": 4,
+      "gram_determinant": "0"
+    },
+    {
+      "inner_products": [
+        "-h",
+        "-h",
+        "h**2"
+      ],
+      "multiplicity": 8,
+      "gram_determinant": "(h - 1)**2*(h + 1)**2"
+    },
+    {
+      "inner_products": [
+        "2*h**2 - 1",
+        "h",
+        "h"
+      ],
+      "multiplicity": 4,
+      "gram_determinant": "0"
+    },
+    {
+      "inner_products": [
+        "2*h**2 - 1",
+        "h**2",
+        "h**2"
+      ],
+      "multiplicity": 8,
+      "gram_determinant": "4*h**2*(h - 1)**2*(h + 1)**2"
+    },
+    {
+      "inner_products": [
+        "h",
+        "h",
+        "h**2"
+      ],
+      "multiplicity": 8,
+      "gram_determinant": "(h - 1)**2*(h + 1)**2"
+    }
+  ],
+  "scope": "symbolic candidate geometry only; no global lower-bound or uniqueness theorem"
+}

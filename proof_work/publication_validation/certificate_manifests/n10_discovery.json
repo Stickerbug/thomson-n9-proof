@@ -21,6 +21,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10D4dGeometry.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateAdapter.lean",
     "proof_work/n10_stationarity_endpoint_certificate_2026-10-25.py",
     "proof_work/n10_stationarity_endpoint_certificate_2026-10-25.json",
@@ -35,7 +36,11 @@
     "proof_work/N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md",
     "proof_work/n10_reduced_three_point_sdp_discovery_2026-10-25.py",
     "proof_work/n10_reduced_three_point_sdp_discovery_2026-10-25.json",
+    "proof_work/n10_candidate_triple_types_2026-10-25.py",
+    "proof_work/n10_candidate_triple_types_2026-10-25.json",
+    "proof_work/N10_CANDIDATE_TRIPLE_TYPES_2026-10-25_zh.md",
     "proof_work/N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
+    "proof_work/N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md",
     "proof_work/N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md"
     ,"proof_work/publication_validation/N10_DELSARTE_BRIDGE_2026-10-25_zh.md"
   ],

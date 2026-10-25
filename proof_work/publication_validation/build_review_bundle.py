@@ -47,6 +47,10 @@ BASELINE_ROOT_FILES = [
     "N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md",
     "n10_reduced_three_point_sdp_discovery_2026-10-25.py",
     "n10_reduced_three_point_sdp_discovery_2026-10-25.json",
+    "n10_candidate_triple_types_2026-10-25.py",
+    "n10_candidate_triple_types_2026-10-25.json",
+    "N10_CANDIDATE_TRIPLE_TYPES_2026-10-25_zh.md",
+    "N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md",
     "N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
     "N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md",
     "analytic10_2026_sum.c", "analytic10_sharp2026_engine.py",
@@ -391,7 +395,8 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/N10D4dGeometry.lean",
           "ThomsonCertificate/N10StationarityEndpoint.lean",
           "ThomsonCertificate/N10CandidateAdapter.lean",
-          "ThomsonCertificate/DelsarteBridge.lean"):
+          "ThomsonCertificate/DelsarteBridge.lean",
+          "ThomsonCertificate/N10ThreePointAdapter.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 

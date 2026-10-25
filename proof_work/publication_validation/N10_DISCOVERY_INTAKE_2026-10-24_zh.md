@@ -43,6 +43,7 @@ DISCOVERY_PENDING
 degree-10 的独立诊断记录在 `n10_three_point_sdp_discovery_degree10_2026-10-25.json`，最新最坏残差约 `-5.31e-4`，没有关闭缺口。
 Clarabel/SCS 对比记录在 `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md`，进一步确认浮点 SDP 只能作发现工具，不能用来改变 `UNKNOWN` 门禁。
 约化候选 Gram 零空间的后续诊断见 `N10_REDUCED_THREE_POINT_SDP_2026-10-25_zh.md`；它提高了数值稳定性，但没有全局覆盖。
+候选 120 个三角形的符号分类见 `N10_CANDIDATE_TRIPLE_TYPES_2026-10-25_zh.md`；该分类可用于下一步局部/边界证书生成，但本身不是全局证明。
 
 ## 可执行入口
 
@@ -58,3 +59,5 @@ Clarabel/SCS 对比记录在 `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md`，进�
 4. 只有全域覆盖、局部非负性、能量恒等式和 Lean 内核重放全部通过后，才把状态从 `DISCOVERY_PENDING` 提升为正式 n=10 定理。
 
 在第 3 步完成以前，任何 D4d 能量或一维驻点结果都只能作为候选发现，不能写成“n=10 已证明”。
+
+三点泛型恒等式的 n=10 接口和复用边界见 `N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md`；这一步只封装了条件式接口，未提供全局 `F/H` 证书。
