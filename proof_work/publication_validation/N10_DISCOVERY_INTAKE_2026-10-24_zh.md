@@ -39,7 +39,7 @@ DISCOVERY_PENDING
 \]
 该下界距 D4d 候选约 `0.03624946015`，没有关闭最优性缺口；它是外部精确算术证书，不是 Lean 定理。方法迁移、规模和不可直接替换的 n=9 固定数据见 `N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md` 与 `N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md`。
 
-进一步的 `n10_three_point_sdp_discovery_2026-10-25.py/json` 在 degree 8 的有限采样和差分进化 SDP 中得到约 `32.71694946` 的候选目标，但最新验证仍有约 `-8.4e-5` 的负残差，故只能用于寻找三点核/局部覆盖数据，不能改写 `UNKNOWN` 状态。
+进一步的 `n10_three_point_sdp_discovery_2026-10-25.py/json` 在 degree 8 的有限采样和差分进化 SDP 中得到约 `32.71694946` 的候选目标，但六轮运行的最新验证仍有约 `-5.95e-5` 的负残差，故只能用于寻找三点核/局部覆盖数据，不能改写 `UNKNOWN` 状态。
 
 ## 可执行入口
 
