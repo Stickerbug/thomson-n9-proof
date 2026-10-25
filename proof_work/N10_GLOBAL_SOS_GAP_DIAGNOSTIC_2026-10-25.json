@@ -1,0 +1,61 @@
+{
+  "status": "GLOBAL_SOS_GAP_DIAGNOSTIC_ONLY",
+  "generated": "2026-10-25",
+  "scope": "n=10 three-point SDP discovery; no Lean theorem",
+  "inputs": {
+    "n10_three_point_sdp_discovery_2026-10-25.json": {
+      "sha256": "8323e58ed311e685d7d9befedd7214f1615ee530696621d9a6af503c576e8263",
+      "bytes": 15087
+    },
+    "n10_three_point_sdp_discovery_degree10_2026-10-25.json": {
+      "sha256": "3337e037bd079454b0fb68988943b01e42bc3ded6b5a47754ab71dbdaf81ef6c",
+      "bytes": 20710
+    },
+    "n10_reduced_three_point_sdp_discovery_2026-10-25.json": {
+      "sha256": "bcd58972cc89d4cdabbe731745179e93c5f290a3036857fcd334a9d999ce5704",
+      "bytes": 1258
+    },
+    "n10_sdp_solver_comparison_2026-10-25.json": {
+      "sha256": "74cccbc6b8e3f45b8f1cf6aa9a6d20ae5dcf4a752ebb88dbbe1c98d4ac200179",
+      "bytes": 997
+    }
+  },
+  "gaps": [
+    {
+      "source": "n10_three_point_sdp_discovery_2026-10-25.json",
+      "validation_min_residuals": [
+        -0.010419686796849459,
+        -0.0001303193574324346,
+        -0.00010020737861038409,
+        -1.536284312264602e-05,
+        -2.5780479742026907e-05,
+        -0.008672127618164716
+      ],
+      "de_min_residuals": [
+        -0.011221253662329733,
+        -0.00016633191560383453,
+        -8.407369446425395e-05,
+        -2.2639819179715026e-05,
+        -1.5584673310836683e-05,
+        -5.953075806280905e-05
+      ]
+    },
+    {
+      "source": "n10_reduced_three_point_sdp_discovery_2026-10-25.json",
+      "degree8_worst_residual": -0.0046,
+      "degree10_worst_residual": -0.0096,
+      "meaning": "finite numerical validation only"
+    },
+    {
+      "source": "n10_reduced_three_point_sdp_discovery_2026-10-25.json",
+      "validation_min_residuals": [],
+      "de_min_residuals": []
+    }
+  ],
+  "required_next": [
+    "exact rational PSD blocks",
+    "all Gram-domain coverage",
+    "Lean replay of harmonic/addition identities",
+    "candidate equality and global lower-bound bridge"
+  ]
+}
