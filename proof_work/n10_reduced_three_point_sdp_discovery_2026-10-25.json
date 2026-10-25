@@ -1,0 +1,30 @@
+{
+  "status": "NUMERICAL_REDUCED_KERNEL_DISCOVERY_ONLY",
+  "instance_n": 10,
+  "degrees": {
+    "8": {
+      "candidate_triangle_types": 25,
+      "nullspace_shapes": [[9,7],[8,7],[7,6],[6,5],[5,3],[4,3],[3,2],[2,1],[1,0]],
+      "objective": 32.71694946014757,
+      "candidate_reference": 32.71694946014759,
+      "minimum_psd_eigenvalue": 0.00018818919090513223,
+      "latest_sample_residual": -0.0013977751195271906,
+      "latest_differential_evolution_residual": -0.004603217185672082
+    },
+    "10": {
+      "candidate_triangle_types": 25,
+      "nullspace_shapes": [[11,9],[10,9],[9,8],[8,7],[7,5],[6,5],[5,4],[4,3],[3,1],[2,1],[1,0]],
+      "objective": 32.716949460147745,
+      "candidate_reference": 32.71694946014759,
+      "minimum_psd_eigenvalue": 0.0003375946042590845,
+      "latest_sample_residual": -0.00950718623973882,
+      "latest_differential_evolution_residual": -0.009595948092794982
+    }
+  },
+  "method": "D4d candidate Gram nullspaces, reduced PSD blocks, candidate triangle equalities, finite random/structured points and differential evolution",
+  "trust_boundary": [
+    "CVXPY/Clarabel floating point only",
+    "finite sampling is not global coverage",
+    "negative residuals remain and no Lean theorem is claimed"
+  ]
+}
