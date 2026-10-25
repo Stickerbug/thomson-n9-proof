@@ -1,0 +1,26 @@
+{
+  "status": "NUMERICAL_SOLVER_COMPARISON_ONLY",
+  "instance_n": 10,
+  "degree": 8,
+  "training_points": 488,
+  "structured_grid": "11x11x3 plus 100 random points and candidate triples",
+  "clarabel": {
+    "status": "optimal_inaccurate",
+    "objective": 32.716949583225585,
+    "minimum_psd_eigenvalue": -1.4083334306831985e-9,
+    "seconds": 0.9451658725738525,
+    "sample_residuals": [0.5786132557337462, 0.9782866353609555, 0.0019302348231728939, 0.23172231550093403]
+  },
+  "scs": {
+    "status": "optimal",
+    "objective": 32.71694949289905,
+    "minimum_psd_eigenvalue": -2.656819289186109e-7,
+    "seconds": 1.7091541290283203,
+    "sample_residuals": [0.8849392460015656, 0.8310118163024021, -0.005618677334560895, 0.32856174937024303]
+  },
+  "known_limitations": [
+    "Both runs use floating-point SDP and finite samples.",
+    "The two solvers return materially different matrices and residuals.",
+    "This comparison is not a global lower bound and is not a Lean theorem."
+  ]
+}
