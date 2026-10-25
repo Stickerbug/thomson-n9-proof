@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T00:00:00+00:00",
+  "updated": "2026-10-25T00:00:00+00:00",
   "repo": "https://github.com/Stickerbug/thomson-n9-proof",
   "verified": {
     "status": "LOCAL_LEAN_COMPILER_AXIOMS_AND_KERNEL_PASS",
@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5676,
-    "bytes": 80862028,
-    "sha256": "d9652237500404e81ea7a3b67d2472e0312d708eb3c47e6f40cc446c3b4ed696"
+    "entries": 5688,
+    "bytes": 81278385,
+    "sha256": "324e59978d56b741fd5d8ef52892d860563da34dec97aa69dd8d3be853c2e1e1"
   },
   "pending_11_source": {
     "verified": [
@@ -78,7 +78,7 @@
       802
     ]
   },
-  "continuation": "proof_work/publication_validation/GLOBAL_THEOREM_2026-10-22_zh.md",
+  "continuation": "proof_work/publication_validation/N10_CONTINUATION_STATUS_2026-10-25_zh.md",
   "environment": {
     "effective_cpu_quota": 4,
     "cpu_affinity": [
@@ -1074,11 +1074,25 @@
   "artifacts": {
     "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
     "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
-    "review_bundle_sha256": "b3e533fde3147c5f90ccb9820698c1df3ca86dbffbaf84d6b4141ed1227ac459",
-    "review_bundle_entries": 5682,
-    "review_bundle_bytes": 81266930,
+    "review_bundle_sha256": "324e59978d56b741fd5d8ef52892d860563da34dec97aa69dd8d3be853c2e1e1",
+    "review_bundle_entries": 5688,
+    "review_bundle_bytes": 81278385,
     "n10_symmetric_family": "proof_work/n10_d4d_symmetric_family_2026-10-24.json",
     "n10_stationarity_elimination": "proof_work/n10_stationarity_elimination_2026-10-24.json",
-    "n10_root_isolation": "proof_work/n10_root_isolation_2026-10-24.json"
+    "n10_root_isolation": "proof_work/n10_root_isolation_2026-10-24.json",
+    "n10_endpoint_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean",
+    "n10_lp_baseline": "proof_work/n10_rational_lp_bound_2026-10-25.json",
+    "n10_global_bound_progress": "proof_work/N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
+    "n10_global_bound_framework": "proof_work/N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md"
+  },
+  "pending_n10": {
+    "status": "UNKNOWN",
+    "candidate_energy_interval": "approximately [32.71694946014744, 32.71694946014774]",
+    "external_lower_bound": "326807/10000 = 32.6807",
+    "gap_approx": "0.03624946015",
+    "endpoint_lean_primitives_compiled": true,
+    "endpoint_final_sign_replay": false,
+    "global_lower_bound_closed": false,
+    "global_n10_theorem_proved": false
   }
 }

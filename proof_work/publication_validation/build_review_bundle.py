@@ -37,6 +37,10 @@ BASELINE_ROOT_FILES = [
     "n10_root_isolation_2026-10-24.json",
     "n10_stationarity_endpoint_certificate_2026-10-25.py",
     "n10_stationarity_endpoint_certificate_2026-10-25.json",
+    "n10_rational_lp_bound_2026-10-25.py",
+    "n10_rational_lp_bound_2026-10-25.json",
+    "N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
+    "N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md",
     "analytic10_2026_sum.c", "analytic10_sharp2026_engine.py",
     "analytic10_sharp2026_run1.json", "analytic10_sharp2026_run1_inputs.json",
     "candidate_low_rank.py", "candidate_triple_types_v1.json",
@@ -138,6 +142,7 @@ PV_EXPLICIT_REQUIRED = (
     "CROSS_INSTANCE_REUSE_AUDIT_2026-10-23_zh.md",
     "N10_PRIORITY_SCREEN_2026-10-23_zh.md",
     "N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
+    "N10_CONTINUATION_STATUS_2026-10-25_zh.md",
     "certificate_manifests/n10_discovery.json",
     "certificate_manifests/n10_discovery_run.json",
 )
@@ -374,7 +379,8 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/ThomsonNineMinimumAdapter.lean",
           "ThomsonCertificate/ThomsonNineStructuredAdapter.lean",
           "ThomsonCertificate/N10CandidateInterval.lean",
-          "ThomsonCertificate/N10D4dGeometry.lean"):
+          "ThomsonCertificate/N10D4dGeometry.lean",
+          "ThomsonCertificate/N10StationarityEndpoint.lean"):
     add_file(os.path.join("proof_work", "publication_validation", "formal", n),
              required=True)
 
