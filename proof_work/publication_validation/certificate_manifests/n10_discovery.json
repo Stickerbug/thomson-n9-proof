@@ -32,6 +32,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10GramSymmetry.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10GramPositiveTypes2.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10RightEndpointFacts.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10RightThresholds.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10ThreePointAdapter.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",

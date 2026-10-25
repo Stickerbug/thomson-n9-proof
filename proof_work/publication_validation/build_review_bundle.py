@@ -406,6 +406,7 @@ for n in ("README_build.md", "build_direct.sh", "lakefile.toml", "lean-toolchain
           "ThomsonCertificate/N10GramSymmetry.lean",
           "ThomsonCertificate/N10GramPositiveTypes2.lean",
           "ThomsonCertificate/N10RightEndpointFacts.lean",
+          "ThomsonCertificate/N10RightThresholds.lean",
           "ThomsonCertificate/N10CandidateAdapter.lean",
           "ThomsonCertificate/DelsarteBridge.lean",
           "ThomsonCertificate/N10ThreePointAdapter.lean",
