@@ -1,0 +1,33 @@
+{
+  "status": "EXACT_FRACTION_BERNSTEIN_CERTIFICATE",
+  "scope": "unconditional Delsarte/Legendre lower bound for ten sphere points",
+  "degree": 12,
+  "legendre_coefficients": [
+    "41269/50000",
+    "25267/50000",
+    "3233/12500",
+    "10131/100000",
+    "47/2000",
+    "0",
+    "0",
+    "109/50000",
+    "131/100000",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "residual_definition": "R(t)=1-(2-2*t)*p(t)^2",
+  "residual_power_degree": 25,
+  "bernstein_leaf_count": 9,
+  "bernstein_max_depth": 6,
+  "lower_bound_exact": "326807/10000",
+  "lower_bound_decimal": 32.6807,
+  "candidate_energy_decimal": 32.71694946014759,
+  "candidate_gap_decimal": 0.03624946014758734,
+  "trust_boundary": [
+    "Fraction arithmetic and Bernstein subdivision are replayed by this script.",
+    "A Lean theorem connecting this polynomial to the n=10 Thomson energy is not yet present.",
+    "The bound is below the D4d candidate and therefore does not prove optimality."
+  ]
+}
