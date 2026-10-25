@@ -20,6 +20,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateInterval.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10D4dGeometry.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
     "proof_work/n10_stationarity_endpoint_certificate_2026-10-25.py",
     "proof_work/n10_stationarity_endpoint_certificate_2026-10-25.json",
     "proof_work/publication_validation/N10_CONTINUATION_STATUS_2026-10-25_zh.md",
@@ -27,6 +28,7 @@
     "proof_work/n10_rational_lp_bound_2026-10-25.json",
     "proof_work/N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
     "proof_work/N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md"
+    ,"proof_work/publication_validation/N10_DELSARTE_BRIDGE_2026-10-25_zh.md"
   ],
   "status": "DISCOVERY_PENDING",
   "scope_note": "the Lean interval layer proves only the rational t-to-h enclosure; analytic10 and d10 artifacts are degree-10 n=9 experiments, not a ten-particle global certificate"
