@@ -1099,6 +1099,9 @@
     "n10_triple_boundary_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleBoundary.lean",
     "n10_stationarity_left_term1": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm1.lean",
     "n10_stationarity_left_term2": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm2.lean"
+    ,"n10_stationarity_left_term3_final": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityLeftTerm3Final.lean"
+    ,"n10_stationarity_right_term1": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm1.lean"
+    ,"n10_stationarity_right_term2": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityRightTerm2.lean"
   },
   "pending_n10": {
     "status": "UNKNOWN",
@@ -1126,5 +1129,9 @@
     "endpoint_left_term1_lean": true,
     "endpoint_left_term2_term3_final": false,
     "endpoint_left_term2_lean": true
+    ,"endpoint_left_term3_final_lean": true
+    ,"endpoint_right_term1_lean": true
+    ,"endpoint_right_term2_lean": true
+    ,"endpoint_right_term3_final_lean": false
   }
 }
