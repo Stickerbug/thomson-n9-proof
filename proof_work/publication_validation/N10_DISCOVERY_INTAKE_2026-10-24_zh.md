@@ -68,3 +68,5 @@ Clarabel/SCS 对比记录在 `N10_SDP_SOLVER_COMPARISON_2026-10-25_zh.md`，进�
 第三项的 numerator 区间层已在 `N10StationarityLeftTerm3.lean` 完成，逆三次幂和最终符号继续推进。
 左端第三项的完整倒数立方链和最终严格负号现已由 `N10StationarityLeftTerm3Final.lean` 编译通过；右端第三项仍未完成。
 右端点第一、第二项也已完成无 `sorry` 重放，剩余是两端第三项和最终变号定理。
+
+右端第三项现已用修正后的 sqrtTwoI 区间完成平方根、倒数立方、成员关系和最终严格正号；这仍只是 D4d 一维驻点端点证书。

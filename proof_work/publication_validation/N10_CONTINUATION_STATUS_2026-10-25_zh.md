@@ -47,3 +47,5 @@ endpoint Lean replay
 * `N10StationarityLeftTerm3.lean` 已完成第三项的代数 numerator 区间层（pbase、a/b base、a_num、b_num）；逆三次幂和最终符号仍待完成。
 * `N10StationarityLeftTerm3Final.lean` 进一步完成左端第三项的平方根、倒数立方、乘法链和最终严格负号；右端第三项尚未闭合。
 * 右端点 term1、term2 的 Lean 区间成员和严格符号也已完成；两端的 term3 与最终符号仍待完成。
+
+右端第三项现已用修正后的 sqrtTwoI 区间完成平方根、倒数立方、成员关系和最终严格正号；这仍只是 D4d 一维驻点端点证书。
