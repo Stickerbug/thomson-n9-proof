@@ -50,6 +50,8 @@ n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candid
 `certificate_manifests/n10_discovery.json` 使用 `discovery` 模式记录真实十粒子候选的接入门槛，并返回 `UNKNOWN`。具体字段、阶段门和后续工作见 `N10_DISCOVERY_INTAKE_2026-10-24_zh.md`；旧的 `analytic10`/`d10` 文件仍只作为 n=9 十阶核实验保留。
 本轮另有固定种子的 32 次 L-BFGS-B 数值提案（能量约 `32.71694946014815`），仅用于候选发现，尚未进入证明管线。 其对称性拟合和一参数能量公式记录在 `n10_d4d_symmetric_family_2026-10-24.json`，仍属于 discovery。`ThomsonCertificate/N10D4dGeometry.lean` 已由 Lean 验证 D4d 十点构型的单位球面、两两不同和 45 项能量恒等式。 驻点消元记录在 `n10_stationarity_elimination_2026-10-24.json`，只提供必要的 224 次结果式因子。 之后的 `n10_root_isolation_2026-10-24.json` 用有理 Bernstein 导数系数证明该区间内结果式根唯一，并用纯有理区间算术确认原始含根号驻点表达式在区间端点变号，同时给出 D4d 族能量的严格区间包围；`ThomsonCertificate/N10CandidateInterval.lean` 由 Lean 验证 `t` 到 `h` 的有理区间映射、驻点表达式的区间连续性和 IVT 零点桥接。当前缺口是把端点符号证书重放进 Lean，以及建立整个十点构型空间的全局下界。
 
+独立文件 `n10_stationarity_endpoint_certificate_2026-10-25.json` 记录两个端点的完整有理区间运算链和严格符号，供后续 Lean 重放逐项对照。
+
 n=9 清单 `certificate_manifests/n9_global_claim.json` 进一步编译 `GlobalMinimumContract` 适配器，统一暴露候选可行性、候选能量恒等式和全局下界；它运行结果为 `PASS`，但仍复用现有冻结 n=9 定理，不改变根入口。
 
 `GenericUniqueness.lean` 提供可选的 `EqualityClassification` 层。n=7/n=8 的等号唯一性可以填充该层；n=9 当前合同不填充它，因此不会产生未经证明的唯一性声明。

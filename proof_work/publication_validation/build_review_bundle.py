@@ -35,6 +35,8 @@ BASELINE_ROOT_FILES = [
     "n10_stationarity_elimination_2026-10-24.json",
     "n10_root_isolation_2026-10-24.py",
     "n10_root_isolation_2026-10-24.json",
+    "n10_stationarity_endpoint_certificate_2026-10-25.py",
+    "n10_stationarity_endpoint_certificate_2026-10-25.json",
     "analytic10_2026_sum.c", "analytic10_sharp2026_engine.py",
     "analytic10_sharp2026_run1.json", "analytic10_sharp2026_run1_inputs.json",
     "candidate_low_rank.py", "candidate_triple_types_v1.json",
