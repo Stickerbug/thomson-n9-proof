@@ -35,6 +35,7 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/N10GramSymmetry.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10GramPositiveTypes2.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10GramBoundaryAdmissible2.lean",
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10TripleTypeCoverage.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10RightEndpointFacts.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/N10RightThresholds.lean",
     "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
@@ -60,7 +61,8 @@
     "proof_work/N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
     "proof_work/N10_GLOBAL_COVER_REUSE_ANALYSIS_2026-10-25_zh.md",
     "proof_work/N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md",
-    "proof_work/N10_GLOBAL_SOS_GAP_DIAGNOSTIC_2026-10-25.json"
+    "proof_work/N10_GLOBAL_SOS_GAP_DIAGNOSTIC_2026-10-25.json",
+    "proof_work/N10_SOS_RATIONAL_ROUNDING_DIAGNOSTIC_2026-10-25.json"
     ,"proof_work/publication_validation/N10_DELSARTE_BRIDGE_2026-10-25_zh.md"
   ],
   "exit_code": null
