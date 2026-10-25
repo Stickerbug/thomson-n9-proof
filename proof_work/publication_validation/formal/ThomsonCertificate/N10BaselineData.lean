@@ -35,4 +35,15 @@ theorem n10Baseline_lower_bound_arithmetic :
   rw [n10Baseline_a0, n10BaselineCoeff_sum]
   norm_num
 
+/- The coefficient/counting part can be consumed independently of the
+   analytic obligations in `DelsarteBridge`. -/
+theorem n10Baseline_bookkeeping_identity :
+    ((10 : ℝ)^2 / 2) * n10BaselineCoeff 0 -
+        (10 / 2) * ∑ k : Fin 13, n10BaselineCoeff k =
+      (326807 / 10000 : ℝ) ∧
+    ((10 : ℝ) * 10 - 10) / 2 = 45 := by
+  constructor
+  · exact n10Baseline_lower_bound_arithmetic
+  · exact n10Baseline_pair_count
+
 end ThomsonTen
