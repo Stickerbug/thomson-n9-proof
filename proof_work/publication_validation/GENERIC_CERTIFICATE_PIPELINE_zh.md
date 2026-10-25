@@ -52,6 +52,8 @@ n=10 清单 `certificate_manifests/n10_candidate_only.json` 明确使用 `candid
 
 独立文件 `n10_stationarity_endpoint_certificate_2026-10-25.json` 记录两个端点的完整有理区间运算链和严格符号，供后续 Lean 重放逐项对照。
 
+另有 `n10_rational_lp_bound_2026-10-25.py/json` 以纯 `Fraction` 和 Bernstein 细分给出外部无条件基线 `E10 >= 326807/10000 = 32.6807`；它低于 D4d 候选约 `32.71694946`，没有改变 n=10 的 `UNKNOWN` 状态，也尚未由 Lean 重放。`N10StationarityEndpoint.lean` 已编译通过区间原语层，但不等于最终驻点端点符号定理。
+
 n=9 清单 `certificate_manifests/n9_global_claim.json` 进一步编译 `GlobalMinimumContract` 适配器，统一暴露候选可行性、候选能量恒等式和全局下界；它运行结果为 `PASS`，但仍复用现有冻结 n=9 定理，不改变根入口。
 
 `GenericUniqueness.lean` 提供可选的 `EqualityClassification` 层。n=7/n=8 的等号唯一性可以填充该层；n=9 当前合同不填充它，因此不会产生未经证明的唯一性声明。
