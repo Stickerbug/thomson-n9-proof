@@ -1,5 +1,5 @@
 {
-  "file_count": 5714,
+  "file_count": 5715,
   "files": {
     "paper/COVER_LETTER_TEMPLATE.md": {
       "bytes": 2648,
@@ -510,8 +510,8 @@
       "sha256": "78348df6277cdf426b1f7490809138d0c261f61a07f372f1fcf0b436cf4db1da"
     },
     "proof_work/publication_validation/build_review_bundle.py": {
-      "bytes": 33931,
-      "sha256": "bb32c41e4f5909be55f4bfce5170be8f8cd2d5d81569f3c6259841c919b5051a"
+      "bytes": 34041,
+      "sha256": "5cfd800f01b823ac919644aa26239164fcafb4a3bd58ccbf24df8a7ca52a886d"
     },
     "proof_work/publication_validation/certificate_manifests/n10_candidate_only.json": {
       "bytes": 412,
@@ -522,12 +522,12 @@
       "sha256": "4a19c5c0ccce77ec72dea7581c9baced7106f02bec3e84458991978474e7efdc"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery.json": {
-      "bytes": 3987,
-      "sha256": "65e055310408153674c862ae4157387e7943adc28891eb8c1affb4154987e8d5"
+      "bytes": 4167,
+      "sha256": "9f2305b338008fe41b63f67d0662dbc582ae34688616ea53f53714d6f8524a67"
     },
     "proof_work/publication_validation/certificate_manifests/n10_discovery_run.json": {
-      "bytes": 3932,
-      "sha256": "d7f79bc52c5712bb019b7e28e514095b811e620ca98cf9326b159454f2fa26d0"
+      "bytes": 4112,
+      "sha256": "b77dd69b1168084b9f2dc9cf32523ef6a165db56a3ae466b035b501bc5cfd217"
     },
     "proof_work/publication_validation/certificate_manifests/n7_external_claim.json": {
       "bytes": 562,
@@ -11120,6 +11120,10 @@
     "proof_work/publication_validation/formal/ThomsonCertificate/GenericUniqueness.lean": {
       "bytes": 647,
       "sha256": "0b8c50c047f462e9a412678bf2dd19fffb926eff81937ffdb0c10b471b2801a8"
+    },
+    "proof_work/publication_validation/formal/ThomsonCertificate/N10BaselineBridge.lean": {
+      "bytes": 802,
+      "sha256": "73afbecd397e20eab0f9b75d501f196651e5e9d1db659ee0d233201cfc7a5b30"
     },
     "proof_work/publication_validation/formal/ThomsonCertificate/N10BaselineData.lean": {
       "bytes": 1301,
@@ -22850,7 +22854,7 @@
       "sha256": "a59ae6c48795b3bc3b87cba98a01973fe7f619b2e222147485f2cfa3ac4dae8d"
     }
   },
-  "generated_utc": "2026-10-25T13:15:55.449139+00:00",
+  "generated_utc": "2026-10-25T13:58:51.067203+00:00",
   "lean_verification": {
     "axiom_audits": 1507,
     "distinct_conditional_targets": 807,
