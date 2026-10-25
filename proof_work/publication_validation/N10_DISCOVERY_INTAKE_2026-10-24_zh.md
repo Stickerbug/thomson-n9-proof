@@ -39,6 +39,8 @@ DISCOVERY_PENDING
 \]
 该下界距 D4d 候选约 `0.03624946015`，没有关闭最优性缺口；它是外部精确算术证书，不是 Lean 定理。方法迁移、规模和不可直接替换的 n=9 固定数据见 `N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md` 与 `N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md`。
 
+进一步的 `n10_three_point_sdp_discovery_2026-10-25.py/json` 在 degree 8 的有限采样 SDP 中得到约 `32.71694946` 的候选目标，但验证仍有负残差，故只能用于寻找三点核/局部覆盖数据，不能改写 `UNKNOWN` 状态。
+
 ## 可执行入口
 
 `run_certificate_pipeline.py` 支持 `mode = discovery`。它检查证据路径安全性后返回 `UNKNOWN`，从而把“尚未找到候选”和“候选已经被 Lean 证明”严格分开。完成候选接入后，应保留本清单作为历史记录，另建 `n10_structured.json`，再编译新的适配器；不应修改旧的 UNKNOWN 报告来伪造时间线。

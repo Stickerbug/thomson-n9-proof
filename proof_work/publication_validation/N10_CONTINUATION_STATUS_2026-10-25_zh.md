@@ -10,6 +10,7 @@
 * `n10_stationarity_endpoint_certificate_2026-10-25.py/json` 使用纯 `Fraction` 区间算术重算左右端点，得到严格符号 `-1` 与 `+1`。这份证书是外部算术记录，尚未等同于 Lean 重放。
 * `ThomsonCertificate/N10StationarityEndpoint.lean` 已通过 Lean 4.34.1 编译，提供无 `sorry` 的有理倒数/平方根区间原语、\(\sqrt2\) 有理包围和左右端点成员；最终驻点表达式的逐项符号仍未接入。
 * `n10_rational_lp_bound_2026-10-25.py/json` 以纯有理 Bernstein 细分给出无条件外部基线 \(E_{10}\ge 326807/10000=32.6807\)。它距候选约 `0.03624946015`，尚不足以证明候选最优；对应方法分析见 `N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md`。
+* `n10_three_point_sdp_discovery_2026-10-25.py/json` 用 n=10 的三点归一化（`8F+d`、目标 `15c-(5/3)F111`）进行了 degree-8 采样 SDP；数值目标约 `32.71694946`，但独立随机/结构化验证仍发现负残差（约 `-2.99e-5`），且 PSD 数值最小特征值受浮点误差影响。这是证书搜索线索，不是下界证明。
 
 ## 仍未完成的证明层
 

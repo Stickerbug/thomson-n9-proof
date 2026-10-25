@@ -30,9 +30,9 @@
   },
   "bundle": {
     "path": "proof_work/THOMSON_N9_REVIEW_BUNDLE.zip",
-    "entries": 5688,
-    "bytes": 81278385,
-    "sha256": "324e59978d56b741fd5d8ef52892d860563da34dec97aa69dd8d3be853c2e1e1"
+    "entries": 5693,
+    "bytes": 81289120,
+    "sha256": "e205ccb0be2c7502ccc1134e664683f35251010806ed51975105f825cd9a6fec"
   },
   "pending_11_source": {
     "verified": [
@@ -1074,16 +1074,19 @@
   "artifacts": {
     "n10_discovery_intake": "proof_work/publication_validation/N10_DISCOVERY_INTAKE_2026-10-24_zh.md",
     "n10_numerical_candidate_proposal": "proof_work/n10_numerical_candidate_proposal_2026-10-24.json",
-    "review_bundle_sha256": "324e59978d56b741fd5d8ef52892d860563da34dec97aa69dd8d3be853c2e1e1",
-    "review_bundle_entries": 5688,
-    "review_bundle_bytes": 81278385,
+    "review_bundle_sha256": "e205ccb0be2c7502ccc1134e664683f35251010806ed51975105f825cd9a6fec",
+    "review_bundle_entries": 5693,
+    "review_bundle_bytes": 81289120,
     "n10_symmetric_family": "proof_work/n10_d4d_symmetric_family_2026-10-24.json",
     "n10_stationarity_elimination": "proof_work/n10_stationarity_elimination_2026-10-24.json",
     "n10_root_isolation": "proof_work/n10_root_isolation_2026-10-24.json",
     "n10_endpoint_lean": "proof_work/publication_validation/formal/ThomsonCertificate/N10StationarityEndpoint.lean",
     "n10_lp_baseline": "proof_work/n10_rational_lp_bound_2026-10-25.json",
     "n10_global_bound_progress": "proof_work/N10_GLOBAL_BOUND_PROGRESS_2026-10-25_zh.md",
-    "n10_global_bound_framework": "proof_work/N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md"
+    "n10_global_bound_framework": "proof_work/N10_GLOBAL_BOUND_FRAMEWORK_ANALYSIS_2026-10-25_zh.md",
+    "n10_candidate_adapter": "proof_work/publication_validation/formal/ThomsonCertificate/N10CandidateAdapter.lean",
+    "n10_delsarte_bridge": "proof_work/publication_validation/formal/ThomsonCertificate/DelsarteBridge.lean",
+    "n10_three_point_sdp": "proof_work/n10_three_point_sdp_discovery_2026-10-25.json"
   },
   "pending_n10": {
     "status": "UNKNOWN",
@@ -1093,6 +1096,12 @@
     "endpoint_lean_primitives_compiled": true,
     "endpoint_final_sign_replay": false,
     "global_lower_bound_closed": false,
-    "global_n10_theorem_proved": false
+    "global_n10_theorem_proved": false,
+    "candidate_adapter_compiled": true,
+    "delsarte_bridge_compiled": true,
+    "three_point_sdp_status": "NUMERICAL_DISCOVERY_ONLY",
+    "three_point_sdp_degree": 8,
+    "three_point_sdp_objective_approx": "32.71694946",
+    "three_point_sdp_validation_min_residual_approx": "-2.99e-5"
   }
 }
